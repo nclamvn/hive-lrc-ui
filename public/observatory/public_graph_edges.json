@@ -1032,6 +1032,30 @@
   "valid_to_release": null
  },
  {
+  "id": "intro:C-D25-COMPOUNDING",
+  "source": "gate:gate-d25",
+  "target": "claim:C-D25-COMPOUNDING",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d25.",
+   "vi": "Xuất hiện tại gate-d25."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D25-CLOSURE",
+  "source": "gate:gate-d25",
+  "target": "claim:C-D25-CLOSURE",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d25.",
+   "vi": "Xuất hiện tại gate-d25."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "dep:0:C1->C2",
   "source": "claim:C1",
   "target": "claim:C2",
@@ -1656,19 +1680,43 @@
   "valid_to_release": null
  },
  {
-  "id": "dep:52:C-D25-ADAPTIVE->C0",
+  "id": "dep:52:C-D25-ADAPTIVE->C-D25-COMPOUNDING",
   "source": "claim:C-D25-ADAPTIVE",
-  "target": "claim:C0",
-  "relation": "reduces_to",
+  "target": "claim:C-D25-COMPOUNDING",
+  "relation": "supports",
   "explanation": {
-   "en": "Adaptive rational-time separation is the current route toward the open target.",
-   "vi": "Tách thời-gian-hữu-tỉ thích nghi là đường hiện tại hướng tới mục tiêu mở."
+   "en": "Separate rational-time clauses compound super-constantly on reachable branches.",
+   "vi": "Các clause thời-gian-hữu-tỉ riêng compound siêu-hằng-số trên nhánh reachable."
   },
-  "valid_from_release": "REL-D25-001",
+  "valid_from_release": "REL-D25-002",
   "valid_to_release": null
  },
  {
-  "id": "dep:53:C-D21-CAMPAIGN->C0",
+  "id": "dep:53:C-D25-COMPOUNDING->C-D25-CLOSURE",
+  "source": "claim:C-D25-COMPOUNDING",
+  "target": "claim:C-D25-CLOSURE",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "The compounding projects within caps, but full closure and SAT cost remain open.",
+   "vi": "Compounding dự phóng trong cap, nhưng đóng đầy đủ và chi phí SAT còn mở."
+  },
+  "valid_from_release": "REL-D25-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:54:C-D25-CLOSURE->C0",
+  "source": "claim:C-D25-CLOSURE",
+  "target": "claim:C0",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "Certifying the within-caps reachable-tree closure is the current route toward the open target.",
+   "vi": "Chứng nhận đóng reachable-tree trong-cap là đường hiện tại hướng tới mục tiêu mở."
+  },
+  "valid_from_release": "REL-D25-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:55:C-D21-CAMPAIGN->C0",
   "source": "claim:C-D21-CAMPAIGN",
   "target": "claim:C0",
   "relation": "reduces_to",

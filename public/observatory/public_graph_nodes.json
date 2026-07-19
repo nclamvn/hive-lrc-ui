@@ -874,7 +874,7 @@
    "en": "GATE D25",
    "vi": "GATE D25"
   },
-  "status": "current",
+  "status": "partial",
   "evidence": "I2",
   "scope": "GATE D25",
   "gate": "gate-d25",
@@ -2325,26 +2325,80 @@
   "id": "claim:C-D25-ADAPTIVE",
   "kind": "claim",
   "label": {
-   "en": "D25 adaptive rational-time separation OPEN: instead of the three fixed denominators, generate rational-time cuts adaptively on the surviving branches. For a time t=a/q define B(a,q) = { r mod q : dist(a r, q Z) < q/14 }; every global counterexample must satisfy OR_i [ V_i mod q in B(a,q) ] for every chosen rational time. Keep the moduli SEPARATE, coupling only through gcd, never a single giant LCM (which returns to state explosion). Measure on the D24 reachable-state ledger which clauses cut branches, the real state reduction, proof size, SAT/decision-diagram cost, and the effect combined with the D23 arithmetic cuts",
-   "vi": "Tách thời-gian-hữu-tỉ thích nghi D25 MỞ: thay vì ba denominator cố định, sinh các cut thời gian hữu tỉ thích nghi trên các nhánh còn sống. Với thời điểm t=a/q định nghĩa B(a,q) = { r mod q : dist(a r, q Z) < q/14 }; mọi phản ví dụ toàn cục phải thỏa OR_i [ V_i mod q thuộc B(a,q) ] cho mọi thời gian hữu tỉ chọn. Giữ các modulus RIÊNG, ghép chỉ qua gcd, không bao giờ một LCM khổng lồ (quay lại bùng nổ trạng thái). Đo trên ledger reachable-state D24 clause nào cắt nhánh, giảm trạng thái thực, cỡ chứng minh, chi phí SAT/decision-diagram, và hiệu quả kết hợp với cut số học D23"
+   "en": "D25 rational-time cut PROVED-INTERNAL: for a reduced time a/q, B(a,q) = { r mod q : min(a r mod q, q - a r mod q) < q/14 } (strict; the boundary is a lonely, not a bad, residue; integer-exact after clearing 14). A global counterexample is improper, so for every a/q it satisfies OR_i [ V_i mod q in B(a,q) ] (else t=a/q is lonely); the contrapositive cuts any branch lonely at that time. Each cut is a disjunction over ONE small modulus, so moduli stay separate and no giant LCM is materialized. B(1,14)={0} reproduces the D24 t=1/14 cut and the p=197 witness fires",
+   "vi": "Cut thời-gian-hữu-tỉ D25 PROVED-INTERNAL: với thời điểm rút gọn a/q, B(a,q) = { r mod q : min(a r mod q, q - a r mod q) < q/14 } (chặt; biên là residue cô đơn không phải xấu; nguyên chính xác sau khi khử 14). Một phản ví dụ toàn cục improper, nên với mọi a/q nó thỏa OR_i [ V_i mod q thuộc B(a,q) ] (nếu không t=a/q cô đơn); phản đảo cắt bất kỳ nhánh nào cô đơn tại thời điểm đó. Mỗi cut là một tuyển trên MỘT modulus nhỏ, nên các modulus giữ riêng và không materialize LCM khổng lồ. B(1,14)={0} tái tạo cut t=1/14 D24 và nhân chứng p=197 kích hoạt"
   },
   "short_label": {
    "en": "C-D25-ADAPTIVE",
    "vi": "C-D25-ADAPTIVE"
   },
-  "status": "open",
+  "status": "proved_internal",
   "evidence": "I2",
-  "scope": "adaptive rational-time separating cuts, moduli kept separate",
+  "scope": "exact rational-time separating clause, one modulus, no LCM",
   "gate": "gate-d25",
   "summary": {
-   "en": "Next: instead of three fixed clocks, invent new rational-time clocks on the fly aimed at the branches still alive, keeping each clock separate so the search never blows up into one giant modulus.",
-   "vi": "Tiếp: thay vì ba đồng hồ cố định, phát minh các đồng hồ thời-gian-hữu-tỉ mới nhắm vào các nhánh còn sống, giữ mỗi đồng hồ riêng để tìm kiếm không bùng nổ thành một modulus khổng lồ."
+   "en": "A proved rule: for any rational time, a counterexample must have a runner near the origin, giving an exact clause on the speeds modulo just that time's denominator, no giant shared clock needed.",
+   "vi": "Một quy tắc đã chứng minh: với mọi thời gian hữu tỉ, một phản ví dụ phải có một người chạy gần gốc, cho một clause chính xác trên tốc độ modulo chỉ denominator của thời điểm đó, không cần đồng hồ chung khổng lồ."
   },
   "technical_summary": {
-   "en": "D25 adaptive rational-time separation OPEN: instead of the three fixed denominators, generate rational-time cuts adaptively on the surviving branches. For a time t=a/q define B(a,q) = { r mod q : dist(a r, q Z) < q/14 }; every global counterexample must satisfy OR_i [ V_i mod q in B(a,q) ] for every chosen rational time. Keep the moduli SEPARATE, coupling only through gcd, never a single giant LCM (which returns to state explosion). Measure on the D24 reachable-state ledger which clauses cut branches, the real state reduction, proof size, SAT/decision-diagram cost, and the effect combined with the D23 arithmetic cuts",
-   "vi": "Tách thời-gian-hữu-tỉ thích nghi D25 MỞ: thay vì ba denominator cố định, sinh các cut thời gian hữu tỉ thích nghi trên các nhánh còn sống. Với thời điểm t=a/q định nghĩa B(a,q) = { r mod q : dist(a r, q Z) < q/14 }; mọi phản ví dụ toàn cục phải thỏa OR_i [ V_i mod q thuộc B(a,q) ] cho mọi thời gian hữu tỉ chọn. Giữ các modulus RIÊNG, ghép chỉ qua gcd, không bao giờ một LCM khổng lồ (quay lại bùng nổ trạng thái). Đo trên ledger reachable-state D24 clause nào cắt nhánh, giảm trạng thái thực, cỡ chứng minh, chi phí SAT/decision-diagram, và hiệu quả kết hợp với cut số học D23"
+   "en": "D25 rational-time cut PROVED-INTERNAL: for a reduced time a/q, B(a,q) = { r mod q : min(a r mod q, q - a r mod q) < q/14 } (strict; the boundary is a lonely, not a bad, residue; integer-exact after clearing 14). A global counterexample is improper, so for every a/q it satisfies OR_i [ V_i mod q in B(a,q) ] (else t=a/q is lonely); the contrapositive cuts any branch lonely at that time. Each cut is a disjunction over ONE small modulus, so moduli stay separate and no giant LCM is materialized. B(1,14)={0} reproduces the D24 t=1/14 cut and the p=197 witness fires",
+   "vi": "Cut thời-gian-hữu-tỉ D25 PROVED-INTERNAL: với thời điểm rút gọn a/q, B(a,q) = { r mod q : min(a r mod q, q - a r mod q) < q/14 } (chặt; biên là residue cô đơn không phải xấu; nguyên chính xác sau khi khử 14). Một phản ví dụ toàn cục improper, nên với mọi a/q nó thỏa OR_i [ V_i mod q thuộc B(a,q) ] (nếu không t=a/q cô đơn); phản đảo cắt bất kỳ nhánh nào cô đơn tại thời điểm đó. Mỗi cut là một tuyển trên MỘT modulus nhỏ, nên các modulus giữ riêng và không materialize LCM khổng lồ. B(1,14)={0} tái tạo cut t=1/14 D24 và nhân chứng p=197 kích hoạt"
   },
   "route": "/claims/C-D25-ADAPTIVE",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D25-COMPOUNDING",
+  "kind": "claim",
+  "label": {
+   "en": "D25 super-constant compounding VALIDATED-BOUNDED: on reachable-state branches the rational-time clauses COMPOUND (survivor fraction about per-clause-rate to the power K). A greedy adaptive hitting set of about 32 rational times reduced a 4000-branch reachable sample to a handful of survivors, and the measured per-clause survival rate projects about 555 rational-time clauses to bring the 2^84 reachable residue space below the 2^42 enumeration caps, a super-constant reduction versus the single fixed mod-84 clock of D24. Bounded pilot measurement, not a universal theorem",
+   "vi": "Compounding siêu-hằng-số D25 VALIDATED-BOUNDED: trên các nhánh reachable-state các clause thời-gian-hữu-tỉ COMPOUND (tỉ lệ sống sót khoảng tỉ-lệ-mỗi-clause mũ K). Một greedy hitting set thích nghi khoảng 32 thời gian hữu tỉ giảm mẫu 4000 nhánh reachable xuống một nhúm sống sót, và tỉ lệ sống sót mỗi clause đo được dự phóng khoảng 555 clause thời-gian-hữu-tỉ để đưa không gian residue reachable 2^84 xuống dưới cap liệt kê 2^42, một giảm siêu-hằng-số so với đồng hồ mod-84 cố định đơn của D24. Đo pilot có chặn, không phải định lý phổ quát"
+  },
+  "short_label": {
+   "en": "C-D25-COMPOUNDING",
+   "vi": "C-D25-COMPOUNDING"
+  },
+  "status": "validated_bounded",
+  "evidence": "I2",
+  "scope": "measured super-constant compounding on reachable branches",
+  "gate": "gate-d25",
+  "summary": {
+   "en": "Unlike the fixed clocks, adding many separate rational-time clauses multiplies the pruning, so a few hundred of them project to shrink the search below the limits, a real qualitative gain.",
+   "vi": "Không như đồng hồ cố định, thêm nhiều clause thời-gian-hữu-tỉ riêng nhân pruning lên, nên vài trăm cái dự phóng thu nhỏ tìm kiếm dưới giới hạn, một lợi ích chất lượng thật."
+  },
+  "technical_summary": {
+   "en": "D25 super-constant compounding VALIDATED-BOUNDED: on reachable-state branches the rational-time clauses COMPOUND (survivor fraction about per-clause-rate to the power K). A greedy adaptive hitting set of about 32 rational times reduced a 4000-branch reachable sample to a handful of survivors, and the measured per-clause survival rate projects about 555 rational-time clauses to bring the 2^84 reachable residue space below the 2^42 enumeration caps, a super-constant reduction versus the single fixed mod-84 clock of D24. Bounded pilot measurement, not a universal theorem",
+   "vi": "Compounding siêu-hằng-số D25 VALIDATED-BOUNDED: trên các nhánh reachable-state các clause thời-gian-hữu-tỉ COMPOUND (tỉ lệ sống sót khoảng tỉ-lệ-mỗi-clause mũ K). Một greedy hitting set thích nghi khoảng 32 thời gian hữu tỉ giảm mẫu 4000 nhánh reachable xuống một nhúm sống sót, và tỉ lệ sống sót mỗi clause đo được dự phóng khoảng 555 clause thời-gian-hữu-tỉ để đưa không gian residue reachable 2^84 xuống dưới cap liệt kê 2^42, một giảm siêu-hằng-số so với đồng hồ mod-84 cố định đơn của D24. Đo pilot có chặn, không phải định lý phổ quát"
+  },
+  "route": "/claims/C-D25-COMPOUNDING",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D25-CLOSURE",
+  "kind": "claim",
+  "label": {
+   "en": "Full within-caps closure OPEN: the projection is favorable but not certified. The greedy hitting set left a few survivors on the sample (the finite denominator pool does not cut every branch; the rest need a larger pool or the D23 arithmetic cuts), and the multi-modulus master's SAT / decision-diagram cost at full clause count is not yet measured within caps. D25-PARTIAL: the direction is validated, full closure is not proven",
+   "vi": "Đóng trong-cap đầy đủ MỞ: dự phóng thuận lợi nhưng chưa chứng nhận. Greedy hitting set để lại vài sống sót trên mẫu (pool denominator hữu hạn không cắt mọi nhánh; phần còn lại cần pool lớn hơn hoặc cut số học D23), và chi phí SAT / decision-diagram của multi-modulus master ở số clause đầy đủ chưa đo trong cap. D25-PARTIAL: hướng được kiểm, đóng đầy đủ chưa chứng minh"
+  },
+  "short_label": {
+   "en": "C-D25-CLOSURE",
+   "vi": "C-D25-CLOSURE"
+  },
+  "status": "open",
+  "evidence": "I2",
+  "scope": "full within-caps reachable-tree closure",
+  "gate": "gate-d25",
+  "summary": {
+   "en": "The math points the right way, but closing the whole search within the limits is still open: some states survive and the cost of all the clauses together is unmeasured.",
+   "vi": "Toán chỉ đúng hướng, nhưng đóng cả tìm kiếm trong giới hạn vẫn mở: vài trạng thái sống sót và chi phí mọi clause cùng lúc chưa đo."
+  },
+  "technical_summary": {
+   "en": "Full within-caps closure OPEN: the projection is favorable but not certified. The greedy hitting set left a few survivors on the sample (the finite denominator pool does not cut every branch; the rest need a larger pool or the D23 arithmetic cuts), and the multi-modulus master's SAT / decision-diagram cost at full clause count is not yet measured within caps. D25-PARTIAL: the direction is validated, full closure is not proven",
+   "vi": "Đóng trong-cap đầy đủ MỞ: dự phóng thuận lợi nhưng chưa chứng nhận. Greedy hitting set để lại vài sống sót trên mẫu (pool denominator hữu hạn không cắt mọi nhánh; phần còn lại cần pool lớn hơn hoặc cut số học D23), và chi phí SAT / decision-diagram của multi-modulus master ở số clause đầy đủ chưa đo trong cap. D25-PARTIAL: hướng được kiểm, đóng đầy đủ chưa chứng minh"
+  },
+  "route": "/claims/C-D25-CLOSURE",
   "valid_from_release": null,
   "valid_to_release": null
  },

@@ -1034,8 +1034,8 @@
    "en": "Adaptive rational-time separation",
    "vi": "Tách thời-gian-hữu-tỉ thích nghi"
   },
-  "status": "current",
-  "verify": "pending",
+  "status": "partial",
+  "verify": "double",
   "independence": "I2",
   "date": "2026-07-19",
   "summary": {
@@ -1052,11 +1052,11 @@
     "vi": "Giữ các modulus RIÊNG, ghép chỉ qua gcd; KHÔNG BAO GIỜ gộp mọi denominator thành một LCM khổng lồ (quay lại bùng nổ trạng thái). Đo trực tiếp trên ledger reachable-state D24: clause nào cắt nhánh, giảm trạng thái thực, cỡ chứng minh, chi phí SAT/decision-diagram, và kết hợp với cut số học D23"
    },
    {
-    "en": "Mandatory regression: p=197 base cover YES, t=1/14 lonely YES, adaptive early cut FIRES. No compute-budget increase; no GLOBAL-WITNESS; BASE-SURVIVOR escalates to D20-R. LRC(13) OPEN",
-    "vi": "Regression bắt buộc: phủ nền p=197 YES, t=1/14 cô đơn YES, cut sớm thích nghi KÍCH HOẠT. Không tăng ngân sách compute; không GLOBAL-WITNESS; BASE-SURVIVOR leo thang tới D20-R. LRC(13) MỞ"
+    "en": "D25-PARTIAL (measured): the rational-time cut is proved sound and double-verified, the mandatory p=197 t=1/14 cut fires, and the clauses COMPOUND super-constantly — a greedy adaptive hitting set of about 32 rational times reduced a 4000-branch reachable sample to a handful, projecting about 555 clauses to bring the 2^84 reachable space below the 2^42 caps, a qualitative gain over D24's constant factor. 224 of 224 corruption rejected. But the greedy left a few survivors (finite pool) and the multi-modulus master's SAT cost is not yet certified within caps, so full closure stays open. LRC(13) OPEN",
+    "vi": "D25-PARTIAL (đo được): cut thời-gian-hữu-tỉ chứng minh vững và kiểm kép, cut t=1/14 p=197 bắt buộc kích hoạt, và các clause COMPOUND siêu-hằng-số — một greedy hitting set thích nghi khoảng 32 thời gian hữu tỉ giảm mẫu 4000 nhánh reachable xuống một nhúm, dự phóng khoảng 555 clause đưa không gian reachable 2^84 xuống dưới cap 2^42, một lợi ích chất lượng so với hằng số D24. 224 trên 224 tấn công bị bác. Nhưng greedy để lại vài sống sót (pool hữu hạn) và chi phí SAT của multi-modulus master chưa chứng nhận trong cap, nên đóng đầy đủ còn mở. LRC(13) MỞ"
    }
   ],
-  "artifacts": 0,
+  "artifacts": 8,
   "route": "/gates/gate-d25"
  }
 ]
