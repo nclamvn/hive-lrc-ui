@@ -65,7 +65,7 @@
 .og-hero-title { font-family: var(--obs-font-display); font-weight: 500; font-size: 40px;
   line-height: 1.06; letter-spacing: -0.018em; margin: 13px 0 0; max-width: 860px; color: var(--obs-ink);
   white-space: pre-line; }
-.og-hero-sub { margin: 14px 0 0; font-size: 12px; font-style: italic; line-height: 1.5; color: var(--obs-ink-2); max-width: 640px; }
+.og-hero-sub { margin: 14px 0 0; font-size: 14.4px; font-style: italic; line-height: 1.5; color: var(--obs-ink-2); max-width: 640px; }
 .og-orbit { justify-self: end; }
 .og-vitruvian { justify-self: end; align-self: start; height: 172px; width: auto; max-width: 100%; opacity: 0.92;
   margin-top: -6px; mix-blend-mode: multiply; }
@@ -296,7 +296,7 @@ a.og-dep:hover { border-color: var(--obs-line-strong); }
 .og-btn[data-on="true"] { background: var(--obs-ink); color: #fff; border-color: var(--obs-ink); }
 
 /* ---------------- the problem: live explainer + history timeline ---------------- */
-.og-problem { display: grid; grid-template-columns: minmax(240px, 300px) 1fr; gap: 34px;
+.og-problem { display: grid; grid-template-columns: 1fr minmax(320px, 560px); gap: 40px;
   padding: 34px var(--obs-page-inset) 6px; max-width: var(--obs-max-content); margin-inline: auto; align-items: center; }
 .og-prob-viz { border: 1px solid var(--obs-line); border-radius: var(--obs-radius-card); background: var(--obs-surface);
   box-shadow: var(--obs-shadow-card); padding: 14px; }

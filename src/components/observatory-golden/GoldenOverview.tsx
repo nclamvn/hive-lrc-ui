@@ -33,9 +33,6 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
 
       {/* the problem: live explainer + history timeline */}
       <section className="og-problem" data-region="problem">
-        <div className="og-prob-viz">
-          <LonelyRunnerCircle static={golden} labels={{ lonely: t("Lonely", "Cô đơn"), caption: vm.problem.caption }} />
-        </div>
         <div className="og-prob-body">
           <div className="og-eyebrow">{vm.problem.kicker}</div>
           <h2 className="og-prob-title">{vm.problem.title}</h2>
@@ -52,6 +49,9 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
             ))}
           </ol>
           <MathText className="og-prob-impact">{vm.problem.impact}</MathText>
+        </div>
+        <div className="og-prob-viz">
+          <LonelyRunnerCircle static={golden} labels={{ lonely: t("Lonely", "Cô đơn"), caption: vm.problem.caption }} />
         </div>
       </section>
 
