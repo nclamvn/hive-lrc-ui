@@ -8,20 +8,20 @@
   "evidence_ceiling": "I2"
  },
  "counts": {
-  "public_releases": 21,
-  "public_claims": 44,
-  "public_gates": 31,
-  "public_graph_nodes": 79,
-  "public_graph_edges": 118,
+  "public_releases": 23,
+  "public_claims": 50,
+  "public_gates": 32,
+  "public_graph_nodes": 86,
+  "public_graph_edges": 131,
   "public_artifacts": 4
  },
  "manifest": {
-  "public_releases": "d79d77c82eb37b2bf14e6fdce32546be0c3636930f051623410a3d18cc52994f",
-  "public_claims": "09e2f12256d0974c99a8d6712397b554c1d6bb7209313f9f59e2e2b67af37b5b",
-  "public_gates": "6b32e0fe0fdc1dfc8f26468c1dfcb059625e8edd1db4de91e3b70a32adeab14f",
-  "public_graph_nodes": "4b0246fa63dc0c2b9aeb3146cf6c217eaf383b9db2be486715600b1a274c07ad",
-  "public_graph_edges": "036220aff0bbb6ce75a95491d6591822ee31d527eca45fa69b95832ec5086f50",
+  "public_releases": "c149e21fcbd65ebce92f10e850f3e78bafff2d0614113e3033f8723bf61d4428",
+  "public_claims": "08f1ffb751fc6513ef231f5497a5c73be16d271967505e59bc55b1b0cfaa8418",
+  "public_gates": "1fba9f1c80c0115bee538abb0a186fa967adb3cabe0e6d27747103cccd9ee09b",
+  "public_graph_nodes": "614d78f1e8434f98b291b98a3d72aaed157f7b2652963f3f3f2c43513c476120",
+  "public_graph_edges": "5889dd4169049a05e54ddf316a95581513ca34bbf219b2b0d11c3bf20e446232",
   "public_artifacts": "35586b8067464ed973f3b9d3df53d265f974bfa8422e96ef43035d98bed5b8d5"
  },
- "snapshot_hash": "65a5adeeccffd0d9a6e0340e401270d01102a1339b32ff3ab69d74418906347b"
+ "snapshot_hash": "a872e1531ce544d770bb6fd19cc76d6f7bef53dbca92c49a1fabd73a86e48046"
 }

@@ -822,21 +822,135 @@
  },
  {
   "claim_id": "C-D23-EARLY-CUTS",
-  "status": "open",
+  "status": "proved_internal",
   "evidence": "I2",
-  "scope": "global constraints applied before the 2H reconstruction threshold",
+  "scope": "early-cut soundness: every early cut preserves a counterexample",
   "gate_introduced": "gate-d23",
   "gate_last_changed": "gate-d23",
   "depends_on": [
    "C-D22-CRT-NO-PRUNING"
   ],
   "statement": {
-   "en": "D23 early global realizability cuts OPEN: apply global constraints BEFORE 2H, not only at reconstruction. Two independent early sources run in parallel. Branch A arithmetic realizability from 13 bounded integer squares (per-degree coefficient bounds, Newton and Maclaurin inequalities, power-sum/Hankel positivity, square-splitting modulo auxiliary moduli, primitivity and multiplicity). Branch B early impropriety on refinement grids at levels 14, 28, 42 by carrying the global residue modulo (14,28,42) alongside the residue modulo p and certifying refined-cover feasibility. Regression: the p=197 witness base-covers yet is proper at level 14, so the early cut must FIRE long before full CRT reconstruction",
-   "vi": "Cut khả-dĩ toàn cục sớm D23 MỞ: áp ràng buộc toàn cục TRƯỚC 2H, không chỉ khi tái dựng. Hai nguồn sớm độc lập chạy song song. Branch A khả năng sinh số học từ 13 bình phương số nguyên có chặn (chặn hệ số theo bậc, bất đẳng thức Newton và Maclaurin, dương power-sum/Hankel, square-splitting theo modulus phụ, primitivity và multiplicity). Branch B impropriety sớm trên refinement grid tại level 14, 28, 42 bằng cách mang residue toàn cục modulo (14,28,42) cùng residue modulo p và chứng nhận refined-cover feasibility. Regression: nhân chứng p=197 phủ nền nhưng proper tại level 14, nên cut sớm phải KÍCH HOẠT rất lâu trước khi tái dựng CRT đầy đủ"
+   "en": "D23 early-cut SOUNDNESS proved: every early cut (arithmetic realizability or refinement impropriety) is a NECESSARY condition for a bounded counterexample, so their combination discards no counterexample. Applied BEFORE the 2H reconstruction threshold, correcting D22 where the only global check waited until reconstruction",
+   "vi": "Tính VỮNG của cut sớm D23 đã chứng minh: mọi cut sớm (khả-dĩ số học hay impropriety refinement) là điều kiện CẦN cho một phản ví dụ có chặn, nên tổ hợp của chúng không loại phản ví dụ nào. Áp TRƯỚC ngưỡng tái dựng 2H, sửa D22 nơi kiểm toàn cục duy nhất đợi tới tái dựng"
   },
   "plain_language": {
-   "en": "The correction: there is more than one early global check. A symbolic state can be cut long before the full tuple is reconstructed, either because its coefficients can't come from 13 integer squares, or because it already fails at the level-14 finer grid where the p=197 witness died.",
-   "vi": "Sửa chữa: có nhiều hơn một kiểm toàn cục sớm. Một trạng thái symbolic có thể bị cắt rất lâu trước khi tái dựng đủ tuple, hoặc vì hệ số của nó không thể đến từ 13 bình phương số nguyên, hoặc vì nó đã hỏng ở lưới tinh level-14 nơi nhân chứng p=197 chết."
+   "en": "Every early cut is proved safe: it only removes objects that a real counterexample could never be.",
+   "vi": "Mọi cut sớm được chứng minh an toàn: nó chỉ loại các đối tượng mà một phản ví dụ thật không bao giờ là."
+  }
+ },
+ {
+  "claim_id": "C-D23-ARITHMETIC",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "Branch A, coefficient/root realizability as 13 integer squares",
+  "gate_introduced": "gate-d23",
+  "gate_last_changed": "gate-d23",
+  "depends_on": [
+   "C-D23-EARLY-CUTS"
+  ],
+  "statement": {
+   "en": "Branch A arithmetic realizability cuts PROVED-INTERNAL: exact positivity, per-degree coefficient bounds, Newton and Maclaurin inequalities, Newton-identity power-sum positivity, an auxiliary-modulus square-splitting sieve, and primitivity/multiplicity. Each is a proved necessary condition for E_j = e_j of 13 bounded integer squares; a genuine square-multiset passes all families",
+   "vi": "Cut khả-dĩ số học Branch A PROVED-INTERNAL: dương chính xác, chặn hệ số theo bậc, bất đẳng thức Newton và Maclaurin, dương power-sum theo đồng nhất thức Newton, sàng square-splitting theo modulus phụ, và primitivity/multiplicity. Mỗi cái là điều kiện cần đã chứng minh cho E_j = e_j của 13 bình phương số nguyên có chặn; một multiset bình phương thật vượt mọi họ"
+  },
+  "plain_language": {
+   "en": "Classical inequalities among symmetric functions certify, before reconstruction, that a candidate cannot come from 13 integer squares.",
+   "vi": "Các bất đẳng thức cổ điển giữa các hàm đối xứng chứng nhận, trước tái dựng, rằng một ứng viên không thể đến từ 13 bình phương số nguyên."
+  }
+ },
+ {
+  "claim_id": "C-D23-REFINEMENT",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "Branch B, early impropriety on refinement grids 14/28/42",
+  "gate_introduced": "gate-d23",
+  "gate_last_changed": "gate-d23",
+  "depends_on": [
+   "C-D23-EARLY-CUTS"
+  ],
+  "statement": {
+   "en": "Branch B refinement cuts 14/28/42 PROVED-INTERNAL: by O-A a counterexample is improper on every refinement grid, so a state proper at level 14, 28 or 42 is soundly cut without integer reconstruction. The cheap mechanism: t=1/14 is a lonely time iff 14 divides no speed, carried as a small-modulus residue mod (14,28,42)",
+   "vi": "Cut refinement 14/28/42 Branch B PROVED-INTERNAL: theo O-A một phản ví dụ improper trên mọi refinement grid, nên một trạng thái proper tại level 14, 28 hoặc 42 bị cắt vững mà không cần tái dựng nguyên. Cơ chế rẻ: t=1/14 là thời điểm cô đơn khi và chỉ khi 14 không chia tốc độ nào, mang dạng residue modulus nhỏ mod (14,28,42)"
+  },
+  "plain_language": {
+   "en": "A state can be thrown out simply because it already has a lonely runner on the finer level-14 grid, no reconstruction needed.",
+   "vi": "Một trạng thái có thể bị loại đơn giản vì nó đã có một người chạy cô đơn trên lưới tinh level-14, không cần tái dựng."
+  }
+ },
+ {
+  "claim_id": "C-D23-P197-CUT",
+  "status": "validated_exact",
+  "evidence": "I2",
+  "scope": "p=197 witness, level-14 early cut",
+  "gate_introduced": "gate-d23",
+  "gate_last_changed": "gate-d23",
+  "depends_on": [
+   "C-D23-REFINEMENT"
+  ],
+  "statement": {
+   "en": "p=197 level-14 early cut VERIFIED: the D19 witness base-covers (0 lonely times at the base level) yet is proper at level 14 (280 lonely times, first at t=1/14), so the Branch B early cut FIRES at level 14 before any CRT reconstruction. Exact, reproduced by two verifiers",
+   "vi": "Cut sớm level-14 p=197 ĐÃ KIỂM: nhân chứng D19 phủ nền (0 thời điểm cô đơn ở mức nền) nhưng proper tại level 14 (280 thời điểm cô đơn, đầu tiên tại t=1/14), nên cut sớm Branch B KÍCH HOẠT tại level 14 trước bất kỳ tái dựng CRT nào. Chính xác, tái lập bởi hai verifier"
+  },
+  "plain_language": {
+   "en": "The exact test case: the p=197 cover is thrown out at the level-14 grid, exactly as required, long before the full tuple would be reconstructed.",
+   "vi": "Ca kiểm chính xác: phủ p=197 bị loại tại lưới level-14, đúng như yêu cầu, rất lâu trước khi tuple đầy đủ được tái dựng."
+  }
+ },
+ {
+  "claim_id": "C-D23-PRUNING",
+  "status": "validated_bounded",
+  "evidence": "I2",
+  "scope": "pilot measurements, bounded sample",
+  "gate_introduced": "gate-d23",
+  "gate_last_changed": "gate-d23",
+  "depends_on": [
+   "C-D23-P197-CUT"
+  ],
+  "statement": {
+   "en": "Pre-2H pruning VALIDATED-BOUNDED (pilot measurements): on the certified pilot, Branch A cut 5000 of 5000 random candidate coefficient vectors and Branch B cut 7 of 7 realistic base covers at level 14, both BEFORE the 2H threshold where D22 had none. These are bounded pilot measurements, NOT a claim that every reachable state is cut",
+   "vi": "Pruning trước-2H VALIDATED-BOUNDED (đo pilot): trên pilot chứng nhận, Branch A cắt 5000 trên 5000 vector hệ số ứng viên ngẫu nhiên và Branch B cắt 7 trên 7 phủ nền thực tại level 14, cả hai TRƯỚC ngưỡng 2H nơi D22 không có. Đây là các đo pilot có chặn, KHÔNG phải tuyên bố mọi reachable state bị loại"
+  },
+  "plain_language": {
+   "en": "On a bounded pilot the early cuts removed every sampled candidate and every sampled cover before reconstruction; this is measured evidence on a sample, not a statement about all states.",
+   "vi": "Trên một pilot có chặn, các cut sớm loại mọi ứng viên và mọi phủ lấy mẫu trước tái dựng; đây là bằng chứng đo trên mẫu, không phải phát biểu về mọi trạng thái."
+  }
+ },
+ {
+  "claim_id": "C-D23-CAMPAIGN",
+  "status": "open",
+  "evidence": "I2",
+  "scope": "full compatible-state campaign with early cuts",
+  "gate_introduced": "gate-d23",
+  "gate_last_changed": "gate-d24",
+  "depends_on": [
+   "C-D23-PRUNING"
+  ],
+  "statement": {
+   "en": "Full compatible-state campaign OPEN: whether the sound, materially-effective early cuts drive the surviving-state count (realizable AND base-improper at all primes AND improper at levels 14/28/42) low enough to certify emptiness within the frozen caps is not yet measured. D23-PASS establishes an effective pruning mechanism, not a campaign result",
+   "vi": "Chiến dịch trạng-thái-tương-thích đầy đủ MỞ: liệu các cut sớm vững, hiệu quả thực chất có đẩy số trạng thái sống sót (khả dĩ VÀ base-improper mọi prime VÀ improper level 14/28/42) đủ thấp để chứng nhận rỗng trong cap đã đóng băng hay không thì chưa đo. D23-PASS lập một cơ chế pruning hiệu quả, không phải kết quả chiến dịch"
+  },
+  "plain_language": {
+   "en": "The early cuts prune strongly, but whether that is enough to check the whole search within the limits is the next open measurement.",
+   "vi": "Các cut sớm cắt mạnh, nhưng liệu điều đó có đủ để kiểm cả không gian tìm trong giới hạn là phép đo mở tiếp theo."
+  }
+ },
+ {
+  "claim_id": "C-D24-REACHABLE",
+  "status": "open",
+  "evidence": "I2",
+  "scope": "early cuts on reachable states from the global master, residue mod 84",
+  "gate_introduced": "gate-d24",
+  "gate_last_changed": "gate-d24",
+  "depends_on": [
+   "C-D23-CAMPAIGN"
+  ],
+  "statement": {
+   "en": "D24 OPEN: test the early cuts on the REAL reachable states enumerated by the global master, carrying one global residue multiset modulo 84 = lcm(14,28,42), never re-chosen per prime. Measure how the proved sound cuts prune the actual reachable state stream, not a random sample",
+   "vi": "D24 MỞ: kiểm các cut sớm trên các reachable state THẬT liệt kê bởi global master, mang một residue multiset toàn cục modulo 84 = lcm(14,28,42), không bao giờ chọn lại theo từng prime. Đo các cut vững đã chứng minh cắt luồng reachable state thực ra sao, không phải một mẫu ngẫu nhiên"
+  },
+  "plain_language": {
+   "en": "Next: run the proved cuts against the states the search actually reaches, using one shared clock residue modulo 84, and measure the real pruning.",
+   "vi": "Tiếp: chạy các cut đã chứng minh trên các trạng thái mà tìm kiếm thực sự chạm, dùng một residue đồng hồ chung modulo 84, và đo pruning thực."
   }
  }
 ]

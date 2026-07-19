@@ -473,5 +473,51 @@
    "en": "D23 (Early Global Realizability Cuts) OPENS. Two parallel branches applied BEFORE 2H. Branch A arithmetic realizability from 13 bounded integer squares: per-degree coefficient bounds, Newton + Maclaurin inequalities, power-sum/Hankel (moment) positivity, square-splitting modulo auxiliary moduli, primitivity + multiplicity constraints. Branch B early impropriety on refinement grids: carry the global residue mod (14,28,42) with the residue mod p and certify refined-cover feasibility at levels 14/28/42 without reconstructing the integer tuple. MANDATORY regression: p=197 base cover YES, p=197 level-14 PROPER, D23 early cut FIRES (before full CRT reconstruction). Nonnegotiable: never wait for full reconstruction to ask whether a symbolic state is 13-integer-square realizable or survives level 14. No compute-budget increase. No GLOBAL-WITNESS; BASE-SURVIVOR -> D20-R. LRC(13) OPEN.",
    "vi": "D23 (Cut Khả-Dĩ Toàn Cục Sớm) MỞ. Hai nhánh song song áp TRƯỚC 2H. Branch A khả năng sinh số học từ 13 bình phương số nguyên có chặn: chặn hệ số theo bậc, bất đẳng thức Newton + Maclaurin, dương power-sum/Hankel (moment), square-splitting theo modulus phụ, ràng buộc primitivity + multiplicity. Branch B impropriety sớm trên refinement grid: mang residue toàn cục mod (14,28,42) cùng residue mod p và chứng nhận refined-cover feasibility tại level 14/28/42 mà không tái dựng tuple nguyên. Regression BẮT BUỘC: phủ nền p=197 YES, level-14 p=197 PROPER, cut sớm D23 KÍCH HOẠT (trước tái dựng CRT đầy đủ). Không thương lượng: không bao giờ đợi tái dựng đầy đủ mới hỏi một trạng thái symbolic có 13-bình-phương-nguyên khả dĩ hay sống sót level 14. Không tăng ngân sách compute. Không GLOBAL-WITNESS; BASE-SURVIVOR -> D20-R. LRC(13) MỞ."
   }
+ },
+ {
+  "id": "REL-D23-002",
+  "sequence": 22,
+  "gate_id": "gate-d23",
+  "change_type": "THEOREM_PROVED",
+  "evidence": "I2",
+  "scope": "early cuts proved sound + pilot pruning validated",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D23-001",
+  "title": {
+   "en": "D23 PASS: early cuts proved sound and prune before reconstruction",
+   "vi": "D23 PASS: cut sớm chứng minh vững và cắt trước tái dựng"
+  },
+  "summary_public": {
+   "en": "For the first time in this stretch the attack takes a forward step. Two independent global checks were built that fire before the expensive reconstruction step, and both are proved safe: neither can ever discard a genuine counterexample. The first checks whether a candidate could even come from thirteen bounded integer squares, using classical inequalities among symmetric functions. The second checks whether the object already fails on the finer level-fourteen time grid, the exact place where the p=197 example died, which it does as required. On a bounded pilot both checks were strongly effective before reconstruction, exactly where the previous approach had none. This establishes an effective early-pruning mechanism. It does not by itself decide the conjecture or close the whole search: whether the strong pruning makes the remaining search small enough to finish within the limits is the next open measurement. No configuration survives and no counterexample is claimed. LRC(13) remains open.",
+   "vi": "Lần đầu trong chặng này cuộc tấn công tiến một bước. Hai kiểm toàn cục độc lập được dựng kích hoạt trước bước tái dựng tốn kém, và cả hai được chứng minh an toàn: không cái nào có thể loại một phản ví dụ thật. Cái đầu kiểm liệu một ứng viên có thể đến từ mười ba bình phương số nguyên có chặn không, dùng các bất đẳng thức cổ điển giữa các hàm đối xứng. Cái thứ hai kiểm liệu đối tượng đã hỏng trên lưới thời gian tinh level-mười-bốn chưa, đúng nơi ví dụ p=197 chết, và nó hỏng như yêu cầu. Trên một pilot có chặn cả hai kiểm rất hiệu quả trước tái dựng, đúng nơi cách trước không có. Điều này lập một cơ chế pruning sớm hiệu quả. Nó tự nó không quyết giả thuyết hay đóng cả không gian tìm: liệu pruning mạnh có làm phần tìm còn lại đủ nhỏ để xong trong giới hạn là phép đo mở tiếp theo. Không cấu hình nào sống sót và không phản ví dụ nào được tuyên bố. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "D23-PASS. Cut soundness THEOREM proved: each early cut is a necessary condition for a bounded counterexample; their combination preserves it. Branch A arithmetic realizability (positivity, per-degree bounds, exact Newton + Maclaurin, Newton-identity power sums, auxiliary-modulus square-splitting sieve, primitivity/multiplicity). Branch B refinement levels 14/28/42 via level-l properness on {j/(lp)} without reconstruction; mechanism t=1/14 lonely iff 14 does not divide any speed. MANDATORY regression VERIFIED: p=197 base cover YES, level-14 PROPER (280 lonely, first t=1/14), early cut FIRES at 14. PILOT MEASUREMENTS (bounded sample, NOT all reachable states): Branch A cut 5000/5000 random candidates; Branch B cut 7/7 realistic base covers at 14, both before 2H where D22 had zero. verify_d23_v1/v2 ACCEPT, corruption_d23 190/190 (159 rebuild, 16/16 mandatory). Effective pruning MECHANISM established; full compatible-state campaign OPEN (does pruning bound the surviving set within caps). No BASE-SURVIVOR, no GLOBAL-WITNESS. LRC(13) OPEN.",
+   "vi": "D23-PASS. Định lý tính VỮNG của cut đã chứng minh: mỗi cut sớm là điều kiện cần cho một phản ví dụ có chặn; tổ hợp giữ nó. Branch A khả-dĩ số học (dương, chặn theo bậc, Newton + Maclaurin chính xác, power-sum theo Newton, sàng square-splitting modulus phụ, primitivity/multiplicity). Branch B refinement level 14/28/42 qua properness level-l trên {j/(lp)} không tái dựng; cơ chế t=1/14 cô đơn khi và chỉ khi 14 không chia tốc độ nào. Regression BẮT BUỘC ĐÃ KIỂM: phủ nền p=197 YES, level-14 PROPER (280 cô đơn, đầu t=1/14), cut sớm KÍCH HOẠT tại 14. ĐO PILOT (mẫu có chặn, KHÔNG phải mọi reachable state): Branch A cắt 5000/5000 ứng viên ngẫu nhiên; Branch B cắt 7/7 phủ nền thực tại 14, cả hai trước 2H nơi D22 bằng không. verify_d23_v1/v2 CHẤP NHẬN, corruption_d23 190/190 (159 rebuild, 16/16 bắt buộc). Cơ chế pruning hiệu quả đã lập; chiến dịch trạng-thái-tương-thích đầy đủ MỞ. Không BASE-SURVIVOR, không GLOBAL-WITNESS. LRC(13) MỞ."
+  }
+ },
+ {
+  "id": "REL-D24-001",
+  "sequence": 23,
+  "gate_id": "gate-d24",
+  "change_type": "GATE_OPENED",
+  "evidence": "I2",
+  "scope": "early cuts on reachable states, global residue mod 84",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D23-002",
+  "title": {
+   "en": "D24 opens: run the proved cuts on real reachable states",
+   "vi": "D24 mở: chạy các cut đã chứng minh trên reachable state thật"
+  },
+  "summary_public": {
+   "en": "The early cuts are proved safe and prune strongly on a sample, so the next step is to run them where it matters: on the actual states the search reaches, rather than on random candidates. D24 does exactly that. It carries one shared clock residue, a single global pattern modulo eighty-four, which is the least common multiple of the level fourteen, twenty-eight and forty-two grids, and it never re-chooses that pattern separately at each prime. On those real reachable states it measures how much the proved cuts actually prune. Nothing about the conjecture is decided by opening this gate, and no larger compute budget is authorized. LRC(13) remains open.",
+   "vi": "Các cut sớm được chứng minh an toàn và cắt mạnh trên một mẫu, nên bước tiếp là chạy chúng nơi quan trọng: trên các trạng thái thực mà tìm kiếm chạm, thay vì trên ứng viên ngẫu nhiên. D24 làm đúng điều đó. Nó mang một residue đồng hồ chung, một mẫu toàn cục duy nhất modulo tám mươi tư, là bội chung nhỏ nhất của các lưới level mười bốn, hai tám và bốn hai, và không bao giờ chọn lại mẫu đó riêng tại mỗi prime. Trên các reachable state thật đó nó đo các cut đã chứng minh cắt thực bao nhiêu. Không có gì về giả thuyết được quyết bởi việc mở gate này, và không ngân sách compute lớn hơn được duyệt. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "D24 (Early Cuts on Reachable States) OPENS. Enumerate the REAL reachable states from the global master and apply the D23-proved early cuts (Branch A + B) to them, carrying ONE global residue multiset modulo 84 = lcm(14,28,42), never re-chosen per prime (one common small-modulus clock). Measure the pruning on the actual reachable-state stream (not a random sample), the branching, certificate cost, surviving-state count and projected campaign cost. The 5000/5000 and 7/7 D23 figures remain BOUNDED PILOT MEASUREMENTS, not a statement about all reachable states. No compute-budget increase. No GLOBAL-WITNESS; BASE-SURVIVOR -> D20-R. LRC(13) OPEN.",
+   "vi": "D24 (Cut Sớm Trên Reachable State) MỞ. Liệt kê các reachable state THẬT từ global master và áp các cut sớm đã-chứng-minh-D23 (Branch A + B) lên chúng, mang MỘT residue multiset toàn cục modulo 84 = lcm(14,28,42), không bao giờ chọn lại theo prime (một đồng hồ modulus-nhỏ chung). Đo pruning trên luồng reachable-state thật (không phải mẫu ngẫu nhiên), branching, chi phí chứng chỉ, số trạng thái sống sót và chi phí chiến dịch dự phóng. Các số 5000/5000 và 7/7 của D23 vẫn là ĐO PILOT CÓ CHẶN, không phải phát biểu về mọi reachable state. Không tăng ngân sách compute. Không GLOBAL-WITNESS; BASE-SURVIVOR -> D20-R. LRC(13) MỞ."
+  }
  }
 ]
