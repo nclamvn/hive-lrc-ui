@@ -384,6 +384,18 @@
   "valid_to_release": null
  },
  {
+  "id": "arc:gate-d25->gate-d26",
+  "source": "gate:gate-d25",
+  "target": "gate:gate-d26",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "intro:C0",
   "source": "gate:scan",
   "target": "claim:C0",
@@ -1032,6 +1044,18 @@
   "valid_to_release": null
  },
  {
+  "id": "intro:C-D25-MULTIMOD",
+  "source": "gate:gate-d25",
+  "target": "claim:C-D25-MULTIMOD",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d25.",
+   "vi": "Xuất hiện tại gate-d25."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "intro:C-D25-COMPOUNDING",
   "source": "gate:gate-d25",
   "target": "claim:C-D25-COMPOUNDING",
@@ -1051,6 +1075,18 @@
   "explanation": {
    "en": "Introduced at gate-d25.",
    "vi": "Xuất hiện tại gate-d25."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D26-LABELED-ROOT",
+  "source": "gate:gate-d26",
+  "target": "claim:C-D26-LABELED-ROOT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d26.",
+   "vi": "Xuất hiện tại gate-d26."
   },
   "valid_from_release": null,
   "valid_to_release": null
@@ -1680,19 +1716,31 @@
   "valid_to_release": null
  },
  {
-  "id": "dep:52:C-D25-ADAPTIVE->C-D25-COMPOUNDING",
+  "id": "dep:52:C-D25-ADAPTIVE->C-D25-MULTIMOD",
   "source": "claim:C-D25-ADAPTIVE",
+  "target": "claim:C-D25-MULTIMOD",
+  "relation": "supports",
+  "explanation": {
+   "en": "Each rational-time clause is one modulus; the master keeps moduli separate, gcd-consistent.",
+   "vi": "Mỗi clause thời-gian-hữu-tỉ là một modulus; master giữ modulus riêng, gcd-nhất-quán."
+  },
+  "valid_from_release": "REL-D26-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:53:C-D25-MULTIMOD->C-D25-COMPOUNDING",
+  "source": "claim:C-D25-MULTIMOD",
   "target": "claim:C-D25-COMPOUNDING",
   "relation": "supports",
   "explanation": {
-   "en": "Separate rational-time clauses compound super-constantly on reachable branches.",
-   "vi": "Các clause thời-gian-hữu-tỉ riêng compound siêu-hằng-số trên nhánh reachable."
+   "en": "On the separate-moduli master, the clauses compound on reachable branches (pilot).",
+   "vi": "Trên master modulus-riêng, các clause compound trên nhánh reachable (pilot)."
   },
   "valid_from_release": "REL-D25-002",
   "valid_to_release": null
  },
  {
-  "id": "dep:53:C-D25-COMPOUNDING->C-D25-CLOSURE",
+  "id": "dep:54:C-D25-COMPOUNDING->C-D25-CLOSURE",
   "source": "claim:C-D25-COMPOUNDING",
   "target": "claim:C-D25-CLOSURE",
   "relation": "reduces_to",
@@ -1704,19 +1752,31 @@
   "valid_to_release": null
  },
  {
-  "id": "dep:54:C-D25-CLOSURE->C0",
+  "id": "dep:55:C-D25-CLOSURE->C-D26-LABELED-ROOT",
   "source": "claim:C-D25-CLOSURE",
-  "target": "claim:C0",
+  "target": "claim:C-D26-LABELED-ROOT",
   "relation": "reduces_to",
   "explanation": {
-   "en": "Certifying the within-caps reachable-tree closure is the current route toward the open target.",
-   "vi": "Chứng nhận đóng reachable-tree trong-cap là đường hiện tại hướng tới mục tiêu mở."
+   "en": "D26 attacks the cost from another side: a global labeled tuple enabling direct CRT at the lower B13 threshold.",
+   "vi": "D26 tấn công chi phí từ phía khác: một tuple có-nhãn toàn cục cho phép CRT trực tiếp ở ngưỡng B13 thấp hơn."
   },
-  "valid_from_release": "REL-D25-002",
+  "valid_from_release": "REL-D26-001",
   "valid_to_release": null
  },
  {
-  "id": "dep:55:C-D21-CAMPAIGN->C0",
+  "id": "dep:56:C-D26-LABELED-ROOT->C0",
+  "source": "claim:C-D26-LABELED-ROOT",
+  "target": "claim:C0",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "The labeled-root direct-CRT campaign is the current route toward the open target.",
+   "vi": "Chiến dịch CRT-trực-tiếp nghiệm-có-nhãn là đường hiện tại hướng tới mục tiêu mở."
+  },
+  "valid_from_release": "REL-D26-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:57:C-D21-CAMPAIGN->C0",
   "source": "claim:C-D21-CAMPAIGN",
   "target": "claim:C0",
   "relation": "reduces_to",

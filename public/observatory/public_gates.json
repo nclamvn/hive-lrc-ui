@@ -1058,5 +1058,37 @@
   ],
   "artifacts": 8,
   "route": "/gates/gate-d25"
+ },
+ {
+  "id": "gate-d26",
+  "phase": "GATE D26",
+  "title": {
+   "en": "Labeled-root CRT campaign",
+   "vi": "Chiến dịch CRT nghiệm-có-nhãn"
+  },
+  "status": "current",
+  "verify": "pending",
+  "independence": "I2",
+  "date": "2026-07-19",
+  "summary": {
+   "en": "Every route so far has paid a heavy price at the reconstruction step, because it rebuilt the symmetric functions of the squared speeds, which live below a very high threshold, roughly the speed bound squared. D26 attacks that threshold directly. The idea is that if the search keeps track globally of which runner is which, a correct and fixed labeling of all thirteen speeds, then each individual speed can be pinned by the Chinese remainder theorem at a much lower threshold, based on the plain speed bound rather than its square. The non-negotiable discipline is that the identity of the runners, their signs, their permutation and their overall scale are decided once, for the whole tuple, at the global level, and are never re-canonicalized separately at each prime or each rational-time denominator, because that is exactly the mistake earlier gates had to unwind. The gate must prove that a single canonical labeled tuple exists and is well defined, pin the exact lower threshold for direct reconstruction, build a local check that preserves the global labels, hold the state in a prime-power factorized master, fold in the rational-time cuts from the previous gate, and measure the true net state complexity, counting every new variable the labeling introduces. A full campaign runs only when the reachable state tree provably fits the fixed limits. No larger compute budget is authorized, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "Mọi đường tới nay đều trả giá nặng ở bước tái dựng, vì nó dựng lại các hàm đối xứng của tốc độ bình phương, sống dưới một ngưỡng rất cao, khoảng chặn tốc độ bình phương. D26 tấn công ngưỡng đó trực tiếp. Ý tưởng là nếu tìm kiếm theo dõi toàn cục người chạy nào là người nào, một nhãn đúng và cố định cho cả mười ba tốc độ, thì mỗi tốc độ riêng có thể ghim bằng định lý phần dư Trung Hoa ở ngưỡng thấp hơn nhiều, dựa trên chặn tốc độ thường thay vì bình phương của nó. Kỷ luật không thương lượng là danh tính người chạy, dấu, hoán vị và scale tổng thể được quyết một lần, cho cả tuple, ở cấp toàn cục, và không bao giờ canonicalize lại riêng tại mỗi prime hay mỗi denominator thời-gian-hữu-tỉ, vì đó chính là lỗi mà các gate trước phải gỡ. Gate phải chứng minh một tuple có-nhãn canonical duy nhất tồn tại và xác định rõ, ghim ngưỡng thấp chính xác cho tái dựng trực tiếp, dựng kiểm cục bộ giữ nhãn toàn cục, giữ trạng thái trong một master phân-tích prime-power, gộp các cut thời-gian-hữu-tỉ từ gate trước, và đo net state complexity thật, đếm mọi biến mới nhãn đưa vào. Một chiến dịch đầy đủ chỉ chạy khi cây trạng thái reachable chứng minh vừa giới hạn cố định. Không ngân sách compute lớn hơn được duyệt, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "checks": [
+   {
+    "en": "Maintain one correct GLOBAL labeling of the 13 speeds and CRT each V_i directly at a threshold based on B13 (much lower than the ~B13^2 squared-coefficient threshold). Prove the canonical labeled tuple exists and pin the exact direct-CRT threshold",
+    "vi": "Giữ một nhãn TOÀN CỤC đúng cho 13 tốc độ và CRT từng V_i trực tiếp ở ngưỡng dựa trên B13 (thấp hơn nhiều ngưỡng hệ-số-bình-phương ~B13^2). Chứng minh tuple có-nhãn canonical tồn tại và ghim ngưỡng CRT-trực-tiếp chính xác"
+   },
+   {
+    "en": "Labels, signs, permutation and scale are GLOBAL objects fixed ONCE at the tuple level, NEVER re-canonicalized per prime or per rational-time denominator. Build a label-preserving local oracle and a prime-power factorized master, and integrate the D25 rational-time cuts",
+    "vi": "Nhãn, dấu, hoán vị và scale là đối tượng TOÀN CỤC cố định MỘT LẦN ở cấp tuple, KHÔNG BAO GIỜ canonicalize lại theo prime hay theo denominator thời-gian-hữu-tỉ. Dựng local oracle giữ-nhãn và master phân-tích prime-power, tích hợp các cut thời-gian-hữu-tỉ D25"
+   },
+   {
+    "en": "Measure the net state complexity exactly, counting every new variable the labeling introduces; run a full campaign only if the reachable state tree provably fits the caps. No compute-budget increase; no GLOBAL-WITNESS; BASE-SURVIVOR escalates to D20-R. LRC(13) OPEN",
+    "vi": "Đo net state complexity chính xác, đếm mọi biến mới nhãn đưa vào; chạy chiến dịch đầy đủ chỉ khi cây trạng thái reachable chứng minh vừa cap. Không tăng ngân sách compute; không GLOBAL-WITNESS; BASE-SURVIVOR leo thang tới D20-R. LRC(13) MỞ"
+   }
+  ],
+  "artifacts": 0,
+  "route": "/gates/gate-d26"
  }
 ]

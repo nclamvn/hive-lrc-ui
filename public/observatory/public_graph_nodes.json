@@ -891,6 +891,33 @@
   "valid_to_release": null
  },
  {
+  "id": "gate:gate-d26",
+  "kind": "gate",
+  "label": {
+   "en": "Labeled-root CRT campaign",
+   "vi": "Chiến dịch CRT nghiệm-có-nhãn"
+  },
+  "short_label": {
+   "en": "GATE D26",
+   "vi": "GATE D26"
+  },
+  "status": "current",
+  "evidence": "I2",
+  "scope": "GATE D26",
+  "gate": "gate-d26",
+  "summary": {
+   "en": "Every route so far has paid a heavy price at the reconstruction step, because it rebuilt the symmetric functions of the squared speeds, which live below a very high threshold, roughly the speed bound squared. D26 attacks that threshold directly. The idea is that if the search keeps track globally of which runner is which, a correct and fixed labeling of all thirteen speeds, then each individual speed can be pinned by the Chinese remainder theorem at a much lower threshold, based on the plain speed bound rather than its square. The non-negotiable discipline is that the identity of the runners, their signs, their permutation and their overall scale are decided once, for the whole tuple, at the global level, and are never re-canonicalized separately at each prime or each rational-time denominator, because that is exactly the mistake earlier gates had to unwind. The gate must prove that a single canonical labeled tuple exists and is well defined, pin the exact lower threshold for direct reconstruction, build a local check that preserves the global labels, hold the state in a prime-power factorized master, fold in the rational-time cuts from the previous gate, and measure the true net state complexity, counting every new variable the labeling introduces. A full campaign runs only when the reachable state tree provably fits the fixed limits. No larger compute budget is authorized, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "Mọi đường tới nay đều trả giá nặng ở bước tái dựng, vì nó dựng lại các hàm đối xứng của tốc độ bình phương, sống dưới một ngưỡng rất cao, khoảng chặn tốc độ bình phương. D26 tấn công ngưỡng đó trực tiếp. Ý tưởng là nếu tìm kiếm theo dõi toàn cục người chạy nào là người nào, một nhãn đúng và cố định cho cả mười ba tốc độ, thì mỗi tốc độ riêng có thể ghim bằng định lý phần dư Trung Hoa ở ngưỡng thấp hơn nhiều, dựa trên chặn tốc độ thường thay vì bình phương của nó. Kỷ luật không thương lượng là danh tính người chạy, dấu, hoán vị và scale tổng thể được quyết một lần, cho cả tuple, ở cấp toàn cục, và không bao giờ canonicalize lại riêng tại mỗi prime hay mỗi denominator thời-gian-hữu-tỉ, vì đó chính là lỗi mà các gate trước phải gỡ. Gate phải chứng minh một tuple có-nhãn canonical duy nhất tồn tại và xác định rõ, ghim ngưỡng thấp chính xác cho tái dựng trực tiếp, dựng kiểm cục bộ giữ nhãn toàn cục, giữ trạng thái trong một master phân-tích prime-power, gộp các cut thời-gian-hữu-tỉ từ gate trước, và đo net state complexity thật, đếm mọi biến mới nhãn đưa vào. Một chiến dịch đầy đủ chỉ chạy khi cây trạng thái reachable chứng minh vừa giới hạn cố định. Không ngân sách compute lớn hơn được duyệt, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "Every route so far has paid a heavy price at the reconstruction step, because it rebuilt the symmetric functions of the squared speeds, which live below a very high threshold, roughly the speed bound squared. D26 attacks that threshold directly. The idea is that if the search keeps track globally of which runner is which, a correct and fixed labeling of all thirteen speeds, then each individual speed can be pinned by the Chinese remainder theorem at a much lower threshold, based on the plain speed bound rather than its square. The non-negotiable discipline is that the identity of the runners, their signs, their permutation and their overall scale are decided once, for the whole tuple, at the global level, and are never re-canonicalized separately at each prime or each rational-time denominator, because that is exactly the mistake earlier gates had to unwind. The gate must prove that a single canonical labeled tuple exists and is well defined, pin the exact lower threshold for direct reconstruction, build a local check that preserves the global labels, hold the state in a prime-power factorized master, fold in the rational-time cuts from the previous gate, and measure the true net state complexity, counting every new variable the labeling introduces. A full campaign runs only when the reachable state tree provably fits the fixed limits. No larger compute budget is authorized, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "Mọi đường tới nay đều trả giá nặng ở bước tái dựng, vì nó dựng lại các hàm đối xứng của tốc độ bình phương, sống dưới một ngưỡng rất cao, khoảng chặn tốc độ bình phương. D26 tấn công ngưỡng đó trực tiếp. Ý tưởng là nếu tìm kiếm theo dõi toàn cục người chạy nào là người nào, một nhãn đúng và cố định cho cả mười ba tốc độ, thì mỗi tốc độ riêng có thể ghim bằng định lý phần dư Trung Hoa ở ngưỡng thấp hơn nhiều, dựa trên chặn tốc độ thường thay vì bình phương của nó. Kỷ luật không thương lượng là danh tính người chạy, dấu, hoán vị và scale tổng thể được quyết một lần, cho cả tuple, ở cấp toàn cục, và không bao giờ canonicalize lại riêng tại mỗi prime hay mỗi denominator thời-gian-hữu-tỉ, vì đó chính là lỗi mà các gate trước phải gỡ. Gate phải chứng minh một tuple có-nhãn canonical duy nhất tồn tại và xác định rõ, ghim ngưỡng thấp chính xác cho tái dựng trực tiếp, dựng kiểm cục bộ giữ nhãn toàn cục, giữ trạng thái trong một master phân-tích prime-power, gộp các cut thời-gian-hữu-tỉ từ gate trước, và đo net state complexity thật, đếm mọi biến mới nhãn đưa vào. Một chiến dịch đầy đủ chỉ chạy khi cây trạng thái reachable chứng minh vừa giới hạn cố định. Không ngân sách compute lớn hơn được duyệt, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "route": "/gates/gate-d26",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "claim:C0",
   "kind": "claim",
   "label": {
@@ -2349,11 +2376,38 @@
   "valid_to_release": null
  },
  {
+  "id": "claim:C-D25-MULTIMOD",
+  "kind": "claim",
+  "label": {
+   "en": "D25 multi-modulus consistency PROVED-INTERNAL: the active moduli are kept SEPARATE, each carrying V_i mod q, and only cross-modulus compatibility is enforced (V_i mod gcd(q1,q2) must agree), so the state represents ONE common speed tuple without ever materializing the least common multiple of the denominators",
+   "vi": "Nhất quán đa-modulus D25 PROVED-INTERNAL: các modulus hoạt động giữ RIÊNG, mỗi cái mang V_i mod q, và chỉ áp tương thích chéo-modulus (V_i mod gcd(q1,q2) phải khớp), nên trạng thái biểu diễn MỘT bộ tốc độ chung mà không bao giờ materialize bội chung nhỏ nhất của các denominator"
+  },
+  "short_label": {
+   "en": "C-D25-MULTIMOD",
+   "vi": "C-D25-MULTIMOD"
+  },
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "multi-modulus consistency, one common speed tuple across separate moduli",
+  "gate": "gate-d25",
+  "summary": {
+   "en": "Every clock stays a separate small modulus, tied together only by their common factors, so the speeds stay one shared tuple and the search never collapses into a single giant modulus.",
+   "vi": "Mỗi đồng hồ giữ là một modulus nhỏ riêng, chỉ nối qua thừa số chung, nên các tốc độ giữ là một bộ chung và tìm kiếm không sụp thành một modulus khổng lồ."
+  },
+  "technical_summary": {
+   "en": "D25 multi-modulus consistency PROVED-INTERNAL: the active moduli are kept SEPARATE, each carrying V_i mod q, and only cross-modulus compatibility is enforced (V_i mod gcd(q1,q2) must agree), so the state represents ONE common speed tuple without ever materializing the least common multiple of the denominators",
+   "vi": "Nhất quán đa-modulus D25 PROVED-INTERNAL: các modulus hoạt động giữ RIÊNG, mỗi cái mang V_i mod q, và chỉ áp tương thích chéo-modulus (V_i mod gcd(q1,q2) phải khớp), nên trạng thái biểu diễn MỘT bộ tốc độ chung mà không bao giờ materialize bội chung nhỏ nhất của các denominator"
+  },
+  "route": "/claims/C-D25-MULTIMOD",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "claim:C-D25-COMPOUNDING",
   "kind": "claim",
   "label": {
-   "en": "D25 super-constant compounding VALIDATED-BOUNDED: on reachable-state branches the rational-time clauses COMPOUND (survivor fraction about per-clause-rate to the power K). A greedy adaptive hitting set of about 32 rational times reduced a 4000-branch reachable sample to a handful of survivors, and the measured per-clause survival rate projects about 555 rational-time clauses to bring the 2^84 reachable residue space below the 2^42 enumeration caps, a super-constant reduction versus the single fixed mod-84 clock of D24. Bounded pilot measurement, not a universal theorem",
-   "vi": "Compounding siêu-hằng-số D25 VALIDATED-BOUNDED: trên các nhánh reachable-state các clause thời-gian-hữu-tỉ COMPOUND (tỉ lệ sống sót khoảng tỉ-lệ-mỗi-clause mũ K). Một greedy hitting set thích nghi khoảng 32 thời gian hữu tỉ giảm mẫu 4000 nhánh reachable xuống một nhúm sống sót, và tỉ lệ sống sót mỗi clause đo được dự phóng khoảng 555 clause thời-gian-hữu-tỉ để đưa không gian residue reachable 2^84 xuống dưới cap liệt kê 2^42, một giảm siêu-hằng-số so với đồng hồ mod-84 cố định đơn của D24. Đo pilot có chặn, không phải định lý phổ quát"
+   "en": "D25 clause compounding VALIDATED-BOUNDED (pilot measurements): the rational-time clauses COMPOUND on reachable branches. Measured on the pilot: about 32 greedy rational times reduced a 4000-branch reachable sample to a handful, at about 0.95 per-clause survival. From that rate, roughly 555 clauses would project to bring the 2^84 reachable residue space below the 2^42 caps. That ~555 figure is an EXPLORATORY PROJECTION, NOT a certified bound: it does not yet account for the new residue variables each new denominator introduces, correlations between clauses, the SAT / decision-diagram size, the proof-certificate cost, or keeping one common tuple across all moduli. So the compounding is a genuine qualitative gain over D24, but the campaign-size claim is unproven",
+   "vi": "Compounding clause D25 VALIDATED-BOUNDED (đo pilot): các clause thời-gian-hữu-tỉ COMPOUND trên nhánh reachable. Đo trên pilot: khoảng 32 thời gian hữu tỉ greedy giảm mẫu 4000 nhánh reachable xuống một nhúm, ở khoảng 0.95 sống sót mỗi clause. Từ tỉ lệ đó, khoảng 555 clause sẽ dự phóng đưa không gian residue reachable 2^84 xuống dưới cap 2^42. Con số ~555 đó là DỰ PHÓNG THĂM DÒ, KHÔNG phải bound chứng nhận: nó chưa tính các biến residue mới mỗi denominator mới đưa vào, tương quan giữa các clause, cỡ SAT / decision-diagram, chi phí proof-certificate, hay việc giữ một bộ chung xuyên mọi modulus. Nên compounding là lợi ích chất lượng thật so với D24, nhưng phát biểu cỡ-chiến-dịch chưa chứng minh"
   },
   "short_label": {
    "en": "C-D25-COMPOUNDING",
@@ -2361,15 +2415,15 @@
   },
   "status": "validated_bounded",
   "evidence": "I2",
-  "scope": "measured super-constant compounding on reachable branches",
+  "scope": "pilot-measured compounding; the ~555 figure is an EXPLORATORY projection",
   "gate": "gate-d25",
   "summary": {
-   "en": "Unlike the fixed clocks, adding many separate rational-time clauses multiplies the pruning, so a few hundred of them project to shrink the search below the limits, a real qualitative gain.",
-   "vi": "Không như đồng hồ cố định, thêm nhiều clause thời-gian-hữu-tỉ riêng nhân pruning lên, nên vài trăm cái dự phóng thu nhỏ tìm kiếm dưới giới hạn, một lợi ích chất lượng thật."
+   "en": "Adding many separate clocks clearly multiplies the pruning, and a rough count suggests a few hundred could shrink the search below the limits. That count is an exploratory estimate, not a proof, since it ignores several real costs.",
+   "vi": "Thêm nhiều đồng hồ riêng rõ ràng nhân pruning lên, và một đếm thô gợi ý vài trăm cái có thể thu nhỏ tìm kiếm dưới giới hạn. Đếm đó là ước lượng thăm dò, không phải chứng minh, vì nó bỏ qua vài chi phí thật."
   },
   "technical_summary": {
-   "en": "D25 super-constant compounding VALIDATED-BOUNDED: on reachable-state branches the rational-time clauses COMPOUND (survivor fraction about per-clause-rate to the power K). A greedy adaptive hitting set of about 32 rational times reduced a 4000-branch reachable sample to a handful of survivors, and the measured per-clause survival rate projects about 555 rational-time clauses to bring the 2^84 reachable residue space below the 2^42 enumeration caps, a super-constant reduction versus the single fixed mod-84 clock of D24. Bounded pilot measurement, not a universal theorem",
-   "vi": "Compounding siêu-hằng-số D25 VALIDATED-BOUNDED: trên các nhánh reachable-state các clause thời-gian-hữu-tỉ COMPOUND (tỉ lệ sống sót khoảng tỉ-lệ-mỗi-clause mũ K). Một greedy hitting set thích nghi khoảng 32 thời gian hữu tỉ giảm mẫu 4000 nhánh reachable xuống một nhúm sống sót, và tỉ lệ sống sót mỗi clause đo được dự phóng khoảng 555 clause thời-gian-hữu-tỉ để đưa không gian residue reachable 2^84 xuống dưới cap liệt kê 2^42, một giảm siêu-hằng-số so với đồng hồ mod-84 cố định đơn của D24. Đo pilot có chặn, không phải định lý phổ quát"
+   "en": "D25 clause compounding VALIDATED-BOUNDED (pilot measurements): the rational-time clauses COMPOUND on reachable branches. Measured on the pilot: about 32 greedy rational times reduced a 4000-branch reachable sample to a handful, at about 0.95 per-clause survival. From that rate, roughly 555 clauses would project to bring the 2^84 reachable residue space below the 2^42 caps. That ~555 figure is an EXPLORATORY PROJECTION, NOT a certified bound: it does not yet account for the new residue variables each new denominator introduces, correlations between clauses, the SAT / decision-diagram size, the proof-certificate cost, or keeping one common tuple across all moduli. So the compounding is a genuine qualitative gain over D24, but the campaign-size claim is unproven",
+   "vi": "Compounding clause D25 VALIDATED-BOUNDED (đo pilot): các clause thời-gian-hữu-tỉ COMPOUND trên nhánh reachable. Đo trên pilot: khoảng 32 thời gian hữu tỉ greedy giảm mẫu 4000 nhánh reachable xuống một nhúm, ở khoảng 0.95 sống sót mỗi clause. Từ tỉ lệ đó, khoảng 555 clause sẽ dự phóng đưa không gian residue reachable 2^84 xuống dưới cap 2^42. Con số ~555 đó là DỰ PHÓNG THĂM DÒ, KHÔNG phải bound chứng nhận: nó chưa tính các biến residue mới mỗi denominator mới đưa vào, tương quan giữa các clause, cỡ SAT / decision-diagram, chi phí proof-certificate, hay việc giữ một bộ chung xuyên mọi modulus. Nên compounding là lợi ích chất lượng thật so với D24, nhưng phát biểu cỡ-chiến-dịch chưa chứng minh"
   },
   "route": "/claims/C-D25-COMPOUNDING",
   "valid_from_release": null,
@@ -2399,6 +2453,33 @@
    "vi": "Đóng trong-cap đầy đủ MỞ: dự phóng thuận lợi nhưng chưa chứng nhận. Greedy hitting set để lại vài sống sót trên mẫu (pool denominator hữu hạn không cắt mọi nhánh; phần còn lại cần pool lớn hơn hoặc cut số học D23), và chi phí SAT / decision-diagram của multi-modulus master ở số clause đầy đủ chưa đo trong cap. D25-PARTIAL: hướng được kiểm, đóng đầy đủ chưa chứng minh"
   },
   "route": "/claims/C-D25-CLOSURE",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D26-LABELED-ROOT",
+  "kind": "claim",
+  "label": {
+   "en": "D26 labeled-root CRT campaign OPEN: instead of waiting to reconstruct all squared-speed coefficients past the 2H threshold (about B13 squared), maintain one correct GLOBAL labeling of the 13 speeds and CRT each V_i directly at a threshold based on B13, which is much lower. Labels, signs, permutation and scale are GLOBAL objects fixed ONCE at the tuple level, never re-canonicalized per prime or per denominator. D26 must prove the canonical labeled tuple, pin the exact direct-CRT threshold, build a label-preserving local oracle, use a prime-power factorized master, integrate the rational-time cuts, and measure the net state complexity exactly including the new variables; a full campaign runs only if the reachable state tree provably fits the caps",
+   "vi": "Chiến dịch CRT nghiệm-có-nhãn D26 MỞ: thay vì đợi tái dựng mọi hệ số tốc-độ-bình-phương sau ngưỡng 2H (khoảng B13 bình phương), giữ một nhãn TOÀN CỤC đúng cho 13 tốc độ và CRT từng V_i trực tiếp ở ngưỡng dựa trên B13, thấp hơn nhiều. Nhãn, dấu, hoán vị và scale là các đối tượng TOÀN CỤC cố định MỘT LẦN ở cấp tuple, không bao giờ canonicalize lại theo prime hay theo denominator. D26 phải chứng minh tuple có-nhãn canonical, ghim ngưỡng CRT-trực-tiếp chính xác, dựng local oracle giữ-nhãn, dùng master phân-tích prime-power, tích hợp các cut thời-gian-hữu-tỉ, và đo net state complexity chính xác kể cả biến mới; một chiến dịch đầy đủ chỉ chạy nếu cây trạng thái reachable chứng minh vừa cap"
+  },
+  "short_label": {
+   "en": "C-D26-LABELED-ROOT",
+   "vi": "C-D26-LABELED-ROOT"
+  },
+  "status": "open",
+  "evidence": "I2",
+  "scope": "labeled-root direct-CRT campaign at the B13 threshold",
+  "gate": "gate-d26",
+  "summary": {
+   "en": "Next idea: keep track of which runner is which globally, so each speed can be pinned by the Chinese remainder theorem at a much lower threshold, without ever re-deciding the labels, signs or scale prime by prime.",
+   "vi": "Ý tiếp: theo dõi người chạy nào là người nào một cách toàn cục, để mỗi tốc độ được ghim bằng định lý phần dư Trung Hoa ở ngưỡng thấp hơn nhiều, mà không bao giờ quyết lại nhãn, dấu hay scale theo từng prime."
+  },
+  "technical_summary": {
+   "en": "D26 labeled-root CRT campaign OPEN: instead of waiting to reconstruct all squared-speed coefficients past the 2H threshold (about B13 squared), maintain one correct GLOBAL labeling of the 13 speeds and CRT each V_i directly at a threshold based on B13, which is much lower. Labels, signs, permutation and scale are GLOBAL objects fixed ONCE at the tuple level, never re-canonicalized per prime or per denominator. D26 must prove the canonical labeled tuple, pin the exact direct-CRT threshold, build a label-preserving local oracle, use a prime-power factorized master, integrate the rational-time cuts, and measure the net state complexity exactly including the new variables; a full campaign runs only if the reachable state tree provably fits the caps",
+   "vi": "Chiến dịch CRT nghiệm-có-nhãn D26 MỞ: thay vì đợi tái dựng mọi hệ số tốc-độ-bình-phương sau ngưỡng 2H (khoảng B13 bình phương), giữ một nhãn TOÀN CỤC đúng cho 13 tốc độ và CRT từng V_i trực tiếp ở ngưỡng dựa trên B13, thấp hơn nhiều. Nhãn, dấu, hoán vị và scale là các đối tượng TOÀN CỤC cố định MỘT LẦN ở cấp tuple, không bao giờ canonicalize lại theo prime hay theo denominator. D26 phải chứng minh tuple có-nhãn canonical, ghim ngưỡng CRT-trực-tiếp chính xác, dựng local oracle giữ-nhãn, dùng master phân-tích prime-power, tích hợp các cut thời-gian-hữu-tỉ, và đo net state complexity chính xác kể cả biến mới; một chiến dịch đầy đủ chỉ chạy nếu cây trạng thái reachable chứng minh vừa cap"
+  },
+  "route": "/claims/C-D26-LABELED-ROOT",
   "valid_from_release": null,
   "valid_to_release": null
  },
