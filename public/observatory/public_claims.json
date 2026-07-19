@@ -708,21 +708,40 @@
  },
  {
   "claim_id": "C-D21-SEED",
-  "status": "open",
+  "status": "proved_internal",
   "evidence": "I2",
-  "scope": "complete initial projective-signature seed set",
+  "scope": "seed completeness theorem, all bounded counterexamples",
   "gate_introduced": "gate-d21",
   "gate_last_changed": "gate-d21",
   "depends_on": [
    "C-D21-PILOT"
   ],
   "statement": {
-   "en": "Seed completeness OPEN (D21-S): generate the COMPLETE set of initial projective signatures without returning to full local-cover enumeration. Two routes: meet-in-the-middle (6+7 split preserving coverage mask, multiplicity, polynomial factor, repeated roots, projective stratum, scale orbit) and a certified small-prime seed bank (keeping both applicable and inapplicable branches, never assuming a small prime applies to every tuple). A fast but incomplete seed set is only a sample; a missed initial signature could be the missed global obstruction",
-   "vi": "Đầy đủ seed MỞ (D21-S): sinh tập ĐẦY ĐỦ chữ ký xạ ảnh ban đầu mà không quay lại liệt kê phủ cục bộ đầy đủ. Hai route: gặp-nhau-ở-giữa (chia 6+7 giữ coverage mask, bội, nhân tử đa thức, nghiệm lặp, stratum xạ ảnh, scale orbit) và một seed bank prime-nhỏ chứng nhận (giữ cả nhánh applicable và inapplicable, không mặc định prime nhỏ áp dụng cho mọi tuple). Một tập seed nhanh nhưng không đầy đủ chỉ là mẫu; một chữ ký ban đầu bỏ sót có thể là obstruction toàn cục bỏ sót"
+   "en": "Seed completeness THEOREM proved: every bounded global counterexample enters at least one retained seed. At each seed prime it is either applicable, retaining its full 13-multiset signature under complete enumeration, or inapplicable, recording that the prime divides the global speed product against FA-OB. Completeness carries padding, the QR scale orbit, permutation and sign removal by squaring, duplicate-root multiplicity and every projective singular stratum. This is unconditional on the enumeration being affordable",
+   "vi": "Định lý đầy đủ seed đã chứng minh: mọi phản ví dụ toàn cục có chặn vào ít nhất một seed được giữ. Tại mỗi seed prime nó hoặc applicable, giữ chữ ký 13-multiset đầy đủ dưới liệt kê đầy đủ, hoặc inapplicable, ghi rằng prime chia tích tốc độ toàn cục theo FA-OB. Đầy đủ mang theo padding, quỹ đạo scale QR, loại hoán vị và dấu bằng bình phương, bội nghiệm lặp và mọi stratum xạ ảnh suy biến. Điều này không phụ thuộc việc liệt kê có kham nổi hay không"
   },
   "plain_language": {
-   "en": "The last gap: list every possible starting fingerprint completely and cheaply — miss one and you could miss the counterexample.",
-   "vi": "Khoảng trống cuối: liệt kê mọi dấu vân tay khởi đầu đầy đủ và rẻ — bỏ sót một là có thể bỏ sót phản ví dụ."
+   "en": "It is proved that a real counterexample can never slip past the seeding step — every one leaves a fingerprint that a complete scan would keep.",
+   "vi": "Đã chứng minh một phản ví dụ thật không bao giờ lọt qua bước seed — mỗi cái để lại dấu vân tay mà một lần quét đầy đủ sẽ giữ."
+  }
+ },
+ {
+  "claim_id": "C-D21-SEED-BLOCKED",
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "measured, both complete seed routes, frozen caps",
+  "gate_introduced": "gate-d21",
+  "gate_last_changed": "gate-d21",
+  "depends_on": [
+   "C-D21-SEED"
+  ],
+  "statement": {
+   "en": "D21-S-BLOCKED (measured): both complete seed routes exceed the frozen caps. The distinct 13-multiset signature count grows from 6 at p=23 to 15511 at p=29, and the complete seed set is the multiplicative CRT product over the small primes needed to pass the reconstruction threshold, at least 2^519. The meet-in-the-middle half-space is about 1e9 to 1e17 at inventory primes. The seed completeness theorem still holds; the complete seed set is simply too large to materialize. Not a compatibility claim, not a counterexample",
+   "vi": "D21-S-BLOCKED (đo được): cả hai route seed đầy đủ vượt cap đã đóng băng. Số chữ ký 13-multiset phân biệt tăng từ 6 tại p=23 lên 15511 tại p=29, và tập seed đầy đủ là tích CRT trên các prime nhỏ cần để vượt ngưỡng tái dựng, ít nhất 2^519. Nửa-không-gian gặp-nhau-ở-giữa khoảng 1e9 tới 1e17 tại prime inventory. Định lý đầy đủ seed vẫn đúng; tập seed đầy đủ đơn giản là quá lớn để hiện thực hóa. Không phải tuyên bố tương thích, không phải phản ví dụ"
+  },
+  "plain_language": {
+   "en": "Listing every starting fingerprint completely is provably necessary but astronomically large, so the seeding step is blocked by cost, not by mathematics.",
+   "vi": "Liệt kê mọi dấu vân tay khởi đầu đầy đủ là cần thiết đã chứng minh nhưng lớn thiên văn, nên bước seed bị chặn bởi chi phí, không phải toán học."
   }
  },
  {

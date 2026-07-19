@@ -792,6 +792,18 @@
   "valid_to_release": null
  },
  {
+  "id": "intro:C-D21-SEED-BLOCKED",
+  "source": "gate:gate-d21",
+  "target": "claim:C-D21-SEED-BLOCKED",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d21.",
+   "vi": "Xuất hiện tại gate-d21."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "intro:C-D21-CAMPAIGN",
   "source": "gate:gate-d21",
   "target": "claim:C-D21-CAMPAIGN",
@@ -1236,19 +1248,31 @@
   "valid_to_release": null
  },
  {
-  "id": "dep:36:C-D21-SEED->C-D21-CAMPAIGN",
+  "id": "dep:36:C-D21-SEED->C-D21-SEED-BLOCKED",
   "source": "claim:C-D21-SEED",
-  "target": "claim:C-D21-CAMPAIGN",
+  "target": "claim:C-D21-SEED-BLOCKED",
   "relation": "reduces_to",
   "explanation": {
-   "en": "A complete certified seed set is the precondition for a feasible full campaign.",
-   "vi": "Một tập seed chứng nhận đầy đủ là điều kiện tiên quyết cho chiến dịch đầy đủ khả thi."
+   "en": "The completeness theorem is proved, but generating the complete seed set is measured to exceed the caps.",
+   "vi": "Định lý đầy đủ đã chứng minh, nhưng sinh tập seed đầy đủ được đo là vượt cap."
   },
-  "valid_from_release": "REL-D21-001",
+  "valid_from_release": "REL-D21-002",
   "valid_to_release": null
  },
  {
-  "id": "dep:37:C-D21-CAMPAIGN->C0",
+  "id": "dep:37:C-D21-SEED-BLOCKED->C-D21-CAMPAIGN",
+  "source": "claim:C-D21-SEED-BLOCKED",
+  "target": "claim:C-D21-CAMPAIGN",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "With complete seeding cost-blocked, a feasible full campaign remains out of reach under the frozen caps.",
+   "vi": "Với seed đầy đủ bị chặn chi phí, một chiến dịch đầy đủ khả thi vẫn ngoài tầm dưới cap đóng băng."
+  },
+  "valid_from_release": "REL-D21-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:38:C-D21-CAMPAIGN->C0",
   "source": "claim:C-D21-CAMPAIGN",
   "target": "claim:C0",
   "relation": "reduces_to",
