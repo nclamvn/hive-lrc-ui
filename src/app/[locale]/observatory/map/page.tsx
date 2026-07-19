@@ -16,7 +16,7 @@ export default async function MapPage({ params }: { params: Promise<{ locale: st
       <h1 className="og-page-h1">{t(L, "The attack as a dependency graph", "Cuộc tấn công dưới dạng đồ thị phụ thuộc")}</h1>
       <p className="og-page-lede">{t(L,
         "A hand-laid map of the research: the gate timeline along the top, and below it the claim dependency chain, how each theorem supports, supersedes or reduces to the next, down to the open target LRC(13).",
-        "Bản đồ đặt tay của nghiên cứu: trục thời gian gate phía trên, và bên dưới là chuỗi phụ thuộc claim, mỗi định lý nâng đỡ, thay thế hay quy về cái tiếp theo thế nào, tới tận mục tiêu mở LRC(13).")}</p>
+        "Bản đồ nghiên cứu được sắp đặt thủ công: phía trên là trục thời gian các gate, bên dưới là chuỗi phụ thuộc giữa các mệnh đề, cho thấy mỗi định lý củng cố, thay thế hay quy về cái kế tiếp ra sao, dẫn tới mục tiêu còn bỏ ngỏ LRC(13).")}</p>
       <div style={{ marginTop: 20 }}>
         <CuratedMap nodes={nodes} edges={edges} locale={L} />
       </div>

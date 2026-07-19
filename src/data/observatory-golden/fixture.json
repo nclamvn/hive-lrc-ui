@@ -16,6 +16,35 @@
     "title": "A live observatory of a Human–AI attack\non the Lonely Runner Conjecture.",
     "subtitle": "Not a solution, a research program. Follow each theorem, computational check, correction and dead end, with exact scope and evidence at every step."
   },
+  "problem": {
+    "kicker": "THE LONELY RUNNER CONJECTURE",
+    "title": "The problem",
+    "lede": "Picture runners on a circular track, starting together at distinct constant speeds. The conjecture says each runner is, at some moment, lonely: at least 1/n of the lap from every other runner. Simple to state, and still unproven beyond 7 runners.",
+    "impact": "Its ideas reach into view-obstruction geometry, Diophantine approximation, and the flows and colourings of graphs.",
+    "caption": "LRC(3): 3 speeds, 4 runners, lonely distance 1/4",
+    "milestones": [
+      { "year": "1967", "label": "Posed", "note": "J. M. Wills, Diophantine approximation" },
+      { "year": "1970s", "label": "View-obstruction form", "note": "T. W. Cusick" },
+      { "year": "1998", "label": "Named the Lonely Runner", "note": "L. Goddyn" },
+      { "year": "2008", "label": "Proved for up to 7 runners", "note": "Barajas-Serra; smaller cases earlier" },
+      { "year": "Now", "label": "This project: LRC(13)", "note": "14 runners, beyond the proved range, OPEN" }
+    ]
+  },
+  "latest": {
+    "kicker": "LATEST RESULT",
+    "phase": "GATE D26",
+    "title": "Labeled-root CRT campaign",
+    "status": "partial",
+    "statusLabel": "PARTIAL",
+    "plain": "The shortcut has a hidden cost: keeping the runner labels straight explodes the search far more than the prime saving helps, so this route does not fit the limits. LRC(13) stays open.",
+    "stats": [
+      { "value": "I2", "label": "evidence" },
+      { "value": "2×", "label": "verifiers" },
+      { "value": "8", "label": "artifacts" }
+    ],
+    "href": "/en/observatory/gates",
+    "cta": "Read the gate →"
+  },
   "metrics": [
     {
       "label": "TARGET CLAIM",

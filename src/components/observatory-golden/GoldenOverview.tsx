@@ -3,12 +3,17 @@ import { Crosshair, Sparkles, ShieldCheck, Boxes, Sigma, Binary, Network, GitBra
 import type { GoldenVM } from "@/lib/goldenOverviewData";
 import type { Locale } from "@/lib/observatory";
 import { OverviewAttackMap } from "@/components/observatory-golden/OverviewAttackMap";
+import { LonelyRunnerCircle } from "@/components/observatory/LonelyRunnerCircle";
 
 const ICON: Record<string, React.ComponentType<{ size?: number; strokeWidth?: number; className?: string }>> = {
   crosshair: Crosshair, sparkles: Sparkles, "shield-check": ShieldCheck, boxes: Boxes,
 };
 
-export function GoldenOverview({ locale, vm }: { locale: Locale; vm: GoldenVM }) {
+const STATUS_TOK: Record<string, string> = {
+  pass: "tok-validated", partial: "tok-partial", blocked: "tok-blocked", current: "tok-current", refuted: "tok-refuted",
+};
+
+export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale; vm: GoldenVM; golden?: boolean }) {
   const t = (en: string, vi: string) => (locale === "vi" ? vi : en);
   const base = `/${locale}/observatory`;
 
@@ -25,6 +30,30 @@ export function GoldenOverview({ locale, vm }: { locale: Locale; vm: GoldenVM })
         <img className="og-vitruvian" src="/vitruvian.png" alt="" aria-hidden width={172} height={170} />
       </section>
 
+      {/* the problem: live explainer + history timeline */}
+      <section className="og-problem" data-region="problem">
+        <div className="og-prob-viz">
+          <LonelyRunnerCircle static={golden} labels={{ lonely: t("Lonely", "Cô đơn"), caption: vm.problem.caption }} />
+        </div>
+        <div className="og-prob-body">
+          <div className="og-eyebrow">{vm.problem.kicker}</div>
+          <h2 className="og-prob-title">{vm.problem.title}</h2>
+          <p className="og-prob-lede">{vm.problem.lede}</p>
+          <ol className="og-timeline">
+            {vm.problem.milestones.map((m) => (
+              <li className="og-tl-row" key={m.year + m.label}>
+                <span className="og-tl-year">{m.year}</span>
+                <span className="og-tl-main">
+                  <span className="og-tl-label">{m.label}</span>
+                  {m.note && <span className="og-tl-note">{m.note}</span>}
+                </span>
+              </li>
+            ))}
+          </ol>
+          <p className="og-prob-impact">{vm.problem.impact}</p>
+        </div>
+      </section>
+
       {/* metric cards */}
       <section className="og-metrics" data-region="metrics">
         {vm.metrics.map((m) => {
@@ -39,6 +68,28 @@ export function GoldenOverview({ locale, vm }: { locale: Locale; vm: GoldenVM })
             </div>
           );
         })}
+      </section>
+
+      {/* latest result — featured */}
+      <section className="og-featured" data-region="latest-result">
+        <div className="og-feat-main">
+          <div className="og-feat-head">
+            <span className="og-feat-kicker">{vm.latest.kicker}</span>
+            <span className="og-feat-phase">{vm.latest.phase}</span>
+            <span className={`og-chip ${STATUS_TOK[vm.latest.status] ?? "tok-current"}`}>{vm.latest.statusLabel}</span>
+          </div>
+          <h3 className="og-feat-title">{vm.latest.title}</h3>
+          <p className="og-feat-plain">{vm.latest.plain}</p>
+          <Link className="og-feat-cta" href={vm.latest.href}>{vm.latest.cta}</Link>
+        </div>
+        <div className="og-feat-stats">
+          {vm.latest.stats.map((s) => (
+            <div className="og-feat-stat" key={s.label}>
+              <span className="v">{s.value}</span>
+              <span className="l">{s.label}</span>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* map + feed */}

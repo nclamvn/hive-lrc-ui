@@ -20,7 +20,7 @@ export default async function ClaimsIndex({ params }: { params: Promise<{ locale
       <h1 className="og-page-h1">{t(L, "Public claim ledger", "Sổ claim công khai")}</h1>
       <p className="og-page-lede">{t(L,
         "Every statement carries an exact status, evidence class and scope. Proved, validated-by-computation and provisional are kept distinct, superseded claims are retained and linked to their successor.",
-        "Mỗi phát biểu mang trạng thái, lớp evidence và phạm vi chính xác. Đã chứng minh, kiểm-bằng-tính-toán và tạm thời được giữ tách biệt, claim bị thay được giữ lại và liên kết tới cái thay thế.")}</p>
+        "Mỗi phát biểu mang một trạng thái, lớp evidence và phạm vi chính xác. Đã chứng minh, đã thẩm định bằng tính toán, và tạm thời được giữ tách biệt; claim bị thay thế vẫn được giữ lại và liên kết tới cái kế nhiệm.")}</p>
       <div className="og-grid" style={{ marginTop: 26 }}>
         {sorted.map((c) => (
           <Link key={c.claim_id} href={`${base}/claims/${c.claim_id}`} className={`og-tile ${c.status === "superseded" ? "tok-superseded" : ""}`} style={c.status === "superseded" ? { opacity: 0.72 } : undefined}>

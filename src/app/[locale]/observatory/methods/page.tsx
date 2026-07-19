@@ -30,7 +30,7 @@ export default async function Methods({ params }: { params: Promise<{ locale: st
       <h1 className="og-page-h1">{t(L, "How the attack changed shape", "Cuộc tấn công đổi hình thế nào")}</h1>
       <p className="og-page-lede">{t(L,
         "The project did not push one method harder, it kept re-representing the problem. Each turn records why the previous representation stopped and what the new one exposed.",
-        "Dự án không đẩy một phương pháp mạnh hơn, nó liên tục biểu diễn lại bài toán. Mỗi lần chuyển ghi rõ vì sao cách cũ dừng và cách mới phơi bày điều gì.")}</p>
+        "Dự án không cố ép một phương pháp duy nhất mạnh hơn, mà liên tục biểu diễn lại bài toán theo cách mới. Mỗi bước chuyển đều ghi rõ vì sao cách cũ bế tắc và cách mới hé lộ thêm điều gì.")}</p>
 
       <div className="og-sec">{t(L, "Compression lens", "Ống kính nén")}</div>
       <div className="og-block og-block-pad">

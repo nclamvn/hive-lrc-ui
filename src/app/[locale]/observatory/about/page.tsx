@@ -37,7 +37,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
           <h2>{t(L, "Standing status", "Trạng thái thường trực")}</h2>
           <p className="og-tech">{t(L,
             "LRC(13) remains OPEN. The project has not solved it. It has built verifiable infrastructure and narrowed the mathematical obstruction, one reviewed gate at a time.",
-            "LRC(13) vẫn MỞ. Dự án chưa giải nó. Dự án đã xây hạ tầng kiểm chứng được và thu hẹp trở ngại toán học, từng gate đã duyệt một.")}</p>
+            "LRC(13) vẫn còn MỞ. Dự án chưa giải được nó. Dự án đã xây dựng hạ tầng kiểm chứng được và thu hẹp dần trở ngại toán học, qua từng gate đã được rà soát.")}</p>
         </div>
         <aside className="og-about-art">
           {/* eslint-disable-next-line @next/next/no-img-element */}

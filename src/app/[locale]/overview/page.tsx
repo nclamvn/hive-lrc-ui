@@ -21,7 +21,7 @@ export default async function OverviewPage({
   const vm = buildGoldenVM(locale as Locale, golden);
   return (
     <ObservatoryShell locale={locale as Locale} page="observatory-overview" golden={golden}>
-      <GoldenOverview locale={locale as Locale} vm={vm} />
+      <GoldenOverview locale={locale as Locale} vm={vm} golden={golden} />
     </ObservatoryShell>
   );
 }

@@ -18,7 +18,7 @@ export default async function Journal({ params }: { params: Promise<{ locale: st
       <h1 className="og-page-h1">{t(L, "Edited research log", "Nhật ký nghiên cứu biên tập")}</h1>
       <p className="og-page-lede">{t(L,
         "Every entry is an Owner-approved release, not a raw log tail. Corrections and withdrawals appear at parity with new theorems, that is what makes the record trustworthy.",
-        "Mỗi mục là một release được Owner duyệt, không phải log thô. Sửa chữa và rút claim hiển thị ngang hàng với định lý mới, chính điều đó tạo độ tin cậy.")}</p>
+        "Mỗi mục là một release đã được Owner duyệt, không phải bản ghi thô chưa biên tập. Sửa chữa và rút claim hiển thị ngang hàng với định lý mới; chính điều đó làm hồ sơ đáng tin.")}</p>
       <div className="og-block" style={{ marginTop: 24 }}>
         {feed.map((r) => (
           <div className="og-feedrow" key={r.id}>
