@@ -348,6 +348,18 @@
   "valid_to_release": null
  },
  {
+  "id": "arc:gate-d22->gate-d23",
+  "source": "gate:gate-d22",
+  "target": "gate:gate-d23",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "intro:C0",
   "source": "gate:scan",
   "target": "claim:C0",
@@ -840,6 +852,42 @@
   "valid_to_release": null
  },
  {
+  "id": "intro:C-D22-PILOT",
+  "source": "gate:gate-d22",
+  "target": "claim:C-D22-PILOT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d22.",
+   "vi": "Xuất hiện tại gate-d22."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D22-CRT-NO-PRUNING",
+  "source": "gate:gate-d22",
+  "target": "claim:C-D22-CRT-NO-PRUNING",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d22.",
+   "vi": "Xuất hiện tại gate-d22."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D23-EARLY-CUTS",
+  "source": "gate:gate-d23",
+  "target": "claim:C-D23-EARLY-CUTS",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d23.",
+   "vi": "Xuất hiện tại gate-d23."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "dep:0:C1->C2",
   "source": "claim:C1",
   "target": "claim:C2",
@@ -1308,19 +1356,55 @@
   "valid_to_release": null
  },
  {
-  "id": "dep:39:C-D22-IMPLICIT-STATE->C0",
+  "id": "dep:39:C-D22-IMPLICIT-STATE->C-D22-PILOT",
   "source": "claim:C-D22-IMPLICIT-STATE",
-  "target": "claim:C0",
-  "relation": "reduces_to",
+  "target": "claim:C-D22-PILOT",
+  "relation": "supports",
   "explanation": {
-   "en": "Implicit global-signature elimination is the current route toward the open target.",
-   "vi": "Loại chữ ký toàn cục implicit là đường hiện tại hướng tới mục tiêu mở."
+   "en": "The proved-sound architecture is validated on a bounded certified pilot.",
+   "vi": "Kiến trúc chứng-minh-vững được kiểm trên một pilot chứng nhận có chặn."
   },
-  "valid_from_release": "REL-D22-001",
+  "valid_from_release": "REL-D22-002",
   "valid_to_release": null
  },
  {
-  "id": "dep:40:C-D21-CAMPAIGN->C0",
+  "id": "dep:40:C-D22-PILOT->C-D22-CRT-NO-PRUNING",
+  "source": "claim:C-D22-PILOT",
+  "target": "claim:C-D22-CRT-NO-PRUNING",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "The pilot measures the crux: cross-prime CRT alone prunes nothing, so a global check must come before reconstruction.",
+   "vi": "Pilot đo mấu chốt: CRT liên-prime đơn thuần không loại gì, nên một kiểm toàn cục phải vào trước tái dựng."
+  },
+  "valid_from_release": "REL-D22-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:41:C-D22-CRT-NO-PRUNING->C-D23-EARLY-CUTS",
+  "source": "claim:C-D22-CRT-NO-PRUNING",
+  "target": "claim:C-D23-EARLY-CUTS",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "At least two independent global constraints exist before 2H: 13-integer-square realizability and level-14 impropriety. D23 applies them early.",
+   "vi": "Có ít nhất hai ràng buộc toàn cục độc lập trước 2H: khả năng sinh 13-bình-phương-nguyên và impropriety level-14. D23 áp chúng sớm."
+  },
+  "valid_from_release": "REL-D23-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:42:C-D23-EARLY-CUTS->C0",
+  "source": "claim:C-D23-EARLY-CUTS",
+  "target": "claim:C0",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "Early global realizability cuts are the current route toward the open target.",
+   "vi": "Cut khả-dĩ toàn cục sớm là đường hiện tại hướng tới mục tiêu mở."
+  },
+  "valid_from_release": "REL-D23-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:43:C-D21-CAMPAIGN->C0",
   "source": "claim:C-D21-CAMPAIGN",
   "target": "claim:C0",
   "relation": "reduces_to",

@@ -793,7 +793,7 @@
    "en": "GATE D22",
    "vi": "GATE D22"
   },
-  "status": "current",
+  "status": "partial",
   "evidence": "I2",
   "scope": "GATE D22",
   "gate": "gate-d22",
@@ -806,6 +806,33 @@
    "vi": "D21-S cho thấy viết ra họ đầy đủ các dấu vân tay khởi đầu là lớn thiên văn, nhưng điều đó chỉ chặn hai cách tường minh để hiện thực hóa nó, không phải mọi phương pháp. Tích các tập dấu vân tay theo từng prime không phải không gian trạng thái ai đó phải dựng; các ràng buộc liên kết các prime có thể loại phần lớn trạng thái trước khi chúng được sinh. D22 đảo thứ tự một lần nữa. Thay vì liệt kê mọi dấu vân tay khởi đầu rồi lọc, nó giữ đối tượng chưa biết có chặn dạng ký hiệu, chiếu nó lên từng prime một, hỏi câu hỏi feasibility cục bộ thu hẹp nhanh, và cắt bỏ các trạng thái bất khả với một chứng minh cho mỗi cut. Hai bức tranh symbolic pilot song song: một coefficient master mang các hàm đối xứng của tốc độ bình phương, và một root master mang chính các tốc độ bình phương. Mỗi bài con cục bộ trả về một match witness, một empty chứng nhận, hoặc một open trung thực, và mọi cut pruning phải mang một định lý và một proof hash, nên không gì bị loại mà không có lý do. Không tăng ngân sách compute, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
   },
   "route": "/gates/gate-d22",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "gate:gate-d23",
+  "kind": "gate",
+  "label": {
+   "en": "Early global realizability cuts",
+   "vi": "Cut khả-dĩ toàn cục sớm"
+  },
+  "short_label": {
+   "en": "GATE D23",
+   "vi": "GATE D23"
+  },
+  "status": "current",
+  "evidence": "I2",
+  "scope": "GATE D23",
+  "gate": "gate-d23",
+  "summary": {
+   "en": "D22 was limited because its only genuine global check waited until the final reconstruction step, and until then matching fingerprints prime by prime removes nothing. The correction is that more than one global check is available early, before the reconstruction threshold. A symbolic state can be ruled out long before the whole speed tuple is reconstructed, for either of two independent reasons. First, arithmetic realizability: its symmetric-function values simply cannot come from thirteen bounded integer squares, which classical inequalities among symmetric functions can often certify. Second, early impropriety on the refinement grids: it already fails on the finer time grid at level fourteen, the exact place where the p=197 base cover turned out to be proper, long before any tuple is reconstructed. D23 runs both branches in parallel, carrying the global residue on the level fourteen, twenty-eight and forty-two grids alongside the residue modulo each prime, and cutting a symbolic state the moment either global check refutes it, with a theorem and a proof hash for every cut. The mandatory regression is that the p=197 witness, a genuine base cover that is proper at level fourteen, must trigger an early cut before full reconstruction. No compute budget increase, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "D22 bị giới hạn vì kiểm toàn cục thật duy nhất của nó đợi tới bước tái dựng cuối, và cho tới đó khớp dấu vân tay theo từng prime không loại gì. Sửa chữa là có nhiều hơn một kiểm toàn cục sẵn sớm, trước ngưỡng tái dựng. Một trạng thái symbolic có thể bị loại rất lâu trước khi tái dựng cả tuple tốc độ, vì một trong hai lý do độc lập. Thứ nhất, khả năng sinh số học: các giá trị hàm đối xứng của nó đơn giản không thể đến từ mười ba bình phương số nguyên có chặn, điều mà các bất đẳng thức cổ điển giữa các hàm đối xứng thường chứng nhận được. Thứ hai, impropriety sớm trên các refinement grid: nó đã hỏng trên lưới thời gian tinh hơn tại level mười bốn, đúng nơi phủ nền p=197 hóa ra proper, rất lâu trước khi tái dựng tuple nào. D23 chạy cả hai nhánh song song, mang residue toàn cục trên các lưới level mười bốn, hai tám và bốn hai cùng residue modulo mỗi prime, và cắt một trạng thái symbolic ngay khi một trong hai kiểm toàn cục bác nó, với một định lý và một proof hash cho mỗi cut. Regression bắt buộc là nhân chứng p=197, một phủ nền thật proper tại level mười bốn, phải kích hoạt một cut sớm trước tái dựng đầy đủ. Không tăng ngân sách compute, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "D22 was limited because its only genuine global check waited until the final reconstruction step, and until then matching fingerprints prime by prime removes nothing. The correction is that more than one global check is available early, before the reconstruction threshold. A symbolic state can be ruled out long before the whole speed tuple is reconstructed, for either of two independent reasons. First, arithmetic realizability: its symmetric-function values simply cannot come from thirteen bounded integer squares, which classical inequalities among symmetric functions can often certify. Second, early impropriety on the refinement grids: it already fails on the finer time grid at level fourteen, the exact place where the p=197 base cover turned out to be proper, long before any tuple is reconstructed. D23 runs both branches in parallel, carrying the global residue on the level fourteen, twenty-eight and forty-two grids alongside the residue modulo each prime, and cutting a symbolic state the moment either global check refutes it, with a theorem and a proof hash for every cut. The mandatory regression is that the p=197 witness, a genuine base cover that is proper at level fourteen, must trigger an early cut before full reconstruction. No compute budget increase, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "D22 bị giới hạn vì kiểm toàn cục thật duy nhất của nó đợi tới bước tái dựng cuối, và cho tới đó khớp dấu vân tay theo từng prime không loại gì. Sửa chữa là có nhiều hơn một kiểm toàn cục sẵn sớm, trước ngưỡng tái dựng. Một trạng thái symbolic có thể bị loại rất lâu trước khi tái dựng cả tuple tốc độ, vì một trong hai lý do độc lập. Thứ nhất, khả năng sinh số học: các giá trị hàm đối xứng của nó đơn giản không thể đến từ mười ba bình phương số nguyên có chặn, điều mà các bất đẳng thức cổ điển giữa các hàm đối xứng thường chứng nhận được. Thứ hai, impropriety sớm trên các refinement grid: nó đã hỏng trên lưới thời gian tinh hơn tại level mười bốn, đúng nơi phủ nền p=197 hóa ra proper, rất lâu trước khi tái dựng tuple nào. D23 chạy cả hai nhánh song song, mang residue toàn cục trên các lưới level mười bốn, hai tám và bốn hai cùng residue modulo mỗi prime, và cắt một trạng thái symbolic ngay khi một trong hai kiểm toàn cục bác nó, với một định lý và một proof hash cho mỗi cut. Regression bắt buộc là nhân chứng p=197, một phủ nền thật proper tại level mười bốn, phải kích hoạt một cut sớm trước tái dựng đầy đủ. Không tăng ngân sách compute, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "route": "/gates/gate-d23",
   "valid_from_release": null,
   "valid_to_release": null
  },
@@ -1893,26 +1920,107 @@
   "id": "claim:C-D22-IMPLICIT-STATE",
   "kind": "claim",
   "label": {
-   "en": "D22 implicit global-signature elimination OPEN: do NOT materialize the initial signature family. Keep the bounded global object symbolic (two master representations piloted in parallel: a coefficient master on E_j = e_j(V_1^2..V_13^2) and a root master on X_i = V_i^2), project it to each prime, ask the narrowed local feasibility subproblem (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE), and generate exact cuts. Every pruning cut must carry a theorem and a proof hash; no compute-budget increase",
-   "vi": "Loại chữ ký toàn cục implicit D22 MỞ: KHÔNG hiện thực hóa họ chữ ký ban đầu. Giữ đối tượng toàn cục có chặn dạng symbolic (hai biểu diễn master pilot song song: coefficient master trên E_j = e_j(V_1^2..V_13^2) và root master trên X_i = V_i^2), chiếu xuống từng prime, hỏi bài con feasibility cục bộ đã thu hẹp (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE), và sinh cut chính xác. Mọi cut pruning phải mang theo một định lý và một proof hash; không tăng ngân sách compute"
+   "en": "D22 implicit CEGAR architecture PROVED-SOUND: keeping the bounded global object symbolic (coefficient master E_j and root master X_i), projecting to each prime, asking the narrowed local subproblem (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE) and generating proof-carrying cuts is sound by the one-way theorem: a bounded counterexample survives every certified cut (its base cover matches at every prime, so an empty-certified cut can never contain it; applicability and square-splitting cuts also exclude it). No certified cut ever removes a counterexample",
+   "vi": "Kiến trúc CEGAR implicit D22 CHỨNG-MINH-VỮNG: giữ đối tượng toàn cục có chặn dạng symbolic (coefficient master E_j và root master X_i), chiếu xuống từng prime, hỏi bài con thu hẹp (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE) và sinh cut mang chứng minh là vững theo định lý một-chiều: một phản ví dụ có chặn sống sót mọi cut chứng nhận (phủ nền của nó khớp tại mọi prime, nên một cut empty-certified không thể chứa nó; các cut applicability và square-splitting cũng loại nó). Không cut chứng nhận nào loại một phản ví dụ"
   },
   "short_label": {
    "en": "C-D22-IMPLICIT-STATE",
    "vi": "C-D22-IMPLICIT-STATE"
   },
-  "status": "open",
+  "status": "proved_internal",
   "evidence": "I2",
-  "scope": "symbolic global object, prime constraints added incrementally",
+  "scope": "one-way soundness of the implicit CEGAR architecture",
   "gate": "gate-d22",
   "summary": {
-   "en": "The next idea: never write down all the starting fingerprints; keep the unknown object as symbols and add one prime's constraint at a time, cutting away impossible states with proofs.",
-   "vi": "Ý tiếp: không bao giờ viết ra mọi dấu vân tay khởi đầu; giữ đối tượng chưa biết dạng ký hiệu và thêm ràng buộc từng prime một, cắt bỏ các trạng thái bất khả với chứng minh."
+   "en": "The symbolic-and-cut architecture is proved safe: no proof-carrying cut can ever throw away a real counterexample.",
+   "vi": "Kiến trúc symbolic-và-cut được chứng minh an toàn: không cut mang chứng minh nào có thể vứt bỏ một phản ví dụ thật."
   },
   "technical_summary": {
-   "en": "D22 implicit global-signature elimination OPEN: do NOT materialize the initial signature family. Keep the bounded global object symbolic (two master representations piloted in parallel: a coefficient master on E_j = e_j(V_1^2..V_13^2) and a root master on X_i = V_i^2), project it to each prime, ask the narrowed local feasibility subproblem (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE), and generate exact cuts. Every pruning cut must carry a theorem and a proof hash; no compute-budget increase",
-   "vi": "Loại chữ ký toàn cục implicit D22 MỞ: KHÔNG hiện thực hóa họ chữ ký ban đầu. Giữ đối tượng toàn cục có chặn dạng symbolic (hai biểu diễn master pilot song song: coefficient master trên E_j = e_j(V_1^2..V_13^2) và root master trên X_i = V_i^2), chiếu xuống từng prime, hỏi bài con feasibility cục bộ đã thu hẹp (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE), và sinh cut chính xác. Mọi cut pruning phải mang theo một định lý và một proof hash; không tăng ngân sách compute"
+   "en": "D22 implicit CEGAR architecture PROVED-SOUND: keeping the bounded global object symbolic (coefficient master E_j and root master X_i), projecting to each prime, asking the narrowed local subproblem (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE) and generating proof-carrying cuts is sound by the one-way theorem: a bounded counterexample survives every certified cut (its base cover matches at every prime, so an empty-certified cut can never contain it; applicability and square-splitting cuts also exclude it). No certified cut ever removes a counterexample",
+   "vi": "Kiến trúc CEGAR implicit D22 CHỨNG-MINH-VỮNG: giữ đối tượng toàn cục có chặn dạng symbolic (coefficient master E_j và root master X_i), chiếu xuống từng prime, hỏi bài con thu hẹp (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE) và sinh cut mang chứng minh là vững theo định lý một-chiều: một phản ví dụ có chặn sống sót mọi cut chứng nhận (phủ nền của nó khớp tại mọi prime, nên một cut empty-certified không thể chứa nó; các cut applicability và square-splitting cũng loại nó). Không cut chứng nhận nào loại một phản ví dụ"
   },
   "route": "/claims/C-D22-IMPLICIT-STATE",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D22-PILOT",
+  "kind": "claim",
+  "label": {
+   "en": "D22 certified pilot VALIDATED-BOUNDED: all mandatory cases run (p=197 cover matches; e1=0 stratum; repeated roots; inapplicable branch; padding-required 13-multiset; four D20-hard primes terminate; a candidate failing square-splitting yields RECONSTRUCTION-FALSE-POSITIVE; timeout injection yields OPEN). Two verifiers ACCEPT, 179 of 179 corruption rejected",
+   "vi": "Pilot chứng nhận D22 VALIDATED-BOUNDED: mọi ca bắt buộc chạy (phủ p=197 khớp; stratum e1=0; nghiệm lặp; nhánh inapplicable; 13-multiset padding-bắt-buộc; bốn prime khó D20 kết thúc; một ứng viên trượt square-splitting cho RECONSTRUCTION-FALSE-POSITIVE; tiêm timeout cho OPEN). Hai verifier CHẤP NHẬN, 179 trên 179 tấn công bị bác"
+  },
+  "short_label": {
+   "en": "C-D22-PILOT",
+   "vi": "C-D22-PILOT"
+  },
+  "status": "validated_bounded",
+  "evidence": "I2",
+  "scope": "certified pilot, mandatory cases + hard primes",
+  "gate": "gate-d22",
+  "summary": {
+   "en": "On a bounded pilot the implicit engine behaves correctly on every required case and stays honest about timeouts.",
+   "vi": "Trên một pilot có chặn, engine implicit hành xử đúng trên mọi ca cần và trung thực về timeout."
+  },
+  "technical_summary": {
+   "en": "D22 certified pilot VALIDATED-BOUNDED: all mandatory cases run (p=197 cover matches; e1=0 stratum; repeated roots; inapplicable branch; padding-required 13-multiset; four D20-hard primes terminate; a candidate failing square-splitting yields RECONSTRUCTION-FALSE-POSITIVE; timeout injection yields OPEN). Two verifiers ACCEPT, 179 of 179 corruption rejected",
+   "vi": "Pilot chứng nhận D22 VALIDATED-BOUNDED: mọi ca bắt buộc chạy (phủ p=197 khớp; stratum e1=0; nghiệm lặp; nhánh inapplicable; 13-multiset padding-bắt-buộc; bốn prime khó D20 kết thúc; một ứng viên trượt square-splitting cho RECONSTRUCTION-FALSE-POSITIVE; tiêm timeout cho OPEN). Hai verifier CHẤP NHẬN, 179 trên 179 tấn công bị bác"
+  },
+  "route": "/claims/C-D22-PILOT",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D22-CRT-NO-PRUNING",
+  "kind": "claim",
+  "label": {
+   "en": "Cross-prime CRT compatibility ALONE prunes NOTHING (measured): distinct primes give independent moduli, so every pair of local signatures is CRT-consistent and the compatible set is the full product prod|Sigma_p|. If the only global check is deferred to the reconstruction threshold 2H, the implicit master grows as prod|Sigma_p| (>= 2^519) before any cut fires, the same wall as D21-S",
+   "vi": "Tương thích CRT liên-prime ĐƠN THUẦN không loại gì (đo được): các prime phân biệt cho modulus độc lập, nên mọi cặp chữ ký cục bộ tương thích CRT và tập tương thích là tích đầy đủ prod|Sigma_p|. Nếu kiểm toàn cục duy nhất bị hoãn tới ngưỡng tái dựng 2H, master implicit tăng như prod|Sigma_p| (>= 2^519) trước khi cut nào kích hoạt, cùng tường như D21-S"
+  },
+  "short_label": {
+   "en": "C-D22-CRT-NO-PRUNING",
+   "vi": "C-D22-CRT-NO-PRUNING"
+  },
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "measured, cross-prime CRT compatibility",
+  "gate": "gate-d22",
+  "summary": {
+   "en": "Just matching fingerprints prime by prime removes nothing; a real global check has to come in earlier than the reconstruction step, or the count explodes again.",
+   "vi": "Chỉ khớp dấu vân tay theo từng prime không loại gì; một kiểm toàn cục thật phải vào sớm hơn bước tái dựng, nếu không số lượng lại bùng nổ."
+  },
+  "technical_summary": {
+   "en": "Cross-prime CRT compatibility ALONE prunes NOTHING (measured): distinct primes give independent moduli, so every pair of local signatures is CRT-consistent and the compatible set is the full product prod|Sigma_p|. If the only global check is deferred to the reconstruction threshold 2H, the implicit master grows as prod|Sigma_p| (>= 2^519) before any cut fires, the same wall as D21-S",
+   "vi": "Tương thích CRT liên-prime ĐƠN THUẦN không loại gì (đo được): các prime phân biệt cho modulus độc lập, nên mọi cặp chữ ký cục bộ tương thích CRT và tập tương thích là tích đầy đủ prod|Sigma_p|. Nếu kiểm toàn cục duy nhất bị hoãn tới ngưỡng tái dựng 2H, master implicit tăng như prod|Sigma_p| (>= 2^519) trước khi cut nào kích hoạt, cùng tường như D21-S"
+  },
+  "route": "/claims/C-D22-CRT-NO-PRUNING",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D23-EARLY-CUTS",
+  "kind": "claim",
+  "label": {
+   "en": "D23 early global realizability cuts OPEN: apply global constraints BEFORE 2H, not only at reconstruction. Two independent early sources run in parallel. Branch A arithmetic realizability from 13 bounded integer squares (per-degree coefficient bounds, Newton and Maclaurin inequalities, power-sum/Hankel positivity, square-splitting modulo auxiliary moduli, primitivity and multiplicity). Branch B early impropriety on refinement grids at levels 14, 28, 42 by carrying the global residue modulo (14,28,42) alongside the residue modulo p and certifying refined-cover feasibility. Regression: the p=197 witness base-covers yet is proper at level 14, so the early cut must FIRE long before full CRT reconstruction",
+   "vi": "Cut khả-dĩ toàn cục sớm D23 MỞ: áp ràng buộc toàn cục TRƯỚC 2H, không chỉ khi tái dựng. Hai nguồn sớm độc lập chạy song song. Branch A khả năng sinh số học từ 13 bình phương số nguyên có chặn (chặn hệ số theo bậc, bất đẳng thức Newton và Maclaurin, dương power-sum/Hankel, square-splitting theo modulus phụ, primitivity và multiplicity). Branch B impropriety sớm trên refinement grid tại level 14, 28, 42 bằng cách mang residue toàn cục modulo (14,28,42) cùng residue modulo p và chứng nhận refined-cover feasibility. Regression: nhân chứng p=197 phủ nền nhưng proper tại level 14, nên cut sớm phải KÍCH HOẠT rất lâu trước khi tái dựng CRT đầy đủ"
+  },
+  "short_label": {
+   "en": "C-D23-EARLY-CUTS",
+   "vi": "C-D23-EARLY-CUTS"
+  },
+  "status": "open",
+  "evidence": "I2",
+  "scope": "global constraints applied before the 2H reconstruction threshold",
+  "gate": "gate-d23",
+  "summary": {
+   "en": "The correction: there is more than one early global check. A symbolic state can be cut long before the full tuple is reconstructed, either because its coefficients can't come from 13 integer squares, or because it already fails at the level-14 finer grid where the p=197 witness died.",
+   "vi": "Sửa chữa: có nhiều hơn một kiểm toàn cục sớm. Một trạng thái symbolic có thể bị cắt rất lâu trước khi tái dựng đủ tuple, hoặc vì hệ số của nó không thể đến từ 13 bình phương số nguyên, hoặc vì nó đã hỏng ở lưới tinh level-14 nơi nhân chứng p=197 chết."
+  },
+  "technical_summary": {
+   "en": "D23 early global realizability cuts OPEN: apply global constraints BEFORE 2H, not only at reconstruction. Two independent early sources run in parallel. Branch A arithmetic realizability from 13 bounded integer squares (per-degree coefficient bounds, Newton and Maclaurin inequalities, power-sum/Hankel positivity, square-splitting modulo auxiliary moduli, primitivity and multiplicity). Branch B early impropriety on refinement grids at levels 14, 28, 42 by carrying the global residue modulo (14,28,42) alongside the residue modulo p and certifying refined-cover feasibility. Regression: the p=197 witness base-covers yet is proper at level 14, so the early cut must FIRE long before full CRT reconstruction",
+   "vi": "Cut khả-dĩ toàn cục sớm D23 MỞ: áp ràng buộc toàn cục TRƯỚC 2H, không chỉ khi tái dựng. Hai nguồn sớm độc lập chạy song song. Branch A khả năng sinh số học từ 13 bình phương số nguyên có chặn (chặn hệ số theo bậc, bất đẳng thức Newton và Maclaurin, dương power-sum/Hankel, square-splitting theo modulus phụ, primitivity và multiplicity). Branch B impropriety sớm trên refinement grid tại level 14, 28, 42 bằng cách mang residue toàn cục modulo (14,28,42) cùng residue modulo p và chứng nhận refined-cover feasibility. Regression: nhân chứng p=197 phủ nền nhưng proper tại level 14, nên cut sớm phải KÍCH HOẠT rất lâu trước khi tái dựng CRT đầy đủ"
+  },
+  "route": "/claims/C-D23-EARLY-CUTS",
   "valid_from_release": null,
   "valid_to_release": null
  },

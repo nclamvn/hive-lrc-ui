@@ -765,21 +765,78 @@
  },
  {
   "claim_id": "C-D22-IMPLICIT-STATE",
-  "status": "open",
+  "status": "proved_internal",
   "evidence": "I2",
-  "scope": "symbolic global object, prime constraints added incrementally",
+  "scope": "one-way soundness of the implicit CEGAR architecture",
   "gate_introduced": "gate-d22",
   "gate_last_changed": "gate-d22",
   "depends_on": [
    "C-D21-SEED-BLOCKED"
   ],
   "statement": {
-   "en": "D22 implicit global-signature elimination OPEN: do NOT materialize the initial signature family. Keep the bounded global object symbolic (two master representations piloted in parallel: a coefficient master on E_j = e_j(V_1^2..V_13^2) and a root master on X_i = V_i^2), project it to each prime, ask the narrowed local feasibility subproblem (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE), and generate exact cuts. Every pruning cut must carry a theorem and a proof hash; no compute-budget increase",
-   "vi": "Loại chữ ký toàn cục implicit D22 MỞ: KHÔNG hiện thực hóa họ chữ ký ban đầu. Giữ đối tượng toàn cục có chặn dạng symbolic (hai biểu diễn master pilot song song: coefficient master trên E_j = e_j(V_1^2..V_13^2) và root master trên X_i = V_i^2), chiếu xuống từng prime, hỏi bài con feasibility cục bộ đã thu hẹp (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE), và sinh cut chính xác. Mọi cut pruning phải mang theo một định lý và một proof hash; không tăng ngân sách compute"
+   "en": "D22 implicit CEGAR architecture PROVED-SOUND: keeping the bounded global object symbolic (coefficient master E_j and root master X_i), projecting to each prime, asking the narrowed local subproblem (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE) and generating proof-carrying cuts is sound by the one-way theorem: a bounded counterexample survives every certified cut (its base cover matches at every prime, so an empty-certified cut can never contain it; applicability and square-splitting cuts also exclude it). No certified cut ever removes a counterexample",
+   "vi": "Kiến trúc CEGAR implicit D22 CHỨNG-MINH-VỮNG: giữ đối tượng toàn cục có chặn dạng symbolic (coefficient master E_j và root master X_i), chiếu xuống từng prime, hỏi bài con thu hẹp (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE) và sinh cut mang chứng minh là vững theo định lý một-chiều: một phản ví dụ có chặn sống sót mọi cut chứng nhận (phủ nền của nó khớp tại mọi prime, nên một cut empty-certified không thể chứa nó; các cut applicability và square-splitting cũng loại nó). Không cut chứng nhận nào loại một phản ví dụ"
   },
   "plain_language": {
-   "en": "The next idea: never write down all the starting fingerprints; keep the unknown object as symbols and add one prime's constraint at a time, cutting away impossible states with proofs.",
-   "vi": "Ý tiếp: không bao giờ viết ra mọi dấu vân tay khởi đầu; giữ đối tượng chưa biết dạng ký hiệu và thêm ràng buộc từng prime một, cắt bỏ các trạng thái bất khả với chứng minh."
+   "en": "The symbolic-and-cut architecture is proved safe: no proof-carrying cut can ever throw away a real counterexample.",
+   "vi": "Kiến trúc symbolic-và-cut được chứng minh an toàn: không cut mang chứng minh nào có thể vứt bỏ một phản ví dụ thật."
+  }
+ },
+ {
+  "claim_id": "C-D22-PILOT",
+  "status": "validated_bounded",
+  "evidence": "I2",
+  "scope": "certified pilot, mandatory cases + hard primes",
+  "gate_introduced": "gate-d22",
+  "gate_last_changed": "gate-d22",
+  "depends_on": [
+   "C-D22-IMPLICIT-STATE"
+  ],
+  "statement": {
+   "en": "D22 certified pilot VALIDATED-BOUNDED: all mandatory cases run (p=197 cover matches; e1=0 stratum; repeated roots; inapplicable branch; padding-required 13-multiset; four D20-hard primes terminate; a candidate failing square-splitting yields RECONSTRUCTION-FALSE-POSITIVE; timeout injection yields OPEN). Two verifiers ACCEPT, 179 of 179 corruption rejected",
+   "vi": "Pilot chứng nhận D22 VALIDATED-BOUNDED: mọi ca bắt buộc chạy (phủ p=197 khớp; stratum e1=0; nghiệm lặp; nhánh inapplicable; 13-multiset padding-bắt-buộc; bốn prime khó D20 kết thúc; một ứng viên trượt square-splitting cho RECONSTRUCTION-FALSE-POSITIVE; tiêm timeout cho OPEN). Hai verifier CHẤP NHẬN, 179 trên 179 tấn công bị bác"
+  },
+  "plain_language": {
+   "en": "On a bounded pilot the implicit engine behaves correctly on every required case and stays honest about timeouts.",
+   "vi": "Trên một pilot có chặn, engine implicit hành xử đúng trên mọi ca cần và trung thực về timeout."
+  }
+ },
+ {
+  "claim_id": "C-D22-CRT-NO-PRUNING",
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "measured, cross-prime CRT compatibility",
+  "gate_introduced": "gate-d22",
+  "gate_last_changed": "gate-d22",
+  "depends_on": [
+   "C-D22-PILOT"
+  ],
+  "statement": {
+   "en": "Cross-prime CRT compatibility ALONE prunes NOTHING (measured): distinct primes give independent moduli, so every pair of local signatures is CRT-consistent and the compatible set is the full product prod|Sigma_p|. If the only global check is deferred to the reconstruction threshold 2H, the implicit master grows as prod|Sigma_p| (>= 2^519) before any cut fires, the same wall as D21-S",
+   "vi": "Tương thích CRT liên-prime ĐƠN THUẦN không loại gì (đo được): các prime phân biệt cho modulus độc lập, nên mọi cặp chữ ký cục bộ tương thích CRT và tập tương thích là tích đầy đủ prod|Sigma_p|. Nếu kiểm toàn cục duy nhất bị hoãn tới ngưỡng tái dựng 2H, master implicit tăng như prod|Sigma_p| (>= 2^519) trước khi cut nào kích hoạt, cùng tường như D21-S"
+  },
+  "plain_language": {
+   "en": "Just matching fingerprints prime by prime removes nothing; a real global check has to come in earlier than the reconstruction step, or the count explodes again.",
+   "vi": "Chỉ khớp dấu vân tay theo từng prime không loại gì; một kiểm toàn cục thật phải vào sớm hơn bước tái dựng, nếu không số lượng lại bùng nổ."
+  }
+ },
+ {
+  "claim_id": "C-D23-EARLY-CUTS",
+  "status": "open",
+  "evidence": "I2",
+  "scope": "global constraints applied before the 2H reconstruction threshold",
+  "gate_introduced": "gate-d23",
+  "gate_last_changed": "gate-d23",
+  "depends_on": [
+   "C-D22-CRT-NO-PRUNING"
+  ],
+  "statement": {
+   "en": "D23 early global realizability cuts OPEN: apply global constraints BEFORE 2H, not only at reconstruction. Two independent early sources run in parallel. Branch A arithmetic realizability from 13 bounded integer squares (per-degree coefficient bounds, Newton and Maclaurin inequalities, power-sum/Hankel positivity, square-splitting modulo auxiliary moduli, primitivity and multiplicity). Branch B early impropriety on refinement grids at levels 14, 28, 42 by carrying the global residue modulo (14,28,42) alongside the residue modulo p and certifying refined-cover feasibility. Regression: the p=197 witness base-covers yet is proper at level 14, so the early cut must FIRE long before full CRT reconstruction",
+   "vi": "Cut khả-dĩ toàn cục sớm D23 MỞ: áp ràng buộc toàn cục TRƯỚC 2H, không chỉ khi tái dựng. Hai nguồn sớm độc lập chạy song song. Branch A khả năng sinh số học từ 13 bình phương số nguyên có chặn (chặn hệ số theo bậc, bất đẳng thức Newton và Maclaurin, dương power-sum/Hankel, square-splitting theo modulus phụ, primitivity và multiplicity). Branch B impropriety sớm trên refinement grid tại level 14, 28, 42 bằng cách mang residue toàn cục modulo (14,28,42) cùng residue modulo p và chứng nhận refined-cover feasibility. Regression: nhân chứng p=197 phủ nền nhưng proper tại level 14, nên cut sớm phải KÍCH HOẠT rất lâu trước khi tái dựng CRT đầy đủ"
+  },
+  "plain_language": {
+   "en": "The correction: there is more than one early global check. A symbolic state can be cut long before the full tuple is reconstructed, either because its coefficients can't come from 13 integer squares, or because it already fails at the level-14 finer grid where the p=197 witness died.",
+   "vi": "Sửa chữa: có nhiều hơn một kiểm toàn cục sớm. Một trạng thái symbolic có thể bị cắt rất lâu trước khi tái dựng đủ tuple, hoặc vì hệ số của nó không thể đến từ 13 bình phương số nguyên, hoặc vì nó đã hỏng ở lưới tinh level-14 nơi nhân chứng p=197 chết."
   }
  }
 ]

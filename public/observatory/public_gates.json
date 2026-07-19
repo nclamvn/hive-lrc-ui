@@ -938,8 +938,8 @@
    "en": "Implicit global-signature elimination",
    "vi": "Loại chữ ký toàn cục implicit"
   },
-  "status": "current",
-  "verify": "pending",
+  "status": "partial",
+  "verify": "double",
   "independence": "I2",
   "date": "2026-07-19",
   "summary": {
@@ -956,11 +956,43 @@
     "vi": "Vòng lặp: chiếu trạng thái symbolic xuống từng prime, hỏi bài con feasibility cục bộ thu hẹp trả MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE, rồi sinh một cut chính xác. Mọi cut pruning phải mang một định lý và một proof hash"
    },
    {
-    "en": "Scope correction accepted: D21-S blocks only the two explicit materialization routes, not every implicit method. No compute-budget increase; no GLOBAL-WITNESS; any BASE-SURVIVOR escalates to D20-R. LRC(13) OPEN",
-    "vi": "Sửa phạm vi chấp nhận: D21-S chỉ chặn hai route hiện thực hóa tường minh, không phải mọi cách implicit. Không tăng ngân sách compute; không GLOBAL-WITNESS; mọi BASE-SURVIVOR leo thang tới D20-R. LRC(13) MỞ"
+    "en": "D22-PARTIAL (measured): one-way soundness proved (a counterexample survives every certified cut) and two verifiers plus 179 of 179 corruption accept the engine, BUT cross-prime CRT compatibility alone prunes nothing, so with a global check only at the reconstruction threshold the implicit master still grows as the product of local signature counts, the same wall as D21-S. Cuts close the impossible regions; the compatible-unreconstructed bulk stays open. The frontier moves to D23 early cuts. LRC(13) OPEN",
+    "vi": "D22-PARTIAL (đo được): định lý một-chiều đã chứng minh (một phản ví dụ sống sót mọi cut chứng nhận) và hai verifier cùng 179 trên 179 tấn công chấp nhận engine, NHƯNG tương thích CRT liên-prime đơn thuần không loại gì, nên với kiểm toàn cục chỉ ở ngưỡng tái dựng master implicit vẫn tăng như tích các đếm chữ ký cục bộ, cùng tường D21-S. Cut đóng các miền bất khả; phần compatible-chưa-tái-dựng còn mở. Frontier chuyển sang cut sớm D23. LRC(13) MỞ"
+   }
+  ],
+  "artifacts": 8,
+  "route": "/gates/gate-d22"
+ },
+ {
+  "id": "gate-d23",
+  "phase": "GATE D23",
+  "title": {
+   "en": "Early global realizability cuts",
+   "vi": "Cut khả-dĩ toàn cục sớm"
+  },
+  "status": "current",
+  "verify": "pending",
+  "independence": "I2",
+  "date": "2026-07-19",
+  "summary": {
+   "en": "D22 was limited because its only genuine global check waited until the final reconstruction step, and until then matching fingerprints prime by prime removes nothing. The correction is that more than one global check is available early, before the reconstruction threshold. A symbolic state can be ruled out long before the whole speed tuple is reconstructed, for either of two independent reasons. First, arithmetic realizability: its symmetric-function values simply cannot come from thirteen bounded integer squares, which classical inequalities among symmetric functions can often certify. Second, early impropriety on the refinement grids: it already fails on the finer time grid at level fourteen, the exact place where the p=197 base cover turned out to be proper, long before any tuple is reconstructed. D23 runs both branches in parallel, carrying the global residue on the level fourteen, twenty-eight and forty-two grids alongside the residue modulo each prime, and cutting a symbolic state the moment either global check refutes it, with a theorem and a proof hash for every cut. The mandatory regression is that the p=197 witness, a genuine base cover that is proper at level fourteen, must trigger an early cut before full reconstruction. No compute budget increase, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "D22 bị giới hạn vì kiểm toàn cục thật duy nhất của nó đợi tới bước tái dựng cuối, và cho tới đó khớp dấu vân tay theo từng prime không loại gì. Sửa chữa là có nhiều hơn một kiểm toàn cục sẵn sớm, trước ngưỡng tái dựng. Một trạng thái symbolic có thể bị loại rất lâu trước khi tái dựng cả tuple tốc độ, vì một trong hai lý do độc lập. Thứ nhất, khả năng sinh số học: các giá trị hàm đối xứng của nó đơn giản không thể đến từ mười ba bình phương số nguyên có chặn, điều mà các bất đẳng thức cổ điển giữa các hàm đối xứng thường chứng nhận được. Thứ hai, impropriety sớm trên các refinement grid: nó đã hỏng trên lưới thời gian tinh hơn tại level mười bốn, đúng nơi phủ nền p=197 hóa ra proper, rất lâu trước khi tái dựng tuple nào. D23 chạy cả hai nhánh song song, mang residue toàn cục trên các lưới level mười bốn, hai tám và bốn hai cùng residue modulo mỗi prime, và cắt một trạng thái symbolic ngay khi một trong hai kiểm toàn cục bác nó, với một định lý và một proof hash cho mỗi cut. Regression bắt buộc là nhân chứng p=197, một phủ nền thật proper tại level mười bốn, phải kích hoạt một cut sớm trước tái dựng đầy đủ. Không tăng ngân sách compute, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "checks": [
+   {
+    "en": "Branch A arithmetic realizability from 13 bounded integer squares, applied BEFORE the 2H threshold: per-degree coefficient bounds, Newton and Maclaurin inequalities, power-sum and Hankel positivity, square-splitting modulo auxiliary moduli, primitivity and multiplicity",
+    "vi": "Branch A khả năng sinh số học từ 13 bình phương số nguyên có chặn, áp TRƯỚC ngưỡng 2H: chặn hệ số theo bậc, bất đẳng thức Newton và Maclaurin, dương power-sum và Hankel, square-splitting theo modulus phụ, primitivity và multiplicity"
+   },
+   {
+    "en": "Branch B early impropriety on refinement grids at levels 14, 28, 42: carry the global residue modulo (14,28,42) with the residue modulo p and certify refined-cover feasibility without reconstructing the integer tuple",
+    "vi": "Branch B impropriety sớm trên refinement grid tại level 14, 28, 42: mang residue toàn cục modulo (14,28,42) cùng residue modulo p và chứng nhận refined-cover feasibility mà không tái dựng tuple nguyên"
+   },
+   {
+    "en": "Mandatory regression: p=197 base cover YES, p=197 level-14 PROPER, D23 early cut FIRES before full reconstruction. Never wait for full reconstruction to ask 13-integer-square realizability or level-14 survival. No compute-budget increase; no GLOBAL-WITNESS; BASE-SURVIVOR escalates to D20-R. LRC(13) OPEN",
+    "vi": "Regression bắt buộc: phủ nền p=197 YES, level-14 p=197 PROPER, cut sớm D23 KÍCH HOẠT trước tái dựng đầy đủ. Không bao giờ đợi tái dựng đầy đủ mới hỏi khả năng sinh 13-bình-phương-nguyên hay sống sót level-14. Không tăng ngân sách compute; không GLOBAL-WITNESS; BASE-SURVIVOR leo thang tới D20-R. LRC(13) MỞ"
    }
   ],
   "artifacts": 0,
-  "route": "/gates/gate-d22"
+  "route": "/gates/gate-d23"
  }
 ]
