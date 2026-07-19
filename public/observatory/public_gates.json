@@ -806,7 +806,7 @@
    "en": "Final connected order, fixed degree-5 refuted, adaptive route",
    "vi": "Bậc liên thông cuối, bác bậc-5 cố định, hướng thích ứng"
   },
-  "status": "current",
+  "status": "partial",
   "verify": "double",
   "independence": "I2",
   "date": "2026-07-19",

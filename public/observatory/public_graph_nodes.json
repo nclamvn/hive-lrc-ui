@@ -685,7 +685,7 @@
    "en": "GATE D18",
    "vi": "GATE D18"
   },
-  "status": "current",
+  "status": "partial",
   "evidence": "I2",
   "scope": "GATE D18",
   "gate": "gate-d18",
