@@ -19,15 +19,16 @@
   "problem": {
     "kicker": "THE LONELY RUNNER CONJECTURE",
     "title": "The problem",
-    "lede": "Picture runners on a circular track, starting together at distinct constant speeds. The conjecture says each runner is, at some moment, lonely: at least 1/n of the lap from every other runner. Simple to state, and still unproven beyond 7 runners.",
-    "impact": "Its ideas reach into view-obstruction geometry, Diophantine approximation, and the flows and colourings of graphs.",
+    "lede": "Picture runners on a circular track, starting together at distinct constant speeds. The conjecture says each runner is, at some moment, lonely: at least $1/n$ of the lap from every other runner. Simple to state, its general case is still unproven beyond 7 runners.",
+    "impact": "A general proof and a computational check are different things. The conjecture is settled for every speed configuration up to 7 runners, while specific integer-speed instances have been verified by computation much further, up to the 12-speed case upstream. This project independently reproduced the 9-speed instance and now targets the 13-speed instance ($14$ runners); the general case there remains open. The conjecture also connects to view-obstruction geometry, Diophantine approximation, and the flows and colourings of graphs.",
     "caption": "LRC(3): 3 speeds, 4 runners, lonely distance 1/4",
     "milestones": [
       { "year": "1967", "label": "Posed", "note": "J. M. Wills, Diophantine approximation" },
       { "year": "1970s", "label": "View-obstruction form", "note": "T. W. Cusick" },
       { "year": "1998", "label": "Named the Lonely Runner", "note": "L. Goddyn" },
-      { "year": "2008", "label": "Proved for up to 7 runners", "note": "Barajas-Serra; smaller cases earlier" },
-      { "year": "Now", "label": "This project: LRC(13)", "note": "14 runners, beyond the proved range, OPEN" }
+      { "year": "2008", "label": "General theorem: up to 7 runners", "note": "Barajas-Serra; open in general for 8 or more runners" },
+      { "year": "compute", "label": "Instances verified further", "note": "specific integer-speed cases up to the 12-speed instance upstream; this project reproduced the 9-speed instance" },
+      { "year": "Now", "label": "This project: LRC(13)", "note": "the 13-speed instance, 14 runners, general case OPEN" }
     ]
   },
   "latest": {
@@ -37,7 +38,7 @@
     "status": "partial",
     "statusLabel": "PARTIAL",
     "statusLine": "Direct-coordinate CRT: PROVED-INTERNAL · Campaign fit: NEGATIVE under frozen caps · V1/V2 ACCEPT · corruption suite PASS · LRC(13) OPEN",
-    "plain": "D26 proves that a globally ordered, positive, primitive tuple of 13 speeds can be reconstructed directly, coordinate by coordinate, using CRT. The reconstruction threshold drops from roughly 1946 bits for the symmetric-coefficient route to roughly 969 bits, reducing the required accumulated primes from about 205 to about 109 (a factor of about 2.008). The local cover at each prime, however, is an unordered multiset. Expanding every assignment onto the 13 global labels yields a worst-case branching proxy near (13!)^109, which cancels the lower-threshold benefit under the current frozen resource caps. The two reconstruction theorems stand; the full labeled campaign does not close. LRC(13) remains OPEN.",
+    "plain": "D26 proves that a globally ordered, positive, primitive tuple of $13$ speeds can be reconstructed directly, coordinate by coordinate, using CRT. The reconstruction threshold drops from roughly $1946$ bits for the symmetric-coefficient route to roughly $969$ bits, reducing the required accumulated primes from about $205$ to about $109$ (a factor of about $2.008$). The local cover at each prime, however, is an unordered multiset. Expanding every assignment onto the $13$ global labels yields a worst-case branching proxy near $(13!)^{109}$, which cancels the lower-threshold benefit under the current frozen resource caps. The two reconstruction theorems stand; the full labeled campaign does not close. LRC(13) remains OPEN.",
     "stats": [
       { "value": "I2", "label": "evidence" },
       { "value": "2×", "label": "verifiers" },

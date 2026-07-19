@@ -4,6 +4,7 @@ import type { GoldenVM } from "@/lib/goldenOverviewData";
 import type { Locale } from "@/lib/observatory";
 import { OverviewAttackMap } from "@/components/observatory-golden/OverviewAttackMap";
 import { LonelyRunnerCircle } from "@/components/observatory/LonelyRunnerCircle";
+import { MathText } from "@/components/observatory-golden/MathText";
 
 const ICON: Record<string, React.ComponentType<{ size?: number; strokeWidth?: number; className?: string }>> = {
   crosshair: Crosshair, sparkles: Sparkles, "shield-check": ShieldCheck, boxes: Boxes,
@@ -38,7 +39,7 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
         <div className="og-prob-body">
           <div className="og-eyebrow">{vm.problem.kicker}</div>
           <h2 className="og-prob-title">{vm.problem.title}</h2>
-          <p className="og-prob-lede">{vm.problem.lede}</p>
+          <MathText className="og-prob-lede">{vm.problem.lede}</MathText>
           <ol className="og-timeline">
             {vm.problem.milestones.map((m) => (
               <li className="og-tl-row" key={m.year + m.label}>
@@ -50,7 +51,7 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
               </li>
             ))}
           </ol>
-          <p className="og-prob-impact">{vm.problem.impact}</p>
+          <MathText className="og-prob-impact">{vm.problem.impact}</MathText>
         </div>
       </section>
 
@@ -80,7 +81,7 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
           </div>
           <h3 className="og-feat-title">{vm.latest.title}</h3>
           <p className="og-feat-status">{vm.latest.statusLine}</p>
-          <p className="og-feat-plain">{vm.latest.plain}</p>
+          <MathText className="og-feat-plain">{vm.latest.plain}</MathText>
           <Link className="og-feat-cta" href={vm.latest.href}>{vm.latest.cta}</Link>
         </div>
         <div className="og-feat-stats">

@@ -347,6 +347,10 @@ a.og-dep:hover { border-color: var(--obs-line-strong); }
 .og-feat-stat .v { font-family: var(--obs-font-display); font-size: 24px; line-height: 1; color: var(--obs-ink); }
 .og-feat-stat .l { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--obs-ink-3); }
 
+/* typographic widow/orphan control on prose (no single-word last lines) */
+.og-hero-sub, .og-prob-lede, .og-prob-impact, .og-feat-plain, .og-feat-status, .og-tl-note,
+.og-feed-desc, .og-page-lede { text-wrap: pretty; }
+
 /* ---------------- responsive ---------------- */
 @media (max-width: 1040px) {
   .og-hero { grid-template-columns: 1fr minmax(0, 300px); }
