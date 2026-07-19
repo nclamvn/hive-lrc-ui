@@ -33,10 +33,11 @@
   "latest": {
     "kicker": "LATEST RESULT",
     "phase": "GATE D26",
-    "title": "Labeled-root CRT campaign",
+    "title": "Direct coordinate CRT: threshold halving with a labeling obstruction",
     "status": "partial",
     "statusLabel": "PARTIAL",
-    "plain": "The newest method tracks which runner is which from the very start, so each speed can be pinned down using only about half as many primes as before: a real, proven shortcut. But keeping every runner's label consistent forces the search to weigh billions of possible labelings at each step, and that bookkeeping grows far faster than the primes it saves. Weighed exactly, the shortcut costs more than it gives back, so this route does not fit inside the compute limits. The two reconstruction theorems stand as genuine results, while the campaign itself is only a partial step, and LRC(13) stays open.",
+    "statusLine": "Direct-coordinate CRT: PROVED-INTERNAL · Campaign fit: NEGATIVE under frozen caps · V1/V2 ACCEPT · corruption suite PASS · LRC(13) OPEN",
+    "plain": "D26 proves that a globally ordered, positive, primitive tuple of 13 speeds can be reconstructed directly, coordinate by coordinate, using CRT. The reconstruction threshold drops from roughly 1946 bits for the symmetric-coefficient route to roughly 969 bits, reducing the required accumulated primes from about 205 to about 109 (a factor of about 2.008). The local cover at each prime, however, is an unordered multiset. Expanding every assignment onto the 13 global labels yields a worst-case branching proxy near (13!)^109, which cancels the lower-threshold benefit under the current frozen resource caps. The two reconstruction theorems stand; the full labeled campaign does not close. LRC(13) remains OPEN.",
     "stats": [
       { "value": "I2", "label": "evidence" },
       { "value": "2×", "label": "verifiers" },

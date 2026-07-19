@@ -334,9 +334,11 @@ a.og-dep:hover { border-color: var(--obs-line-strong); }
 .og-feat-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .og-feat-kicker { font-size: var(--obs-text-sm); letter-spacing: 0.22em; text-transform: uppercase; color: var(--obs-accent); font-weight: 600; }
 .og-feat-phase { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--obs-ink-2); }
-.og-feat-title { font-family: var(--obs-font-display); font-weight: 500; font-size: 23px; line-height: 1.15;
-  letter-spacing: -0.012em; margin: 9px 0 0; color: var(--obs-ink); }
-.og-feat-plain { margin: 8px 0 0; font-size: 12.6px; line-height: 1.55; color: var(--obs-ink-2); max-width: 760px; }
+.og-feat-title { font-family: var(--obs-font-display); font-weight: 500; font-size: 23px; line-height: 1.2;
+  letter-spacing: -0.012em; margin: 9px 0 0; color: var(--obs-ink); max-width: 820px; }
+.og-feat-status { margin: 9px 0 0; font-family: ui-monospace, Menlo, monospace; font-size: 10.8px; line-height: 1.5;
+  letter-spacing: 0.01em; color: var(--obs-ink-3); max-width: 820px; }
+.og-feat-plain { margin: 9px 0 0; font-size: 12.6px; line-height: 1.6; color: var(--obs-ink-2); max-width: 820px; }
 .og-feat-cta { display: inline-block; margin: 13px 0 0; font-size: 12px; color: var(--obs-ink); text-decoration: none;
   border-bottom: 1px solid var(--obs-line-strong); padding-bottom: 1px; transition: border-color .12s; }
 .og-feat-cta:hover { border-color: var(--obs-ink); }

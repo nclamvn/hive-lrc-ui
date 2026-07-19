@@ -14,7 +14,7 @@ export interface GoldenVM {
   };
   latest: {
     kicker: string; phase: string; title: string; statusLabel: string; status: string;
-    plain: string; stats: { value: string; label: string }[]; href: string; cta: string;
+    statusLine: string; plain: string; stats: { value: string; label: string }[]; href: string; cta: string;
   };
   metrics: { label: string; value: string; description: string; status: string; icon: string; accent?: boolean; badge?: string }[];
   feed: { time: string; seq: string; type: string; title: string; body: string }[];
@@ -66,12 +66,14 @@ export function buildGoldenVM(locale: Locale, golden: boolean): GoldenVM {
     latest: {
       kicker: t("LATEST RESULT", "KẾT QUẢ MỚI NHẤT"),
       phase: current.phase,
-      title: pick(current.title, locale),
+      title: t("Direct coordinate CRT: threshold halving with a labeling obstruction",
+               "Tái dựng CRT trực tiếp theo nghiệm: giảm một nửa ngưỡng, chưa vượt chi phí ghép nhãn"),
       status: current.status,
       statusLabel: statusText[current.status] ?? current.status,
+      statusLine: "Direct-coordinate CRT: PROVED-INTERNAL · Campaign fit: NEGATIVE under frozen caps · V1/V2 ACCEPT · corruption suite PASS · LRC(13) OPEN",
       plain: t(
-        "The newest method tracks which runner is which from the very start, so each speed can be pinned down using only about half as many primes as before: a real, proven shortcut. But keeping every runner's label consistent forces the search to weigh billions of possible labelings at each step, and that bookkeeping grows far faster than the primes it saves. Weighed exactly, the shortcut costs more than it gives back, so this route does not fit inside the compute limits. The two reconstruction theorems stand as genuine results, while the campaign itself is only a partial step, and LRC(13) stays open.",
-        "Phương pháp mới nhất theo dõi ngay từ đầu người chạy nào là người nào, nhờ đó mỗi vận tốc chỉ cần khoảng một nửa số nguyên tố so với trước để xác định: một lối tắt thật sự và đã được chứng minh. Nhưng để giữ nhãn của mọi người chạy nhất quán, quá trình tìm kiếm phải cân nhắc hàng tỉ cách gán nhãn ở mỗi bước, và khối lượng đó phình ra nhanh hơn nhiều so với số nguyên tố tiết kiệm được. Khi được tính toán chính xác, cái giá của lối tắt lớn hơn lợi ích nó mang lại, nên hướng đi này không nằm gọn trong giới hạn tính toán. Hai định lý tái dựng vẫn đứng vững như những kết quả thật, còn bản thân chiến dịch mới chỉ là một bước đi từng phần, và LRC(13) thì vẫn còn mở."),
+        "D26 proves that a globally ordered, positive, primitive tuple of 13 speeds can be reconstructed directly, coordinate by coordinate, using CRT. The reconstruction threshold drops from roughly 1946 bits for the symmetric-coefficient route to roughly 969 bits, reducing the required accumulated primes from about 205 to about 109 (a factor of about 2.008). The local cover at each prime, however, is an unordered multiset. Expanding every assignment onto the 13 global labels yields a worst-case branching proxy near (13!)^109, which cancels the lower-threshold benefit under the current frozen resource caps. The two reconstruction theorems stand; the full labeled campaign does not close. LRC(13) remains OPEN.",
+        "D26 chứng minh rằng một bộ 13 vận tốc dương, nguyên thủy và được sắp thứ tự toàn cục có thể được tái dựng trực tiếp theo từng tọa độ bằng CRT. Ngưỡng tái dựng giảm từ khoảng 1946 bits của phương pháp hệ số đối xứng xuống khoảng 969 bits, tương ứng giảm số prime cần tích lũy từ khoảng 205 xuống 109 (hệ số khoảng 2.008). Tuy nhiên, local cover tại mỗi prime là một multiset không thứ tự. Việc bung toàn bộ phép ghép vào 13 nhãn toàn cục tạo worst-case branching proxy gần (13!)^109, làm mất lợi ích của ngưỡng thấp hơn dưới giới hạn tài nguyên hiện tại. Hai định lý tái dựng vẫn được giữ nguyên; full labeled campaign chưa đóng. LRC(13) vẫn đang mở."),
       stats: [
         { value: current.independence, label: t("evidence", "bằng chứng") },
         { value: current.verify === "double" ? "2×" : current.verify === "single" ? "1×" : "—", label: t("verifiers", "verifier") },

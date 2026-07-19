@@ -79,6 +79,7 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
             <span className={`og-chip ${STATUS_TOK[vm.latest.status] ?? "tok-current"}`}>{vm.latest.statusLabel}</span>
           </div>
           <h3 className="og-feat-title">{vm.latest.title}</h3>
+          <p className="og-feat-status">{vm.latest.statusLine}</p>
           <p className="og-feat-plain">{vm.latest.plain}</p>
           <Link className="og-feat-cta" href={vm.latest.href}>{vm.latest.cta}</Link>
         </div>
