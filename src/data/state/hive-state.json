@@ -1,0 +1,131 @@
+{
+  "project": "HIVE-LRC",
+  "updatedAt": "2026-07-17",
+  "phase": {
+    "scan": "passed",
+    "gateA": "passed",
+    "gateB": "passed",
+    "gateC": "partial",
+    "gateD": "partial",
+    "gateD4": "pass_bounded_p191",
+    "gateD5": "pass_uniform_all_primes",
+    "gateD6": "blocked_campaign_nogo",
+    "gateD7": "restart_predicate_refreeze",
+    "gateD7R": "pass_predicate_reproduced",
+    "gateD8": "partial_fourier_criterion",
+    "gateD9": "partial_abs_barrier_inverse",
+    "gateD10": "partial_moment_dual_pair_theorem",
+    "gateD11": "partial_spike_removed_punctured_closure",
+    "gateD12": "partial_ratio_graph_dichotomy",
+    "gateD13": "partial_connected_hypergraph",
+    "gateD14": "partial_connected_support_purity",
+    "gateD15": "partial_projective_support3_inventory",
+    "gateD16": "partial_modular_rank_support4",
+    "gateD17": "pass_support4_fast_correlation_inventory_complete",
+    "current": "gate_d17_support4fast"
+  },
+  "targetClaim": {
+    "id": "C0",
+    "statement": "LRC(13)",
+    "status": "open",
+    "novelty": "nu"
+  },
+  "bestVerifiedResult": {
+    "statement": "k = 9 reproduced locally",
+    "correctness": "verified_local",
+    "independence": "I1"
+  },
+  "claims": [
+    {
+      "id": "C-CERT",
+      "statement": "Recursive proof-trace + orbit certificate architecture verified on bounded domains",
+      "status": "supported_internal",
+      "independence": "I2"
+    },
+    {
+      "id": "C-D3",
+      "statement": "Direct-properness certificate for the k=13 tight class; residual estimate (~1.6e4) later made exact in D4",
+      "status": "supported_internal",
+      "independence": "I2"
+    },
+    {
+      "id": "C-D4-K13-P191",
+      "statement": "k=13 tight residual closed exactly at p=191: 16,171 orbit-classes, mass identity B0+B1+residual=14^13, all reps proper, two independent verifiers, 16/16 corruption rejected",
+      "status": "supported_internal",
+      "independence": "I2"
+    },
+    {
+      "id": "C-D5-K13-UNIFORM",
+      "statement": "k=13 tight interface proper for every prime p>182: CRT-reduced witness formula, per-rep rational witness arcs, aggregate threshold P0=78 with zero in-scope exceptions, two independent verifiers, 18/18 corruption rejected",
+      "status": "supported_internal",
+      "independence": "I2"
+    }
+  ],
+  "risks": {
+    "activeP0": [
+      {
+        "id": "R1-B",
+        "statement": "production-scale certificate not yet complete"
+      },
+      {
+        "id": "R3",
+        "statement": "k=13 tight class bounded-certificate candidate; exact orbit-count run pending"
+      }
+    ],
+    "resolved": [
+      {
+        "id": "R2",
+        "statement": "duplicate-coordinate traceability",
+        "resolution": "no gap found in audited branch",
+        "independence": "I2"
+      },
+      {
+        "id": "R1-C",
+        "statement": "raw expansion before quotient",
+        "resolution": "orbit-compressed (Gate C.003)",
+        "independence": "I2"
+      },
+      {
+        "id": "R1-D",
+        "statement": "orbit-count certificate",
+        "resolution": "exact at p=53 (Gate C.003)",
+        "independence": "I2"
+      }
+    ]
+  },
+  "workflow": [
+    {
+      "id": "scan",
+      "state": "completed"
+    },
+    {
+      "id": "contractor_review",
+      "state": "completed"
+    },
+    {
+      "id": "gate_a",
+      "state": "completed"
+    },
+    {
+      "id": "gate_b",
+      "state": "completed"
+    },
+    {
+      "id": "gate_c",
+      "state": "completed"
+    },
+    {
+      "id": "gate_d",
+      "state": "current"
+    },
+    {
+      "id": "certify",
+      "state": "pending"
+    },
+    {
+      "id": "attack_k13",
+      "state": "target"
+    }
+  ],
+  "publicClaimsAuthorized": false
+}

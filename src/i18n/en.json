@@ -1,0 +1,135 @@
+{
+  "app": {
+    "title": "HIVE-LRC",
+    "subtitle": "Lonely Runner Conjecture · 14 runners · Research Investigation",
+    "language": "Language"
+  },
+  "nav": {
+    "overview": "Overview",
+    "claims": "Claims",
+    "reproduction": "Reproduction",
+    "campaigns": "Campaigns",
+    "workflow": "Workflow",
+    "verification": "Verification",
+    "effectiveness": "Effectiveness",
+    "risks": "Risks",
+    "resources": "Resources",
+    "notes": "Notes",
+    "artifacts": "Artifacts",
+    "settings": "Settings"
+  },
+  "system": {
+    "status": "System status",
+    "nominal": "Operational"
+  },
+  "metrics": {
+    "targetClaim": "Target Claim",
+    "currentPhase": "Current Phase",
+    "bestVerifiedResult": "Best Verified Result",
+    "researchProfile": "Research Profile",
+    "reproducedK9": "k = 9 reproduced",
+    "investigation": "Investigation",
+    "gateB": "Gate B",
+    "gateD": "Gate D3"
+  },
+  "claims": {
+    "title": "Claim Ledger",
+    "viewAll": "View all",
+    "id": "ID",
+    "claim": "Claim",
+    "status": "Status",
+    "novelty": "Novelty",
+    "c0": "LRC(13)",
+    "c1": "Upstream pipeline proves k ≤ 12",
+    "c2": "k = 9 reproduced locally",
+    "c4": "Logs sufficient for independent checker",
+    "c5": "k = 10 reproduction",
+    "c2dup": "Audited duplicate-coordinate handling preserves multiplicity",
+    "ccert": "Certificate architecture verified (bounded)",
+    "cd3": "Tight-class k=13 direct-properness certificate",
+    "cd4": "k=13 tight residual closed exactly at p=191: 16,171 orbit-classes, mass identity",
+    "cd5": "k=13 tight interface proper for every prime p>182 (P0=78, 0 exceptions)"
+  },
+  "statuses": {
+    "open": "OPEN",
+    "externalClaim": "EXTERNAL CLAIM",
+    "verifiedLocal": "VERIFIED-LOCAL",
+    "refutedAsIs": "REFUTED AS-IS",
+    "next": "NEXT",
+    "completed": "COMPLETED",
+    "pending": "PENDING",
+    "target": "TARGET",
+    "inProgress": "IN PROGRESS",
+    "supportedInternal": "SUPPORTED-INTERNAL",
+    "resolved": "DONE"
+  },
+  "reproduction": {
+    "title": "Reproduction Ladder"
+  },
+  "chart": {
+    "title": "Prime Campaign / Bottleneck Map",
+    "index": "Relative compute index",
+    "illustrative": "Illustrative, not measured",
+    "hardnessJump": "Major hardness jump",
+    "summary": "Line chart of relative compute index on a logarithmic scale for k = 9 to k = 13. Values are illustrative, not measured. The index rises sharply at k = 13, marked as a major hardness jump."
+  },
+  "workflow": {
+    "title": "Research Workflow",
+    "scan": "Scan",
+    "contractorReview": "Contractor Review",
+    "rri": "RRI",
+    "vision": "Vision",
+    "blueprint": "Blueprint",
+    "build": "Build",
+    "verify": "Verify",
+    "attack": "Attack k=13",
+    "gateA": "Gate A",
+    "gateB": "Gate B",
+    "gateC": "Gate C",
+    "gateD": "Gate D",
+    "certify": "Certify"
+  },
+  "risks": {
+    "title": "Risk Register",
+    "risk": "Risk",
+    "priority": "Priority",
+    "r1": "certificate insufficiency",
+    "r2": "duplicate-coordinate traceability",
+    "r3": "k=13 tight class: bounded certificate candidate",
+    "r1b": "production certificate not yet full-scale"
+  },
+  "resources": {
+    "title": "Resource Profile",
+    "plentiful": "Plentiful",
+    "moderate": "Moderate",
+    "constrained": "Constrained",
+    "bottleneck": "L resources are the current bottleneck."
+  },
+  "graph": {
+    "title": "Proof-Obligation / Dependency Graph",
+    "proven": "Proven / Satisfied",
+    "progress": "In Progress",
+    "open": "Open / Unmet",
+    "upstream": "Upstream Pipeline",
+    "bounds": "Combinatorial Bounds",
+    "certificate": "Certificate Layer",
+    "traceability": "Traceability Layer",
+    "integrity": "Log Integrity & Canonicalization",
+    "checker": "Independent Checker",
+    "ladder": "Reproduction Ladder",
+    "attack": "Attack k=13",
+    "nodeList": "Dependency nodes"
+  },
+  "notes": {
+    "title": "Notes / Next Actions",
+    "a1": "run exact orbit-count for k=13 tight fiber",
+    "a2": "integrate direct certificate into pipeline",
+    "a3": "formalize B2' soundness + orbit-invariance (Lean)",
+    "a4": "reproduce k=10 with manifest"
+  },
+  "header": {
+    "researchLead": "Research Lead",
+    "operator": "Operator",
+    "profileMenu": "Profile and language menu"
+  }
+}

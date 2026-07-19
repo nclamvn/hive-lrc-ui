@@ -6,19 +6,45 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "playwright test",
+    "test:visual": "playwright test tests/visual",
+    "test:e2e": "playwright test tests/e2e",
+    "observatory:build": "node scripts/build-observatory.mts",
+    "observatory:check": "node scripts/observatory-governance.mjs",
+    "observatory": "node scripts/build-observatory.mts && node scripts/observatory-governance.mjs",
+    "prebuild": "node scripts/build-observatory.mts && node scripts/observatory-governance.mjs"
   },
   "dependencies": {
+    "@observablehq/plot": "^0.6.17",
+    "@types/dagre": "^0.7.54",
+    "@xyflow/react": "^12.11.2",
+    "cytoscape": "^3.34.0",
+    "cytoscape-dagre": "^4.0.0",
+    "d3": "^7.9.0",
+    "dagre": "^0.8.5",
+    "katex": "^0.17.0",
+    "lucide-react": "^1.24.0",
     "next": "16.2.10",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-markdown": "^10.1.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.61.1",
     "@types/node": "^20",
+    "@types/pixelmatch": "^5.2.6",
+    "@types/pngjs": "^6.0.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0",
+    "ssim.js": "^3.5.0",
     "typescript": "^5"
   }
 }

@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "generated_from": [
+   "src/data/wiki/gates.ts",
+   "src/data/observatory/ontology.ts"
+  ],
+  "lrc13": "OPEN",
+  "evidence_ceiling": "I2"
+ },
+ "counts": {
+  "public_releases": 14,
+  "public_claims": 31,
+  "public_gates": 27,
+  "public_graph_nodes": 62,
+  "public_graph_edges": 87,
+  "public_artifacts": 4
+ },
+ "manifest": {
+  "public_releases": "f98362d51b9c3e7ef690078d4a126ccc9e1d036abf6ae7a28cab44e6d02f1846",
+  "public_claims": "6e2f34afc9e07dfeed3e0d0156950cef5ee6af4de15ff1dc821d53e50e2d09a9",
+  "public_gates": "1b800ea4f00ba310ff4fd53b09db76f1d75e35b087da55b9f44b937ab1c9cc77",
+  "public_graph_nodes": "cb67afa555f7ba13cb48cce8f2f6709290e5c1cc4c1960e625a702b0485354a3",
+  "public_graph_edges": "5ae063f45001890a0ee38ca91b1b95c7629e2befaa2944b715735de82530c5f4",
+  "public_artifacts": "35586b8067464ed973f3b9d3df53d265f974bfa8422e96ef43035d98bed5b8d5"
+ },
+ "snapshot_hash": "c77b18962865a9529bc2eae3a83db920386ab35dc7ac9abfdbd1e5744dced424"
+}

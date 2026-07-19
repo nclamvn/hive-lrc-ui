@@ -1,0 +1,135 @@
+{
+  "app": {
+    "title": "HIVE-LRC",
+    "subtitle": "Phỏng đoán Người chạy Cô đơn · 14 người chạy · Điều tra nghiên cứu",
+    "language": "Ngôn ngữ"
+  },
+  "nav": {
+    "overview": "Tổng quan",
+    "claims": "Mệnh đề",
+    "reproduction": "Tái lập",
+    "campaigns": "Chiến dịch",
+    "workflow": "Quy trình",
+    "verification": "Kiểm chứng",
+    "effectiveness": "Hiệu quả",
+    "risks": "Rủi ro",
+    "resources": "Tài nguyên",
+    "notes": "Ghi chú",
+    "artifacts": "Tư liệu",
+    "settings": "Cài đặt"
+  },
+  "system": {
+    "status": "Trạng thái",
+    "nominal": "Hoạt động"
+  },
+  "metrics": {
+    "targetClaim": "Mệnh đề mục tiêu",
+    "currentPhase": "Giai đoạn hiện tại",
+    "bestVerifiedResult": "Kết quả tốt nhất đã kiểm chứng",
+    "researchProfile": "Hồ sơ nghiên cứu",
+    "reproducedK9": "k = 9 đã tái lập",
+    "investigation": "Điều tra",
+    "gateB": "Gate B",
+    "gateD": "Gate D3"
+  },
+  "claims": {
+    "title": "Sổ mệnh đề",
+    "viewAll": "Xem tất cả",
+    "id": "Mã",
+    "claim": "Mệnh đề",
+    "status": "Trạng thái",
+    "novelty": "Tính mới",
+    "c0": "LRC(13)",
+    "c1": "Quy trình nguồn tuyên bố chứng minh k ≤ 12",
+    "c2": "k = 9 đã được tái lập cục bộ",
+    "c4": "Log hiện tại đủ cho bộ kiểm tra độc lập",
+    "c5": "Tái lập k = 10",
+    "c2dup": "Xử lý tọa độ trùng (đã audit) bảo toàn tọa độ lặp",
+    "ccert": "Kiến trúc chứng thư đã kiểm (có giới hạn)",
+    "cd3": "Chứng thư properness trực tiếp lớp tight k=13",
+    "cd4": "Residual tight k=13 đóng chính xác tại p=191: 16.171 lớp orbit, đẳng thức khối lượng",
+    "cd5": "Giao diện tight k=13 proper với mọi prime p>182 (P0=78, 0 ngoại lệ)"
+  },
+  "statuses": {
+    "open": "ĐANG MỞ",
+    "externalClaim": "TUYÊN BỐ BÊN NGOÀI",
+    "verifiedLocal": "ĐÃ KIỂM CHỨNG CỤC BỘ",
+    "refutedAsIs": "BỊ BÁC BỎ Ở TRẠNG THÁI HIỆN TẠI",
+    "next": "TIẾP THEO",
+    "completed": "HOÀN TẤT",
+    "pending": "CHỜ XỬ LÝ",
+    "target": "MỤC TIÊU",
+    "inProgress": "ĐANG THỰC HIỆN",
+    "supportedInternal": "CÓ CƠ SỞ NỘI BỘ",
+    "resolved": "XONG"
+  },
+  "reproduction": {
+    "title": "Thang tái lập"
+  },
+  "chart": {
+    "title": "Chiến dịch số nguyên tố / Bản đồ điểm nghẽn",
+    "index": "Chỉ số tính toán tương đối",
+    "illustrative": "Minh họa, không phải số đo",
+    "hardnessJump": "Bước nhảy độ khó lớn",
+    "summary": "Biểu đồ đường chỉ số tính toán tương đối trên thang logarit cho k = 9 đến k = 13. Giá trị chỉ mang tính minh họa, không phải số đo. Chỉ số tăng vọt tại k = 13, được đánh dấu là bước nhảy độ khó lớn."
+  },
+  "workflow": {
+    "title": "Quy trình nghiên cứu",
+    "scan": "Khảo sát",
+    "contractorReview": "Chủ thầu rà soát",
+    "rri": "RRI",
+    "vision": "Tầm nhìn",
+    "blueprint": "Bản thiết kế",
+    "build": "Thi công",
+    "verify": "Kiểm chứng",
+    "attack": "Tấn công k=13",
+    "gateA": "Gate A",
+    "gateB": "Gate B",
+    "gateC": "Gate C",
+    "gateD": "Gate D",
+    "certify": "Chứng thư"
+  },
+  "risks": {
+    "title": "Sổ rủi ro",
+    "risk": "Rủi ro",
+    "priority": "Ưu tiên",
+    "r1": "thiếu chứng thư độc lập",
+    "r2": "truy vết trường hợp tọa độ trùng",
+    "r3": "lớp tight k=13: ứng viên chứng thư có chặn",
+    "r1b": "chứng thư sản xuất chưa đủ quy mô đầy đủ"
+  },
+  "resources": {
+    "title": "Hồ sơ tài nguyên",
+    "plentiful": "Dồi dào",
+    "moderate": "Trung bình",
+    "constrained": "Hạn chế",
+    "bottleneck": "Tài nguyên mức L là điểm nghẽn hiện tại."
+  },
+  "graph": {
+    "title": "Đồ thị nghĩa vụ chứng minh / phụ thuộc",
+    "proven": "Đã chứng minh / Đã thỏa",
+    "progress": "Đang thực hiện",
+    "open": "Đang mở / Chưa thỏa",
+    "upstream": "Quy trình nguồn",
+    "bounds": "Các chặn tổ hợp",
+    "certificate": "Tầng chứng thư",
+    "traceability": "Tầng truy vết",
+    "integrity": "Tính toàn vẹn log & chuẩn hóa",
+    "checker": "Bộ kiểm tra độc lập",
+    "ladder": "Thang tái lập",
+    "attack": "Tấn công k=13",
+    "nodeList": "Các nút phụ thuộc"
+  },
+  "notes": {
+    "title": "Ghi chú / Hành động tiếp theo",
+    "a1": "chạy đếm orbit chính xác cho tight fiber k=13",
+    "a2": "tích hợp chứng thư trực tiếp vào pipeline",
+    "a3": "hình thức hóa tính đúng B2' + bất biến orbit (Lean)",
+    "a4": "tái lập k=10 kèm manifest"
+  },
+  "header": {
+    "researchLead": "Trưởng nhóm nghiên cứu",
+    "operator": "Vận hành",
+    "profileMenu": "Menu hồ sơ và ngôn ngữ"
+  }
+}

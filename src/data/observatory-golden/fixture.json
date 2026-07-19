@@ -1,0 +1,416 @@
+{
+  "meta": {
+    "id": "hive-observatory-golden-v1",
+    "viewport": {
+      "width": 1586,
+      "height": 992,
+      "dpr": 1
+    },
+    "locale": "en",
+    "timezone": "UTC",
+    "version": "0.6.3",
+    "updated": "18s ago"
+  },
+  "hero": {
+    "eyebrow": "LIVE OBSERVATORY",
+    "title": "A live observatory of a Human–AI attack\non the Lonely Runner Conjecture.",
+    "subtitle": "Not a solution, a research program. Follow each theorem, computational check, correction and dead end, with exact scope and evidence at every step."
+  },
+  "metrics": [
+    {
+      "label": "TARGET CLAIM",
+      "value": "LRC(13)",
+      "description": "Lonely Runner Conjecture",
+      "status": "14 researchers online",
+      "icon": "crosshair"
+    },
+    {
+      "label": "CURRENT RESEARCH GATE",
+      "value": "Gate D16",
+      "description": "Modular rank repair · Support-3 completeness\nSupport-4",
+      "status": "In progress",
+      "icon": "sparkles",
+      "accent": true
+    },
+    {
+      "label": "HIGHEST INDEPENDENT REPRODUCTION",
+      "value": "k = 9",
+      "badge": "Verified",
+      "description": "Matched upstream exactly",
+      "status": "1 reproduction",
+      "icon": "shield-check"
+    },
+    {
+      "label": "LATEST STRUCTURAL ADVANCE",
+      "value": "Support-3 complete",
+      "description": "All 109 primes",
+      "status": "12 new results today",
+      "icon": "boxes",
+      "accent": true
+    }
+  ],
+  "feed": [
+    {
+      "time": "2m ago",
+      "seq": "#9",
+      "type": "GATE OPENED",
+      "title": "Support-4 projective framework opened",
+      "body": "The projective method now extends to four-coordinate relations, exact at four small primes, full closure and support-5 remain open."
+    },
+    {
+      "time": "18m ago",
+      "seq": "#8",
+      "type": "THEOREM PROVED",
+      "title": "Support-3 closed on the complete universe",
+      "body": "Scanning every triple at every one of the 109 primes shows the worst tail is 0.010377 at p=353, correcting both earlier estimates."
+    },
+    {
+      "time": "1h ago",
+      "seq": "#7",
+      "type": "CLAIM UPDATED",
+      "title": "Modular rank correction (F_p, not Q)",
+      "body": "A load-bearing correction: structural dimension must be counted modulo p, because the relations hold modulo p. The earlier rational-rank inference was withdrawn."
+    },
+    {
+      "time": "2h ago",
+      "seq": "#6",
+      "type": "CORRECTION APPLIED",
+      "title": "Verifier margin reconciliation",
+      "body": "Two reported margin numbers were the same quantity measured on two different test vectors, not a mismatch."
+    },
+    {
+      "time": "3h ago",
+      "seq": "#5",
+      "type": "THEOREM PROVED",
+      "title": "Projective relation directions and lattice tail",
+      "body": "Repeated scalar copies of a relation are compressed into one projective structural direction with a canonical height."
+    }
+  ],
+  "graph": {
+    "fixedLayout": true,
+    "nodes": [
+      {
+        "id": "S",
+        "kind": "gate-black",
+        "x": 85,
+        "y": 104,
+        "label": "S",
+        "caption": "Start\nScope &\nDefinitions"
+      },
+      {
+        "id": "A",
+        "kind": "gate-black",
+        "x": 161,
+        "y": 104,
+        "label": "A",
+        "caption": "Arithmetic\nFramework"
+      },
+      {
+        "id": "B",
+        "kind": "gate-black",
+        "x": 222,
+        "y": 104,
+        "label": "B",
+        "caption": "Structural\nSetup"
+      },
+      {
+        "id": "C",
+        "kind": "gate-black",
+        "x": 286,
+        "y": 104,
+        "label": "C",
+        "caption": "Local\nPrimes"
+      },
+      {
+        "id": "D16",
+        "kind": "gate-current",
+        "x": 451,
+        "y": 124,
+        "label": "D16",
+        "caption": "Modular rank repair\nSupport-3 comp.\nIn progress"
+      },
+      {
+        "id": "D3",
+        "kind": "gate-black",
+        "x": 565,
+        "y": 114,
+        "label": "D3"
+      },
+      {
+        "id": "D4",
+        "kind": "gate-black",
+        "x": 638,
+        "y": 114,
+        "label": "D4"
+      },
+      {
+        "id": "D5",
+        "kind": "gate-black",
+        "x": 709,
+        "y": 114,
+        "label": "D5"
+      },
+      {
+        "id": "D6",
+        "kind": "gate-white",
+        "x": 770,
+        "y": 114,
+        "label": "D6"
+      },
+      {
+        "id": "D7R",
+        "kind": "gate-open",
+        "x": 832,
+        "y": 114,
+        "label": "D7R"
+      },
+      {
+        "id": "D8",
+        "kind": "gate-white",
+        "x": 892,
+        "y": 114,
+        "label": "D8"
+      },
+      {
+        "id": "D9",
+        "kind": "gate-white",
+        "x": 955,
+        "y": 114,
+        "label": "D9"
+      },
+      {
+        "id": "D10",
+        "kind": "gate-white",
+        "x": 1018,
+        "y": 114,
+        "label": "D10"
+      },
+      {
+        "id": "C004",
+        "kind": "claim",
+        "x": 331,
+        "y": 47,
+        "label": "C.004"
+      },
+      {
+        "id": "C005",
+        "kind": "claim",
+        "x": 404,
+        "y": 47,
+        "label": "C.005"
+      },
+      {
+        "id": "D11",
+        "kind": "gate-white",
+        "x": 122,
+        "y": 219,
+        "label": "D11"
+      },
+      {
+        "id": "D12",
+        "kind": "gate-white",
+        "x": 178,
+        "y": 219,
+        "label": "D12"
+      },
+      {
+        "id": "D13",
+        "kind": "gate-white",
+        "x": 236,
+        "y": 219,
+        "label": "D13"
+      },
+      {
+        "id": "D14",
+        "kind": "gate-white",
+        "x": 294,
+        "y": 219,
+        "label": "D14"
+      },
+      {
+        "id": "D15",
+        "kind": "gate-white",
+        "x": 352,
+        "y": 219,
+        "label": "D15"
+      },
+      {
+        "id": "D17",
+        "kind": "gate-white",
+        "x": 615,
+        "y": 47,
+        "label": "D17"
+      },
+      {
+        "id": "D18",
+        "kind": "gate-white",
+        "x": 687,
+        "y": 47,
+        "label": "D18"
+      },
+      {
+        "id": "D19",
+        "kind": "gate-white",
+        "x": 759,
+        "y": 47,
+        "label": "D19"
+      },
+      {
+        "id": "R1",
+        "kind": "risk",
+        "x": 580,
+        "y": 231,
+        "label": "R1",
+        "caption": "Rank shift"
+      },
+      {
+        "id": "R2",
+        "kind": "risk",
+        "x": 655,
+        "y": 231,
+        "label": "R2",
+        "caption": "Carry\npropagation"
+      },
+      {
+        "id": "R3",
+        "kind": "risk",
+        "x": 728,
+        "y": 231,
+        "label": "R3",
+        "caption": "Lattice tail\ncontrol"
+      }
+    ],
+    "edges": [
+      [
+        "S",
+        "A",
+        "primary"
+      ],
+      [
+        "A",
+        "B",
+        "primary"
+      ],
+      [
+        "B",
+        "C",
+        "primary"
+      ],
+      [
+        "C",
+        "C004",
+        "dependency"
+      ],
+      [
+        "C004",
+        "C005",
+        "dependency"
+      ],
+      [
+        "C",
+        "D16",
+        "dependency"
+      ],
+      [
+        "C005",
+        "D16",
+        "dependency"
+      ],
+      [
+        "D16",
+        "D3",
+        "active"
+      ],
+      [
+        "D3",
+        "D4",
+        "active"
+      ],
+      [
+        "D4",
+        "D5",
+        "active"
+      ],
+      [
+        "D5",
+        "D6",
+        "dependency"
+      ],
+      [
+        "D6",
+        "D7R",
+        "dependency"
+      ],
+      [
+        "D7R",
+        "D8",
+        "dependency"
+      ],
+      [
+        "D8",
+        "D9",
+        "dependency"
+      ],
+      [
+        "D9",
+        "D10",
+        "dependency"
+      ],
+      [
+        "D11",
+        "D12",
+        "dependency"
+      ],
+      [
+        "D12",
+        "D13",
+        "dependency"
+      ],
+      [
+        "D13",
+        "D14",
+        "dependency"
+      ],
+      [
+        "D14",
+        "D15",
+        "dependency"
+      ],
+      [
+        "D15",
+        "D16",
+        "dependency"
+      ],
+      [
+        "D16",
+        "D17",
+        "open"
+      ],
+      [
+        "D17",
+        "D18",
+        "open"
+      ],
+      [
+        "D18",
+        "D19",
+        "open"
+      ],
+      [
+        "D16",
+        "R1",
+        "risk"
+      ],
+      [
+        "R1",
+        "R2",
+        "risk"
+      ],
+      [
+        "R2",
+        "R3",
+        "risk"
+      ]
+    ]
+  }
+}

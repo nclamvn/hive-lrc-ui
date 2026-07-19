@@ -1,0 +1,594 @@
+[
+ {
+  "claim_id": "C0",
+  "status": "open",
+  "evidence": "I2",
+  "scope": "k=13, 14 runners",
+  "gate_introduced": "scan",
+  "gate_last_changed": "gate-d16",
+  "depends_on": [],
+  "statement": {
+   "en": "LRC(13) holds",
+   "vi": "LRC(13) đúng"
+  },
+  "plain_language": {
+   "en": "The Lonely Runner Conjecture for 13 nonzero speeds is the target. It is not solved, the project builds verifiable infrastructure and narrows the obstruction.",
+   "vi": "Giả thuyết Người chạy cô đơn cho 13 vận tốc là mục tiêu. Chưa giải, dự án xây hạ tầng kiểm chứng được và thu hẹp trở ngại."
+  }
+ },
+ {
+  "claim_id": "C1",
+  "status": "external_claim",
+  "evidence": "I1",
+  "scope": "k<=12",
+  "gate_introduced": "scan",
+  "gate_last_changed": "scan",
+  "depends_on": [],
+  "statement": {
+   "en": "LRC holds for k<=12 (upstream)",
+   "vi": "LRC đúng cho k<=12 (thượng nguồn)"
+  },
+  "plain_language": {
+   "en": "Known upstream results establish the conjecture up to 12 speeds, the project audits and reuses them.",
+   "vi": "Kết quả thượng nguồn đã biết chứng minh tới 12 vận tốc, dự án audit và dùng lại."
+  }
+ },
+ {
+  "claim_id": "C2",
+  "status": "validated_exact",
+  "evidence": "I1",
+  "scope": "k=9",
+  "gate_introduced": "scan",
+  "gate_last_changed": "scan",
+  "depends_on": [
+   "C1"
+  ],
+  "statement": {
+   "en": "k=9 reproduced locally, identical to upstream",
+   "vi": "k=9 tái lập cục bộ, khớp thượng nguồn"
+  },
+  "plain_language": {
+   "en": "The k=9 case was recomputed locally and matched the upstream result digit for digit, the highest independently reproduced result.",
+   "vi": "Trường hợp k=9 tính lại cục bộ và khớp thượng nguồn tới từng chữ số, kết quả tái lập độc lập cao nhất."
+  }
+ },
+ {
+  "claim_id": "C-D4-K13-P191",
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "k=13 tight class at p=191",
+  "gate_introduced": "gate-d14",
+  "gate_last_changed": "gate-d14",
+  "depends_on": [
+   "C1"
+  ],
+  "statement": {
+   "en": "Exact k=13 tight orbit count = 16,171",
+   "vi": "Đếm orbit tight k=13 chính xác = 16,171"
+  },
+  "plain_language": {
+   "en": "The tight configurations for 13 speeds collapse under symmetry to exactly 16,171 orbit classes, computed exactly, not extrapolated.",
+   "vi": "Cấu hình tight cho 13 vận tốc thu gọn theo đối xứng còn đúng 16,171 lớp orbit, tính chính xác, không ngoại suy."
+  }
+ },
+ {
+  "claim_id": "C-D5-UNIFORM",
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "all primes p>182",
+  "gate_introduced": "gate-d14",
+  "gate_last_changed": "gate-d14",
+  "depends_on": [
+   "C-D4-K13-P191"
+  ],
+  "statement": {
+   "en": "Uniform prime transfer: tight closure at p=191 extends to all p>182",
+   "vi": "Chuyển prime đều: đóng tight tại p=191 mở sang mọi p>182"
+  },
+  "plain_language": {
+   "en": "A single lattice-point argument covers every prime above 182 at once, so no per-prime campaign is needed on the tight side.",
+   "vi": "Một lập luận điểm-lưới phủ mọi prime trên 182 cùng lúc, nên không cần chiến dịch từng-prime phía tight."
+  }
+ },
+ {
+  "claim_id": "C-D12-DEFICIT-IDENTITY",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "non-tight, degree-5 dual",
+  "gate_introduced": "gate-d12",
+  "gate_last_changed": "gate-d12",
+  "depends_on": [
+   "C-D5-UNIFORM"
+  ],
+  "statement": {
+   "en": "Exact dual-deficit identity for the non-tight margin",
+   "vi": "Danh tính dual-deficit chính xác cho margin non-tight"
+  },
+  "plain_language": {
+   "en": "The gap between a candidate and a proper configuration is written as an exact sum over pairs and triples, turning a hard estimate into bookkeeping.",
+   "vi": "Khoảng cách giữa ứng viên và cấu hình proper viết thành tổng chính xác trên cặp và bộ-ba, biến ước lượng khó thành ghi sổ."
+  }
+ },
+ {
+  "claim_id": "C-D13-SUPPORT3-INVERSE-SCOPED",
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "measured at p=191",
+  "gate_introduced": "gate-d13",
+  "gate_last_changed": "gate-d16",
+  "depends_on": [
+   "C-D12-DEFICIT-IDENTITY"
+  ],
+  "statement": {
+   "en": "Large connected triple correlation implies a bounded-height support-3 relation (profile at p=191)",
+   "vi": "Tương quan bộ-ba liên thông lớn kéo theo quan hệ support-3 chiều cao chặn (profile p=191)"
+  },
+  "plain_language": {
+   "en": "A big three-way correlation is always backed by a short exact relation, measured at p=191, later made complete in D16.",
+   "vi": "Tương quan ba chiều lớn luôn được nâng đỡ bởi một quan hệ ngắn chính xác, đo tại p=191, sau làm đầy đủ ở D16."
+  }
+ },
+ {
+  "claim_id": "C-D14-PURITY-LEMMA",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "all supports, exact identity",
+  "gate_introduced": "gate-d14",
+  "gate_last_changed": "gate-d14",
+  "depends_on": [
+   "C-D13-SUPPORT3-INVERSE-SCOPED"
+  ],
+  "statement": {
+   "en": "Connected cumulant = primitive relation signal + exact puncture correction",
+   "vi": "Cumulant liên thông = tín hiệu quan hệ nguyên thủy + hiệu chỉnh đục-lỗ chính xác"
+  },
+  "plain_language": {
+   "en": "Each correlation splits exactly into a genuine structural relation plus a deterministic finite-field term, decomposable patterns cancel.",
+   "vi": "Mỗi tương quan tách chính xác thành một quan hệ cấu trúc thật cộng một số hạng trường hữu hạn xác định, mẫu phân tách được triệt tiêu."
+  }
+ },
+ {
+  "claim_id": "C-D14-SUPPORT3-TAIL",
+  "status": "superseded",
+  "evidence": "I2",
+  "scope": "audited p=191/439/877",
+  "gate_introduced": "gate-d14",
+  "gate_last_changed": "gate-d16",
+  "depends_on": [
+   "C-D14-PURITY-LEMMA"
+  ],
+  "superseded_by": "C-D16-SUPPORT3-COMPLETE",
+  "statement": {
+   "en": "Support-3 tail small, audited at three primes (bound 9/1000)",
+   "vi": "Đuôi support-3 nhỏ, audit ba prime (chặn 9/1000)"
+  },
+  "plain_language": {
+   "en": "An early three-prime estimate suggested the support-3 tail is under 9/1000, later shown too small once the full universe was scanned.",
+   "vi": "Một ước lượng ba-prime ban đầu gợi ý đuôi support-3 dưới 9/1000, sau chứng tỏ quá nhỏ khi quét toàn universe."
+  }
+ },
+ {
+  "claim_id": "C-D15-ORBIT-IDENTITY",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "projective directions, all supports",
+  "gate_introduced": "gate-d15",
+  "gate_last_changed": "gate-d15",
+  "depends_on": [
+   "C-D14-PURITY-LEMMA"
+  ],
+  "statement": {
+   "en": "Exact projective orbit-mass identity, direction height = primitive relation height",
+   "vi": "Danh tính khối-lượng-quỹ-đạo xạ ảnh chính xác, chiều cao hướng = chiều cao quan hệ nguyên thủy"
+  },
+  "plain_language": {
+   "en": "Repeated scalar copies of a relation are compressed into one projective direction, measured by a canonical height and an exact orbit mass.",
+   "vi": "Các bản sao vô hướng lặp của một quan hệ được nén thành một hướng xạ ảnh, đo bằng chiều cao chuẩn tắc và khối lượng quỹ đạo chính xác."
+  }
+ },
+ {
+  "claim_id": "C-D15-SUPPORT3-INVENTORY",
+  "status": "superseded",
+  "evidence": "I2",
+  "scope": "extremal family, 109 primes",
+  "gate_introduced": "gate-d15",
+  "gate_last_changed": "gate-d16",
+  "depends_on": [
+   "C-D15-ORBIT-IDENTITY"
+  ],
+  "superseded_by": "C-D16-SUPPORT3-COMPLETE",
+  "statement": {
+   "en": "Support-3 tail < 1/100 over 109 primes (extremal family, max 0.009475 at p=281)",
+   "vi": "Đuôi support-3 < 1/100 trên 109 prime (họ cực trị, max 0.009475 tại p=281)"
+  },
+  "plain_language": {
+   "en": "A broader 109-prime estimate over an extremal family gave 1/100, still incomplete, the full universe reaches 0.010377.",
+   "vi": "Ước lượng 109-prime rộng hơn trên họ cực trị cho 1/100, vẫn chưa đầy đủ, full universe đạt 0.010377."
+  }
+ },
+ {
+  "claim_id": "C-D16-MODULAR-RANK",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "all relation matrices",
+  "gate_introduced": "gate-d16",
+  "gate_last_changed": "gate-d16",
+  "depends_on": [
+   "C-D15-ORBIT-IDENTITY"
+  ],
+  "statement": {
+   "en": "Relation rank is over F_p: dim ker = 13 - rank_Fp >= 1 (u is a kernel witness)",
+   "vi": "Hạng quan hệ trên F_p: dim ker = 13 - rank_Fp >= 1 (u là nhân chứng kernel)"
+  },
+  "plain_language": {
+   "en": "Because relations hold modulo p, structural dimension must be counted modulo p, a load-bearing correction that withdrew the earlier rational-rank inference.",
+   "vi": "Vì quan hệ đúng theo modulo p, chiều cấu trúc phải đếm theo modulo p, một sửa chữa cốt yếu rút suy luận hạng-hữu-tỷ cũ."
+  }
+ },
+ {
+  "claim_id": "C-D16-SUPPORT3-COMPLETE",
+  "status": "validated_exact",
+  "evidence": "I2",
+  "scope": "COMPLETE universe, all 109 primes",
+  "gate_introduced": "gate-d16",
+  "gate_last_changed": "gate-d16",
+  "depends_on": [
+   "C-D15-SUPPORT3-INVENTORY",
+   "C-D15-ORBIT-IDENTITY"
+  ],
+  "supersedes": "C-D15-SUPPORT3-INVENTORY",
+  "statement": {
+   "en": "Support-3 closes on the full universe of all (p-1)^2 triples: tail < 11/1000 (max 0.010377 at p=353)",
+   "vi": "Support-3 đóng trên full universe mọi (p-1)^2 bộ-ba: đuôi < 11/1000 (max 0.010377 tại p=353)"
+  },
+  "plain_language": {
+   "en": "Scanning every triple at every one of the 109 primes shows the worst tail is 0.010377 at p=353, correcting both earlier constants (9/1000, 1/100).",
+   "vi": "Quét mọi bộ-ba tại từng prime trong 109 cho thấy đuôi tệ nhất là 0.010377 tại p=353, sửa cả hai hằng số cũ (9/1000, 1/100)."
+  }
+ },
+ {
+  "claim_id": "C-D16-SUPPORT4-FRAMEWORK",
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "PARTIAL-INVENTORY, exact at p=191/193/197/199",
+  "gate_introduced": "gate-d16",
+  "gate_last_changed": "gate-d16",
+  "depends_on": [
+   "C-D16-SUPPORT3-COMPLETE"
+  ],
+  "statement": {
+   "en": "Primitive support-4 orbit identity + lattice + connected 4th cumulant, tau4 < 8/1000 at four primes, inventory + support-5 OPEN",
+   "vi": "Danh tính quỹ đạo support-4 nguyên thủy + lattice + cumulant bậc 4, tau4 < 8/1000 tại bốn prime, inventory + support-5 MỞ"
+  },
+  "plain_language": {
+   "en": "The projective method extends to four-coordinate relations, exact at four small primes, full closure and support-5 remain open.",
+   "vi": "Phương pháp xạ ảnh mở sang quan hệ bốn tọa độ, chính xác tại bốn prime nhỏ, đóng đầy đủ và support-5 vẫn mở."
+  }
+ },
+ {
+  "claim_id": "C-D18-DEGREE5-NECESSARY",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "p=197 realizable witness",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D16-SUPPORT4-FRAMEWORK"
+  ],
+  "statement": {
+   "en": "A real proper vector at p=197 has best degree-4 bound 0 while degree 5 recovers 5/98, so degree 5 is the minimal information level",
+   "vi": "Một vector proper thật tại p=197 có chặn bậc-4 tốt nhất 0 trong khi bậc 5 phục hồi 5/98, nên bậc 5 là mức thông tin tối thiểu"
+  },
+  "plain_language": {
+   "en": "An honest counterexample shows a fourth-order certificate can never work, and the fifth order is exactly what is needed.",
+   "vi": "Một phản ví dụ trung thực cho thấy chứng chỉ bậc bốn không bao giờ đủ, và bậc năm chính là mức cần thiết."
+  }
+ },
+ {
+  "claim_id": "C-D18G-RANK-CUT",
+  "status": "refuted",
+  "evidence": "I2",
+  "scope": "p=197, all vectors",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D18-DEGREE5-NECESSARY"
+  ],
+  "statement": {
+   "en": "Bounded-height modular rank as the support-5 structural cut is refuted, rank saturates to full for every vector",
+   "vi": "Hạng modular chiều-cao-chặn làm phép cắt cấu trúc support-5 bị bác, hạng bão hòa tới đầy đủ cho mọi vector"
+  },
+  "plain_language": {
+   "en": "Using relation rank to detect structure does not work, every vector already reaches full rank.",
+   "vi": "Dùng hạng quan hệ để phát hiện cấu trúc không hiệu quả, mọi vector đã đạt hạng đầy đủ."
+  }
+ },
+ {
+  "claim_id": "C-D18G-EXISTENCE-CUT",
+  "status": "refuted",
+  "evidence": "I2",
+  "scope": "p=197, all subsets",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D18-DEGREE5-NECESSARY"
+  ],
+  "statement": {
+   "en": "Bounded-height relation existence as the cut is refuted, every five-subset carries a short support-5 relation",
+   "vi": "Tồn tại quan hệ chiều-cao-chặn làm phép cắt bị bác, mọi bộ-năm mang một quan hệ support-5 ngắn"
+  },
+  "plain_language": {
+   "en": "Detecting structure by whether a short relation exists fails, short relations are everywhere.",
+   "vi": "Phát hiện cấu trúc bằng việc có tồn tại quan hệ ngắn hay không thất bại, quan hệ ngắn ở khắp nơi."
+  }
+ },
+ {
+  "claim_id": "C-D18G-MAGNITUDE-CUT",
+  "status": "refuted",
+  "evidence": "I2",
+  "scope": "p=197",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D18-DEGREE5-NECESSARY"
+  ],
+  "statement": {
+   "en": "Per-direction magnitude concentration as the cut is refuted, the adverse fifth-order mass is diffuse",
+   "vi": "Độ lớn tập trung mỗi chiều làm phép cắt bị bác, khối lượng bậc năm bất lợi bị phân tán"
+  },
+  "plain_language": {
+   "en": "Peeling off the few largest directions does not separate structure, the mass is spread out.",
+   "vi": "Bóc vài chiều lớn nhất không tách được cấu trúc, khối lượng bị dàn trải."
+  }
+ },
+ {
+  "claim_id": "C-D18G-COHERENCE-CUT",
+  "status": "validated_bounded",
+  "evidence": "I2",
+  "scope": "bounded validation at p=197",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D18G-RANK-CUT",
+   "C-D18G-EXISTENCE-CUT",
+   "C-D18G-MAGNITUDE-CUT"
+  ],
+  "statement": {
+   "en": "Coherence of the fifth-order mass separates the tight coherent family from the incoherent residual branch on bounded validation",
+   "vi": "Coherence của khối lượng bậc năm tách họ tight coherent khỏi nhánh residual không coherent trên tập kiểm giới hạn"
+  },
+  "plain_language": {
+   "en": "The invariant that works measures whether the mass adds up or cancels, isolating the already-handled tight family.",
+   "vi": "Bất biến hiệu quả đo việc khối lượng cộng dồn hay triệt tiêu, cô lập họ tight vốn đã được xử lý."
+  }
+ },
+ {
+  "claim_id": "C-D18H-FIXED-M5-CLOSURE",
+  "status": "refuted",
+  "evidence": "I2",
+  "scope": "p=197 exact vector",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D18G-COHERENCE-CUT",
+   "C-D18-DEGREE5-NECESSARY"
+  ],
+  "statement": {
+   "en": "The fixed signed degree-5 margin M5 is REFUTED, a real proper non-tight vector at p=197 has M5 = minus 20/49 < 0",
+   "vi": "Biên bậc-5 có dấu cố định M5 BỊ BÁC BỎ, một vector proper non-tight thật tại p=197 có M5 = trừ 20/49 < 0"
+  },
+  "plain_language": {
+   "en": "A single fixed fifth-order rule cannot certify every case, an honest counterexample drives it negative.",
+   "vi": "Một quy tắc bậc năm cố định không thể chứng nhận mọi trường hợp, một phản ví dụ trung thực làm nó âm."
+  }
+ },
+ {
+  "claim_id": "C-D18H-SIGNED-INVERSE",
+  "status": "refuted",
+  "evidence": "I2",
+  "scope": "p=197 exact vector",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D18H-FIXED-M5-CLOSURE"
+  ],
+  "statement": {
+   "en": "The signed inverse theorem is refuted as posed, the counterexample has large adverse mass yet is non-tight and adaptively certified",
+   "vi": "Định lý nghịch đảo có dấu bị bác theo cách phát biểu, phản ví dụ có khối lượng bất lợi lớn nhưng non-tight và được chứng nhận thích ứng"
+  },
+  "plain_language": {
+   "en": "Large fifth-order mass does not force a known structured family, so that route also fails as stated.",
+   "vi": "Khối lượng bậc năm lớn không ép ra một họ cấu trúc đã biết, nên hướng đó cũng thất bại như đã nêu."
+  }
+ },
+ {
+  "claim_id": "D-D18H-ADAPTIVE-DEG5",
+  "status": "validated_bounded",
+  "evidence": "I2",
+  "scope": "~20000 proper non-tight vectors at p=197",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D18H-FIXED-M5-CLOSURE"
+  ],
+  "statement": {
+   "en": "The best per-vector adaptive degree-5 dual stays positive on the tested sample, min bound about 0.02",
+   "vi": "Dual bậc-5 thích ứng tốt nhất theo từng vector vẫn dương trên tập kiểm, chặn nhỏ nhất khoảng 0.02"
+  },
+  "plain_language": {
+   "en": "Choosing the best fifth-order certificate per vector works on every case tested, the correct object.",
+   "vi": "Chọn chứng chỉ bậc năm tốt nhất cho từng vector hiệu quả trên mọi ca đã kiểm, chính là đối tượng đúng."
+  }
+ },
+ {
+  "claim_id": "C-D18I-DUAL-46",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "exact rational enumeration",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "D-D18H-ADAPTIVE-DEG5"
+  ],
+  "statement": {
+   "en": "The degree-5 dual polyhedron has exactly 46 rational vertices, enumerated exhaustively, each a valid degree-5 minorant",
+   "vi": "Đa diện dual bậc-5 có đúng 46 đỉnh hữu tỉ, liệt kê đầy đủ, mỗi đỉnh là một minorant bậc-5 hợp lệ"
+  },
+  "plain_language": {
+   "en": "The family of best-possible fifth-order certificates is a finite list of 46 exact members.",
+   "vi": "Họ chứng chỉ bậc năm tốt nhất có thể là một danh sách hữu hạn gồm 46 phần tử chính xác."
+  }
+ },
+ {
+  "claim_id": "C-D18I-PRIMAL-DUAL",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "all moment profiles",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D18I-DUAL-46"
+  ],
+  "statement": {
+   "en": "The adaptive bound B5 = max over the 46 vertices equals the minimum p0 among distributions matching S0..S5, verified on both witnesses (5/98 and 487/3528)",
+   "vi": "Chặn thích ứng B5 = max trên 46 đỉnh bằng p0 nhỏ nhất trong các phân phối khớp S0..S5, kiểm trên cả hai nhân chứng (5/98 và 487/3528)"
+  },
+  "plain_language": {
+   "en": "The best adaptive certificate exactly equals the smallest loneliness probability consistent with the first six moments.",
+   "vi": "Chứng chỉ thích ứng tốt nhất bằng đúng xác suất cô đơn nhỏ nhất tương thích với sáu moment đầu."
+  }
+ },
+ {
+  "claim_id": "D-D18I-10-VERTEX-COVER",
+  "status": "validated_bounded",
+  "evidence": "I2",
+  "scope": "~20000 non-tight vectors at p=197, sample only",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D18I-PRIMAL-DUAL"
+  ],
+  "statement": {
+   "en": "On the tested sample ten of the 46 vertices certify every vector positively, sampled minimum B5 = 3/98, validation only not a theorem",
+   "vi": "Trên tập kiểm mười trong 46 đỉnh chứng nhận mọi vector là dương, min B5 mẫu = 3/98, chỉ là kiểm chứng không phải định lý"
+  },
+  "plain_language": {
+   "en": "Empirically a handful of certificates already covers every case tested, strong evidence but not yet a proof.",
+   "vi": "Thực nghiệm một nhúm chứng chỉ đã phủ mọi ca đã kiểm, bằng chứng mạnh nhưng chưa phải chứng minh."
+  }
+ },
+ {
+  "claim_id": "C-D18J-UNCOVERED-CONE",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "exact characterization",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "D-D18I-10-VERTEX-COVER"
+  ],
+  "statement": {
+   "en": "The region not certified by any adaptive dual vertex is exactly the p0=0 truncated moment cone (distributions on {1..13})",
+   "vi": "Miền không được đỉnh dual thích ứng nào chứng nhận chính là moment cone cắt cụt p0=0 (phân phối trên {1..13})"
+  },
+  "plain_language": {
+   "en": "The uncovered set is exactly the profiles admitting a zero-loneliness companion distribution.",
+   "vi": "Tập không phủ chính là các profile cho phép một phân phối cô đơn-bằng-không đi kèm."
+  }
+ },
+ {
+  "claim_id": "D-D18J-HISTOGRAM-ONLY",
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "outer relaxation at p=197",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "C-D18J-UNCOVERED-CONE"
+  ],
+  "statement": {
+   "en": "Integer p0=0 histograms survive the current outer realizability constraints; no real B5<=0 vector was found in bounded search",
+   "vi": "Histogram nguyên p0=0 vẫn sống sót qua các ràng buộc khả dĩ ngoài hiện tại; không tìm thấy vector thật B5<=0 trong tìm kiếm giới hạn"
+  },
+  "plain_language": {
+   "en": "A valid integer histogram is not the same as a real speed vector; the gap is the open separation.",
+   "vi": "Một histogram nguyên hợp lệ không giống một vector tốc độ thật; khoảng cách đó là phần tách còn mở."
+  }
+ },
+ {
+  "claim_id": "C-D18J-VECTOR-SEPARATION",
+  "status": "open",
+  "evidence": "I2",
+  "scope": "all realizable vectors, all 109 primes",
+  "gate_introduced": "gate-d18",
+  "gate_last_changed": "gate-d18",
+  "depends_on": [
+   "D-D18J-HISTOGRAM-ONLY"
+  ],
+  "statement": {
+   "en": "Separating actual speed-vector moment profiles from the p0=0 cone (exact realizability cut) remains OPEN",
+   "vi": "Tách các profile moment của vector tốc độ thật khỏi cone p0=0 (lát cắt khả dĩ chính xác) vẫn MỞ"
+  },
+  "plain_language": {
+   "en": "The remaining obligation is to prove real vectors never reach the uncovered cone.",
+   "vi": "Nghĩa vụ còn lại là chứng minh vector thật không bao giờ chạm miền không phủ."
+  }
+ },
+ {
+  "claim_id": "C-D19-COVER-WITNESS",
+  "status": "validated_exact",
+  "evidence": "I2",
+  "scope": "48 of 109 primes; exact witness at p=197",
+  "gate_introduced": "gate-d19",
+  "gate_last_changed": "gate-d19",
+  "depends_on": [
+   "C-D18J-VECTOR-SEPARATION"
+  ],
+  "statement": {
+   "en": "Explicit 13-cover witnesses exist, an exact non-tight improper vector at p=197 (13 distinct speeds, zero lonely times, B5=0) refutes per-prime cyclic-cover infeasibility",
+   "vi": "Nhân chứng phủ-13 hiện hữu, một vector improper non-tight chính xác tại p=197 (13 tốc độ phân biệt, không thời điểm cô đơn, B5=0) bác vô-khả-thi phủ tuần hoàn theo từng prime"
+  },
+  "plain_language": {
+   "en": "Thirteen shifts of the bad set really can cover the whole group at individual primes, so single-prime separation cannot work.",
+   "vi": "Mười ba phép dịch của tập bad thực sự có thể phủ toàn nhóm tại từng prime, nên tách theo từng prime không thể hiệu quả."
+  }
+ },
+ {
+  "claim_id": "C-D19-PER-PRIME-INSUFFICIENT",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "moment and cover methods, all primes",
+  "gate_introduced": "gate-d19",
+  "gate_last_changed": "gate-d19",
+  "depends_on": [
+   "C-D19-COVER-WITNESS"
+  ],
+  "statement": {
+   "en": "Both per-prime methods, the adaptive degree-5 moment dual and cyclic-cover infeasibility, are refuted by the same explicit witnesses; single-prime covers exist and have B5=0",
+   "vi": "Cả hai phương pháp theo từng prime, dual moment bậc-5 thích ứng và vô-khả-thi phủ tuần hoàn, đều bị bác bởi cùng các nhân chứng; phủ đơn-prime hiện hữu và có B5=0"
+  },
+  "plain_language": {
+   "en": "Neither moment nor cover methods at a single prime can settle the conjecture, since counterexample-shaped covers exist at each prime.",
+   "vi": "Cả phương pháp moment lẫn phủ tại một prime đều không thể kết luận, vì phủ hình-phản-ví-dụ hiện hữu tại mỗi prime."
+  }
+ },
+ {
+  "claim_id": "C-D19-LIFT",
+  "status": "open",
+  "evidence": "I2",
+  "scope": "prime-product lift, all 109 primes",
+  "gate_introduced": "gate-d19",
+  "gate_last_changed": "gate-d19",
+  "depends_on": [
+   "C-D19-PER-PRIME-INSUFFICIENT"
+  ],
+  "statement": {
+   "en": "The only remaining route is the prime-product lift, a real counterexample must cover simultaneously across enough primes to exceed B13 = 7^156 * 13^143, remains OPEN",
+   "vi": "Đường còn lại duy nhất là lift tích-các-prime, một phản ví dụ thật phải phủ đồng thời qua đủ prime để vượt B13 = 7^156 * 13^143, vẫn MỞ"
+  },
+  "plain_language": {
+   "en": "Single-prime covers are killed only by requiring one cover to hold across many primes at once, that lift is the open problem.",
+   "vi": "Phủ đơn-prime chỉ bị loại khi buộc một phủ đúng qua nhiều prime cùng lúc, lift đó là bài toán mở."
+  }
+ }
+]

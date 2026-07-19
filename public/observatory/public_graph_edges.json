@@ -1,0 +1,1046 @@
+[
+ {
+  "id": "arc:scan->gate-a",
+  "source": "gate:scan",
+  "target": "gate:gate-a",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-a->gate-b",
+  "source": "gate:gate-a",
+  "target": "gate:gate-b",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-b->gate-c",
+  "source": "gate:gate-b",
+  "target": "gate:gate-c",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-c->gate-c004",
+  "source": "gate:gate-c",
+  "target": "gate:gate-c004",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-c004->gate-c005",
+  "source": "gate:gate-c004",
+  "target": "gate:gate-c005",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-c005->gate-d0",
+  "source": "gate:gate-c005",
+  "target": "gate:gate-d0",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d0->gate-d1",
+  "source": "gate:gate-d0",
+  "target": "gate:gate-d1",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d1->gate-d2",
+  "source": "gate:gate-d1",
+  "target": "gate:gate-d2",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d2->gate-d3",
+  "source": "gate:gate-d2",
+  "target": "gate:gate-d3",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d3->gate-d4",
+  "source": "gate:gate-d3",
+  "target": "gate:gate-d4",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d4->gate-d5",
+  "source": "gate:gate-d4",
+  "target": "gate:gate-d5",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d5->gate-d6",
+  "source": "gate:gate-d5",
+  "target": "gate:gate-d6",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d6->gate-d7",
+  "source": "gate:gate-d6",
+  "target": "gate:gate-d7",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d7->gate-d7r",
+  "source": "gate:gate-d7",
+  "target": "gate:gate-d7r",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d7r->gate-d8",
+  "source": "gate:gate-d7r",
+  "target": "gate:gate-d8",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d8->gate-d9",
+  "source": "gate:gate-d8",
+  "target": "gate:gate-d9",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d9->gate-d10",
+  "source": "gate:gate-d9",
+  "target": "gate:gate-d10",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d10->gate-d11",
+  "source": "gate:gate-d10",
+  "target": "gate:gate-d11",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d11->gate-d12",
+  "source": "gate:gate-d11",
+  "target": "gate:gate-d12",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d12->gate-d13",
+  "source": "gate:gate-d12",
+  "target": "gate:gate-d13",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d13->gate-d14",
+  "source": "gate:gate-d13",
+  "target": "gate:gate-d14",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d14->gate-d15",
+  "source": "gate:gate-d14",
+  "target": "gate:gate-d15",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d15->gate-d16",
+  "source": "gate:gate-d15",
+  "target": "gate:gate-d16",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d16->gate-d17",
+  "source": "gate:gate-d16",
+  "target": "gate:gate-d17",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d17->gate-d18",
+  "source": "gate:gate-d17",
+  "target": "gate:gate-d18",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d18->gate-d19",
+  "source": "gate:gate-d18",
+  "target": "gate:gate-d19",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C0",
+  "source": "gate:scan",
+  "target": "claim:C0",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at scan.",
+   "vi": "Xuất hiện tại scan."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C1",
+  "source": "gate:scan",
+  "target": "claim:C1",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at scan.",
+   "vi": "Xuất hiện tại scan."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C2",
+  "source": "gate:scan",
+  "target": "claim:C2",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at scan.",
+   "vi": "Xuất hiện tại scan."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D4-K13-P191",
+  "source": "gate:gate-d14",
+  "target": "claim:C-D4-K13-P191",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d14.",
+   "vi": "Xuất hiện tại gate-d14."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D5-UNIFORM",
+  "source": "gate:gate-d14",
+  "target": "claim:C-D5-UNIFORM",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d14.",
+   "vi": "Xuất hiện tại gate-d14."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D12-DEFICIT-IDENTITY",
+  "source": "gate:gate-d12",
+  "target": "claim:C-D12-DEFICIT-IDENTITY",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d12.",
+   "vi": "Xuất hiện tại gate-d12."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D13-SUPPORT3-INVERSE-SCOPED",
+  "source": "gate:gate-d13",
+  "target": "claim:C-D13-SUPPORT3-INVERSE-SCOPED",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d13.",
+   "vi": "Xuất hiện tại gate-d13."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D14-PURITY-LEMMA",
+  "source": "gate:gate-d14",
+  "target": "claim:C-D14-PURITY-LEMMA",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d14.",
+   "vi": "Xuất hiện tại gate-d14."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D14-SUPPORT3-TAIL",
+  "source": "gate:gate-d14",
+  "target": "claim:C-D14-SUPPORT3-TAIL",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d14.",
+   "vi": "Xuất hiện tại gate-d14."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D15-ORBIT-IDENTITY",
+  "source": "gate:gate-d15",
+  "target": "claim:C-D15-ORBIT-IDENTITY",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d15.",
+   "vi": "Xuất hiện tại gate-d15."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D15-SUPPORT3-INVENTORY",
+  "source": "gate:gate-d15",
+  "target": "claim:C-D15-SUPPORT3-INVENTORY",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d15.",
+   "vi": "Xuất hiện tại gate-d15."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D16-MODULAR-RANK",
+  "source": "gate:gate-d16",
+  "target": "claim:C-D16-MODULAR-RANK",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d16.",
+   "vi": "Xuất hiện tại gate-d16."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D16-SUPPORT3-COMPLETE",
+  "source": "gate:gate-d16",
+  "target": "claim:C-D16-SUPPORT3-COMPLETE",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d16.",
+   "vi": "Xuất hiện tại gate-d16."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D16-SUPPORT4-FRAMEWORK",
+  "source": "gate:gate-d16",
+  "target": "claim:C-D16-SUPPORT4-FRAMEWORK",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d16.",
+   "vi": "Xuất hiện tại gate-d16."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18-DEGREE5-NECESSARY",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18-DEGREE5-NECESSARY",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18G-RANK-CUT",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18G-RANK-CUT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18G-EXISTENCE-CUT",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18G-EXISTENCE-CUT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18G-MAGNITUDE-CUT",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18G-MAGNITUDE-CUT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18G-COHERENCE-CUT",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18G-COHERENCE-CUT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18H-FIXED-M5-CLOSURE",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18H-FIXED-M5-CLOSURE",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18H-SIGNED-INVERSE",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18H-SIGNED-INVERSE",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:D-D18H-ADAPTIVE-DEG5",
+  "source": "gate:gate-d18",
+  "target": "claim:D-D18H-ADAPTIVE-DEG5",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18I-DUAL-46",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18I-DUAL-46",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18I-PRIMAL-DUAL",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18I-PRIMAL-DUAL",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:D-D18I-10-VERTEX-COVER",
+  "source": "gate:gate-d18",
+  "target": "claim:D-D18I-10-VERTEX-COVER",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18J-UNCOVERED-CONE",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18J-UNCOVERED-CONE",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:D-D18J-HISTOGRAM-ONLY",
+  "source": "gate:gate-d18",
+  "target": "claim:D-D18J-HISTOGRAM-ONLY",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D18J-VECTOR-SEPARATION",
+  "source": "gate:gate-d18",
+  "target": "claim:C-D18J-VECTOR-SEPARATION",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d18.",
+   "vi": "Xuất hiện tại gate-d18."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D19-COVER-WITNESS",
+  "source": "gate:gate-d19",
+  "target": "claim:C-D19-COVER-WITNESS",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d19.",
+   "vi": "Xuất hiện tại gate-d19."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D19-PER-PRIME-INSUFFICIENT",
+  "source": "gate:gate-d19",
+  "target": "claim:C-D19-PER-PRIME-INSUFFICIENT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d19.",
+   "vi": "Xuất hiện tại gate-d19."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D19-LIFT",
+  "source": "gate:gate-d19",
+  "target": "claim:C-D19-LIFT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d19.",
+   "vi": "Xuất hiện tại gate-d19."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:0:C1->C2",
+  "source": "claim:C1",
+  "target": "claim:C2",
+  "relation": "supports",
+  "explanation": {
+   "en": "Upstream k<=12 underwrites the k=9 reproduction.",
+   "vi": "k<=12 thượng nguồn làm nền cho tái lập k=9."
+  },
+  "valid_from_release": "REL-SCAN-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:1:C-D4-K13-P191->C-D5-UNIFORM",
+  "source": "claim:C-D4-K13-P191",
+  "target": "claim:C-D5-UNIFORM",
+  "relation": "supports",
+  "explanation": {
+   "en": "Exact tight count at one prime feeds the uniform transfer.",
+   "vi": "Đếm tight chính xác tại một prime cấp cho chuyển đều."
+  },
+  "valid_from_release": "REL-D05-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:2:C-D5-UNIFORM->C-D12-DEFICIT-IDENTITY",
+  "source": "claim:C-D5-UNIFORM",
+  "target": "claim:C-D12-DEFICIT-IDENTITY",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "With the tight side closed, the remaining work is the non-tight deficit.",
+   "vi": "Đóng phía tight xong, việc còn lại là deficit non-tight."
+  },
+  "valid_from_release": "REL-D12-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:3:C-D12-DEFICIT-IDENTITY->C-D13-SUPPORT3-INVERSE-SCOPED",
+  "source": "claim:C-D12-DEFICIT-IDENTITY",
+  "target": "claim:C-D13-SUPPORT3-INVERSE-SCOPED",
+  "relation": "supports",
+  "explanation": {
+   "en": "The deficit identity exposes connected correlations as the object to bound.",
+   "vi": "Danh tính deficit phơi bày tương quan liên thông là đối tượng cần chặn."
+  },
+  "valid_from_release": "REL-D13-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:4:C-D13-SUPPORT3-INVERSE-SCOPED->C-D14-PURITY-LEMMA",
+  "source": "claim:C-D13-SUPPORT3-INVERSE-SCOPED",
+  "target": "claim:C-D14-PURITY-LEMMA",
+  "relation": "supports",
+  "explanation": {
+   "en": "The support-3 inverse motivates the exact purity separation.",
+   "vi": "Support-3 inverse thúc đẩy tách thuần khiết chính xác."
+  },
+  "valid_from_release": "REL-D14-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:5:C-D14-PURITY-LEMMA->C-D14-SUPPORT3-TAIL",
+  "source": "claim:C-D14-PURITY-LEMMA",
+  "target": "claim:C-D14-SUPPORT3-TAIL",
+  "relation": "supports",
+  "explanation": {
+   "en": "Purity yields the first support-3 tail estimate (later superseded).",
+   "vi": "Thuần khiết cho ước lượng đuôi support-3 đầu tiên (sau bị thay)."
+  },
+  "valid_from_release": "REL-D14-001",
+  "valid_to_release": "REL-D16-002"
+ },
+ {
+  "id": "dep:6:C-D14-PURITY-LEMMA->C-D15-ORBIT-IDENTITY",
+  "source": "claim:C-D14-PURITY-LEMMA",
+  "target": "claim:C-D15-ORBIT-IDENTITY",
+  "relation": "supports",
+  "explanation": {
+   "en": "Purity is projectivized into the exact orbit-mass identity.",
+   "vi": "Thuần khiết được xạ-ảnh-hóa thành danh tính khối-lượng-quỹ-đạo chính xác."
+  },
+  "valid_from_release": "REL-D15-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:7:C-D15-ORBIT-IDENTITY->C-D15-SUPPORT3-INVENTORY",
+  "source": "claim:C-D15-ORBIT-IDENTITY",
+  "target": "claim:C-D15-SUPPORT3-INVENTORY",
+  "relation": "supports",
+  "explanation": {
+   "en": "Orbit grouping gives the 109-prime extremal-family estimate (later superseded).",
+   "vi": "Gom quỹ đạo cho ước lượng họ-cực-trị 109-prime (sau bị thay)."
+  },
+  "valid_from_release": "REL-D15-001",
+  "valid_to_release": "REL-D16-002"
+ },
+ {
+  "id": "dep:8:C-D16-SUPPORT3-COMPLETE->C-D14-SUPPORT3-TAIL",
+  "source": "claim:C-D16-SUPPORT3-COMPLETE",
+  "target": "claim:C-D14-SUPPORT3-TAIL",
+  "relation": "supersedes",
+  "explanation": {
+   "en": "The complete-universe bound 11/1000 supersedes the 9/1000 three-prime estimate.",
+   "vi": "Chặn full-universe 11/1000 thay ước lượng ba-prime 9/1000."
+  },
+  "valid_from_release": "REL-D16-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:9:C-D16-SUPPORT3-COMPLETE->C-D15-SUPPORT3-INVENTORY",
+  "source": "claim:C-D16-SUPPORT3-COMPLETE",
+  "target": "claim:C-D15-SUPPORT3-INVENTORY",
+  "relation": "supersedes",
+  "explanation": {
+   "en": "The complete-universe scan supersedes the incomplete extremal-family 1/100.",
+   "vi": "Quét full-universe thay 1/100 họ-cực-trị chưa đầy đủ."
+  },
+  "valid_from_release": "REL-D16-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:10:C-D16-MODULAR-RANK->C-D15-ORBIT-IDENTITY",
+  "source": "claim:C-D16-MODULAR-RANK",
+  "target": "claim:C-D15-ORBIT-IDENTITY",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Rank handoffs from the orbit method must be recomputed over F_p.",
+   "vi": "Handoff hạng từ phương pháp quỹ đạo phải tính lại trên F_p."
+  },
+  "valid_from_release": "REL-D16-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:11:C-D16-SUPPORT3-COMPLETE->C-D16-SUPPORT4-FRAMEWORK",
+  "source": "claim:C-D16-SUPPORT3-COMPLETE",
+  "target": "claim:C-D16-SUPPORT4-FRAMEWORK",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "With support-3 complete, the residual is support-4 (then support-5).",
+   "vi": "Support-3 đầy đủ, phần dư là support-4 (rồi support-5)."
+  },
+  "valid_from_release": "REL-D16-003",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:12:C-D16-SUPPORT4-FRAMEWORK->C-D18-DEGREE5-NECESSARY",
+  "source": "claim:C-D16-SUPPORT4-FRAMEWORK",
+  "target": "claim:C-D18-DEGREE5-NECESSARY",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "With support-4 closed, the final order is support-5, and a witness proves it is required.",
+   "vi": "Support-4 đóng xong, bậc cuối là support-5, và một nhân chứng chứng minh nó là bắt buộc."
+  },
+  "valid_from_release": "REL-D18-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:13:C-D18-DEGREE5-NECESSARY->C-D18G-RANK-CUT",
+  "source": "claim:C-D18-DEGREE5-NECESSARY",
+  "target": "claim:C-D18G-RANK-CUT",
+  "relation": "refutes",
+  "explanation": {
+   "en": "The witness structure refutes the rank cut, rank saturates for every vector.",
+   "vi": "Cấu trúc nhân chứng bác phép cắt hạng, hạng bão hòa cho mọi vector."
+  },
+  "valid_from_release": "REL-D18-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:14:C-D18-DEGREE5-NECESSARY->C-D18G-EXISTENCE-CUT",
+  "source": "claim:C-D18-DEGREE5-NECESSARY",
+  "target": "claim:C-D18G-EXISTENCE-CUT",
+  "relation": "refutes",
+  "explanation": {
+   "en": "Short support-5 relations are unavoidable, refuting the existence cut.",
+   "vi": "Quan hệ support-5 ngắn không tránh được, bác phép cắt tồn tại."
+  },
+  "valid_from_release": "REL-D18-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:15:C-D18-DEGREE5-NECESSARY->C-D18G-MAGNITUDE-CUT",
+  "source": "claim:C-D18-DEGREE5-NECESSARY",
+  "target": "claim:C-D18G-MAGNITUDE-CUT",
+  "relation": "refutes",
+  "explanation": {
+   "en": "The adverse mass is diffuse, refuting the magnitude cut.",
+   "vi": "Khối lượng bất lợi phân tán, bác phép cắt độ lớn."
+  },
+  "valid_from_release": "REL-D18-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:16:C-D18G-RANK-CUT->C-D18G-COHERENCE-CUT",
+  "source": "claim:C-D18G-RANK-CUT",
+  "target": "claim:C-D18G-COHERENCE-CUT",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "After the three degenerate cuts, coherence is the invariant that separates.",
+   "vi": "Sau ba phép cắt suy biến, coherence là bất biến tách được."
+  },
+  "valid_from_release": "REL-D18-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:17:C-D18G-COHERENCE-CUT->C-D18H-FIXED-M5-CLOSURE",
+  "source": "claim:C-D18G-COHERENCE-CUT",
+  "target": "claim:C-D18H-FIXED-M5-CLOSURE",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "The residual reduces to the signed fifth-order bound, first tried as a fixed rule.",
+   "vi": "Residual quy về chặn bậc năm có dấu, thử đầu tiên bằng một quy tắc cố định."
+  },
+  "valid_from_release": "REL-D18-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:18:C-D18H-FIXED-M5-CLOSURE->C-D18H-SIGNED-INVERSE",
+  "source": "claim:C-D18H-FIXED-M5-CLOSURE",
+  "target": "claim:C-D18H-SIGNED-INVERSE",
+  "relation": "refutes",
+  "explanation": {
+   "en": "The same counterexample refutes both the fixed margin and the signed inverse theorem.",
+   "vi": "Cùng một phản ví dụ bác cả biên cố định lẫn định lý nghịch đảo có dấu."
+  },
+  "valid_from_release": "REL-D18-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:19:C-D18H-SIGNED-INVERSE->D-D18H-ADAPTIVE-DEG5",
+  "source": "claim:C-D18H-SIGNED-INVERSE",
+  "target": "claim:D-D18H-ADAPTIVE-DEG5",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "Both fixed routes refuted, the correct object is the best per-vector adaptive dual.",
+   "vi": "Cả hai hướng cố định bị bác, đối tượng đúng là dual thích ứng tốt nhất theo từng vector."
+  },
+  "valid_from_release": "REL-D18-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:20:D-D18H-ADAPTIVE-DEG5->C-D18I-DUAL-46",
+  "source": "claim:D-D18H-ADAPTIVE-DEG5",
+  "target": "claim:C-D18I-DUAL-46",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "The adaptive dual is a finite family, exactly 46 rational vertices.",
+   "vi": "Dual thích ứng là một họ hữu hạn, đúng 46 đỉnh hữu tỉ."
+  },
+  "valid_from_release": "REL-D18-003",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:21:C-D18I-DUAL-46->C-D18I-PRIMAL-DUAL",
+  "source": "claim:C-D18I-DUAL-46",
+  "target": "claim:C-D18I-PRIMAL-DUAL",
+  "relation": "supports",
+  "explanation": {
+   "en": "With the vertices fixed, LP duality equates the adaptive max to the primal minimum p0.",
+   "vi": "Cố định các đỉnh, đối ngẫu LP đồng nhất max thích ứng với p0 nhỏ nhất primal."
+  },
+  "valid_from_release": "REL-D18-003",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:22:C-D18I-PRIMAL-DUAL->D-D18I-10-VERTEX-COVER",
+  "source": "claim:C-D18I-PRIMAL-DUAL",
+  "target": "claim:D-D18I-10-VERTEX-COVER",
+  "relation": "supports",
+  "explanation": {
+   "en": "On the sample only ten vertices are ever optimal and all bounds stay positive.",
+   "vi": "Trên tập mẫu chỉ mười đỉnh từng tối ưu và mọi chặn vẫn dương."
+  },
+  "valid_from_release": "REL-D18-003",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:23:D-D18I-10-VERTEX-COVER->C-D18J-UNCOVERED-CONE",
+  "source": "claim:D-D18I-10-VERTEX-COVER",
+  "target": "claim:C-D18J-UNCOVERED-CONE",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "The empirical cover reduces to characterizing the uncovered region exactly.",
+   "vi": "Phủ thực nghiệm quy về đặc tả chính xác miền không phủ."
+  },
+  "valid_from_release": "REL-D18-004",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:24:C-D18J-UNCOVERED-CONE->D-D18J-HISTOGRAM-ONLY",
+  "source": "claim:C-D18J-UNCOVERED-CONE",
+  "target": "claim:D-D18J-HISTOGRAM-ONLY",
+  "relation": "supports",
+  "explanation": {
+   "en": "The uncovered cone still admits integer p0=0 histograms.",
+   "vi": "Cone không phủ vẫn cho phép histogram nguyên p0=0."
+  },
+  "valid_from_release": "REL-D18-004",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:25:D-D18J-HISTOGRAM-ONLY->C-D18J-VECTOR-SEPARATION",
+  "source": "claim:D-D18J-HISTOGRAM-ONLY",
+  "target": "claim:C-D18J-VECTOR-SEPARATION",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "Closing requires separating real vectors from histogram-only profiles.",
+   "vi": "Đóng cần tách vector thật khỏi profile chỉ-histogram."
+  },
+  "valid_from_release": "REL-D18-004",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:26:C-D18J-VECTOR-SEPARATION->C-D19-COVER-WITNESS",
+  "source": "claim:C-D18J-VECTOR-SEPARATION",
+  "target": "claim:C-D19-COVER-WITNESS",
+  "relation": "refutes",
+  "explanation": {
+   "en": "The exact cyclic-cover source yields explicit covers, refuting per-prime separation.",
+   "vi": "Nguồn phủ tuần hoàn chính xác cho ra các phủ tường minh, bác tách theo từng prime."
+  },
+  "valid_from_release": "REL-D19-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:27:C-D19-COVER-WITNESS->C-D19-PER-PRIME-INSUFFICIENT",
+  "source": "claim:C-D19-COVER-WITNESS",
+  "target": "claim:C-D19-PER-PRIME-INSUFFICIENT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Explicit covers with B5=0 refute both per-prime moment and cover methods.",
+   "vi": "Các phủ tường minh với B5=0 bác cả phương pháp moment lẫn phủ theo từng prime."
+  },
+  "valid_from_release": "REL-D19-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:28:C-D19-PER-PRIME-INSUFFICIENT->C-D19-LIFT",
+  "source": "claim:C-D19-PER-PRIME-INSUFFICIENT",
+  "target": "claim:C-D19-LIFT",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "Per-prime methods refuted, only the prime-product lift can close the branch.",
+   "vi": "Phương pháp theo từng prime bị bác, chỉ lift tích-các-prime mới đóng được nhánh."
+  },
+  "valid_from_release": "REL-D19-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:29:C-D19-LIFT->C0",
+  "source": "claim:C-D19-LIFT",
+  "target": "claim:C0",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "The prime-product lift is the remaining route toward the open target.",
+   "vi": "Lift tích-các-prime là đường còn lại hướng tới mục tiêu mở."
+  },
+  "valid_from_release": "REL-D19-001",
+  "valid_to_release": null
+ }
+]

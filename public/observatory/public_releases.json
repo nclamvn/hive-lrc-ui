@@ -1,0 +1,316 @@
+[
+ {
+  "id": "REL-SCAN-001",
+  "sequence": 1,
+  "gate_id": "scan",
+  "change_type": "GATE_CLOSED",
+  "evidence": "I1",
+  "scope": "k=9",
+  "owner_approved": true,
+  "published_at": "2026-07-17T00:00:00Z",
+  "title": {
+   "en": "Research scan complete, k=9 reproduced",
+   "vi": "Hoàn tất khảo sát, tái lập k=9"
+  },
+  "summary_public": {
+   "en": "Upstream sources audited and compiled, the k=9 case was reproduced locally, matching the published result exactly.",
+   "vi": "Nguồn thượng nguồn được audit và compile, k=9 tái lập cục bộ, khớp kết quả đã công bố."
+  },
+  "summary_technical": {
+   "en": "Four upstream repos cloned/compiled, k=9 output identical to result_10, product-over-primes threshold re-checked with exact integers.",
+   "vi": "Bốn kho thượng nguồn clone/compile, k=9 khớp result_10, ngưỡng tích-số-nguyên-tố kiểm lại bằng số nguyên chính xác."
+  }
+ },
+ {
+  "id": "REL-D05-001",
+  "sequence": 2,
+  "gate_id": "gate-d14",
+  "change_type": "THEOREM_PROVED",
+  "evidence": "I2",
+  "scope": "all p>182",
+  "owner_approved": true,
+  "published_at": "2026-07-18T00:00:00Z",
+  "title": {
+   "en": "Tight side closed uniformly across primes",
+   "vi": "Đóng phía tight đều trên các prime"
+  },
+  "summary_public": {
+   "en": "The tight configurations reduce to 16,171 exact orbit classes, closed at p=191 and transferred uniformly to all primes above 182.",
+   "vi": "Cấu hình tight thu về 16,171 lớp orbit chính xác, đóng tại p=191 và chuyển đều sang mọi prime trên 182."
+  },
+  "summary_technical": {
+   "en": "Exact k=13 orbit count 16,171 via fold-class multisets, uniform lattice-point transfer covers all p>182 (P0=78).",
+   "vi": "Đếm orbit k=13 chính xác 16,171 qua đa-tập fold-class, chuyển điểm-lưới đều phủ mọi p>182 (P0=78)."
+  }
+ },
+ {
+  "id": "REL-D12-001",
+  "sequence": 3,
+  "gate_id": "gate-d12",
+  "change_type": "THEOREM_PROVED",
+  "evidence": "I2",
+  "scope": "non-tight, degree-5",
+  "owner_approved": true,
+  "published_at": "2026-07-18T00:00:00Z",
+  "title": {
+   "en": "Non-tight margin becomes an exact deficit sum",
+   "vi": "Margin non-tight thành tổng deficit chính xác"
+  },
+  "summary_public": {
+   "en": "The gap on the hard (non-tight) side is rewritten as an exact finite sum over pairs and triples of speeds.",
+   "vi": "Khoảng cách phía khó (non-tight) viết lại thành tổng hữu hạn chính xác trên cặp và bộ-ba vận tốc."
+  },
+  "summary_technical": {
+   "en": "Dual-deficit identity margin = sum_{j<=5}(-1)^j mu_j*, per-edge pair correlations, Bonferroni-alternating signs.",
+   "vi": "Danh tính dual-deficit margin = tổng_{j<=5}(-1)^j mu_j*, tương quan cặp theo cạnh, dấu xen kẽ Bonferroni."
+  }
+ },
+ {
+  "id": "REL-D14-001",
+  "sequence": 4,
+  "gate_id": "gate-d14",
+  "change_type": "THEOREM_PROVED",
+  "evidence": "I2",
+  "scope": "all supports (identity)",
+  "owner_approved": true,
+  "published_at": "2026-07-18T00:00:00Z",
+  "title": {
+   "en": "Connected-support purity lemma",
+   "vi": "Bổ đề thuần khiết support liên thông"
+  },
+  "summary_public": {
+   "en": "Every correlation splits exactly into a genuine structural relation and a deterministic finite-field term.",
+   "vi": "Mỗi tương quan tách chính xác thành quan hệ cấu trúc thật và số hạng trường hữu hạn xác định."
+  },
+  "summary_technical": {
+   "en": "kappa_S = [p/(p-1)] sum primitive relation frequencies - (1/(p-1))(1-beta)^|S|, verified kappa_direct == kappa_fourier.",
+   "vi": "kappa_S = [p/(p-1)] tổng tần số quan hệ nguyên thủy - (1/(p-1))(1-beta)^|S|, kiểm kappa_direct == kappa_fourier."
+  }
+ },
+ {
+  "id": "REL-D15-001",
+  "sequence": 5,
+  "gate_id": "gate-d15",
+  "change_type": "THEOREM_PROVED",
+  "evidence": "I2",
+  "scope": "projective directions",
+  "owner_approved": true,
+  "published_at": "2026-07-18T00:00:00Z",
+  "title": {
+   "en": "Projective relation directions and lattice tail",
+   "vi": "Hướng quan hệ xạ ảnh và đuôi lattice"
+  },
+  "summary_public": {
+   "en": "Repeated scalar copies of a relation are compressed into one projective structural direction with a canonical height.",
+   "vi": "Các bản sao vô hướng lặp của một quan hệ được nén thành một hướng cấu trúc xạ ảnh với chiều cao chuẩn tắc."
+  },
+  "summary_technical": {
+   "en": "Exact orbit-mass identity sum prod Bhat = sum_D A_p(D), relation lattice det p with exact l-infinity shortest vector.",
+   "vi": "Danh tính khối-lượng-quỹ-đạo chính xác tổng tích Bhat = tổng_D A_p(D), relation lattice det p với vector ngắn nhất l-vô-cùng chính xác."
+  }
+ },
+ {
+  "id": "REL-D15-002",
+  "sequence": 6,
+  "gate_id": "gate-d15",
+  "change_type": "CLAIM_UPDATED",
+  "evidence": "I2",
+  "scope": "verifier metric",
+  "owner_approved": true,
+  "published_at": "2026-07-18T00:00:00Z",
+  "supersedes_release_id": "REL-D15-001",
+  "title": {
+   "en": "Verifier margin reconciliation",
+   "vi": "Điều hòa margin verifier"
+  },
+  "summary_public": {
+   "en": "Two reported margin numbers were the same quantity measured on two different test vectors, not a mismatch.",
+   "vi": "Hai con số margin là cùng một đại lượng đo trên hai vector khác nhau, không phải mâu thuẫn."
+  },
+  "summary_technical": {
+   "en": "+0.1158 / -8.358 = degree-5 Bonferroni punctured dual margin M5 on the AP vector (11/95) vs the tight vector (-794/95).",
+   "vi": "+0.1158 / -8.358 = margin đối ngẫu đục-lỗ Bonferroni bậc 5 M5 trên vector AP (11/95) vs vector tight (-794/95)."
+  }
+ },
+ {
+  "id": "REL-D16-001",
+  "sequence": 7,
+  "gate_id": "gate-d16",
+  "change_type": "CLAIM_WITHDRAWN",
+  "evidence": "I2",
+  "scope": "all relation matrices",
+  "owner_approved": true,
+  "published_at": "2026-07-18T00:00:00Z",
+  "title": {
+   "en": "Modular rank correction (F_p, not Q)",
+   "vi": "Sửa hạng modular (F_p, không phải Q)"
+  },
+  "summary_public": {
+   "en": "A load-bearing correction: structural dimension must be counted modulo p, because the relations hold modulo p. The earlier rational-rank inference was withdrawn.",
+   "vi": "Một sửa chữa cốt yếu: chiều cấu trúc phải đếm theo modulo p, vì quan hệ đúng theo modulo p. Suy luận hạng-hữu-tỷ cũ bị rút."
+  },
+  "summary_technical": {
+   "en": "R u = 0 mod p with u != 0 implies rank_Fp(R) <= 12, so dim_Fp ker = 13 - rank_Fp >= 1, the D15 'generic additive dimension 0' was withdrawn.",
+   "vi": "R u = 0 mod p với u != 0 kéo theo rank_Fp(R) <= 12, nên dim_Fp ker = 13 - rank_Fp >= 1, 'chiều cộng generic 0' của D15 bị rút."
+  }
+ },
+ {
+  "id": "REL-D16-002",
+  "sequence": 8,
+  "gate_id": "gate-d16",
+  "change_type": "THEOREM_PROVED",
+  "evidence": "I2",
+  "scope": "COMPLETE universe, 109 primes",
+  "owner_approved": true,
+  "published_at": "2026-07-18T00:00:00Z",
+  "supersedes_release_id": "REL-D15-001",
+  "title": {
+   "en": "Support-3 closed on the complete universe",
+   "vi": "Support-3 đóng trên full universe"
+  },
+  "summary_public": {
+   "en": "Scanning every triple at every one of the 109 primes shows the worst tail is 0.010377 at p=353, correcting both earlier estimates.",
+   "vi": "Quét mọi bộ-ba tại từng prime trong 109 cho đuôi tệ nhất 0.010377 tại p=353, sửa cả hai ước lượng cũ."
+  },
+  "summary_technical": {
+   "en": "Full (p-1)^2 triple universe, exact punctured cumulant, tau3 < 11/1000, supersedes 9/1000 (D14) and 1/100 (D15).",
+   "vi": "Full universe (p-1)^2 bộ-ba, cumulant đục-lỗ chính xác, tau3 < 11/1000, thay 9/1000 (D14) và 1/100 (D15)."
+  }
+ },
+ {
+  "id": "REL-D16-003",
+  "sequence": 9,
+  "gate_id": "gate-d16",
+  "change_type": "GATE_OPENED",
+  "evidence": "I2",
+  "scope": "PARTIAL-INVENTORY (4 primes)",
+  "owner_approved": true,
+  "published_at": "2026-07-18T00:00:00Z",
+  "title": {
+   "en": "Support-4 projective framework opened",
+   "vi": "Mở framework xạ ảnh support-4"
+  },
+  "summary_public": {
+   "en": "The projective method now extends to four-coordinate relations, exact at four small primes, full closure and support-5 remain open.",
+   "vi": "Phương pháp xạ ảnh mở sang quan hệ bốn tọa độ, chính xác tại bốn prime nhỏ, đóng đầy đủ và support-5 vẫn mở."
+  },
+  "summary_technical": {
+   "en": "Support-4 orbit identity (verified p=43), lattice det p, connected 4th cumulant, tau4 < 8/1000 at p=191/193/197/199.",
+   "vi": "Danh tính quỹ đạo support-4 (kiểm p=43), lattice det p, cumulant bậc 4 liên thông, tau4 < 8/1000 tại p=191/193/197/199."
+  }
+ },
+ {
+  "id": "REL-D18-001",
+  "sequence": 10,
+  "gate_id": "gate-d18",
+  "change_type": "ARCHITECTURE_CHANGED",
+  "evidence": "I2",
+  "scope": "support-5 structural cut",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "title": {
+   "en": "Degree-4 refuted, support-5 necessary, coherence cut",
+   "vi": "Bác bỏ bậc-4, cần support-5, phép cắt coherence"
+  },
+  "summary_public": {
+   "en": "An honest counterexample proves a fourth-order certificate can never close the generic branch and the fifth order is the minimal level needed. The support-5 machinery is built and verified. Three natural structural cuts are proved degenerate, and coherence separates the already-handled tight family from the residual, whose control is the still-open signed Fourier bound. LRC(13) remains open.",
+   "vi": "Một phản ví dụ trung thực chứng minh chứng chỉ bậc bốn không bao giờ đóng được nhánh generic và bậc năm là mức tối thiểu cần thiết. Bộ máy support-5 được dựng và kiểm. Ba phép cắt cấu trúc tự nhiên bị chứng minh suy biến, và coherence tách họ tight vốn đã xử lý khỏi residual, mà việc kiểm soát nó là chặn Fourier có dấu vẫn còn mở. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "p=197 witness best degree-4 bound 0, degree-5 recovers 5/98. kappa5 10-partition identity, tensor Fourier, adverse slope -1, witness control. r_{5,H} saturates to 12, support-5 relations dense, mass diffuse, coherence = P5_net/P5_absmass separates tight (1.0) from residual (<0.1). Two verifiers ACCEPT, 62/62 corruption.",
+   "vi": "Nhân chứng p=197 chặn bậc-4 tốt nhất 0, bậc-5 phục hồi 5/98. Danh tính kappa5 10 phân hoạch, Fourier tensor, độ dốc bất lợi -1, kiểm soát nhân chứng. r_{5,H} bão hòa tới 12, quan hệ support-5 dày đặc, khối lượng phân tán, coherence = P5_net/P5_absmass tách tight (1.0) khỏi residual (<0.1). Hai verifier CHẤP NHẬN, 62/62 tấn công."
+  }
+ },
+ {
+  "id": "REL-D18-002",
+  "sequence": 11,
+  "gate_id": "gate-d18",
+  "change_type": "COUNTEREXAMPLE_FOUND",
+  "evidence": "I2",
+  "scope": "signed degree-5 closure",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D18-001",
+  "title": {
+   "en": "D18-H REFUTED, fixed signed degree-5 fails, adaptive route",
+   "vi": "D18-H BỊ BÁC BỎ, bậc-5 có dấu cố định thất bại, hướng thích ứng"
+  },
+  "summary_public": {
+   "en": "The fixed signed fifth-order closure is refuted by an exact real vector at p=197, and the signed inverse theorem fails as posed. Degree-5 remains necessary. The validated new direction is the adaptive fifth-order dual, choosing the best certificate per vector, which holds on every case tested. A uniform adaptive proof over all vectors remains open. This negative result is published in full. LRC(13) remains open.",
+   "vi": "Chặn bậc năm có dấu cố định bị bác bởi một vector thật chính xác tại p=197, và định lý nghịch đảo có dấu thất bại theo cách phát biểu. Bậc năm vẫn cần thiết. Hướng mới đã kiểm là dual bậc năm thích ứng, chọn chứng chỉ tốt nhất cho từng vector, đúng trên mọi ca đã kiểm. Chứng minh thích ứng đồng đều trên mọi vector vẫn mở. Kết quả âm này được công bố đầy đủ. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "Exact refuter u at p=197: fixed Bonferroni M5 = -20/49 < 0 while proper (p0=8/49), adverse A5=S5=129/98 but non-tight, best degree-5 = +0.138. min best-deg5 over ~20000 proper non-tight vectors ~ +0.02 (= p0 at minimizer). Fixed M5 and signed inverse both refuted, best per-vector adaptive degree-5 validated-bounded, uniform proof OPEN. Two verifiers ACCEPT, 65/65 corruption.",
+   "vi": "Refuter chính xác u tại p=197: M5 Bonferroni cố định = -20/49 < 0 dù proper (p0=8/49), A5=S5=129/98 nhưng non-tight, best degree-5 = +0.138. min best-deg5 trên ~20000 vector proper non-tight ~ +0.02 (= p0 tại điểm cực tiểu). M5 cố định và nghịch đảo có dấu đều bị bác, dual bậc-5 thích ứng tốt nhất theo từng vector validated-bounded, chứng minh đồng đều MỞ. Hai verifier CHẤP NHẬN, 65/65 tấn công."
+  }
+ },
+ {
+  "id": "REL-D18-003",
+  "sequence": 12,
+  "gate_id": "gate-d18",
+  "change_type": "THEOREM_PROVED",
+  "evidence": "I2",
+  "scope": "adaptive degree-5 dual polyhedron",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D18-002",
+  "title": {
+   "en": "D18-I PARTIAL, 46 exact dual vertices and primal-dual proved",
+   "vi": "D18-I PARTIAL, 46 đỉnh dual chính xác và primal-dual đã chứng minh"
+  },
+  "summary_public": {
+   "en": "The adaptive fifth-order dual is now a finite exact object, exactly 46 rational vertices, and the best adaptive bound equals the smallest loneliness probability consistent with the first six moments. On every tested case ten of these certificates suffice, but a proof for all achievable cases is still open. The search used no properness assumption and found no counterexample. LRC(13) remains open.",
+   "vi": "Dual bậc năm thích ứng nay là một đối tượng hữu hạn chính xác, đúng 46 đỉnh hữu tỉ, và chặn thích ứng tốt nhất bằng xác suất cô đơn nhỏ nhất tương thích với sáu moment đầu. Trên mọi ca đã kiểm mười chứng chỉ này là đủ, nhưng chứng minh cho mọi ca khả dĩ vẫn mở. Việc tìm kiếm không dùng giả định properness và không tìm thấy phản ví dụ. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "D5 polyhedron -> 46 exact vertices (C(14,6)=3003 bases). B5 = max_v L_v(S) = min mu_0 matching S0..S5, verified. B5(D18-E)=5/98, B5(D18-H refuter)=487/3528, B5(p0=0 ctrl)=0. min B5=3/98 over 20459 non-tight vectors (no proper filter), 10-vertex empirical cover, both validation-only. Full realizable cover OPEN. V1/V2 ACCEPT, 69/69 corruption.",
+   "vi": "Đa diện D5 -> 46 đỉnh chính xác (C(14,6)=3003 cơ sở). B5 = max_v L_v(S) = min mu_0 khớp S0..S5, đã kiểm. B5(D18-E)=5/98, B5(refuter D18-H)=487/3528, B5(ctrl p0=0)=0. min B5=3/98 trên 20459 vector non-tight (không lọc proper), phủ 10 đỉnh thực nghiệm, cả hai chỉ kiểm chứng. Phủ khả dĩ đầy đủ MỞ. V1/V2 CHẤP NHẬN, 69/69 tấn công."
+  }
+ },
+ {
+  "id": "REL-D18-004",
+  "sequence": 13,
+  "gate_id": "gate-d18",
+  "change_type": "ARCHITECTURE_CHANGED",
+  "evidence": "I2",
+  "scope": "exact cover reformulation",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D18-003",
+  "title": {
+   "en": "D18-J PARTIAL, D18 closed as exact reformulation, D19 opens",
+   "vi": "D18-J PARTIAL, D18 đóng dạng tái phát biểu chính xác, mở D19"
+  },
+  "summary_public": {
+   "en": "The region no adaptive certificate covers is exactly the zero-loneliness moment cone. Integer histograms with zero loneliness survive the current outer constraints, and no real counterexample was found in bounded search, but separating real speed vectors from these histograms stays open. D18 closes as an exact reformulation of the remaining obligation, not a solution. The next gate returns to the exact cyclic-covering source. LRC(13) remains open.",
+   "vi": "Miền không chứng chỉ thích ứng nào phủ chính là moment cone cô đơn-bằng-không. Histogram nguyên với cô đơn-bằng-không sống sót qua các ràng buộc ngoài hiện tại, và không tìm thấy phản ví dụ thật trong tìm kiếm giới hạn, nhưng việc tách vector tốc độ thật khỏi các histogram đó vẫn mở. D18 đóng dạng tái phát biểu chính xác của nghĩa vụ còn lại, không phải lời giải. Gate tiếp theo quay về nguồn phủ tuần hoàn chính xác. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "Uncovered region U = {S: B5(S)<=0} = moment cone of distributions on {1..13}. Outer polytope from proved bounds still admits p0=0 integer histograms (HISTOGRAM-ONLY). Per-realized-point cover holds (pinned S2..S5 excludes p0=0). No real B5<=0 in 20459-vector search. Missing cut = exact realizable (S2..S5) polytope. V1/V2 ACCEPT, 73/73 corruption. D18 PARTIAL; D19 exact cyclic cover opens.",
+   "vi": "Miền không phủ U = {S: B5(S)<=0} = moment cone của phân phối trên {1..13}. Đa giác ngoài từ chặn đã chứng minh vẫn cho phép histogram nguyên p0=0 (CHỈ-HISTOGRAM). Phủ theo-điểm-thực-tại đúng (ghim S2..S5 loại p0=0). Không có B5<=0 thật trong tìm kiếm 20459 vector. Lát cắt thiếu = đa giác khả dĩ (S2..S5) chính xác. V1/V2 CHẤP NHẬN, 73/73 tấn công. D18 PARTIAL; mở D19 phủ tuần hoàn chính xác."
+  }
+ },
+ {
+  "id": "REL-D19-001",
+  "sequence": 14,
+  "gate_id": "gate-d19",
+  "change_type": "COUNTEREXAMPLE_FOUND",
+  "evidence": "I2",
+  "scope": "exact cyclic cover, per-prime",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D18-004",
+  "title": {
+   "en": "D19 REFUTED, per-prime cyclic-cover infeasibility is false",
+   "vi": "D19 BỊ BÁC BỎ, vô-khả-thi phủ tuần hoàn theo từng prime là sai"
+  },
+  "summary_public": {
+   "en": "Returning to the exact source object, thirteen shifts of the bad set really can cover the whole group at individual primes. Explicit covers exist at 48 of the 109 primes, including an exact non-tight improper vector at p=197. These single-prime covers are exactly what upstream enumeration finds and are not real counterexamples, they are eliminated only by requiring one configuration to cover across many primes at once. So both per-prime methods, moment and cover, cannot settle the conjecture. The only remaining route is the prime-product lift. LRC(13) remains open and is not disproven.",
+   "vi": "Quay về đối tượng nguồn chính xác, mười ba phép dịch của tập bad thực sự có thể phủ toàn nhóm tại từng prime. Phủ tường minh hiện hữu tại 48 trong 109 prime, gồm một vector improper non-tight chính xác tại p=197. Các phủ đơn-prime này chính là thứ liệt kê thượng nguồn tìm ra và không phải phản ví dụ thật, chúng chỉ bị loại khi buộc một cấu hình phủ qua nhiều prime cùng lúc. Nên cả hai phương pháp theo từng prime, moment và phủ, đều không thể kết luận. Đường còn lại duy nhất là lift tích-các-prime. LRC(13) vẫn mở và không bị bác bỏ."
+  },
+  "summary_technical": {
+   "en": "Equivalence: improper <=> 13 cyclic translates of B cover G=Z/(p-1). Fractional cover = (p-1)/|B| ~ 7 (all 109, <<13, closes nothing). Greedy integer cover <=13 at 48/109 primes (verified). Witness p=197: 13 distinct non-tight speeds, 0 lonely times, p0=0, B5=0 -> corrects D18 (adaptive dual also fails per-prime; the 20459-vector no-counterexample search was sampling-bounded). Only route = prime-product lift B13=7^156*13^143. V1/V2 ACCEPT, 78/78 corruption.",
+   "vi": "Tương đương: improper <=> 13 phép dịch tuần hoàn của B phủ G=Z/(p-1). Phủ phân số = (p-1)/|B| ~ 7 (toàn 109, <<13, không đóng gì). Phủ nguyên greedy <=13 tại 48/109 prime (đã kiểm). Nhân chứng p=197: 13 tốc độ non-tight phân biệt, 0 thời điểm cô đơn, p0=0, B5=0 -> sửa D18 (dual thích ứng cũng thất bại theo từng prime; tìm kiếm 20459 vector bị giới hạn mẫu). Đường duy nhất = lift tích-các-prime B13=7^156*13^143. V1/V2 CHẤP NHẬN, 78/78 tấn công."
+  }
+ }
+]

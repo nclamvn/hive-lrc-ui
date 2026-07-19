@@ -1,0 +1,52 @@
+:root {
+  --obs-bg: #fdfcf9;
+  --obs-surface: #fffefc;
+  --obs-surface-soft: #faf9f6;
+  --obs-ink: #111111;
+  --obs-ink-2: #66645f;
+  --obs-ink-3: #8b8881;
+  --obs-line: #e2e0da;
+  --obs-line-strong: #cbc8c0;
+  --obs-accent: #2f9b50;
+  --obs-accent-soft: rgba(47, 155, 80, 0.10);
+  --obs-danger: #a66a4d;
+
+  --obs-radius-card: 11px;
+  --obs-radius-control: 8px;
+  --obs-shadow-card:
+    0 1px 2px rgba(17, 17, 17, 0.03),
+    0 8px 24px rgba(17, 17, 17, 0.035);
+
+  --obs-page-inset: 46px;
+  --obs-grid-gap: 14px;
+  --obs-nav-height: 55px;
+
+  --obs-font-ui: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --obs-font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+
+  --obs-text-micro: 9px;
+  --obs-text-xs: 10px;
+  --obs-text-sm: 11px;
+  --obs-text-body: 12px;
+  --obs-text-nav: 13px;
+  --obs-text-panel: 11px;
+  --obs-text-metric: 22px;
+  --obs-text-hero: 44px;
+
+  --obs-motion-fast: 140ms;
+  --obs-motion-base: 200ms;
+}
+
+html, body {
+  background: var(--obs-bg);
+  color: var(--obs-ink);
+  font-family: var(--obs-font-ui);
+}
+
+[data-golden="true"] *,
+[data-golden="true"] *::before,
+[data-golden="true"] *::after {
+  animation: none !important;
+  transition: none !important;
+  caret-color: transparent !important;
+}

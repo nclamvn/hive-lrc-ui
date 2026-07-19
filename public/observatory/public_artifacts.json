@@ -1,0 +1,38 @@
+[
+ {
+  "artifact_id": "ART-D14-REPORT",
+  "type": "report",
+  "title": "Gate D14 Connected-Tail Report",
+  "source_gate": "gate-d14",
+  "verification_status": "two_verifiers_accept",
+  "corruption": "40/40 rejected",
+  "download_policy": "on_request"
+ },
+ {
+  "artifact_id": "ART-D15-REPORT",
+  "type": "report",
+  "title": "Gate D15 Projective Relation Tail Report",
+  "source_gate": "gate-d15",
+  "verification_status": "two_verifiers_accept",
+  "corruption": "44/44 rejected",
+  "download_policy": "on_request"
+ },
+ {
+  "artifact_id": "ART-D16-REPORT",
+  "type": "report",
+  "title": "Gate D16 Modular Rank & Support-4 Report",
+  "source_gate": "gate-d16",
+  "verification_status": "two_verifiers_accept",
+  "corruption": "48/48 rejected",
+  "download_policy": "on_request"
+ },
+ {
+  "artifact_id": "ART-D16-S3-TABLE",
+  "type": "inventory_table",
+  "title": "Support-3 full-universe table (109 primes)",
+  "source_gate": "gate-d16",
+  "verification_status": "two_verifiers_accept",
+  "corruption": "n/a",
+  "download_policy": "metadata_only"
+ }
+]
