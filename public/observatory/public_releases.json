@@ -519,5 +519,51 @@
    "en": "D24 (Early Cuts on Reachable States) OPENS. Enumerate the REAL reachable states from the global master and apply the D23-proved early cuts (Branch A + B) to them, carrying ONE global residue multiset modulo 84 = lcm(14,28,42), never re-chosen per prime (one common small-modulus clock). Measure the pruning on the actual reachable-state stream (not a random sample), the branching, certificate cost, surviving-state count and projected campaign cost. The 5000/5000 and 7/7 D23 figures remain BOUNDED PILOT MEASUREMENTS, not a statement about all reachable states. No compute-budget increase. No GLOBAL-WITNESS; BASE-SURVIVOR -> D20-R. LRC(13) OPEN.",
    "vi": "D24 (Cut Sớm Trên Reachable State) MỞ. Liệt kê các reachable state THẬT từ global master và áp các cut sớm đã-chứng-minh-D23 (Branch A + B) lên chúng, mang MỘT residue multiset toàn cục modulo 84 = lcm(14,28,42), không bao giờ chọn lại theo prime (một đồng hồ modulus-nhỏ chung). Đo pruning trên luồng reachable-state thật (không phải mẫu ngẫu nhiên), branching, chi phí chứng chỉ, số trạng thái sống sót và chi phí chiến dịch dự phóng. Các số 5000/5000 và 7/7 của D23 vẫn là ĐO PILOT CÓ CHẶN, không phải phát biểu về mọi reachable state. Không tăng ngân sách compute. Không GLOBAL-WITNESS; BASE-SURVIVOR -> D20-R. LRC(13) MỞ."
   }
+ },
+ {
+  "id": "REL-D24-002",
+  "sequence": 24,
+  "gate_id": "gate-d24",
+  "change_type": "ARCHITECTURE_CHANGED",
+  "evidence": "I2",
+  "scope": "reachable-state cuts effective but constant-factor",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D24-001",
+  "title": {
+   "en": "D24 PARTIAL: fixed-level cuts effective on reachable states, constant factor",
+   "vi": "D24 PARTIAL: cut level cố định hiệu quả trên reachable state, hằng số"
+  },
+  "summary_public": {
+   "en": "The proved early cuts were run where it matters, on the real states the search reaches rather than on random candidates. On that real distribution the fixed checks at the level fourteen, twenty-eight and forty-two clocks remove more than half of the states, and the p=197 example is thrown out at level fourteen exactly as required. This is honest, measured progress. But the reduction is only by a constant factor: cutting half of a very large space still leaves a very large space, beyond the fixed limits. So the search closes on the branches tested but not as a whole, and open branches remain. The remaining size figure describes the current setup, not a hard floor for every possible method. No configuration survives and no counterexample is claimed. LRC(13) remains open.",
+   "vi": "Các cut sớm đã chứng minh được chạy nơi quan trọng, trên các trạng thái thực mà tìm kiếm chạm thay vì trên ứng viên ngẫu nhiên. Trên phân phối thực đó các kiểm cố định tại đồng hồ level mười bốn, hai tám và bốn hai loại hơn một nửa trạng thái, và ví dụ p=197 bị loại tại level mười bốn đúng như yêu cầu. Đây là tiến bộ trung thực, đo được. Nhưng giảm chỉ theo hằng số: cắt một nửa một không gian rất lớn vẫn để lại một không gian rất lớn, vượt giới hạn cố định. Nên tìm kiếm đóng trên các nhánh đã kiểm nhưng không phải toàn bộ, và các nhánh mở còn lại. Con số cỡ còn lại mô tả thiết lập hiện tại, không phải sàn cứng cho mọi phương pháp khả dĩ. Không cấu hình nào sống sót và không phản ví dụ nào được tuyên bố. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "D24-PARTIAL. Global mod-84 = lcm(14,28,42) state; exact t=1/14 cut (counterexample needs >=1 V_i divisible by 14, verified on p=197). CRT couple mod 84 with each prime (>7) -> mod 84p; refined subproblem REFINED-MATCH/REFINED-EMPTY-CERTIFIED/OPEN-INCOMPLETE. MEASURED on the reachable mod-84 distribution (NOT random): fixed refinement test-times at 14/28/42 cut 55.3% of reachable states; p=197 cut at level 14. Constant-factor pruning: mod-84 space ~2^84, residual ~2^83 vs caps ~2^42 (a scale indicator for the current architecture, NOT a proof every exact representation must materialize that many states). verify_d24_v1/v2 ACCEPT, corruption_d24 204/204 (170 rebuild, 19/19 mandatory). Exact closures on tested branches, certified OPEN branches remain. No BASE-SURVIVOR, no GLOBAL-WITNESS. LRC(13) OPEN.",
+   "vi": "D24-PARTIAL. Trạng thái mod-84 = lcm(14,28,42); cut chính xác t=1/14 (phản ví dụ cần >=1 V_i chia hết 14, kiểm trên p=197). Ghép CRT mod 84 với mỗi prime (>7) -> mod 84p; bài con refined REFINED-MATCH/REFINED-EMPTY-CERTIFIED/OPEN-INCOMPLETE. ĐO trên phân phối reachable mod-84 (KHÔNG ngẫu nhiên): test-time refinement cố định tại 14/28/42 cắt 55.3% reachable state; p=197 cắt tại level 14. Pruning hằng số: mod-84 ~2^84, còn lại ~2^83 vs cap ~2^42 (chỉ báo cỡ cho kiến trúc hiện tại, KHÔNG phải chứng minh mọi biểu diễn chính xác buộc materialize từng ấy). verify_d24_v1/v2 CHẤP NHẬN, corruption_d24 204/204 (170 rebuild, 19/19 bắt buộc). Đóng chính xác trên nhánh đã kiểm, nhánh OPEN chứng nhận còn lại. Không BASE-SURVIVOR, không GLOBAL-WITNESS. LRC(13) MỞ."
+  }
+ },
+ {
+  "id": "REL-D25-001",
+  "sequence": 25,
+  "gate_id": "gate-d25",
+  "change_type": "GATE_OPENED",
+  "evidence": "I2",
+  "scope": "adaptive rational-time separation, moduli kept separate",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D24-002",
+  "title": {
+   "en": "D25 opens: adaptive rational-time separation, no giant common modulus",
+   "vi": "D25 mở: tách thời-gian-hữu-tỉ thích nghi, không modulus chung khổng lồ"
+  },
+  "summary_public": {
+   "en": "The fixed clocks helped but only by a constant factor, so the next idea is to stop using a fixed handful of clocks and instead invent new ones on the fly, aimed at whichever branches are still alive. Each new clock is a rational time whose denominator is chosen to separate the surviving states, and every real counterexample must have a runner near the origin at that time. The crucial discipline is to keep every clock separate, linking them only loosely through common factors, and never to fold all the denominators into one enormous shared modulus, which would just bring back the earlier explosion. The gate measures, on the states the previous search actually reached, which of these adaptive clocks cut real branches, how much they shrink the search, and how expensive the proofs are, on their own and combined with the arithmetic checks. Nothing about the conjecture is decided by opening this gate, and no larger compute budget is authorized. LRC(13) remains open.",
+   "vi": "Các đồng hồ cố định giúp nhưng chỉ theo hằng số, nên ý tiếp là ngừng dùng một nhúm đồng hồ cố định và thay vào đó phát minh đồng hồ mới tùy biến, nhắm vào bất cứ nhánh nào còn sống. Mỗi đồng hồ mới là một thời gian hữu tỉ mà denominator được chọn để tách các trạng thái còn sống, và mọi phản ví dụ thật phải có một người chạy gần gốc tại thời điểm đó. Kỷ luật mấu chốt là giữ mọi đồng hồ riêng, liên kết chỉ lỏng lẻo qua thừa số chung, và không bao giờ gộp mọi denominator thành một modulus chung khổng lồ, điều sẽ mang lại bùng nổ trước đó. Gate đo, trên các trạng thái mà tìm kiếm trước thực sự chạm, đồng hồ tùy biến nào cắt nhánh thật, chúng thu nhỏ tìm kiếm bao nhiêu, và chứng minh tốn kém ra sao, riêng lẻ và kết hợp với kiểm số học. Không có gì về giả thuyết được quyết bởi việc mở gate này, và không ngân sách compute lớn hơn được duyệt. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "D25 (Adaptive Rational-Time Separation) OPENS. Instead of the three fixed denominators, generate rational-time cuts adaptively on surviving branches: for t=a/q, B(a,q)={ r mod q : dist(a r, q Z) < q/14 }; every global counterexample satisfies OR_i [ V_i mod q in B(a,q) ] for every chosen rational time. Keep moduli SEPARATE, couple only via gcd; NEVER a single giant LCM (returns to state explosion). Measure DIRECTLY on the D24 reachable-state ledger: which rational-time clauses cut branches, real state reduction, proof size, SAT/decision-diagram cost, effect combined with the D23 arithmetic cuts. MANDATORY regression: p=197 base cover YES, t=1/14 lonely YES, adaptive early cut FIRES. No compute-budget increase. No GLOBAL-WITNESS; BASE-SURVIVOR -> D20-R. LRC(13) OPEN.",
+   "vi": "D25 (Tách Thời-Gian-Hữu-Tỉ Thích Nghi) MỞ. Thay vì ba denominator cố định, sinh cut thời gian hữu tỉ thích nghi trên nhánh còn sống: với t=a/q, B(a,q)={ r mod q : dist(a r, q Z) < q/14 }; mọi phản ví dụ toàn cục thỏa OR_i [ V_i mod q thuộc B(a,q) ] cho mọi thời gian hữu tỉ chọn. Giữ modulus RIÊNG, ghép chỉ qua gcd; KHÔNG BAO GIỜ một LCM khổng lồ (quay lại bùng nổ). Đo TRỰC TIẾP trên ledger reachable-state D24: clause thời-gian-hữu-tỉ nào cắt nhánh, giảm trạng thái thực, cỡ chứng minh, chi phí SAT/decision-diagram, hiệu quả kết hợp với cut số học D23. Regression BẮT BUỘC: phủ nền p=197 YES, t=1/14 cô đơn YES, cut sớm thích nghi KÍCH HOẠT. Không tăng ngân sách compute. Không GLOBAL-WITNESS; BASE-SURVIVOR -> D20-R. LRC(13) MỞ."
+  }
  }
 ]

@@ -372,6 +372,18 @@
   "valid_to_release": null
  },
  {
+  "id": "arc:gate-d24->gate-d25",
+  "source": "gate:gate-d24",
+  "target": "gate:gate-d25",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "intro:C0",
   "source": "gate:scan",
   "target": "claim:C0",
@@ -972,6 +984,54 @@
   "valid_to_release": null
  },
  {
+  "id": "intro:C-D24-COUPLING",
+  "source": "gate:gate-d24",
+  "target": "claim:C-D24-COUPLING",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d24.",
+   "vi": "Xuất hiện tại gate-d24."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D24-PRUNING",
+  "source": "gate:gate-d24",
+  "target": "claim:C-D24-PRUNING",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d24.",
+   "vi": "Xuất hiện tại gate-d24."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D24-CLOSURE",
+  "source": "gate:gate-d24",
+  "target": "claim:C-D24-CLOSURE",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d24.",
+   "vi": "Xuất hiện tại gate-d24."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D25-ADAPTIVE",
+  "source": "gate:gate-d25",
+  "target": "claim:C-D25-ADAPTIVE",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d25.",
+   "vi": "Xuất hiện tại gate-d25."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "dep:0:C1->C2",
   "source": "claim:C1",
   "target": "claim:C2",
@@ -1548,19 +1608,67 @@
   "valid_to_release": null
  },
  {
-  "id": "dep:48:C-D24-REACHABLE->C0",
+  "id": "dep:48:C-D24-REACHABLE->C-D24-COUPLING",
   "source": "claim:C-D24-REACHABLE",
-  "target": "claim:C0",
-  "relation": "reduces_to",
+  "target": "claim:C-D24-COUPLING",
+  "relation": "supports",
   "explanation": {
-   "en": "Early cuts on reachable states are the current route toward the open target.",
-   "vi": "Cut sớm trên reachable state là đường hiện tại hướng tới mục tiêu mở."
+   "en": "The mod-84 clock couples to each prime by CRT for the refined subproblem.",
+   "vi": "Đồng hồ mod-84 ghép với mỗi prime bằng CRT cho bài con refined."
   },
-  "valid_from_release": "REL-D24-001",
+  "valid_from_release": "REL-D24-002",
   "valid_to_release": null
  },
  {
-  "id": "dep:49:C-D21-CAMPAIGN->C0",
+  "id": "dep:49:C-D24-COUPLING->C-D24-PRUNING",
+  "source": "claim:C-D24-COUPLING",
+  "target": "claim:C-D24-PRUNING",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "On the reachable distribution the fixed-level cuts prune 55.3% (measured), a constant factor.",
+   "vi": "Trên phân phối reachable các cut level cố định cắt 55.3% (đo được), một hằng số."
+  },
+  "valid_from_release": "REL-D24-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:50:C-D24-PRUNING->C-D24-CLOSURE",
+  "source": "claim:C-D24-PRUNING",
+  "target": "claim:C-D24-CLOSURE",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "Constant-factor pruning does not bring the campaign within caps; closure stays open.",
+   "vi": "Pruning hằng số không đưa chiến dịch vào cap; đóng vẫn mở."
+  },
+  "valid_from_release": "REL-D24-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:51:C-D24-CLOSURE->C-D25-ADAPTIVE",
+  "source": "claim:C-D24-CLOSURE",
+  "target": "claim:C-D25-ADAPTIVE",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "D25 adds adaptive rational-time cuts (moduli separate, gcd-coupled) aiming at surviving branches.",
+   "vi": "D25 thêm cut thời-gian-hữu-tỉ thích nghi (modulus riêng, ghép gcd) nhắm nhánh còn sống."
+  },
+  "valid_from_release": "REL-D25-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:52:C-D25-ADAPTIVE->C0",
+  "source": "claim:C-D25-ADAPTIVE",
+  "target": "claim:C0",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "Adaptive rational-time separation is the current route toward the open target.",
+   "vi": "Tách thời-gian-hữu-tỉ thích nghi là đường hiện tại hướng tới mục tiêu mở."
+  },
+  "valid_from_release": "REL-D25-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:53:C-D21-CAMPAIGN->C0",
   "source": "claim:C-D21-CAMPAIGN",
   "target": "claim:C0",
   "relation": "reduces_to",

@@ -847,7 +847,7 @@
    "en": "GATE D24",
    "vi": "GATE D24"
   },
-  "status": "current",
+  "status": "partial",
   "evidence": "I2",
   "scope": "GATE D24",
   "gate": "gate-d24",
@@ -860,6 +860,33 @@
    "vi": "D23 chứng minh các cut sớm của nó an toàn và cho thấy, trên một pilot có chặn, chúng cắt mạnh trước tái dựng. Các số pilot, mọi ứng viên và mọi phủ lấy mẫu bị loại, là đo trên một mẫu, không phải phát biểu về cả không gian tìm. D24 kiểm các cut đã chứng minh nơi thực sự quan trọng: trên các trạng thái thật mà global master chạm, thay vì trên ứng viên ngẫu nhiên. Engine mang một đồng hồ chung duy nhất, một mẫu residue toàn cục modulo tám mươi tư, bội chung nhỏ nhất của các lưới level mười bốn, hai tám và bốn hai, và không bao giờ chọn lại mẫu đó riêng tại mỗi prime, nên các ràng buộc level giữ là một đối tượng toàn cục chung. Trên luồng reachable-state thật này nó đo các cut đã chứng minh cắt bao nhiêu, branching chúng tạo, chi phí chứng chỉ và chi phí chiến dịch dự phóng. Không ngân sách compute lớn hơn được duyệt, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
   },
   "route": "/gates/gate-d24",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "gate:gate-d25",
+  "kind": "gate",
+  "label": {
+   "en": "Adaptive rational-time separation",
+   "vi": "Tách thời-gian-hữu-tỉ thích nghi"
+  },
+  "short_label": {
+   "en": "GATE D25",
+   "vi": "GATE D25"
+  },
+  "status": "current",
+  "evidence": "I2",
+  "scope": "GATE D25",
+  "gate": "gate-d25",
+  "summary": {
+   "en": "D24 showed that a fixed handful of clocks, the level fourteen, twenty-eight and forty-two grids, removes more than half of the reachable states but only by a constant factor, which is not enough to bring the search within the fixed limits. D25 stops relying on a fixed set of clocks and instead invents new ones on the fly, aimed at whichever branches are still alive. Each new clock is a rational time whose denominator is chosen to separate the surviving states, and by the definition of a lonely runner every genuine counterexample must have at least one runner near the origin at that time, which becomes an exact clause on the speeds modulo that denominator. The crucial discipline, and the whole point of the gate, is that these denominators are kept separate and are linked only loosely through their common factors; they are never folded into one enormous shared modulus, because that would simply bring back the state explosion the previous gates ran into. The gate measures, directly on the states the previous search actually reached, which of these adaptive clocks cut real branches, how much they shrink the search, and how expensive the resulting proofs are, both on their own and combined with the arithmetic checks. The required regression is unchanged: the p=197 base cover has a lonely time at one fourteenth, so an adaptive early cut must fire. No larger compute budget is authorized, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "D24 cho thấy một nhúm đồng hồ cố định, các lưới level mười bốn, hai tám và bốn hai, loại hơn một nửa reachable state nhưng chỉ theo hằng số, không đủ đưa tìm kiếm vào giới hạn cố định. D25 ngừng dựa vào một tập đồng hồ cố định và thay vào đó phát minh đồng hồ mới tùy biến, nhắm vào bất cứ nhánh nào còn sống. Mỗi đồng hồ mới là một thời gian hữu tỉ mà denominator được chọn để tách các trạng thái còn sống, và theo định nghĩa người chạy cô đơn mọi phản ví dụ thật phải có ít nhất một người chạy gần gốc tại thời điểm đó, trở thành một clause chính xác trên các tốc độ modulo denominator đó. Kỷ luật mấu chốt, và toàn bộ điểm của gate, là các denominator này được giữ riêng và chỉ liên kết lỏng lẻo qua thừa số chung; chúng không bao giờ gộp thành một modulus chung khổng lồ, vì điều đó sẽ mang lại bùng nổ trạng thái mà các gate trước gặp. Gate đo, trực tiếp trên các trạng thái mà tìm kiếm trước thực sự chạm, đồng hồ tùy biến nào cắt nhánh thật, chúng thu nhỏ tìm kiếm bao nhiêu, và chứng minh tốn kém ra sao, riêng lẻ và kết hợp với kiểm số học. Regression yêu cầu không đổi: phủ nền p=197 có thời điểm cô đơn tại một phần mười bốn, nên một cut sớm thích nghi phải kích hoạt. Không ngân sách compute lớn hơn được duyệt, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "D24 showed that a fixed handful of clocks, the level fourteen, twenty-eight and forty-two grids, removes more than half of the reachable states but only by a constant factor, which is not enough to bring the search within the fixed limits. D25 stops relying on a fixed set of clocks and instead invents new ones on the fly, aimed at whichever branches are still alive. Each new clock is a rational time whose denominator is chosen to separate the surviving states, and by the definition of a lonely runner every genuine counterexample must have at least one runner near the origin at that time, which becomes an exact clause on the speeds modulo that denominator. The crucial discipline, and the whole point of the gate, is that these denominators are kept separate and are linked only loosely through their common factors; they are never folded into one enormous shared modulus, because that would simply bring back the state explosion the previous gates ran into. The gate measures, directly on the states the previous search actually reached, which of these adaptive clocks cut real branches, how much they shrink the search, and how expensive the resulting proofs are, both on their own and combined with the arithmetic checks. The required regression is unchanged: the p=197 base cover has a lonely time at one fourteenth, so an adaptive early cut must fire. No larger compute budget is authorized, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "D24 cho thấy một nhúm đồng hồ cố định, các lưới level mười bốn, hai tám và bốn hai, loại hơn một nửa reachable state nhưng chỉ theo hằng số, không đủ đưa tìm kiếm vào giới hạn cố định. D25 ngừng dựa vào một tập đồng hồ cố định và thay vào đó phát minh đồng hồ mới tùy biến, nhắm vào bất cứ nhánh nào còn sống. Mỗi đồng hồ mới là một thời gian hữu tỉ mà denominator được chọn để tách các trạng thái còn sống, và theo định nghĩa người chạy cô đơn mọi phản ví dụ thật phải có ít nhất một người chạy gần gốc tại thời điểm đó, trở thành một clause chính xác trên các tốc độ modulo denominator đó. Kỷ luật mấu chốt, và toàn bộ điểm của gate, là các denominator này được giữ riêng và chỉ liên kết lỏng lẻo qua thừa số chung; chúng không bao giờ gộp thành một modulus chung khổng lồ, vì điều đó sẽ mang lại bùng nổ trạng thái mà các gate trước gặp. Gate đo, trực tiếp trên các trạng thái mà tìm kiếm trước thực sự chạm, đồng hồ tùy biến nào cắt nhánh thật, chúng thu nhỏ tìm kiếm bao nhiêu, và chứng minh tốn kém ra sao, riêng lẻ và kết hợp với kiểm số học. Regression yêu cầu không đổi: phủ nền p=197 có thời điểm cô đơn tại một phần mười bốn, nên một cut sớm thích nghi phải kích hoạt. Không ngân sách compute lớn hơn được duyệt, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "route": "/gates/gate-d25",
   "valid_from_release": null,
   "valid_to_release": null
  },
@@ -2190,26 +2217,134 @@
   "id": "claim:C-D24-REACHABLE",
   "kind": "claim",
   "label": {
-   "en": "D24 OPEN: test the early cuts on the REAL reachable states enumerated by the global master, carrying one global residue multiset modulo 84 = lcm(14,28,42), never re-chosen per prime. Measure how the proved sound cuts prune the actual reachable state stream, not a random sample",
-   "vi": "D24 MỞ: kiểm các cut sớm trên các reachable state THẬT liệt kê bởi global master, mang một residue multiset toàn cục modulo 84 = lcm(14,28,42), không bao giờ chọn lại theo từng prime. Đo các cut vững đã chứng minh cắt luồng reachable state thực ra sao, không phải một mẫu ngẫu nhiên"
+   "en": "D24 global mod-84 semantics PROVED-INTERNAL: represent reachable states as one common residue multiset modulo 84 = lcm(14,28,42), a single global clock never re-chosen per prime. The frozen exact cut: t=1/14 is a lonely time iff 14 divides no speed, so a bounded counterexample must have at least one V_i divisible by 14 (verified firing on the p=197 witness); the analogous test-time conditions at levels 28 and 42 are exact, not over-generalized to full level-l impropriety",
+   "vi": "Ngữ nghĩa mod-84 toàn cục D24 PROVED-INTERNAL: biểu diễn reachable state bằng một residue multiset chung modulo 84 = lcm(14,28,42), một đồng hồ toàn cục duy nhất không chọn lại theo prime. Cut chính xác đóng băng: t=1/14 là thời điểm cô đơn khi và chỉ khi 14 không chia tốc độ nào, nên một phản ví dụ có chặn phải có ít nhất một V_i chia hết cho 14 (kiểm kích hoạt trên nhân chứng p=197); điều kiện test-time tương tự tại level 28 và 42 là chính xác, không tổng quát hóa thành impropriety level-l đầy đủ"
   },
   "short_label": {
    "en": "C-D24-REACHABLE",
    "vi": "C-D24-REACHABLE"
   },
-  "status": "open",
+  "status": "proved_internal",
   "evidence": "I2",
-  "scope": "early cuts on reachable states from the global master, residue mod 84",
+  "scope": "global mod-84 state semantics + exact t=1/14 divisibility cut",
   "gate": "gate-d24",
   "summary": {
-   "en": "Next: run the proved cuts against the states the search actually reaches, using one shared clock residue modulo 84, and measure the real pruning.",
-   "vi": "Tiếp: chạy các cut đã chứng minh trên các trạng thái mà tìm kiếm thực sự chạm, dùng một residue đồng hồ chung modulo 84, và đo pruning thực."
+   "en": "One shared clock modulo 84 with an exact rule: any counterexample must have a runner whose speed is a multiple of 14, or the time 1/14 would be lonely.",
+   "vi": "Một đồng hồ chung modulo 84 với quy tắc chính xác: mọi phản ví dụ phải có một người chạy tốc độ là bội của 14, nếu không thời điểm 1/14 sẽ cô đơn."
   },
   "technical_summary": {
-   "en": "D24 OPEN: test the early cuts on the REAL reachable states enumerated by the global master, carrying one global residue multiset modulo 84 = lcm(14,28,42), never re-chosen per prime. Measure how the proved sound cuts prune the actual reachable state stream, not a random sample",
-   "vi": "D24 MỞ: kiểm các cut sớm trên các reachable state THẬT liệt kê bởi global master, mang một residue multiset toàn cục modulo 84 = lcm(14,28,42), không bao giờ chọn lại theo từng prime. Đo các cut vững đã chứng minh cắt luồng reachable state thực ra sao, không phải một mẫu ngẫu nhiên"
+   "en": "D24 global mod-84 semantics PROVED-INTERNAL: represent reachable states as one common residue multiset modulo 84 = lcm(14,28,42), a single global clock never re-chosen per prime. The frozen exact cut: t=1/14 is a lonely time iff 14 divides no speed, so a bounded counterexample must have at least one V_i divisible by 14 (verified firing on the p=197 witness); the analogous test-time conditions at levels 28 and 42 are exact, not over-generalized to full level-l impropriety",
+   "vi": "Ngữ nghĩa mod-84 toàn cục D24 PROVED-INTERNAL: biểu diễn reachable state bằng một residue multiset chung modulo 84 = lcm(14,28,42), một đồng hồ toàn cục duy nhất không chọn lại theo prime. Cut chính xác đóng băng: t=1/14 là thời điểm cô đơn khi và chỉ khi 14 không chia tốc độ nào, nên một phản ví dụ có chặn phải có ít nhất một V_i chia hết cho 14 (kiểm kích hoạt trên nhân chứng p=197); điều kiện test-time tương tự tại level 28 và 42 là chính xác, không tổng quát hóa thành impropriety level-l đầy đủ"
   },
   "route": "/claims/C-D24-REACHABLE",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D24-COUPLING",
+  "kind": "claim",
+  "label": {
+   "en": "D24 refined CRT coupling PROVED-INTERNAL: for each applicable prime p (coprime to 84, p>7), V_i mod 84 and V_i mod p combine by CRT into V_i mod 84p, and the refined local subproblem certifies impropriety on the nested grids {j/(l p)} returning REFINED-MATCH / REFINED-EMPTY-CERTIFIED / OPEN-INCOMPLETE with a replayable proof",
+   "vi": "Ghép CRT refined D24 PROVED-INTERNAL: với mỗi prime áp dụng p (nguyên tố cùng nhau với 84, p>7), V_i mod 84 và V_i mod p ghép bằng CRT thành V_i mod 84p, và bài con refined cục bộ chứng nhận impropriety trên lưới lồng {j/(l p)} trả REFINED-MATCH / REFINED-EMPTY-CERTIFIED / OPEN-INCOMPLETE với chứng minh replay được"
+  },
+  "short_label": {
+   "en": "C-D24-COUPLING",
+   "vi": "C-D24-COUPLING"
+  },
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "CRT coupling mod 84 with each prime -> mod 84p",
+  "gate": "gate-d24",
+  "summary": {
+   "en": "The global clock and each prime are combined exactly, so the finer-grid check runs against one consistent picture.",
+   "vi": "Đồng hồ toàn cục và mỗi prime được ghép chính xác, nên kiểm lưới tinh chạy trên một bức tranh nhất quán."
+  },
+  "technical_summary": {
+   "en": "D24 refined CRT coupling PROVED-INTERNAL: for each applicable prime p (coprime to 84, p>7), V_i mod 84 and V_i mod p combine by CRT into V_i mod 84p, and the refined local subproblem certifies impropriety on the nested grids {j/(l p)} returning REFINED-MATCH / REFINED-EMPTY-CERTIFIED / OPEN-INCOMPLETE with a replayable proof",
+   "vi": "Ghép CRT refined D24 PROVED-INTERNAL: với mỗi prime áp dụng p (nguyên tố cùng nhau với 84, p>7), V_i mod 84 và V_i mod p ghép bằng CRT thành V_i mod 84p, và bài con refined cục bộ chứng nhận impropriety trên lưới lồng {j/(l p)} trả REFINED-MATCH / REFINED-EMPTY-CERTIFIED / OPEN-INCOMPLETE với chứng minh replay được"
+  },
+  "route": "/claims/C-D24-COUPLING",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D24-PRUNING",
+  "kind": "claim",
+  "label": {
+   "en": "Reachable-state pruning 55.3% VALIDATED-BOUNDED: on the actual reachable mod-84 distribution (not random candidates), the fixed refinement test-time cuts at levels 14, 28 and 42 cut 55.3% of states and the mandatory p=197 witness is cut at level 14. These fixed-level cuts are genuinely effective but give only a CONSTANT-factor reduction; the residual scale for the current architecture (about 2^83) is a size indicator, NOT a proof that every exact representation must materialize that many states",
+   "vi": "Pruning reachable-state 55.3% VALIDATED-BOUNDED: trên phân phối reachable mod-84 thực (không phải ứng viên ngẫu nhiên), các cut test-time refinement cố định tại level 14, 28 và 42 cắt 55.3% trạng thái và nhân chứng p=197 bắt buộc bị cắt tại level 14. Các cut level cố định này hiệu quả thật nhưng chỉ giảm HẰNG SỐ; quy mô còn lại cho kiến trúc hiện tại (khoảng 2^83) là chỉ báo cỡ, KHÔNG phải chứng minh mọi biểu diễn chính xác buộc phải materialize từng ấy state"
+  },
+  "short_label": {
+   "en": "C-D24-PRUNING",
+   "vi": "C-D24-PRUNING"
+  },
+  "status": "validated_bounded",
+  "evidence": "I2",
+  "scope": "measured on the reachable mod-84 distribution",
+  "gate": "gate-d24",
+  "summary": {
+   "en": "The fixed level cuts really do remove more than half the reachable states, but only by a constant factor, so the search is still too big for the current setup; that size is an indicator, not a hard floor.",
+   "vi": "Các cut level cố định thực sự loại hơn một nửa reachable state, nhưng chỉ theo hằng số, nên tìm kiếm vẫn quá lớn cho thiết lập hiện tại; cỡ đó là chỉ báo, không phải sàn cứng."
+  },
+  "technical_summary": {
+   "en": "Reachable-state pruning 55.3% VALIDATED-BOUNDED: on the actual reachable mod-84 distribution (not random candidates), the fixed refinement test-time cuts at levels 14, 28 and 42 cut 55.3% of states and the mandatory p=197 witness is cut at level 14. These fixed-level cuts are genuinely effective but give only a CONSTANT-factor reduction; the residual scale for the current architecture (about 2^83) is a size indicator, NOT a proof that every exact representation must materialize that many states",
+   "vi": "Pruning reachable-state 55.3% VALIDATED-BOUNDED: trên phân phối reachable mod-84 thực (không phải ứng viên ngẫu nhiên), các cut test-time refinement cố định tại level 14, 28 và 42 cắt 55.3% trạng thái và nhân chứng p=197 bắt buộc bị cắt tại level 14. Các cut level cố định này hiệu quả thật nhưng chỉ giảm HẰNG SỐ; quy mô còn lại cho kiến trúc hiện tại (khoảng 2^83) là chỉ báo cỡ, KHÔNG phải chứng minh mọi biểu diễn chính xác buộc phải materialize từng ấy state"
+  },
+  "route": "/claims/C-D24-PRUNING",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D24-CLOSURE",
+  "kind": "claim",
+  "label": {
+   "en": "Full compatible-state closure OPEN: whether the reachable-state campaign closes within the frozen caps is not reached. The fixed-level cuts prune materially but only by a constant factor, so certified OPEN branches remain. A super-constant-in-modulus separation is needed",
+   "vi": "Đóng trạng-thái-tương-thích đầy đủ MỞ: liệu chiến dịch reachable-state đóng trong cap đã đóng băng thì chưa đạt. Các cut level cố định cắt thực chất nhưng chỉ theo hằng số, nên các nhánh OPEN chứng nhận còn lại. Cần một phép tách siêu-hằng-số theo modulus"
+  },
+  "short_label": {
+   "en": "C-D24-CLOSURE",
+   "vi": "C-D24-CLOSURE"
+  },
+  "status": "open",
+  "evidence": "I2",
+  "scope": "full compatible-state closure within caps",
+  "gate": "gate-d25",
+  "summary": {
+   "en": "Closing the whole search within the limits is still open; the fixed cuts are not enough, something that scales with the modulus is needed.",
+   "vi": "Đóng cả tìm kiếm trong giới hạn vẫn mở; các cut cố định chưa đủ, cần thứ gì đó co giãn theo modulus."
+  },
+  "technical_summary": {
+   "en": "Full compatible-state closure OPEN: whether the reachable-state campaign closes within the frozen caps is not reached. The fixed-level cuts prune materially but only by a constant factor, so certified OPEN branches remain. A super-constant-in-modulus separation is needed",
+   "vi": "Đóng trạng-thái-tương-thích đầy đủ MỞ: liệu chiến dịch reachable-state đóng trong cap đã đóng băng thì chưa đạt. Các cut level cố định cắt thực chất nhưng chỉ theo hằng số, nên các nhánh OPEN chứng nhận còn lại. Cần một phép tách siêu-hằng-số theo modulus"
+  },
+  "route": "/claims/C-D24-CLOSURE",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D25-ADAPTIVE",
+  "kind": "claim",
+  "label": {
+   "en": "D25 adaptive rational-time separation OPEN: instead of the three fixed denominators, generate rational-time cuts adaptively on the surviving branches. For a time t=a/q define B(a,q) = { r mod q : dist(a r, q Z) < q/14 }; every global counterexample must satisfy OR_i [ V_i mod q in B(a,q) ] for every chosen rational time. Keep the moduli SEPARATE, coupling only through gcd, never a single giant LCM (which returns to state explosion). Measure on the D24 reachable-state ledger which clauses cut branches, the real state reduction, proof size, SAT/decision-diagram cost, and the effect combined with the D23 arithmetic cuts",
+   "vi": "Tách thời-gian-hữu-tỉ thích nghi D25 MỞ: thay vì ba denominator cố định, sinh các cut thời gian hữu tỉ thích nghi trên các nhánh còn sống. Với thời điểm t=a/q định nghĩa B(a,q) = { r mod q : dist(a r, q Z) < q/14 }; mọi phản ví dụ toàn cục phải thỏa OR_i [ V_i mod q thuộc B(a,q) ] cho mọi thời gian hữu tỉ chọn. Giữ các modulus RIÊNG, ghép chỉ qua gcd, không bao giờ một LCM khổng lồ (quay lại bùng nổ trạng thái). Đo trên ledger reachable-state D24 clause nào cắt nhánh, giảm trạng thái thực, cỡ chứng minh, chi phí SAT/decision-diagram, và hiệu quả kết hợp với cut số học D23"
+  },
+  "short_label": {
+   "en": "C-D25-ADAPTIVE",
+   "vi": "C-D25-ADAPTIVE"
+  },
+  "status": "open",
+  "evidence": "I2",
+  "scope": "adaptive rational-time separating cuts, moduli kept separate",
+  "gate": "gate-d25",
+  "summary": {
+   "en": "Next: instead of three fixed clocks, invent new rational-time clocks on the fly aimed at the branches still alive, keeping each clock separate so the search never blows up into one giant modulus.",
+   "vi": "Tiếp: thay vì ba đồng hồ cố định, phát minh các đồng hồ thời-gian-hữu-tỉ mới nhắm vào các nhánh còn sống, giữ mỗi đồng hồ riêng để tìm kiếm không bùng nổ thành một modulus khổng lồ."
+  },
+  "technical_summary": {
+   "en": "D25 adaptive rational-time separation OPEN: instead of the three fixed denominators, generate rational-time cuts adaptively on the surviving branches. For a time t=a/q define B(a,q) = { r mod q : dist(a r, q Z) < q/14 }; every global counterexample must satisfy OR_i [ V_i mod q in B(a,q) ] for every chosen rational time. Keep the moduli SEPARATE, coupling only through gcd, never a single giant LCM (which returns to state explosion). Measure on the D24 reachable-state ledger which clauses cut branches, the real state reduction, proof size, SAT/decision-diagram cost, and the effect combined with the D23 arithmetic cuts",
+   "vi": "Tách thời-gian-hữu-tỉ thích nghi D25 MỞ: thay vì ba denominator cố định, sinh các cut thời gian hữu tỉ thích nghi trên các nhánh còn sống. Với thời điểm t=a/q định nghĩa B(a,q) = { r mod q : dist(a r, q Z) < q/14 }; mọi phản ví dụ toàn cục phải thỏa OR_i [ V_i mod q thuộc B(a,q) ] cho mọi thời gian hữu tỉ chọn. Giữ các modulus RIÊNG, ghép chỉ qua gcd, không bao giờ một LCM khổng lồ (quay lại bùng nổ trạng thái). Đo trên ledger reachable-state D24 clause nào cắt nhánh, giảm trạng thái thực, cỡ chứng minh, chi phí SAT/decision-diagram, và hiệu quả kết hợp với cut số học D23"
+  },
+  "route": "/claims/C-D25-ADAPTIVE",
   "valid_from_release": null,
   "valid_to_release": null
  },
