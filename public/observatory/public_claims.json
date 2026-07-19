@@ -688,6 +688,44 @@
   }
  },
  {
+  "claim_id": "C-D21-PILOT",
+  "status": "validated_bounded",
+  "evidence": "I2",
+  "scope": "hard-prime pilot, p up to 2267, bounded caps",
+  "gate_introduced": "gate-d21",
+  "gate_last_changed": "gate-d21",
+  "depends_on": [
+   "C-D21-NARROWED"
+  ],
+  "statement": {
+   "en": "Hard-prime pilot VALIDATED-BOUNDED: on the D20-hard primes up to 2267 every narrowed query terminates under 0.35s with a replayable certificate, and the mandatory padding-required case and timeout injection behave correctly (timeout to OPEN). This is measured bounded evidence that the per-query wall is removed, not a campaign conclusion",
+   "vi": "Pilot prime-khó VALIDATED-BOUNDED: trên các prime khó D20 tới 2267 mọi truy vấn thu hẹp kết thúc dưới 0.35s với chứng chỉ replay, và ca padding-bắt-buộc cùng tiêm timeout hành xử đúng (timeout thành OPEN). Đây là bằng chứng đo được có chặn rằng tường mỗi-truy-vấn đã gỡ, không phải kết luận chiến dịch"
+  },
+  "plain_language": {
+   "en": "On a bounded pilot of the hardest primes, the new fast query works and stays honest about timeouts.",
+   "vi": "Trên một pilot có chặn của các prime khó nhất, truy vấn nhanh mới hoạt động và trung thực về timeout."
+  }
+ },
+ {
+  "claim_id": "C-D21-SEED",
+  "status": "open",
+  "evidence": "I2",
+  "scope": "complete initial projective-signature seed set",
+  "gate_introduced": "gate-d21",
+  "gate_last_changed": "gate-d21",
+  "depends_on": [
+   "C-D21-PILOT"
+  ],
+  "statement": {
+   "en": "Seed completeness OPEN (D21-S): generate the COMPLETE set of initial projective signatures without returning to full local-cover enumeration. Two routes: meet-in-the-middle (6+7 split preserving coverage mask, multiplicity, polynomial factor, repeated roots, projective stratum, scale orbit) and a certified small-prime seed bank (keeping both applicable and inapplicable branches, never assuming a small prime applies to every tuple). A fast but incomplete seed set is only a sample; a missed initial signature could be the missed global obstruction",
+   "vi": "Đầy đủ seed MỞ (D21-S): sinh tập ĐẦY ĐỦ chữ ký xạ ảnh ban đầu mà không quay lại liệt kê phủ cục bộ đầy đủ. Hai route: gặp-nhau-ở-giữa (chia 6+7 giữ coverage mask, bội, nhân tử đa thức, nghiệm lặp, stratum xạ ảnh, scale orbit) và một seed bank prime-nhỏ chứng nhận (giữ cả nhánh applicable và inapplicable, không mặc định prime nhỏ áp dụng cho mọi tuple). Một tập seed nhanh nhưng không đầy đủ chỉ là mẫu; một chữ ký ban đầu bỏ sót có thể là obstruction toàn cục bỏ sót"
+  },
+  "plain_language": {
+   "en": "The last gap: list every possible starting fingerprint completely and cheaply — miss one and you could miss the counterexample.",
+   "vi": "Khoảng trống cuối: liệt kê mọi dấu vân tay khởi đầu đầy đủ và rẻ — bỏ sót một là có thể bỏ sót phản ví dụ."
+  }
+ },
+ {
   "claim_id": "C-D21-CAMPAIGN",
   "status": "open",
   "evidence": "I2",
@@ -695,7 +733,7 @@
   "gate_introduced": "gate-d21",
   "gate_last_changed": "gate-d21",
   "depends_on": [
-   "C-D21-NARROWED"
+   "C-D21-SEED"
   ],
   "statement": {
    "en": "Full signature-narrowed campaign feasibility OPEN: per-query narrowing is validated, but seeding the first prime's signature set still reduces to D20 enumeration unless a meet-in-the-middle seed generator supplies it; no campaign verdict is claimed until that is built and its cost measured",

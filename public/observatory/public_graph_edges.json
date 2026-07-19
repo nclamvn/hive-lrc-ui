@@ -768,6 +768,30 @@
   "valid_to_release": null
  },
  {
+  "id": "intro:C-D21-PILOT",
+  "source": "gate:gate-d21",
+  "target": "claim:C-D21-PILOT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d21.",
+   "vi": "Xuất hiện tại gate-d21."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D21-SEED",
+  "source": "gate:gate-d21",
+  "target": "claim:C-D21-SEED",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d21.",
+   "vi": "Xuất hiện tại gate-d21."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "intro:C-D21-CAMPAIGN",
   "source": "gate:gate-d21",
   "target": "claim:C-D21-CAMPAIGN",
@@ -1188,19 +1212,43 @@
   "valid_to_release": null
  },
  {
-  "id": "dep:34:C-D21-NARROWED->C-D21-CAMPAIGN",
+  "id": "dep:34:C-D21-NARROWED->C-D21-PILOT",
   "source": "claim:C-D21-NARROWED",
-  "target": "claim:C-D21-CAMPAIGN",
-  "relation": "reduces_to",
+  "target": "claim:C-D21-PILOT",
+  "relation": "supports",
   "explanation": {
-   "en": "The per-query wall is removed; the remaining open question is full-campaign seeding via meet-in-the-middle.",
-   "vi": "Tường mỗi-truy-vấn đã gỡ; câu hỏi mở còn lại là seed chiến dịch đầy đủ qua gặp-nhau-ở-giữa."
+   "en": "The narrowed oracle is validated on a bounded hard-prime pilot up to p=2267.",
+   "vi": "Oracle thu hẹp được kiểm trên một pilot prime-khó có chặn tới p=2267."
   },
   "valid_from_release": "REL-D21-001",
   "valid_to_release": null
  },
  {
-  "id": "dep:35:C-D21-CAMPAIGN->C0",
+  "id": "dep:35:C-D21-PILOT->C-D21-SEED",
+  "source": "claim:C-D21-PILOT",
+  "target": "claim:C-D21-SEED",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "With per-query cost validated, the only frontier is generating the complete initial signature seed set.",
+   "vi": "Với chi phí mỗi-truy-vấn đã kiểm, frontier duy nhất là sinh tập seed chữ ký ban đầu đầy đủ."
+  },
+  "valid_from_release": "REL-D21-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:36:C-D21-SEED->C-D21-CAMPAIGN",
+  "source": "claim:C-D21-SEED",
+  "target": "claim:C-D21-CAMPAIGN",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "A complete certified seed set is the precondition for a feasible full campaign.",
+   "vi": "Một tập seed chứng nhận đầy đủ là điều kiện tiên quyết cho chiến dịch đầy đủ khả thi."
+  },
+  "valid_from_release": "REL-D21-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:37:C-D21-CAMPAIGN->C0",
   "source": "claim:C-D21-CAMPAIGN",
   "target": "claim:C0",
   "relation": "reduces_to",

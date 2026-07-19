@@ -9,19 +9,19 @@
  },
  "counts": {
   "public_releases": 17,
-  "public_claims": 37,
+  "public_claims": 39,
   "public_gates": 29,
-  "public_graph_nodes": 70,
-  "public_graph_edges": 101,
+  "public_graph_nodes": 72,
+  "public_graph_edges": 105,
   "public_artifacts": 4
  },
  "manifest": {
   "public_releases": "6c219b0da49ebdc588d09b910fca17322373c0f4009a43eac9dcffc2a52aecbc",
-  "public_claims": "600b1675a88e1fa6cfe7033b8652a0448514be7306d7e64170ed2966e1dfdc90",
+  "public_claims": "f82775516ace415378eba0032612c3d1a701bbc01966d28e5c50f296e3729129",
   "public_gates": "aa2dc4bfde73b14f86f5bfd70a95909428c4627f9be1447cf14ec28208250781",
-  "public_graph_nodes": "0c03e185eb4c3579c3b98995e4b37aca292504449cac1a12e223c5737ec5a9a6",
-  "public_graph_edges": "6a0e1d642b6253e79fb66465f6638726f952a6f3e369ee87f0bedb43bdd64c1d",
+  "public_graph_nodes": "ae174aaf550137434303f3320fe5336534139138a15cfe885860f68b8c6fe859",
+  "public_graph_edges": "fb82de39b7a9e03e6bdd442af0c23253d96e0d0d8f038268ab42d3aec2efe828",
   "public_artifacts": "35586b8067464ed973f3b9d3df53d265f974bfa8422e96ef43035d98bed5b8d5"
  },
- "snapshot_hash": "9cd36595c422be3a5c8f78f63df40f65dc7c3d98bafd4206df5d1bbe9e61674e"
+ "snapshot_hash": "9333b2418f09ce17f68cc0cdc1ef2df6612a87ed74686ed2538ca691ea77e2d1"
 }
