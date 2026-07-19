@@ -335,5 +335,51 @@
    "en": "Target: rule out one bounded global 13-multiset U inducing compatible local covers across a certified prime family P with product > B13 = 7^156*13^143, or surface one CRT-compatible bounded global witness. Representation: monic root polynomial F_p(X)=prod(X-r_i) mod p; a global tuple induces compatible symmetric-coefficient residues via CRT. Mandated phase 1: freeze + independent replay of D6 reduction and D7R alignment (predicate mismatch => D20-RESTART); no inherited cost proxy/DFS semantics reused without replay. Per-prime program closed as insufficient. No properness prefilter; no support-6. LRC(13) OPEN.",
    "vi": "Mục tiêu: loại một multiset-13 toàn cục có chặn U sinh phủ cục bộ tương thích qua họ prime chứng nhận P với tích > B13 = 7^156*13^143, hoặc trưng ra một nhân chứng toàn cục tương thích CRT có chặn. Biểu diễn: đa thức nghiệm đơn khởi F_p(X)=prod(X-r_i) mod p; một tuple toàn cục sinh thặng dư hệ số đối xứng tương thích qua CRT. Phase 1 bắt buộc: đóng băng + replay độc lập rút gọn D6 và căn chỉnh D7R (lệch predicate => D20-RESTART); không tái dùng cost proxy/ngữ nghĩa DFS kế thừa mà không replay. Chương trình theo từng prime đóng vì không đủ. Không tiền lọc properness; không support-6. LRC(13) MỞ."
   }
+ },
+ {
+  "id": "REL-D20-002",
+  "sequence": 16,
+  "gate_id": "gate-d20",
+  "change_type": "GATE_CLOSED",
+  "evidence": "I2",
+  "scope": "prime-product lift blocked at scale",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D20-001",
+  "title": {
+   "en": "D20 BLOCKED, machinery built, enumeration blocked at scale",
+   "vi": "D20 BỊ CHẶN, máy đã dựng, liệt kê bị chặn ở quy mô"
+  },
+  "summary_public": {
+   "en": "D20 built the full prime-product lift machinery and then hit a computational wall. The upstream reduction was frozen and independently re-checked with no mismatch. The key correction is that a single-prime cover is a necessary clue for a counterexample but not proof of one, since finer time grids can break it, so the search became a sound one-way filter with mandatory refinement. The applicability, normalization and reconstruction rules were proved and the whole engine, projective atlas, three-valued oracle and complete generator were double-verified. But the decisive fact is measured, not assumed: complete local-cover enumeration does not finish within the resource limits for the required primes, so every campaign block stays open and nothing is certified closed. This is an honest cost-driven block, like the earlier D6 campaign, and it is not a compatibility claim, not a counterexample, and not a solution. The next gate reverses the search order. LRC(13) remains open.",
+   "vi": "D20 đã dựng toàn bộ bộ máy lift tích-các-prime rồi gặp bức tường tính toán. Rút gọn thượng nguồn được đóng băng và kiểm lại độc lập không lệch. Sửa chữa mấu chốt: một phủ đơn-prime là manh mối cần cho phản ví dụ nhưng không phải bằng chứng, vì lưới thời gian tinh hơn có thể phá nó, nên tìm kiếm thành bộ lọc một chiều đúng đắn với refinement bắt buộc. Các quy tắc applicability, chuẩn hóa và tái dựng đã chứng minh và toàn bộ engine, atlas xạ ảnh, oracle ba trạng thái và generator đầy đủ được kiểm kép. Nhưng sự thật quyết định là đo được, không giả định: liệt kê phủ cục bộ đầy đủ không xong trong giới hạn tài nguyên cho các prime cần, nên mọi block chiến dịch OPEN và không gì chứng nhận đóng. Đây là block trung thực do chi phí, như chiến dịch D6 trước, và không phải tuyên bố tương thích, không phải phản ví dụ, không phải lời giải. Gate tiếp theo đảo ngược thứ tự tìm kiếm. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "Frozen: reduction predicate LRC(12) & (forall p: J(13,p)=0) & prod p >= B13 => LRC(13); D6 V1/V2 ACCEPT, no restart. O-A: global counterexample => base cover at every p (necessary), but base cover =/=> obstruction (p=197 witness base lonely 0, level-14 lonely 280, proper); sound outer relaxation + refinement escalation. O-B/O-C/O-D: applicable iff p divides no speed; sign via squaring; one global QR scale (no independent per-prime); H_V(Y)=prod(Y-V_i^2); 294-prime inventory [191,2267] > B13*2H. Engine + projective atlas (all strata, no division) + 3-valued oracle + least-uncovered exact-cover generator (complete for minimal, brute-checked) all double-verified; corruption 100..158/... rejected. D20-BLOCKED measured: complete enumeration exceeds caps for p>=191, 10/10 inventory-head blocks OPEN, certified product 0 bits vs 2H 1946 bits. No GLOBAL-WITNESS, no BASE-SURVIVOR. LRC(13) OPEN.",
+   "vi": "Đóng băng: predicate rút gọn LRC(12) & (moi p: J(13,p)=0) & tich p >= B13 => LRC(13); D6 V1/V2 CHẤP NHẬN, không restart. O-A: phản ví dụ toàn cục => phủ nền tại mọi p (cần), nhưng phủ nền =/=> obstruction (nhân chứng p=197 nền lonely 0, mức-14 lonely 280, proper); nới lỏng ngoài đúng đắn + leo thang refinement. O-B/O-C/O-D: applicable khi p không chia tốc độ nào; dấu qua bình phương; một scale QR toàn cục (không riêng lẻ mỗi prime); H_V(Y)=prod(Y-V_i^2); inventory 294 prime [191,2267] > B13*2H. Engine + atlas xạ ảnh (mọi stratum, không chia) + oracle 3 trạng thái + generator phủ chính xác least-uncovered (đầy đủ cho minimal, kiểm brute) đều kiểm kép; tấn công 100..158 bị bác. D20-BLOCKED đo được: liệt kê đầy đủ vượt cap cho p>=191, 10/10 block đầu-inventory OPEN, tích chứng nhận 0 bit vs 2H 1946 bit. Không GLOBAL-WITNESS, không BASE-SURVIVOR. LRC(13) MỞ."
+  }
+ },
+ {
+  "id": "REL-D21-001",
+  "sequence": 17,
+  "gate_id": "gate-d21",
+  "change_type": "GATE_OPENED",
+  "evidence": "I2",
+  "scope": "signature-narrowed certified compatibility",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D20-002",
+  "title": {
+   "en": "D21 OPEN, signature-narrowed certified compatibility",
+   "vi": "D21 MỞ, tương thích chứng nhận thu hẹp theo chữ ký"
+  },
+  "summary_public": {
+   "en": "D20 was blocked because it asked for the complete local-cover universe before any cross-prime information narrowed the query. D21 reverses the order: fix a partial global signature first, then ask only for local covers compatible with it. Two things carry it. The padding correction: a full thirteen-speed cover is a small core plus filler, and the filler is not harmless because it shifts the very fingerprint the compatibility test relies on, so the oracle must query the full multiset. The narrowed oracle: once a target fingerprint is fixed, the covers are pinned to a small family found by a fast scan, cost linear in the prime rather than the blocked full enumeration; measured on the hard primes up to 2267, each query finishes in a fraction of a second with a replayable certificate. Every query still answers matches-complete, empty-certified or open, a solver refutation without a checkable proof is invalid, and a timeout is open. The honest boundary: the per-query wall is gone, but seeding the whole campaign at the first prime is still open, so no campaign verdict is claimed. LRC(13) remains open.",
+   "vi": "D20 bị chặn vì nó đòi toàn bộ vũ trụ phủ cục bộ trước khi bất kỳ thông tin liên-prime nào thu hẹp truy vấn. D21 đảo ngược thứ tự: cố định một chữ ký toàn cục từng phần trước, rồi chỉ hỏi các phủ cục bộ tương thích với nó. Hai điều dẫn dắt nó. Sửa chữa padding: một phủ mười ba tốc độ đầy đủ là lõi nhỏ cộng phần đệm, và phần đệm không vô hại vì nó dịch chuyển chính dấu vân tay mà kiểm tương thích dựa vào, nên oracle phải truy vấn trên toàn multiset. Oracle thu hẹp: khi cố định dấu vân tay đích, các phủ bị ghim vào một họ nhỏ tìm bằng quét nhanh, chi phí tuyến tính theo prime thay vì liệt kê đầy đủ bị chặn; đo trên các prime khó tới 2267, mỗi truy vấn xong trong một phần giây với chứng chỉ replay. Mọi truy vấn vẫn trả lời matches-complete, empty-certified hoặc open, một bác bỏ từ solver không có chứng minh kiểm được là vô hiệu, và timeout là open. Ranh giới trung thực: tường mỗi-truy-vấn đã gỡ, nhưng seed cả chiến dịch tại prime đầu vẫn mở, nên chưa tuyên bố verdict chiến dịch. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "Padding decomposition PROVED: every 13-multiset cover = minimal core + padding; padding updates e_j via (Y-w^2) factors, changing multiplicity, symmetric coefficients, projective orbit and CRT congruences => full-multiset queries required (brute-verified p=23: 66=66). Narrowed oracle: full signature pins {V_i^2} up to the QR scale action, so all matches found by scanning (p-1)/2 scales, O(p); measured < 0.35s on D20-hard primes to 2267. 3-valued MATCHES-COMPLETE/EMPTY-CERTIFIED/OPEN-INCOMPLETE, exhaustive-scan certificate; partial-signature SAT/ILP backend requires VeriPB/LRAT/Farkas proof, UNSAT-without-proof invalid, timeout OPEN. verify_d21_v1/v2 ACCEPT, corruption 158/158 (126 rebuild, 17/17 mandatory). Pilot PASS incl mandatory padding-required case + timeout injection. Campaign feasibility OPEN: first-prime signature-set seeding still ~D20 unless meet-in-the-middle built + measured. No GLOBAL-WITNESS. LRC(13) OPEN.",
+   "vi": "Phân rã padding CHỨNG MINH: mọi phủ 13-multiset = lõi tối tiểu + padding; padding cập nhật e_j qua nhân tử (Y-w^2), đổi bội, hệ số đối xứng, quỹ đạo xạ ảnh và đồng dư CRT => cần truy vấn toàn multiset (kiểm brute p=23: 66=66). Oracle thu hẹp: chữ ký đầy đủ ghim {V_i^2} tới tác động scale QR, nên mọi khớp tìm bằng quét (p-1)/2 scale, O(p); đo < 0.35s trên prime khó D20 tới 2267. 3 trạng thái MATCHES-COMPLETE/EMPTY-CERTIFIED/OPEN-INCOMPLETE, chứng chỉ quét đầy đủ; backend SAT/ILP chữ ký từng phần cần chứng minh VeriPB/LRAT/Farkas, UNSAT-không-chứng-minh vô hiệu, timeout OPEN. verify_d21_v1/v2 CHẤP NHẬN, tấn công 158/158 (126 rebuild, 17/17 bắt buộc). Pilot PASS gồm ca padding-bắt-buộc + tiêm timeout. Khả thi chiến dịch MỞ: seed tập chữ ký prime đầu vẫn ~D20 trừ khi dựng + đo gặp-nhau-ở-giữa. Không GLOBAL-WITNESS. LRC(13) MỞ."
+  }
  }
 ]

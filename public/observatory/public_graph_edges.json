@@ -324,6 +324,18 @@
   "valid_to_release": null
  },
  {
+  "id": "arc:gate-d20->gate-d21",
+  "source": "gate:gate-d20",
+  "target": "gate:gate-d21",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "intro:C0",
   "source": "gate:scan",
   "target": "claim:C0",
@@ -708,6 +720,66 @@
   "valid_to_release": null
  },
  {
+  "id": "intro:C-D20-BASE-NECESSARY",
+  "source": "gate:gate-d20",
+  "target": "claim:C-D20-BASE-NECESSARY",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d20.",
+   "vi": "Xuất hiện tại gate-d20."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D20-BLOCKED",
+  "source": "gate:gate-d20",
+  "target": "claim:C-D20-BLOCKED",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d20.",
+   "vi": "Xuất hiện tại gate-d20."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D21-PADDING",
+  "source": "gate:gate-d21",
+  "target": "claim:C-D21-PADDING",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d21.",
+   "vi": "Xuất hiện tại gate-d21."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D21-NARROWED",
+  "source": "gate:gate-d21",
+  "target": "claim:C-D21-NARROWED",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d21.",
+   "vi": "Xuất hiện tại gate-d21."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D21-CAMPAIGN",
+  "source": "gate:gate-d21",
+  "target": "claim:C-D21-CAMPAIGN",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d21.",
+   "vi": "Xuất hiện tại gate-d21."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "dep:0:C1->C2",
   "source": "claim:C1",
   "target": "claim:C2",
@@ -1068,15 +1140,75 @@
   "valid_to_release": null
  },
  {
-  "id": "dep:30:C-D20-PRIME-PRODUCT-LIFT->C0",
+  "id": "dep:30:C-D20-PRIME-PRODUCT-LIFT->C-D20-BASE-NECESSARY",
   "source": "claim:C-D20-PRIME-PRODUCT-LIFT",
+  "target": "claim:C-D20-BASE-NECESSARY",
+  "relation": "supports",
+  "explanation": {
+   "en": "O-A: a global counterexample induces a base cover at every prime, but base cover is not sufficient (p=197 proper at level 14).",
+   "vi": "O-A: một phản ví dụ toàn cục sinh phủ nền tại mọi prime, nhưng phủ nền chưa đủ (p=197 proper ở mức 14)."
+  },
+  "valid_from_release": "REL-D20-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:31:C-D20-BASE-NECESSARY->C-D20-BLOCKED",
+  "source": "claim:C-D20-BASE-NECESSARY",
+  "target": "claim:C-D20-BLOCKED",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "On that footing the full machinery is built, but complete enumeration is blocked at inventory scale under caps.",
+   "vi": "Trên nền đó toàn bộ máy được dựng, nhưng liệt kê đầy đủ bị chặn ở quy mô inventory dưới cap."
+  },
+  "valid_from_release": "REL-D20-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:32:C-D20-BLOCKED->C-D21-PADDING",
+  "source": "claim:C-D20-BLOCKED",
+  "target": "claim:C-D21-PADDING",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "D21 reverses the order; first it corrects the cover object with the padding decomposition.",
+   "vi": "D21 đảo ngược thứ tự; trước hết sửa đối tượng phủ bằng phân rã padding."
+  },
+  "valid_from_release": "REL-D21-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:33:C-D21-PADDING->C-D21-NARROWED",
+  "source": "claim:C-D21-PADDING",
+  "target": "claim:C-D21-NARROWED",
+  "relation": "supports",
+  "explanation": {
+   "en": "With the full multiset fixed, a target signature pins it up to the QR scale, enabling the linear-cost narrowed scan.",
+   "vi": "Với multiset đầy đủ cố định, một chữ ký đích ghim nó tới scale QR, cho phép quét thu hẹp chi phí tuyến tính."
+  },
+  "valid_from_release": "REL-D21-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:34:C-D21-NARROWED->C-D21-CAMPAIGN",
+  "source": "claim:C-D21-NARROWED",
+  "target": "claim:C-D21-CAMPAIGN",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "The per-query wall is removed; the remaining open question is full-campaign seeding via meet-in-the-middle.",
+   "vi": "Tường mỗi-truy-vấn đã gỡ; câu hỏi mở còn lại là seed chiến dịch đầy đủ qua gặp-nhau-ở-giữa."
+  },
+  "valid_from_release": "REL-D21-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:35:C-D21-CAMPAIGN->C0",
+  "source": "claim:C-D21-CAMPAIGN",
   "target": "claim:C0",
   "relation": "reduces_to",
   "explanation": {
-   "en": "D20 simultaneous cross-prime compatibility is the remaining route toward the open target.",
-   "vi": "Tương thích liên-prime đồng thời D20 là đường còn lại hướng tới mục tiêu mở."
+   "en": "A feasible certified narrowed campaign is the current route toward the open target.",
+   "vi": "Một chiến dịch thu hẹp chứng nhận khả thi là đường hiện tại hướng tới mục tiêu mở."
   },
-  "valid_from_release": "REL-D20-001",
+  "valid_from_release": "REL-D21-001",
   "valid_to_release": null
  }
 ]

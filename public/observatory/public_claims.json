@@ -598,17 +598,112 @@
   "evidence": "I2",
   "scope": "one global 13-speed multiset, certified prime family beyond B13",
   "gate_introduced": "gate-d20",
-  "gate_last_changed": "gate-d20",
+  "gate_last_changed": "gate-d21",
   "depends_on": [
    "C-D19-LIFT"
   ],
   "statement": {
-   "en": "Simultaneous prime-product lift OPEN: rule out one common bounded 13-speed multiset inducing compatible local covers across a certified prime family whose product exceeds B13, encoded by monic root polynomials with CRT-compatible symmetric coefficients; the mandated first phase is an independent replay of the D6/D7R reduction",
-   "vi": "Lift tích-các-prime đồng thời MỞ: loại một multiset 13 tốc độ có chặn chung sinh ra phủ cục bộ tương thích qua một họ prime được chứng nhận mà tích vượt B13, mã hóa bằng đa thức nghiệm đơn khởi với hệ số đối xứng tương thích CRT; phase đầu bắt buộc là replay độc lập rút gọn D6/D7R"
+   "en": "Simultaneous prime-product lift OPEN: rule out one common bounded 13-speed multiset inducing compatible local covers across a certified prime family whose product exceeds B13. The full machinery was built (reduction replay, applicability, QR normalization, CRT reconstruction, projective atlas, 3-valued oracle, complete generator) but the D20 enumerate-first campaign is BLOCKED at scale (cost); D21 reopens it via signature-narrowing",
+   "vi": "Lift tích-các-prime đồng thời MỞ: loại một multiset 13 tốc độ có chặn chung sinh phủ cục bộ tương thích qua họ prime chứng nhận mà tích vượt B13. Toàn bộ máy đã dựng (replay rút gọn, applicability, chuẩn hóa QR, tái dựng CRT, atlas xạ ảnh, oracle 3 trạng thái, generator đầy đủ) nhưng chiến dịch liệt-kê-trước D20 BỊ CHẶN ở quy mô (chi phí); D21 mở lại qua thu hẹp theo chữ ký"
   },
   "plain_language": {
-   "en": "The open question is whether one single global speed set can pass the cover test at many primes at once, not just one prime.",
-   "vi": "Câu hỏi mở là liệu một bộ tốc độ toàn cục duy nhất có vượt được kiểm phủ tại nhiều prime cùng lúc không, chứ không chỉ một prime."
+   "en": "Whether one single global speed set can pass the cover test at many primes at once. The direct-enumeration route hit a cost wall; the narrowed route is the current attempt.",
+   "vi": "Liệu một bộ tốc độ toàn cục duy nhất có vượt kiểm phủ tại nhiều prime cùng lúc. Đường liệt kê trực tiếp gặp tường chi phí; đường thu hẹp là nỗ lực hiện tại."
+  }
+ },
+ {
+  "claim_id": "C-D20-BASE-NECESSARY",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "all primes; grid-refinement monotonicity",
+  "gate_introduced": "gate-d20",
+  "gate_last_changed": "gate-d20",
+  "depends_on": [
+   "C-D20-PRIME-PRODUCT-LIFT"
+  ],
+  "statement": {
+   "en": "O-A: a global counterexample induces a base-level cover at every prime (necessary), but a base cover is NOT sufficient — the exact p=197 witness covers at base level yet is proper at refinement level 14. So the base-cover compatibility search is a sound one-way filter; every survivor must pass the refinement tower",
+   "vi": "O-A: một phản ví dụ toàn cục sinh phủ mức nền tại mọi prime (cần), nhưng phủ nền KHÔNG đủ — nhân chứng chính xác p=197 phủ ở mức nền nhưng proper ở mức refinement 14. Nên tìm kiếm tương thích phủ-nền là bộ lọc một chiều đúng đắn; mọi survivor phải qua tháp refinement"
+  },
+  "plain_language": {
+   "en": "A single-prime cover is a required clue for a counterexample, but not proof of one — finer time grids can break it.",
+   "vi": "Một phủ đơn-prime là manh mối cần cho phản ví dụ, nhưng không phải bằng chứng — lưới thời gian tinh hơn có thể phá nó."
+  }
+ },
+ {
+  "claim_id": "C-D20-BLOCKED",
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "measured, inventory primes p>=191, frozen caps",
+  "gate_introduced": "gate-d20",
+  "gate_last_changed": "gate-d20",
+  "depends_on": [
+   "C-D20-BASE-NECESSARY"
+  ],
+  "statement": {
+   "en": "D20-BLOCKED (measured, not assumed): complete local-cover enumeration does not terminate within the resource caps for the inventory primes, so every campaign block is OPEN and the certified-closed product is zero. Honest cost-driven negative capability, like the D6 non-tight campaign; NOT a compatibility claim, NOT a counterexample",
+   "vi": "D20-BLOCKED (đo được, không giả định): liệt kê phủ cục bộ đầy đủ không kết thúc trong cap tài nguyên cho các prime inventory, nên mọi block chiến dịch OPEN và tích chứng nhận đóng bằng không. Năng lực âm trung thực do chi phí, như chiến dịch non-tight D6; KHÔNG phải tuyên bố tương thích, KHÔNG phải phản ví dụ"
+  },
+  "plain_language": {
+   "en": "The direct route is blocked by computation cost, not by mathematics — nothing was proved or disproved about LRC(13).",
+   "vi": "Đường trực tiếp bị chặn bởi chi phí tính toán, không phải toán học — không có gì được chứng minh hay bác bỏ về LRC(13)."
+  }
+ },
+ {
+  "claim_id": "C-D21-PADDING",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "all 13-multiset covers, brute-verified small primes",
+  "gate_introduced": "gate-d21",
+  "gate_last_changed": "gate-d21",
+  "depends_on": [
+   "C-D20-BLOCKED"
+  ],
+  "statement": {
+   "en": "Padding decomposition: every 13-multiset cover = minimal core + padding; padding changes multiplicity, symmetric coefficients, projective orbit and CRT compatibility, so a minimal-core-only oracle is incomplete and the full 13-multiset must be queried (brute-verified p=23: 66=66)",
+   "vi": "Phân rã padding: mọi phủ 13-multiset = lõi tối tiểu + padding; padding đổi bội, hệ số đối xứng, quỹ đạo xạ ảnh và tương thích CRT, nên oracle chỉ-lõi là không đầy đủ và phải truy vấn toàn multiset 13 (kiểm brute p=23: 66=66)"
+  },
+  "plain_language": {
+   "en": "A full 13-speed cover is a small core plus filler, and the filler matters — it shifts the fingerprint the compatibility test relies on.",
+   "vi": "Một phủ 13 tốc độ đầy đủ là lõi nhỏ cộng phần đệm, và phần đệm có ý nghĩa — nó dịch chuyển dấu vân tay mà kiểm tương thích dựa vào."
+  }
+ },
+ {
+  "claim_id": "C-D21-NARROWED",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "full-signature query, per prime, O((p-1)/2)",
+  "gate_introduced": "gate-d21",
+  "gate_last_changed": "gate-d21",
+  "depends_on": [
+   "C-D21-PADDING"
+  ],
+  "statement": {
+   "en": "Signature-narrowed oracle: fixing a target signature pins the squared-speed multiset up to the quadratic-residue scale action, so all matching covers are found by scanning the scale half-group in cost linear in p. Measured to terminate under 0.35s on D20-hard primes up to 2267 where full enumeration was blocked; 3-valued with replayable certificates, UNSAT-without-proof rejected, timeout OPEN. Removes the D20 per-query wall",
+   "vi": "Oracle thu hẹp theo chữ ký: cố định chữ ký đích ghim multiset tốc độ bình phương tới tác động scale thặng dư bình phương, nên mọi phủ khớp tìm bằng quét nửa nhóm scale với chi phí tuyến tính theo p. Đo kết thúc dưới 0.35s trên prime khó D20 tới 2267 nơi liệt kê đầy đủ bị chặn; 3 trạng thái với chứng chỉ replay, UNSAT-không-chứng-minh bị loại, timeout OPEN. Gỡ tường mỗi-truy-vấn D20"
+  },
+  "plain_language": {
+   "en": "Instead of listing every cover then filtering, D21 uses the target fingerprint to look only where a match could be — fast even at the hard primes.",
+   "vi": "Thay vì liệt kê mọi phủ rồi lọc, D21 dùng dấu vân tay đích để chỉ tìm nơi có thể khớp — nhanh cả ở các prime khó."
+  }
+ },
+ {
+  "claim_id": "C-D21-CAMPAIGN",
+  "status": "open",
+  "evidence": "I2",
+  "scope": "full 294-prime certified campaign feasibility",
+  "gate_introduced": "gate-d21",
+  "gate_last_changed": "gate-d21",
+  "depends_on": [
+   "C-D21-NARROWED"
+  ],
+  "statement": {
+   "en": "Full signature-narrowed campaign feasibility OPEN: per-query narrowing is validated, but seeding the first prime's signature set still reduces to D20 enumeration unless a meet-in-the-middle seed generator supplies it; no campaign verdict is claimed until that is built and its cost measured",
+   "vi": "Khả thi chiến dịch thu hẹp theo chữ ký đầy đủ MỞ: thu hẹp mỗi-truy-vấn đã kiểm, nhưng seed tập chữ ký prime đầu vẫn quy về liệt kê D20 trừ khi một generator seed gặp-nhau-ở-giữa cung cấp; chưa tuyên bố verdict chiến dịch cho tới khi dựng và đo chi phí"
+  },
+  "plain_language": {
+   "en": "The per-prime check is fast now; whether the whole 294-prime campaign is affordable is the next open measurement.",
+   "vi": "Kiểm mỗi-prime giờ nhanh; liệu cả chiến dịch 294 prime có kham nổi là phép đo mở tiếp theo."
   }
  }
 ]
