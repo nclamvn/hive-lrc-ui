@@ -32,9 +32,8 @@ export function buildGoldenVM(locale: Locale, golden: boolean): GoldenVM {
     title: pick(r.title, locale), body: pick(r.summary_public, locale),
   }));
 
-  // latest result: derived from the current gate + its most decisive claim (auto-advances)
-  const gateClaims = claims.filter((c) => c.gate_introduced === current.id);
-  const summaryClaim = gateClaims[gateClaims.length - 1];
+  // latest result: phase/status/stats derived from the current gate (auto-advances);
+  // the explanation is a curated, fuller plain-language summary of the current result.
   const statusText: Record<string, string> = {
     pass: t("PASS", "ĐẠT"), partial: t("PARTIAL", "MỘT PHẦN"), blocked: t("BLOCKED", "BỊ CHẶN"),
     current: t("IN PROGRESS", "ĐANG CHẠY"), refuted: t("REFUTED", "BÁC BỎ"),
@@ -70,7 +69,9 @@ export function buildGoldenVM(locale: Locale, golden: boolean): GoldenVM {
       title: pick(current.title, locale),
       status: current.status,
       statusLabel: statusText[current.status] ?? current.status,
-      plain: summaryClaim ? pick(summaryClaim.plain_language, locale) : pick(current.summary, locale),
+      plain: t(
+        "The newest method tracks which runner is which from the very start, so each speed can be pinned down using only about half as many primes as before: a real, proven shortcut. But keeping every runner's label consistent forces the search to weigh billions of possible labelings at each step, and that bookkeeping grows far faster than the primes it saves. Weighed exactly, the shortcut costs more than it gives back, so this route does not fit inside the compute limits. The two reconstruction theorems stand as genuine results, while the campaign itself is only a partial step, and LRC(13) stays open.",
+        "Phương pháp mới nhất theo dõi ngay từ đầu người chạy nào là người nào, nhờ đó mỗi vận tốc chỉ cần khoảng một nửa số nguyên tố so với trước để xác định: một lối tắt thật sự và đã được chứng minh. Nhưng để giữ nhãn của mọi người chạy nhất quán, quá trình tìm kiếm phải cân nhắc hàng tỉ cách gán nhãn ở mỗi bước, và khối lượng đó phình ra nhanh hơn nhiều so với số nguyên tố tiết kiệm được. Khi được tính toán chính xác, cái giá của lối tắt lớn hơn lợi ích nó mang lại, nên hướng đi này không nằm gọn trong giới hạn tính toán. Hai định lý tái dựng vẫn đứng vững như những kết quả thật, còn bản thân chiến dịch mới chỉ là một bước đi từng phần, và LRC(13) thì vẫn còn mở."),
       stats: [
         { value: current.independence, label: t("evidence", "bằng chứng") },
         { value: current.verify === "double" ? "2×" : current.verify === "single" ? "1×" : "—", label: t("verifiers", "verifier") },

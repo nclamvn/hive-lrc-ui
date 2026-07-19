@@ -36,7 +36,7 @@
     "title": "Labeled-root CRT campaign",
     "status": "partial",
     "statusLabel": "PARTIAL",
-    "plain": "The shortcut has a hidden cost: keeping the runner labels straight explodes the search far more than the prime saving helps, so this route does not fit the limits. LRC(13) stays open.",
+    "plain": "The newest method tracks which runner is which from the very start, so each speed can be pinned down using only about half as many primes as before: a real, proven shortcut. But keeping every runner's label consistent forces the search to weigh billions of possible labelings at each step, and that bookkeeping grows far faster than the primes it saves. Weighed exactly, the shortcut costs more than it gives back, so this route does not fit inside the compute limits. The two reconstruction theorems stand as genuine results, while the campaign itself is only a partial step, and LRC(13) stays open.",
     "stats": [
       { "value": "I2", "label": "evidence" },
       { "value": "2×", "label": "verifiers" },
