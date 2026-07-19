@@ -14,9 +14,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL(`/${seg}/overview`, request.url));
   }
 
+  // Retired Console site: send old /{locale}/console links to the unified Observatory.
+  if (LOCALES.includes(seg) && pathname === `/${seg}/console`) {
+    return NextResponse.redirect(new URL(`/${seg}/overview`, request.url));
+  }
+
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/", "/en", "/vi"],
+  matcher: ["/", "/en", "/vi", "/en/console", "/vi/console"],
 };
