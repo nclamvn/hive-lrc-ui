@@ -1101,8 +1101,8 @@
    "vi": "Chiến dịch CRT nghiệm-có-nhãn D26 MỞ: thay vì đợi tái dựng mọi hệ số tốc-độ-bình-phương sau ngưỡng 2H (khoảng B13 bình phương), giữ một nhãn TOÀN CỤC đúng cho 13 tốc độ và CRT từng V_i trực tiếp ở ngưỡng dựa trên B13, thấp hơn nhiều. Nhãn, dấu, hoán vị và scale là các đối tượng TOÀN CỤC cố định MỘT LẦN ở cấp tuple, không bao giờ canonicalize lại theo prime hay theo denominator. D26 phải chứng minh tuple có-nhãn canonical, ghim ngưỡng CRT-trực-tiếp chính xác, dựng local oracle giữ-nhãn, dùng master phân-tích prime-power, tích hợp các cut thời-gian-hữu-tỉ, và đo net state complexity chính xác kể cả biến mới; một chiến dịch đầy đủ chỉ chạy nếu cây trạng thái reachable chứng minh vừa cap"
   },
   "plain_language": {
-   "en": "Next idea: keep track of which runner is which globally, so each speed can be pinned by the Chinese remainder theorem at a much lower threshold, without ever re-deciding the labels, signs or scale prime by prime.",
-   "vi": "Ý tiếp: theo dõi người chạy nào là người nào một cách toàn cục, để mỗi tốc độ được ghim bằng định lý phần dư Trung Hoa ở ngưỡng thấp hơn nhiều, mà không bao giờ quyết lại nhãn, dấu hay scale theo từng prime."
+   "en": "The D26 route keeps one fixed global labeling of the 13 speeds and reconstructs each speed directly by CRT at a lower threshold, instead of reconstructing the symmetric coefficients at the high threshold. Labels, signs and scale are fixed once at the tuple level, not per prime.",
+   "vi": "Hướng D26 giữ một global labeling cố định cho 13 vận tốc và tái dựng từng vận tốc trực tiếp bằng CRT ở ngưỡng thấp hơn, thay cho việc tái dựng các hệ số đối xứng ở ngưỡng cao. Nhãn, dấu và scale được cố định một lần ở cấp tuple, không theo từng prime."
   }
  },
  {
@@ -1120,8 +1120,8 @@
    "vi": "Định lý CRT-trực-tiếp D26 CHỨNG MINH và kiểm kép: một tuple có-nhãn canonical duy nhất tồn tại (sắp tăng phá S_13 một lần, đại diện dương, nguyên thủy, giữ lặp) với dấu, hoán vị và scale cố định MỘT LẦN toàn cục; và mỗi tọa độ có-nhãn V_i dưới B13 được ghim bằng CRT trực tiếp khi tích modulus vượt 2*B13 = 969 bit, so với ngưỡng hệ-số-bình-phương 2H = 1946 bit. Ngưỡng trực tiếp chứng minh khoảng một nửa, giảm tích prime chứng nhận từ khoảng 205 xuống khoảng 109 prime. Chuyển ngược tái-đối-xứng về cùng đối tượng e_j(V^2) mà đường hệ-số dùng"
   },
   "plain_language": {
-   "en": "D26 proves a real shortcut: tracking which runner is which lets each speed be pinned with about half as many primes. The math checks out.",
-   "vi": "D26 chứng minh một lối tắt thật: theo dõi người chạy nào là người nào cho phép ghim mỗi tốc độ với khoảng một nửa số prime. Toán đúng."
+   "en": "Direct coordinate CRT is proved and double-verified: each speed in the canonical labeled tuple is pinned once the modulus product exceeds about 969 bits, against about 1946 bits for the coefficient route, roughly half the certified primes.",
+   "vi": "Direct coordinate CRT được chứng minh và kiểm kép: mỗi vận tốc trong canonical labeled tuple được xác định khi modulus product vượt khoảng 969 bits, so với khoảng 1946 bits của phương pháp hệ số, tức khoảng một nửa số prime chứng nhận."
   }
  },
  {
@@ -1139,8 +1139,8 @@
    "vi": "D26-PARTIAL (đo net-complexity): ledger chính xác quyết định và âm. Giữ một nhãn toàn cục buộc tới 13! (khoảng 6.2 tỉ) gán nhãn mỗi prime tích lũy, khoảng 2^3546 entropy nhãn xuyên tích lũy khoảng 109 prime, vượt xa cả tiết kiệm ngưỡng 977 bit lẫn cap compute 2^42. Nhất quán CRT chỉ ép nhãn sau khi một tọa độ ghim, cần toàn bộ tích lũy. Theo quy tắc gate, một denominator thêm nhiều trạng thái tự do hơn nó bỏ không phải tiến bộ, nên chiến dịch có-nhãn KHÔNG net-vừa cap. 723 trên 723 tấn công bị bác. Định lý tái dựng vẫn đứng; campaign-fit đóng âm. Không BASE-SURVIVOR, không GLOBAL-WITNESS"
   },
   "plain_language": {
-   "en": "The shortcut has a hidden cost: keeping the runner labels straight explodes the search far more than the prime saving helps, so this route does not fit the limits. LRC(13) stays open.",
-   "vi": "Lối tắt có chi phí ẩn: giữ nhãn người chạy cho đúng làm bùng nổ tìm kiếm hơn nhiều so với lợi ích tiết kiệm prime, nên đường này không vừa giới hạn. LRC(13) vẫn mở."
+   "en": "The labeling cost dominates: each local cover is an unordered multiset, and assigning it to the 13 global labels gives a worst-case branching proxy near (13!)^109, beyond the frozen caps. The lower threshold does not offset this, so the fully labeled campaign does not close. LRC(13) remains OPEN.",
+   "vi": "Chi phí ghép nhãn chi phối: mỗi local cover là một multiset không thứ tự, và việc gán nó vào 13 nhãn toàn cục cho worst-case branching proxy gần (13!)^109, vượt frozen caps. Ngưỡng thấp hơn không bù được, nên fully labeled campaign chưa đóng. LRC(13) vẫn đang mở."
   }
  }
 ]

@@ -16,12 +16,12 @@
   "public_artifacts": 4
  },
  "manifest": {
-  "public_releases": "3dc18d0e5f4cefe706e5a49824ad6b602649f5425f4dcd2db578950ab0be8b7d",
-  "public_claims": "f85ad8b912cbcf1baf0fc138c2ceae2be768cf19c1ec146f0d7fc7e2b890dea2",
-  "public_gates": "bdea9a7d22525438d2162b1a34c70e6f57685c2cb77fb127938af28099b95104",
-  "public_graph_nodes": "276b24de789193cb3d3b4cc1f74ff9972e360ddda97a32a8637a6a2702718cea",
+  "public_releases": "e25a4a19f468130cce395de58842e0c8d84f7c09607dea669d9d25b79820e54a",
+  "public_claims": "11564ac1817afba9879ac3aa96d6bb2b3360cd47a1c5e07a39860383e6c9a0e7",
+  "public_gates": "472ba5184211c06cdac4d779bee4e68d4afaf10bed98d3bf90710dd1280ecd17",
+  "public_graph_nodes": "b752b66bc3810a3dc14a59f7e93897af44afae06b7483add921b6f82a85e8212",
   "public_graph_edges": "7f49c87320e24bdce84ee7e987c41116ea81f0f8702de8cf78e8a6eb9d0609c2",
   "public_artifacts": "35586b8067464ed973f3b9d3df53d265f974bfa8422e96ef43035d98bed5b8d5"
  },
- "snapshot_hash": "79ce49500c8fc160966a70af72e3fad4a50198e2657e221cf1153bc43adc62bc"
+ "snapshot_hash": "3ea8704bb7d80f51304a0013b1cf1f6e284cdad3ae25b2803fea390bcd83a13b"
 }
