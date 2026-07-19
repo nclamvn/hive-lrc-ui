@@ -766,7 +766,7 @@
    "en": "GATE D21",
    "vi": "GATE D21"
   },
-  "status": "current",
+  "status": "partial",
   "evidence": "I2",
   "scope": "GATE D21",
   "gate": "gate-d21",
@@ -779,6 +779,33 @@
    "vi": "D20 bị chặn vì nó đòi toàn bộ vũ trụ phủ cục bộ không ràng buộc trước khi bất kỳ thông tin liên-prime nào thu hẹp truy vấn. D21 đảo ngược thứ tự: lan truyền một chữ ký toàn cục từng phần trước, rồi chỉ hỏi các phủ cục bộ tương thích với chữ ký đó. Hai sửa chữa và một thắng lợi kiến trúc dẫn dắt nó. Thứ nhất, sửa chữa padding: một phủ mười ba tốc độ đầy đủ là một lõi tối tiểu cộng một multiset padding, và padding không vô hại vì nó đổi bội, hệ số đối xứng, quỹ đạo xạ ảnh và tương thích CRT, nên oracle phải truy vấn trên toàn multiset mười ba, không chỉ lõi tối tiểu. Điều này được chứng minh và đối chiếu brute force. Thứ hai, oracle thu hẹp: khi cố định một chữ ký đích, multiset tốc độ bình phương bị ghim tới tác động scale thặng dư bình phương, nên mọi phủ khớp được tìm bằng cách quét nửa nhóm scale, chi phí tuyến tính theo prime thay vì liệt kê đầy đủ đã bị chặn. Đo trên các prime khó của D20 tới 2267, mỗi truy vấn thu hẹp kết thúc trong một phần giây với chứng chỉ replay được, đúng nơi đường cũ bị chặn. Mọi truy vấn vẫn trả về một trong matches-complete, empty-certified hoặc open-incomplete, một bác bỏ từ solver là vô hiệu nếu không có chứng minh máy-kiểm, và timeout là open. Ranh giới trung thực: bức tường liệt kê mỗi-truy-vấn đã gỡ, nhưng chiến dịch đầy đủ vẫn cần một seed gặp-nhau-ở-giữa tại prime đầu, nên chưa tuyên bố verdict chiến dịch. LRC(13) vẫn mở."
   },
   "route": "/gates/gate-d21",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "gate:gate-d22",
+  "kind": "gate",
+  "label": {
+   "en": "Implicit global-signature elimination",
+   "vi": "Loại chữ ký toàn cục implicit"
+  },
+  "short_label": {
+   "en": "GATE D22",
+   "vi": "GATE D22"
+  },
+  "status": "current",
+  "evidence": "I2",
+  "scope": "GATE D22",
+  "gate": "gate-d22",
+  "summary": {
+   "en": "D21-S showed that writing down the complete family of starting fingerprints is astronomically large, but that only blocks the two explicit ways to materialize it, not every method. The product of the per-prime fingerprint sets is not a state space anyone must build; constraints linking the primes can rule out most states before they are ever generated. D22 reverses the order once more. Instead of listing all starting fingerprints and then filtering, it keeps the unknown bounded object as symbols, projects it onto one prime at a time, asks the fast narrowed local feasibility question, and cuts away impossible states with a proof for every cut. Two symbolic pictures are piloted in parallel: a coefficient master carrying the symmetric functions of the squared speeds, and a root master carrying the squared speeds themselves. Each local subproblem returns a match witness, a certified empty, or an honest open, and every pruning cut must carry a theorem and a proof hash, so nothing is discarded without justification. No compute budget increase is authorized, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "D21-S cho thấy viết ra họ đầy đủ các dấu vân tay khởi đầu là lớn thiên văn, nhưng điều đó chỉ chặn hai cách tường minh để hiện thực hóa nó, không phải mọi phương pháp. Tích các tập dấu vân tay theo từng prime không phải không gian trạng thái ai đó phải dựng; các ràng buộc liên kết các prime có thể loại phần lớn trạng thái trước khi chúng được sinh. D22 đảo thứ tự một lần nữa. Thay vì liệt kê mọi dấu vân tay khởi đầu rồi lọc, nó giữ đối tượng chưa biết có chặn dạng ký hiệu, chiếu nó lên từng prime một, hỏi câu hỏi feasibility cục bộ thu hẹp nhanh, và cắt bỏ các trạng thái bất khả với một chứng minh cho mỗi cut. Hai bức tranh symbolic pilot song song: một coefficient master mang các hàm đối xứng của tốc độ bình phương, và một root master mang chính các tốc độ bình phương. Mỗi bài con cục bộ trả về một match witness, một empty chứng nhận, hoặc một open trung thực, và mọi cut pruning phải mang một định lý và một proof hash, nên không gì bị loại mà không có lý do. Không tăng ngân sách compute, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "D21-S showed that writing down the complete family of starting fingerprints is astronomically large, but that only blocks the two explicit ways to materialize it, not every method. The product of the per-prime fingerprint sets is not a state space anyone must build; constraints linking the primes can rule out most states before they are ever generated. D22 reverses the order once more. Instead of listing all starting fingerprints and then filtering, it keeps the unknown bounded object as symbols, projects it onto one prime at a time, asks the fast narrowed local feasibility question, and cuts away impossible states with a proof for every cut. Two symbolic pictures are piloted in parallel: a coefficient master carrying the symmetric functions of the squared speeds, and a root master carrying the squared speeds themselves. Each local subproblem returns a match witness, a certified empty, or an honest open, and every pruning cut must carry a theorem and a proof hash, so nothing is discarded without justification. No compute budget increase is authorized, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "D21-S cho thấy viết ra họ đầy đủ các dấu vân tay khởi đầu là lớn thiên văn, nhưng điều đó chỉ chặn hai cách tường minh để hiện thực hóa nó, không phải mọi phương pháp. Tích các tập dấu vân tay theo từng prime không phải không gian trạng thái ai đó phải dựng; các ràng buộc liên kết các prime có thể loại phần lớn trạng thái trước khi chúng được sinh. D22 đảo thứ tự một lần nữa. Thay vì liệt kê mọi dấu vân tay khởi đầu rồi lọc, nó giữ đối tượng chưa biết có chặn dạng ký hiệu, chiếu nó lên từng prime một, hỏi câu hỏi feasibility cục bộ thu hẹp nhanh, và cắt bỏ các trạng thái bất khả với một chứng minh cho mỗi cut. Hai bức tranh symbolic pilot song song: một coefficient master mang các hàm đối xứng của tốc độ bình phương, và một root master mang chính các tốc độ bình phương. Mỗi bài con cục bộ trả về một match witness, một empty chứng nhận, hoặc một open trung thực, và mọi cut pruning phải mang một định lý và một proof hash, nên không gì bị loại mà không có lý do. Không tăng ngân sách compute, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "route": "/gates/gate-d22",
   "valid_from_release": null,
   "valid_to_release": null
  },
@@ -1812,8 +1839,8 @@
   "id": "claim:C-D21-SEED-BLOCKED",
   "kind": "claim",
   "label": {
-   "en": "D21-S-BLOCKED (measured): both complete seed routes exceed the frozen caps. The distinct 13-multiset signature count grows from 6 at p=23 to 15511 at p=29, and the complete seed set is the multiplicative CRT product over the small primes needed to pass the reconstruction threshold, at least 2^519. The meet-in-the-middle half-space is about 1e9 to 1e17 at inventory primes. The seed completeness theorem still holds; the complete seed set is simply too large to materialize. Not a compatibility claim, not a counterexample",
-   "vi": "D21-S-BLOCKED (đo được): cả hai route seed đầy đủ vượt cap đã đóng băng. Số chữ ký 13-multiset phân biệt tăng từ 6 tại p=23 lên 15511 tại p=29, và tập seed đầy đủ là tích CRT trên các prime nhỏ cần để vượt ngưỡng tái dựng, ít nhất 2^519. Nửa-không-gian gặp-nhau-ở-giữa khoảng 1e9 tới 1e17 tại prime inventory. Định lý đầy đủ seed vẫn đúng; tập seed đầy đủ đơn giản là quá lớn để hiện thực hóa. Không phải tuyên bố tương thích, không phải phản ví dụ"
+   "en": "Seed MATERIALIZATION BLOCKED-COMPUTE (measured): the two built routes that materialize the seed set both exceed the frozen caps. Distinct 13-multiset signatures grow 6 (p=23) -> 15511 (p=29); the Cartesian small-prime seed set is the CRT product to pass the threshold, at least 2^519; the meet-in-the-middle half-space is 1e9..1e17 at inventory primes. SCOPE (Contractor): this blocks the two explicit materialization methods, NOT every implicit approach. The product of local signature sets is not the mandatory state space, cross-prime constraints may eliminate most states before they are generated. Not a compatibility claim, not a counterexample",
+   "vi": "Hiện thực hóa seed BỊ CHẶN-CHI-PHÍ (đo được): hai route đã dựng hiện thực hóa tập seed đều vượt cap. Chữ ký 13-multiset phân biệt tăng 6 (p=23) -> 15511 (p=29); tập seed prime-nhỏ Cartesian là tích CRT để vượt ngưỡng, ít nhất 2^519; nửa-không-gian gặp-nhau-ở-giữa 1e9..1e17 tại prime inventory. PHẠM VI (Thầu): điều này chặn hai phương pháp hiện thực hóa tường minh, KHÔNG phải mọi cách implicit. Tích các tập chữ ký cục bộ không phải không gian trạng thái bắt buộc, ràng buộc xuyên prime có thể loại phần lớn trạng thái trước khi sinh. Không phải tuyên bố tương thích, không phải phản ví dụ"
   },
   "short_label": {
    "en": "C-D21-SEED-BLOCKED",
@@ -1821,15 +1848,15 @@
   },
   "status": "supported_internal",
   "evidence": "I2",
-  "scope": "measured, both complete seed routes, frozen caps",
-  "gate": "gate-d21",
+  "scope": "measured, the two explicit MATERIALIZATION routes only, frozen caps",
+  "gate": "gate-d22",
   "summary": {
-   "en": "Listing every starting fingerprint completely is provably necessary but astronomically large, so the seeding step is blocked by cost, not by mathematics.",
-   "vi": "Liệt kê mọi dấu vân tay khởi đầu đầy đủ là cần thiết đã chứng minh nhưng lớn thiên văn, nên bước seed bị chặn bởi chi phí, không phải toán học."
+   "en": "The two ways we tried to list every starting fingerprint are astronomically large, so those routes are cost-blocked. That does not mean every method is blocked, keeping the object symbolic may prune most states before they exist.",
+   "vi": "Hai cách chúng tôi thử liệt kê mọi dấu vân tay khởi đầu lớn thiên văn, nên các route đó bị chặn chi phí. Điều đó không nghĩa mọi phương pháp bị chặn, giữ đối tượng dạng symbolic có thể loại phần lớn trạng thái trước khi chúng tồn tại."
   },
   "technical_summary": {
-   "en": "D21-S-BLOCKED (measured): both complete seed routes exceed the frozen caps. The distinct 13-multiset signature count grows from 6 at p=23 to 15511 at p=29, and the complete seed set is the multiplicative CRT product over the small primes needed to pass the reconstruction threshold, at least 2^519. The meet-in-the-middle half-space is about 1e9 to 1e17 at inventory primes. The seed completeness theorem still holds; the complete seed set is simply too large to materialize. Not a compatibility claim, not a counterexample",
-   "vi": "D21-S-BLOCKED (đo được): cả hai route seed đầy đủ vượt cap đã đóng băng. Số chữ ký 13-multiset phân biệt tăng từ 6 tại p=23 lên 15511 tại p=29, và tập seed đầy đủ là tích CRT trên các prime nhỏ cần để vượt ngưỡng tái dựng, ít nhất 2^519. Nửa-không-gian gặp-nhau-ở-giữa khoảng 1e9 tới 1e17 tại prime inventory. Định lý đầy đủ seed vẫn đúng; tập seed đầy đủ đơn giản là quá lớn để hiện thực hóa. Không phải tuyên bố tương thích, không phải phản ví dụ"
+   "en": "Seed MATERIALIZATION BLOCKED-COMPUTE (measured): the two built routes that materialize the seed set both exceed the frozen caps. Distinct 13-multiset signatures grow 6 (p=23) -> 15511 (p=29); the Cartesian small-prime seed set is the CRT product to pass the threshold, at least 2^519; the meet-in-the-middle half-space is 1e9..1e17 at inventory primes. SCOPE (Contractor): this blocks the two explicit materialization methods, NOT every implicit approach. The product of local signature sets is not the mandatory state space, cross-prime constraints may eliminate most states before they are generated. Not a compatibility claim, not a counterexample",
+   "vi": "Hiện thực hóa seed BỊ CHẶN-CHI-PHÍ (đo được): hai route đã dựng hiện thực hóa tập seed đều vượt cap. Chữ ký 13-multiset phân biệt tăng 6 (p=23) -> 15511 (p=29); tập seed prime-nhỏ Cartesian là tích CRT để vượt ngưỡng, ít nhất 2^519; nửa-không-gian gặp-nhau-ở-giữa 1e9..1e17 tại prime inventory. PHẠM VI (Thầu): điều này chặn hai phương pháp hiện thực hóa tường minh, KHÔNG phải mọi cách implicit. Tích các tập chữ ký cục bộ không phải không gian trạng thái bắt buộc, ràng buộc xuyên prime có thể loại phần lớn trạng thái trước khi sinh. Không phải tuyên bố tương thích, không phải phản ví dụ"
   },
   "route": "/claims/C-D21-SEED-BLOCKED",
   "valid_from_release": null,
@@ -1859,6 +1886,33 @@
    "vi": "Khả thi chiến dịch thu hẹp theo chữ ký đầy đủ MỞ: thu hẹp mỗi-truy-vấn đã kiểm, nhưng seed tập chữ ký prime đầu vẫn quy về liệt kê D20 trừ khi một generator seed gặp-nhau-ở-giữa cung cấp; chưa tuyên bố verdict chiến dịch cho tới khi dựng và đo chi phí"
   },
   "route": "/claims/C-D21-CAMPAIGN",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D22-IMPLICIT-STATE",
+  "kind": "claim",
+  "label": {
+   "en": "D22 implicit global-signature elimination OPEN: do NOT materialize the initial signature family. Keep the bounded global object symbolic (two master representations piloted in parallel: a coefficient master on E_j = e_j(V_1^2..V_13^2) and a root master on X_i = V_i^2), project it to each prime, ask the narrowed local feasibility subproblem (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE), and generate exact cuts. Every pruning cut must carry a theorem and a proof hash; no compute-budget increase",
+   "vi": "Loại chữ ký toàn cục implicit D22 MỞ: KHÔNG hiện thực hóa họ chữ ký ban đầu. Giữ đối tượng toàn cục có chặn dạng symbolic (hai biểu diễn master pilot song song: coefficient master trên E_j = e_j(V_1^2..V_13^2) và root master trên X_i = V_i^2), chiếu xuống từng prime, hỏi bài con feasibility cục bộ đã thu hẹp (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE), và sinh cut chính xác. Mọi cut pruning phải mang theo một định lý và một proof hash; không tăng ngân sách compute"
+  },
+  "short_label": {
+   "en": "C-D22-IMPLICIT-STATE",
+   "vi": "C-D22-IMPLICIT-STATE"
+  },
+  "status": "open",
+  "evidence": "I2",
+  "scope": "symbolic global object, prime constraints added incrementally",
+  "gate": "gate-d22",
+  "summary": {
+   "en": "The next idea: never write down all the starting fingerprints; keep the unknown object as symbols and add one prime's constraint at a time, cutting away impossible states with proofs.",
+   "vi": "Ý tiếp: không bao giờ viết ra mọi dấu vân tay khởi đầu; giữ đối tượng chưa biết dạng ký hiệu và thêm ràng buộc từng prime một, cắt bỏ các trạng thái bất khả với chứng minh."
+  },
+  "technical_summary": {
+   "en": "D22 implicit global-signature elimination OPEN: do NOT materialize the initial signature family. Keep the bounded global object symbolic (two master representations piloted in parallel: a coefficient master on E_j = e_j(V_1^2..V_13^2) and a root master on X_i = V_i^2), project it to each prime, ask the narrowed local feasibility subproblem (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE), and generate exact cuts. Every pruning cut must carry a theorem and a proof hash; no compute-budget increase",
+   "vi": "Loại chữ ký toàn cục implicit D22 MỞ: KHÔNG hiện thực hóa họ chữ ký ban đầu. Giữ đối tượng toàn cục có chặn dạng symbolic (hai biểu diễn master pilot song song: coefficient master trên E_j = e_j(V_1^2..V_13^2) và root master trên X_i = V_i^2), chiếu xuống từng prime, hỏi bài con feasibility cục bộ đã thu hẹp (MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE), và sinh cut chính xác. Mọi cut pruning phải mang theo một định lý và một proof hash; không tăng ngân sách compute"
+  },
+  "route": "/claims/C-D22-IMPLICIT-STATE",
   "valid_from_release": null,
   "valid_to_release": null
  },

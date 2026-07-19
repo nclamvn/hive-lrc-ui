@@ -902,7 +902,7 @@
    "en": "Signature-narrowed certified compatibility",
    "vi": "Tương thích chứng nhận thu hẹp theo chữ ký"
   },
-  "status": "current",
+  "status": "partial",
   "verify": "double",
   "independence": "I2",
   "date": "2026-07-19",
@@ -920,11 +920,47 @@
     "vi": "Oracle thu hẹp quét nửa nhóm scale thặng dư bình phương, chi phí tuyến tính theo p; đo kết thúc dưới 0.35s trên các prime khó D20 tới 2267 nơi liệt kê đầy đủ bị chặn; ba trạng thái với chứng chỉ replay, UNSAT-không-chứng-minh bị loại, timeout là OPEN"
    },
    {
-    "en": "Two verifiers ACCEPT, 158 of 158 corruption rejected; pilot passes with the mandatory padding-required case and timeout injection. Honest boundary: per-query wall removed, full-campaign seeding via meet-in-the-middle still open, no campaign verdict claimed. LRC(13) OPEN",
-    "vi": "Hai verifier CHẤP NHẬN, 158 trên 158 tấn công bị bác; pilot đạt với ca padding-bắt-buộc và tiêm timeout. Ranh giới trung thực: tường mỗi-truy-vấn đã gỡ, seed chiến dịch qua gặp-nhau-ở-giữa vẫn mở, chưa tuyên bố verdict chiến dịch. LRC(13) MỞ"
+    "en": "Two verifiers ACCEPT, 158 of 158 corruption rejected; pilot passes with the mandatory padding-required case and timeout injection",
+    "vi": "Hai verifier CHẤP NHẬN, 158 trên 158 tấn công bị bác; pilot đạt với ca padding-bắt-buộc và tiêm timeout"
+   },
+   {
+    "en": "D21-S: the seed-completeness theorem is proved (every counterexample enters a retained seed), but both explicit seed materialization routes are BLOCKED-COMPUTE (distinct signatures 6 to 15511 from p=23 to 29; complete set at least 2^519). Scope: this blocks the two explicit routes, not every implicit method. Campaign NOT reached; the frontier moves to D22 implicit symbolic elimination. LRC(13) OPEN",
+    "vi": "D21-S: định lý đầy đủ seed đã chứng minh (mọi phản ví dụ vào một seed giữ lại), nhưng cả hai route hiện thực hóa seed tường minh BỊ CHẶN-CHI-PHÍ (chữ ký phân biệt 6 tới 15511 từ p=23 tới 29; tập đầy đủ ít nhất 2^519). Phạm vi: chặn hai route tường minh, không phải mọi cách implicit. Chiến dịch CHƯA đạt; frontier chuyển sang D22 loại symbolic implicit. LRC(13) MỞ"
    }
   ],
-  "artifacts": 11,
+  "artifacts": 24,
   "route": "/gates/gate-d21"
+ },
+ {
+  "id": "gate-d22",
+  "phase": "GATE D22",
+  "title": {
+   "en": "Implicit global-signature elimination",
+   "vi": "Loại chữ ký toàn cục implicit"
+  },
+  "status": "current",
+  "verify": "pending",
+  "independence": "I2",
+  "date": "2026-07-19",
+  "summary": {
+   "en": "D21-S showed that writing down the complete family of starting fingerprints is astronomically large, but that only blocks the two explicit ways to materialize it, not every method. The product of the per-prime fingerprint sets is not a state space anyone must build; constraints linking the primes can rule out most states before they are ever generated. D22 reverses the order once more. Instead of listing all starting fingerprints and then filtering, it keeps the unknown bounded object as symbols, projects it onto one prime at a time, asks the fast narrowed local feasibility question, and cuts away impossible states with a proof for every cut. Two symbolic pictures are piloted in parallel: a coefficient master carrying the symmetric functions of the squared speeds, and a root master carrying the squared speeds themselves. Each local subproblem returns a match witness, a certified empty, or an honest open, and every pruning cut must carry a theorem and a proof hash, so nothing is discarded without justification. No compute budget increase is authorized, and nothing about the conjecture is decided by opening this gate. LRC(13) remains open.",
+   "vi": "D21-S cho thấy viết ra họ đầy đủ các dấu vân tay khởi đầu là lớn thiên văn, nhưng điều đó chỉ chặn hai cách tường minh để hiện thực hóa nó, không phải mọi phương pháp. Tích các tập dấu vân tay theo từng prime không phải không gian trạng thái ai đó phải dựng; các ràng buộc liên kết các prime có thể loại phần lớn trạng thái trước khi chúng được sinh. D22 đảo thứ tự một lần nữa. Thay vì liệt kê mọi dấu vân tay khởi đầu rồi lọc, nó giữ đối tượng chưa biết có chặn dạng ký hiệu, chiếu nó lên từng prime một, hỏi câu hỏi feasibility cục bộ thu hẹp nhanh, và cắt bỏ các trạng thái bất khả với một chứng minh cho mỗi cut. Hai bức tranh symbolic pilot song song: một coefficient master mang các hàm đối xứng của tốc độ bình phương, và một root master mang chính các tốc độ bình phương. Mỗi bài con cục bộ trả về một match witness, một empty chứng nhận, hoặc một open trung thực, và mọi cut pruning phải mang một định lý và một proof hash, nên không gì bị loại mà không có lý do. Không tăng ngân sách compute, và không có gì về giả thuyết được quyết bởi việc mở gate này. LRC(13) vẫn mở."
+  },
+  "checks": [
+   {
+    "en": "Do NOT materialize the initial signature family; keep the bounded global object symbolic while prime constraints are added incrementally. Two master representations piloted in parallel: coefficient master on E_j = e_j(V_i^2), root master on X_i = V_i^2",
+    "vi": "KHÔNG hiện thực hóa họ chữ ký ban đầu; giữ đối tượng toàn cục có chặn dạng symbolic trong khi thêm ràng buộc prime tăng dần. Hai biểu diễn master pilot song song: coefficient master trên E_j = e_j(V_i^2), root master trên X_i = V_i^2"
+   },
+   {
+    "en": "Loop: project the symbolic state to each prime, ask the narrowed local feasibility subproblem returning MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE, then generate an exact cut. Every pruning cut must carry a theorem and a proof hash",
+    "vi": "Vòng lặp: chiếu trạng thái symbolic xuống từng prime, hỏi bài con feasibility cục bộ thu hẹp trả MATCH-WITNESS / EMPTY-CERTIFIED / OPEN-INCOMPLETE, rồi sinh một cut chính xác. Mọi cut pruning phải mang một định lý và một proof hash"
+   },
+   {
+    "en": "Scope correction accepted: D21-S blocks only the two explicit materialization routes, not every implicit method. No compute-budget increase; no GLOBAL-WITNESS; any BASE-SURVIVOR escalates to D20-R. LRC(13) OPEN",
+    "vi": "Sửa phạm vi chấp nhận: D21-S chỉ chặn hai route hiện thực hóa tường minh, không phải mọi cách implicit. Không tăng ngân sách compute; không GLOBAL-WITNESS; mọi BASE-SURVIVOR leo thang tới D20-R. LRC(13) MỞ"
+   }
+  ],
+  "artifacts": 0,
+  "route": "/gates/gate-d22"
  }
 ]

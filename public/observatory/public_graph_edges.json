@@ -336,6 +336,18 @@
   "valid_to_release": null
  },
  {
+  "id": "arc:gate-d21->gate-d22",
+  "source": "gate:gate-d21",
+  "target": "gate:gate-d22",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "intro:C0",
   "source": "gate:scan",
   "target": "claim:C0",
@@ -816,6 +828,18 @@
   "valid_to_release": null
  },
  {
+  "id": "intro:C-D22-IMPLICIT-STATE",
+  "source": "gate:gate-d22",
+  "target": "claim:C-D22-IMPLICIT-STATE",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d22.",
+   "vi": "Xuất hiện tại gate-d22."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "dep:0:C1->C2",
   "source": "claim:C1",
   "target": "claim:C2",
@@ -1272,7 +1296,31 @@
   "valid_to_release": null
  },
  {
-  "id": "dep:38:C-D21-CAMPAIGN->C0",
+  "id": "dep:38:C-D21-SEED-BLOCKED->C-D22-IMPLICIT-STATE",
+  "source": "claim:C-D21-SEED-BLOCKED",
+  "target": "claim:C-D22-IMPLICIT-STATE",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "Materializing the seed set is blocked, but the product of local signature sets is not mandatory; D22 keeps the global object symbolic and adds prime constraints implicitly.",
+   "vi": "Hiện thực hóa tập seed bị chặn, nhưng tích các tập chữ ký cục bộ không bắt buộc; D22 giữ đối tượng toàn cục dạng symbolic và thêm ràng buộc prime một cách implicit."
+  },
+  "valid_from_release": "REL-D22-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:39:C-D22-IMPLICIT-STATE->C0",
+  "source": "claim:C-D22-IMPLICIT-STATE",
+  "target": "claim:C0",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "Implicit global-signature elimination is the current route toward the open target.",
+   "vi": "Loại chữ ký toàn cục implicit là đường hiện tại hướng tới mục tiêu mở."
+  },
+  "valid_from_release": "REL-D22-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:40:C-D21-CAMPAIGN->C0",
   "source": "claim:C-D21-CAMPAIGN",
   "target": "claim:C0",
   "relation": "reduces_to",
