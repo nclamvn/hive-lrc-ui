@@ -27,9 +27,9 @@ export function buildGoldenVM(locale: Locale, golden: boolean): GoldenVM {
     hero: {
       eyebrow: t("LIVE OBSERVATORY", "OBSERVATORY TRỰC TIẾP"),
       title: t("A live observatory of a Human-AI attack\non the Lonely Runner Conjecture.",
-               "Đài quan sát trực tiếp một cuộc tấn công Người-AI\nvào Giả thuyết Người chạy cô đơn."),
+               "Bảng quan sát trực tiếp cuộc tấn công của AI\nvào Giả thuyết Người chạy cô đơn."),
       subtitle: t("Not a solution, a research program. Follow each theorem, computational check, correction and dead end, with exact scope and evidence at every step.",
-                  "Không phải lời giải, một chương trình nghiên cứu. Theo dõi từng định lý, kiểm tính toán, sửa chữa và ngõ cụt, với phạm vi và evidence chính xác ở mỗi bước."),
+                  "Một chương trình kiểm tra khả năng phối hợp giữa Người và AI. Theo dõi từng định lý, kiểm tra tính toán, sửa chữa và ngõ cụt, với phạm vi và evidence chính xác ở mỗi bước."),
     },
     metrics: [
       { label: t("TARGET CLAIM", "MỤC TIÊU"), value: "LRC(13)", description: t("Lonely Runner Conjecture", "Giả thuyết Người chạy cô đơn"),

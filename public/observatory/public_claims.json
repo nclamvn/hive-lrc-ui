@@ -622,12 +622,12 @@
    "C-D20-PRIME-PRODUCT-LIFT"
   ],
   "statement": {
-   "en": "O-A: a global counterexample induces a base-level cover at every prime (necessary), but a base cover is NOT sufficient — the exact p=197 witness covers at base level yet is proper at refinement level 14. So the base-cover compatibility search is a sound one-way filter; every survivor must pass the refinement tower",
-   "vi": "O-A: một phản ví dụ toàn cục sinh phủ mức nền tại mọi prime (cần), nhưng phủ nền KHÔNG đủ — nhân chứng chính xác p=197 phủ ở mức nền nhưng proper ở mức refinement 14. Nên tìm kiếm tương thích phủ-nền là bộ lọc một chiều đúng đắn; mọi survivor phải qua tháp refinement"
+   "en": "O-A: a global counterexample induces a base-level cover at every prime (necessary), but a base cover is NOT sufficient: the exact p=197 witness covers at base level yet is proper at refinement level 14. So the base-cover compatibility search is a sound one-way filter; every survivor must pass the refinement tower",
+   "vi": "O-A: một phản ví dụ toàn cục sinh phủ mức nền tại mọi prime (cần), nhưng phủ nền KHÔNG đủ: nhân chứng chính xác p=197 phủ ở mức nền nhưng proper ở mức refinement 14. Nên tìm kiếm tương thích phủ-nền là bộ lọc một chiều đúng đắn; mọi survivor phải qua tháp refinement"
   },
   "plain_language": {
-   "en": "A single-prime cover is a required clue for a counterexample, but not proof of one — finer time grids can break it.",
-   "vi": "Một phủ đơn-prime là manh mối cần cho phản ví dụ, nhưng không phải bằng chứng — lưới thời gian tinh hơn có thể phá nó."
+   "en": "A single-prime cover is a required clue for a counterexample, but not proof of one; finer time grids can break it.",
+   "vi": "Một phủ đơn-prime là manh mối cần cho phản ví dụ, nhưng không phải bằng chứng; lưới thời gian tinh hơn có thể phá nó."
   }
  },
  {
@@ -645,8 +645,8 @@
    "vi": "D20-BLOCKED (đo được, không giả định): liệt kê phủ cục bộ đầy đủ không kết thúc trong cap tài nguyên cho các prime inventory, nên mọi block chiến dịch OPEN và tích chứng nhận đóng bằng không. Năng lực âm trung thực do chi phí, như chiến dịch non-tight D6; KHÔNG phải tuyên bố tương thích, KHÔNG phải phản ví dụ"
   },
   "plain_language": {
-   "en": "The direct route is blocked by computation cost, not by mathematics — nothing was proved or disproved about LRC(13).",
-   "vi": "Đường trực tiếp bị chặn bởi chi phí tính toán, không phải toán học — không có gì được chứng minh hay bác bỏ về LRC(13)."
+   "en": "The direct route is blocked by computation cost, not by mathematics: nothing was proved or disproved about LRC(13).",
+   "vi": "Đường trực tiếp bị chặn bởi chi phí tính toán, không phải toán học: không có gì được chứng minh hay bác bỏ về LRC(13)."
   }
  },
  {
@@ -664,8 +664,8 @@
    "vi": "Phân rã padding: mọi phủ 13-multiset = lõi tối tiểu + padding; padding đổi bội, hệ số đối xứng, quỹ đạo xạ ảnh và tương thích CRT, nên oracle chỉ-lõi là không đầy đủ và phải truy vấn toàn multiset 13 (kiểm brute p=23: 66=66)"
   },
   "plain_language": {
-   "en": "A full 13-speed cover is a small core plus filler, and the filler matters — it shifts the fingerprint the compatibility test relies on.",
-   "vi": "Một phủ 13 tốc độ đầy đủ là lõi nhỏ cộng phần đệm, và phần đệm có ý nghĩa — nó dịch chuyển dấu vân tay mà kiểm tương thích dựa vào."
+   "en": "A full 13-speed cover is a small core plus filler, and the filler matters: it shifts the fingerprint the compatibility test relies on.",
+   "vi": "Một phủ 13 tốc độ đầy đủ là lõi nhỏ cộng phần đệm, và phần đệm có ý nghĩa: nó dịch chuyển dấu vân tay mà kiểm tương thích dựa vào."
   }
  },
  {
@@ -683,8 +683,8 @@
    "vi": "Oracle thu hẹp theo chữ ký: cố định chữ ký đích ghim multiset tốc độ bình phương tới tác động scale thặng dư bình phương, nên mọi phủ khớp tìm bằng quét nửa nhóm scale với chi phí tuyến tính theo p. Đo kết thúc dưới 0.35s trên prime khó D20 tới 2267 nơi liệt kê đầy đủ bị chặn; 3 trạng thái với chứng chỉ replay, UNSAT-không-chứng-minh bị loại, timeout OPEN. Gỡ tường mỗi-truy-vấn D20"
   },
   "plain_language": {
-   "en": "Instead of listing every cover then filtering, D21 uses the target fingerprint to look only where a match could be — fast even at the hard primes.",
-   "vi": "Thay vì liệt kê mọi phủ rồi lọc, D21 dùng dấu vân tay đích để chỉ tìm nơi có thể khớp — nhanh cả ở các prime khó."
+   "en": "Instead of listing every cover then filtering, D21 uses the target fingerprint to look only where a match could be, fast even at the hard primes.",
+   "vi": "Thay vì liệt kê mọi phủ rồi lọc, D21 dùng dấu vân tay đích để chỉ tìm nơi có thể khớp, nhanh cả ở các prime khó."
   }
  },
  {
@@ -721,8 +721,8 @@
    "vi": "Định lý đầy đủ seed đã chứng minh: mọi phản ví dụ toàn cục có chặn vào ít nhất một seed được giữ. Tại mỗi seed prime nó hoặc applicable, giữ chữ ký 13-multiset đầy đủ dưới liệt kê đầy đủ, hoặc inapplicable, ghi rằng prime chia tích tốc độ toàn cục theo FA-OB. Đầy đủ mang theo padding, quỹ đạo scale QR, loại hoán vị và dấu bằng bình phương, bội nghiệm lặp và mọi stratum xạ ảnh suy biến. Điều này không phụ thuộc việc liệt kê có kham nổi hay không"
   },
   "plain_language": {
-   "en": "It is proved that a real counterexample can never slip past the seeding step — every one leaves a fingerprint that a complete scan would keep.",
-   "vi": "Đã chứng minh một phản ví dụ thật không bao giờ lọt qua bước seed — mỗi cái để lại dấu vân tay mà một lần quét đầy đủ sẽ giữ."
+   "en": "It is proved that a real counterexample can never slip past the seeding step: every one leaves a fingerprint that a complete scan would keep.",
+   "vi": "Đã chứng minh một phản ví dụ thật không bao giờ lọt qua bước seed: mỗi cái để lại dấu vân tay mà một lần quét đầy đủ sẽ giữ."
   }
  },
  {
@@ -1103,6 +1103,44 @@
   "plain_language": {
    "en": "Next idea: keep track of which runner is which globally, so each speed can be pinned by the Chinese remainder theorem at a much lower threshold, without ever re-deciding the labels, signs or scale prime by prime.",
    "vi": "Ý tiếp: theo dõi người chạy nào là người nào một cách toàn cục, để mỗi tốc độ được ghim bằng định lý phần dư Trung Hoa ở ngưỡng thấp hơn nhiều, mà không bao giờ quyết lại nhãn, dấu hay scale theo từng prime."
+  }
+ },
+ {
+  "claim_id": "C-D26-DIRECT-CRT",
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "canonical labeled tuple + direct coordinate CRT threshold",
+  "gate_introduced": "gate-d26",
+  "gate_last_changed": "gate-d26",
+  "depends_on": [
+   "C-D26-LABELED-ROOT"
+  ],
+  "statement": {
+   "en": "D26 direct-CRT theorems PROVED and double-verified: a unique canonical labeled tuple exists (sort ascending breaking S_13 once, positive representative, primitive, duplicates kept) with sign, permutation and scale fixed ONCE globally; and each labeled coordinate V_i below B13 is pinned by direct CRT once the modulus product exceeds 2*B13 = 969 bits, versus the squared-coefficient threshold 2H = 1946 bits. The direct threshold is provably about half, cutting the certified prime product from about 205 to about 109 primes. Back-conversion re-symmetrizes to the same e_j(V^2) object the coefficient route uses",
+   "vi": "Định lý CRT-trực-tiếp D26 CHỨNG MINH và kiểm kép: một tuple có-nhãn canonical duy nhất tồn tại (sắp tăng phá S_13 một lần, đại diện dương, nguyên thủy, giữ lặp) với dấu, hoán vị và scale cố định MỘT LẦN toàn cục; và mỗi tọa độ có-nhãn V_i dưới B13 được ghim bằng CRT trực tiếp khi tích modulus vượt 2*B13 = 969 bit, so với ngưỡng hệ-số-bình-phương 2H = 1946 bit. Ngưỡng trực tiếp chứng minh khoảng một nửa, giảm tích prime chứng nhận từ khoảng 205 xuống khoảng 109 prime. Chuyển ngược tái-đối-xứng về cùng đối tượng e_j(V^2) mà đường hệ-số dùng"
+  },
+  "plain_language": {
+   "en": "D26 proves a real shortcut: tracking which runner is which lets each speed be pinned with about half as many primes. The math checks out.",
+   "vi": "D26 chứng minh một lối tắt thật: theo dõi người chạy nào là người nào cho phép ghim mỗi tốc độ với khoảng một nửa số prime. Toán đúng."
+  }
+ },
+ {
+  "claim_id": "C-D26-NET-NEGATIVE",
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "measured net-complexity ledger, labeled campaign, frozen caps",
+  "gate_introduced": "gate-d26",
+  "gate_last_changed": "gate-d26",
+  "depends_on": [
+   "C-D26-DIRECT-CRT"
+  ],
+  "statement": {
+   "en": "D26-PARTIAL (measured net-complexity): the exact ledger is decisive and negative. Maintaining one global labeling forces up to 13! (about 6.2 billion) label assignments per accumulation prime, roughly 2^3546 labeling entropy across the about 109-prime accumulation, far above both the 977-bit threshold saving and the 2^42 compute cap. CRT-consistency forces the labeling only after a coordinate pins, which needs the full accumulation. By the gate rule, a denominator that adds more unconstrained state than it removes is not progress, so the labeled campaign does NOT net-fit the caps. 723 of 723 corruption rejected. The reconstruction theorems stand; the campaign-fit closes negative. No BASE-SURVIVOR, no GLOBAL-WITNESS",
+   "vi": "D26-PARTIAL (đo net-complexity): ledger chính xác quyết định và âm. Giữ một nhãn toàn cục buộc tới 13! (khoảng 6.2 tỉ) gán nhãn mỗi prime tích lũy, khoảng 2^3546 entropy nhãn xuyên tích lũy khoảng 109 prime, vượt xa cả tiết kiệm ngưỡng 977 bit lẫn cap compute 2^42. Nhất quán CRT chỉ ép nhãn sau khi một tọa độ ghim, cần toàn bộ tích lũy. Theo quy tắc gate, một denominator thêm nhiều trạng thái tự do hơn nó bỏ không phải tiến bộ, nên chiến dịch có-nhãn KHÔNG net-vừa cap. 723 trên 723 tấn công bị bác. Định lý tái dựng vẫn đứng; campaign-fit đóng âm. Không BASE-SURVIVOR, không GLOBAL-WITNESS"
+  },
+  "plain_language": {
+   "en": "The shortcut has a hidden cost: keeping the runner labels straight explodes the search far more than the prime saving helps, so this route does not fit the limits. LRC(13) stays open.",
+   "vi": "Lối tắt có chi phí ẩn: giữ nhãn người chạy cho đúng làm bùng nổ tìm kiếm hơn nhiều so với lợi ích tiết kiệm prime, nên đường này không vừa giới hạn. LRC(13) vẫn mở."
   }
  }
 ]

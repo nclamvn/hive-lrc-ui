@@ -1092,6 +1092,30 @@
   "valid_to_release": null
  },
  {
+  "id": "intro:C-D26-DIRECT-CRT",
+  "source": "gate:gate-d26",
+  "target": "claim:C-D26-DIRECT-CRT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d26.",
+   "vi": "Xuất hiện tại gate-d26."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "intro:C-D26-NET-NEGATIVE",
+  "source": "gate:gate-d26",
+  "target": "claim:C-D26-NET-NEGATIVE",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d26.",
+   "vi": "Xuất hiện tại gate-d26."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "dep:0:C1->C2",
   "source": "claim:C1",
   "target": "claim:C2",
@@ -1769,14 +1793,38 @@
   "target": "claim:C0",
   "relation": "reduces_to",
   "explanation": {
-   "en": "The labeled-root direct-CRT campaign is the current route toward the open target.",
-   "vi": "Chiến dịch CRT-trực-tiếp nghiệm-có-nhãn là đường hiện tại hướng tới mục tiêu mở."
+   "en": "The labeled-root direct-CRT campaign is a route toward the open target.",
+   "vi": "Chiến dịch CRT-trực-tiếp nghiệm-có-nhãn là một đường hướng tới mục tiêu mở."
   },
   "valid_from_release": "REL-D26-001",
   "valid_to_release": null
  },
  {
-  "id": "dep:57:C-D21-CAMPAIGN->C0",
+  "id": "dep:57:C-D26-LABELED-ROOT->C-D26-DIRECT-CRT",
+  "source": "claim:C-D26-LABELED-ROOT",
+  "target": "claim:C-D26-DIRECT-CRT",
+  "relation": "supports",
+  "explanation": {
+   "en": "The canonical labeled tuple and direct coordinate CRT at 969 bits (half of 2H) are proved and double-verified.",
+   "vi": "Tuple có-nhãn canonical và CRT tọa độ trực tiếp ở 969 bit (nửa của 2H) được chứng minh và kiểm kép."
+  },
+  "valid_from_release": "REL-D26-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:58:C-D26-DIRECT-CRT->C-D26-NET-NEGATIVE",
+  "source": "claim:C-D26-DIRECT-CRT",
+  "target": "claim:C-D26-NET-NEGATIVE",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "The exact net-complexity ledger shows the labeling entropy (~2^3546) dominates the threshold saving; the labeled campaign does not net-fit the caps.",
+   "vi": "Ledger net-complexity chính xác cho thấy entropy nhãn (~2^3546) áp đảo tiết kiệm ngưỡng; chiến dịch có-nhãn không net-vừa cap."
+  },
+  "valid_from_release": "REL-D26-002",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:59:C-D21-CAMPAIGN->C0",
   "source": "claim:C-D21-CAMPAIGN",
   "target": "claim:C0",
   "relation": "reduces_to",

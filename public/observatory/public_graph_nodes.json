@@ -745,11 +745,11 @@
   "gate": "gate-d20",
   "summary": {
    "en": "D20 built the full prime-product lift machinery and then hit a computational wall. The D6 finite reduction and D7R alignment were frozen and independently replayed with no predicate mismatch, so no restart. The key correction, O-A, is that a local cover at one prime is a necessary but not sufficient sign of a global counterexample: the exact p=197 witness covers at the base level yet is proper one refinement level up, so a base cover can be broken by refinement. That makes the base-cover compatibility search a sound one-way filter, and every survivor only a candidate that must still pass the refinement tower. On that footing the applicability, normalization and reconstruction rules were proved: a prime is applicable exactly when it divides no speed, sign is removed by squaring, the one global scale acts as a single unit per prime with no independent per-prime scaling, the global object is the monic polynomial in the squared speeds, and a certified inventory of 294 primes crosses the reconstruction threshold. The compatibility engine, the complete projective atlas over every coefficient stratum, the three-valued cover oracle and the complete exact-cover generator were all built and double-verified. But the decisive fact is measured, not assumed: complete local-cover enumeration does not terminate within the resource caps for the inventory primes, so every campaign block is open and nothing is certified closed. This is D20-BLOCKED, an honest negative-capability result driven by cost, exactly like the earlier D6 non-tight campaign. It is not a compatibility claim, not a counterexample, and not a solution. LRC(13) remains open.",
-   "vi": "D20 đã dựng toàn bộ bộ máy lift tích-các-prime rồi gặp bức tường tính toán. Rút gọn hữu hạn D6 và căn chỉnh D7R được đóng băng và replay độc lập không lệch predicate, nên không restart. Sửa chữa mấu chốt O-A: một phủ cục bộ tại một prime là cần nhưng chưa đủ cho phản ví dụ toàn cục — nhân chứng chính xác p=197 phủ ở mức nền nhưng lại proper ở một mức tinh hơn, nên phủ nền có thể bị phá bởi refinement. Điều đó khiến tìm kiếm tương thích phủ-nền thành bộ lọc một chiều đúng đắn, và mọi survivor chỉ là ứng viên còn phải qua tháp refinement. Trên nền đó, các quy tắc applicability, chuẩn hóa và tái dựng đã được chứng minh: một prime applicable đúng khi không chia hết tốc độ nào, dấu bị loại bằng bình phương, một scale toàn cục duy nhất tác động như một unit mỗi prime không có scaling riêng lẻ, đối tượng toàn cục là đa thức đơn khởi trên các tốc độ bình phương, và một inventory chứng nhận 294 prime vượt ngưỡng tái dựng. Engine tương thích, atlas xạ ảnh đầy đủ trên mọi stratum hệ số, oracle phủ ba trạng thái và generator phủ chính xác đầy đủ đều được dựng và kiểm kép. Nhưng sự thật quyết định là đo được, không phải giả định: liệt kê phủ cục bộ đầy đủ không kết thúc trong các cap tài nguyên cho các prime inventory, nên mọi block chiến dịch đều OPEN và không gì được chứng nhận đóng. Đây là D20-BLOCKED, một kết quả năng-lực-âm trung thực do chi phí, đúng như chiến dịch non-tight D6 trước đó. Không phải tuyên bố tương thích, không phải phản ví dụ, không phải lời giải. LRC(13) vẫn mở."
+   "vi": "D20 đã dựng toàn bộ bộ máy lift tích-các-prime rồi gặp bức tường tính toán. Rút gọn hữu hạn D6 và căn chỉnh D7R được đóng băng và replay độc lập không lệch predicate, nên không restart. Sửa chữa mấu chốt O-A: một phủ cục bộ tại một prime là cần nhưng chưa đủ cho phản ví dụ toàn cục: nhân chứng chính xác p=197 phủ ở mức nền nhưng lại proper ở một mức tinh hơn, nên phủ nền có thể bị phá bởi refinement. Điều đó khiến tìm kiếm tương thích phủ-nền thành bộ lọc một chiều đúng đắn, và mọi survivor chỉ là ứng viên còn phải qua tháp refinement. Trên nền đó, các quy tắc applicability, chuẩn hóa và tái dựng đã được chứng minh: một prime applicable đúng khi không chia hết tốc độ nào, dấu bị loại bằng bình phương, một scale toàn cục duy nhất tác động như một unit mỗi prime không có scaling riêng lẻ, đối tượng toàn cục là đa thức đơn khởi trên các tốc độ bình phương, và một inventory chứng nhận 294 prime vượt ngưỡng tái dựng. Engine tương thích, atlas xạ ảnh đầy đủ trên mọi stratum hệ số, oracle phủ ba trạng thái và generator phủ chính xác đầy đủ đều được dựng và kiểm kép. Nhưng sự thật quyết định là đo được, không phải giả định: liệt kê phủ cục bộ đầy đủ không kết thúc trong các cap tài nguyên cho các prime inventory, nên mọi block chiến dịch đều OPEN và không gì được chứng nhận đóng. Đây là D20-BLOCKED, một kết quả năng-lực-âm trung thực do chi phí, đúng như chiến dịch non-tight D6 trước đó. Không phải tuyên bố tương thích, không phải phản ví dụ, không phải lời giải. LRC(13) vẫn mở."
   },
   "technical_summary": {
    "en": "D20 built the full prime-product lift machinery and then hit a computational wall. The D6 finite reduction and D7R alignment were frozen and independently replayed with no predicate mismatch, so no restart. The key correction, O-A, is that a local cover at one prime is a necessary but not sufficient sign of a global counterexample: the exact p=197 witness covers at the base level yet is proper one refinement level up, so a base cover can be broken by refinement. That makes the base-cover compatibility search a sound one-way filter, and every survivor only a candidate that must still pass the refinement tower. On that footing the applicability, normalization and reconstruction rules were proved: a prime is applicable exactly when it divides no speed, sign is removed by squaring, the one global scale acts as a single unit per prime with no independent per-prime scaling, the global object is the monic polynomial in the squared speeds, and a certified inventory of 294 primes crosses the reconstruction threshold. The compatibility engine, the complete projective atlas over every coefficient stratum, the three-valued cover oracle and the complete exact-cover generator were all built and double-verified. But the decisive fact is measured, not assumed: complete local-cover enumeration does not terminate within the resource caps for the inventory primes, so every campaign block is open and nothing is certified closed. This is D20-BLOCKED, an honest negative-capability result driven by cost, exactly like the earlier D6 non-tight campaign. It is not a compatibility claim, not a counterexample, and not a solution. LRC(13) remains open.",
-   "vi": "D20 đã dựng toàn bộ bộ máy lift tích-các-prime rồi gặp bức tường tính toán. Rút gọn hữu hạn D6 và căn chỉnh D7R được đóng băng và replay độc lập không lệch predicate, nên không restart. Sửa chữa mấu chốt O-A: một phủ cục bộ tại một prime là cần nhưng chưa đủ cho phản ví dụ toàn cục — nhân chứng chính xác p=197 phủ ở mức nền nhưng lại proper ở một mức tinh hơn, nên phủ nền có thể bị phá bởi refinement. Điều đó khiến tìm kiếm tương thích phủ-nền thành bộ lọc một chiều đúng đắn, và mọi survivor chỉ là ứng viên còn phải qua tháp refinement. Trên nền đó, các quy tắc applicability, chuẩn hóa và tái dựng đã được chứng minh: một prime applicable đúng khi không chia hết tốc độ nào, dấu bị loại bằng bình phương, một scale toàn cục duy nhất tác động như một unit mỗi prime không có scaling riêng lẻ, đối tượng toàn cục là đa thức đơn khởi trên các tốc độ bình phương, và một inventory chứng nhận 294 prime vượt ngưỡng tái dựng. Engine tương thích, atlas xạ ảnh đầy đủ trên mọi stratum hệ số, oracle phủ ba trạng thái và generator phủ chính xác đầy đủ đều được dựng và kiểm kép. Nhưng sự thật quyết định là đo được, không phải giả định: liệt kê phủ cục bộ đầy đủ không kết thúc trong các cap tài nguyên cho các prime inventory, nên mọi block chiến dịch đều OPEN và không gì được chứng nhận đóng. Đây là D20-BLOCKED, một kết quả năng-lực-âm trung thực do chi phí, đúng như chiến dịch non-tight D6 trước đó. Không phải tuyên bố tương thích, không phải phản ví dụ, không phải lời giải. LRC(13) vẫn mở."
+   "vi": "D20 đã dựng toàn bộ bộ máy lift tích-các-prime rồi gặp bức tường tính toán. Rút gọn hữu hạn D6 và căn chỉnh D7R được đóng băng và replay độc lập không lệch predicate, nên không restart. Sửa chữa mấu chốt O-A: một phủ cục bộ tại một prime là cần nhưng chưa đủ cho phản ví dụ toàn cục: nhân chứng chính xác p=197 phủ ở mức nền nhưng lại proper ở một mức tinh hơn, nên phủ nền có thể bị phá bởi refinement. Điều đó khiến tìm kiếm tương thích phủ-nền thành bộ lọc một chiều đúng đắn, và mọi survivor chỉ là ứng viên còn phải qua tháp refinement. Trên nền đó, các quy tắc applicability, chuẩn hóa và tái dựng đã được chứng minh: một prime applicable đúng khi không chia hết tốc độ nào, dấu bị loại bằng bình phương, một scale toàn cục duy nhất tác động như một unit mỗi prime không có scaling riêng lẻ, đối tượng toàn cục là đa thức đơn khởi trên các tốc độ bình phương, và một inventory chứng nhận 294 prime vượt ngưỡng tái dựng. Engine tương thích, atlas xạ ảnh đầy đủ trên mọi stratum hệ số, oracle phủ ba trạng thái và generator phủ chính xác đầy đủ đều được dựng và kiểm kép. Nhưng sự thật quyết định là đo được, không phải giả định: liệt kê phủ cục bộ đầy đủ không kết thúc trong các cap tài nguyên cho các prime inventory, nên mọi block chiến dịch đều OPEN và không gì được chứng nhận đóng. Đây là D20-BLOCKED, một kết quả năng-lực-âm trung thực do chi phí, đúng như chiến dịch non-tight D6 trước đó. Không phải tuyên bố tương thích, không phải phản ví dụ, không phải lời giải. LRC(13) vẫn mở."
   },
   "route": "/gates/gate-d20",
   "valid_from_release": null,
@@ -901,7 +901,7 @@
    "en": "GATE D26",
    "vi": "GATE D26"
   },
-  "status": "current",
+  "status": "partial",
   "evidence": "I2",
   "scope": "GATE D26",
   "gate": "gate-d26",
@@ -1785,8 +1785,8 @@
   "id": "claim:C-D20-BASE-NECESSARY",
   "kind": "claim",
   "label": {
-   "en": "O-A: a global counterexample induces a base-level cover at every prime (necessary), but a base cover is NOT sufficient — the exact p=197 witness covers at base level yet is proper at refinement level 14. So the base-cover compatibility search is a sound one-way filter; every survivor must pass the refinement tower",
-   "vi": "O-A: một phản ví dụ toàn cục sinh phủ mức nền tại mọi prime (cần), nhưng phủ nền KHÔNG đủ — nhân chứng chính xác p=197 phủ ở mức nền nhưng proper ở mức refinement 14. Nên tìm kiếm tương thích phủ-nền là bộ lọc một chiều đúng đắn; mọi survivor phải qua tháp refinement"
+   "en": "O-A: a global counterexample induces a base-level cover at every prime (necessary), but a base cover is NOT sufficient: the exact p=197 witness covers at base level yet is proper at refinement level 14. So the base-cover compatibility search is a sound one-way filter; every survivor must pass the refinement tower",
+   "vi": "O-A: một phản ví dụ toàn cục sinh phủ mức nền tại mọi prime (cần), nhưng phủ nền KHÔNG đủ: nhân chứng chính xác p=197 phủ ở mức nền nhưng proper ở mức refinement 14. Nên tìm kiếm tương thích phủ-nền là bộ lọc một chiều đúng đắn; mọi survivor phải qua tháp refinement"
   },
   "short_label": {
    "en": "C-D20-BASE-NECESSARY",
@@ -1797,12 +1797,12 @@
   "scope": "all primes; grid-refinement monotonicity",
   "gate": "gate-d20",
   "summary": {
-   "en": "A single-prime cover is a required clue for a counterexample, but not proof of one — finer time grids can break it.",
-   "vi": "Một phủ đơn-prime là manh mối cần cho phản ví dụ, nhưng không phải bằng chứng — lưới thời gian tinh hơn có thể phá nó."
+   "en": "A single-prime cover is a required clue for a counterexample, but not proof of one; finer time grids can break it.",
+   "vi": "Một phủ đơn-prime là manh mối cần cho phản ví dụ, nhưng không phải bằng chứng; lưới thời gian tinh hơn có thể phá nó."
   },
   "technical_summary": {
-   "en": "O-A: a global counterexample induces a base-level cover at every prime (necessary), but a base cover is NOT sufficient — the exact p=197 witness covers at base level yet is proper at refinement level 14. So the base-cover compatibility search is a sound one-way filter; every survivor must pass the refinement tower",
-   "vi": "O-A: một phản ví dụ toàn cục sinh phủ mức nền tại mọi prime (cần), nhưng phủ nền KHÔNG đủ — nhân chứng chính xác p=197 phủ ở mức nền nhưng proper ở mức refinement 14. Nên tìm kiếm tương thích phủ-nền là bộ lọc một chiều đúng đắn; mọi survivor phải qua tháp refinement"
+   "en": "O-A: a global counterexample induces a base-level cover at every prime (necessary), but a base cover is NOT sufficient: the exact p=197 witness covers at base level yet is proper at refinement level 14. So the base-cover compatibility search is a sound one-way filter; every survivor must pass the refinement tower",
+   "vi": "O-A: một phản ví dụ toàn cục sinh phủ mức nền tại mọi prime (cần), nhưng phủ nền KHÔNG đủ: nhân chứng chính xác p=197 phủ ở mức nền nhưng proper ở mức refinement 14. Nên tìm kiếm tương thích phủ-nền là bộ lọc một chiều đúng đắn; mọi survivor phải qua tháp refinement"
   },
   "route": "/claims/C-D20-BASE-NECESSARY",
   "valid_from_release": null,
@@ -1824,8 +1824,8 @@
   "scope": "measured, inventory primes p>=191, frozen caps",
   "gate": "gate-d20",
   "summary": {
-   "en": "The direct route is blocked by computation cost, not by mathematics — nothing was proved or disproved about LRC(13).",
-   "vi": "Đường trực tiếp bị chặn bởi chi phí tính toán, không phải toán học — không có gì được chứng minh hay bác bỏ về LRC(13)."
+   "en": "The direct route is blocked by computation cost, not by mathematics: nothing was proved or disproved about LRC(13).",
+   "vi": "Đường trực tiếp bị chặn bởi chi phí tính toán, không phải toán học: không có gì được chứng minh hay bác bỏ về LRC(13)."
   },
   "technical_summary": {
    "en": "D20-BLOCKED (measured, not assumed): complete local-cover enumeration does not terminate within the resource caps for the inventory primes, so every campaign block is OPEN and the certified-closed product is zero. Honest cost-driven negative capability, like the D6 non-tight campaign; NOT a compatibility claim, NOT a counterexample",
@@ -1851,8 +1851,8 @@
   "scope": "all 13-multiset covers, brute-verified small primes",
   "gate": "gate-d21",
   "summary": {
-   "en": "A full 13-speed cover is a small core plus filler, and the filler matters — it shifts the fingerprint the compatibility test relies on.",
-   "vi": "Một phủ 13 tốc độ đầy đủ là lõi nhỏ cộng phần đệm, và phần đệm có ý nghĩa — nó dịch chuyển dấu vân tay mà kiểm tương thích dựa vào."
+   "en": "A full 13-speed cover is a small core plus filler, and the filler matters: it shifts the fingerprint the compatibility test relies on.",
+   "vi": "Một phủ 13 tốc độ đầy đủ là lõi nhỏ cộng phần đệm, và phần đệm có ý nghĩa: nó dịch chuyển dấu vân tay mà kiểm tương thích dựa vào."
   },
   "technical_summary": {
    "en": "Padding decomposition: every 13-multiset cover = minimal core + padding; padding changes multiplicity, symmetric coefficients, projective orbit and CRT compatibility, so a minimal-core-only oracle is incomplete and the full 13-multiset must be queried (brute-verified p=23: 66=66)",
@@ -1878,8 +1878,8 @@
   "scope": "full-signature query, per prime, O((p-1)/2)",
   "gate": "gate-d21",
   "summary": {
-   "en": "Instead of listing every cover then filtering, D21 uses the target fingerprint to look only where a match could be — fast even at the hard primes.",
-   "vi": "Thay vì liệt kê mọi phủ rồi lọc, D21 dùng dấu vân tay đích để chỉ tìm nơi có thể khớp — nhanh cả ở các prime khó."
+   "en": "Instead of listing every cover then filtering, D21 uses the target fingerprint to look only where a match could be, fast even at the hard primes.",
+   "vi": "Thay vì liệt kê mọi phủ rồi lọc, D21 dùng dấu vân tay đích để chỉ tìm nơi có thể khớp, nhanh cả ở các prime khó."
   },
   "technical_summary": {
    "en": "Signature-narrowed oracle: fixing a target signature pins the squared-speed multiset up to the quadratic-residue scale action, so all matching covers are found by scanning the scale half-group in cost linear in p. Measured to terminate under 0.35s on D20-hard primes up to 2267 where full enumeration was blocked; 3-valued with replayable certificates, UNSAT-without-proof rejected, timeout OPEN. Removes the D20 per-query wall",
@@ -1932,8 +1932,8 @@
   "scope": "seed completeness theorem, all bounded counterexamples",
   "gate": "gate-d21",
   "summary": {
-   "en": "It is proved that a real counterexample can never slip past the seeding step — every one leaves a fingerprint that a complete scan would keep.",
-   "vi": "Đã chứng minh một phản ví dụ thật không bao giờ lọt qua bước seed — mỗi cái để lại dấu vân tay mà một lần quét đầy đủ sẽ giữ."
+   "en": "It is proved that a real counterexample can never slip past the seeding step: every one leaves a fingerprint that a complete scan would keep.",
+   "vi": "Đã chứng minh một phản ví dụ thật không bao giờ lọt qua bước seed: mỗi cái để lại dấu vân tay mà một lần quét đầy đủ sẽ giữ."
   },
   "technical_summary": {
    "en": "Seed completeness THEOREM proved: every bounded global counterexample enters at least one retained seed. At each seed prime it is either applicable, retaining its full 13-multiset signature under complete enumeration, or inapplicable, recording that the prime divides the global speed product against FA-OB. Completeness carries padding, the QR scale orbit, permutation and sign removal by squaring, duplicate-root multiplicity and every projective singular stratum. This is unconditional on the enumeration being affordable",
@@ -2480,6 +2480,60 @@
    "vi": "Chiến dịch CRT nghiệm-có-nhãn D26 MỞ: thay vì đợi tái dựng mọi hệ số tốc-độ-bình-phương sau ngưỡng 2H (khoảng B13 bình phương), giữ một nhãn TOÀN CỤC đúng cho 13 tốc độ và CRT từng V_i trực tiếp ở ngưỡng dựa trên B13, thấp hơn nhiều. Nhãn, dấu, hoán vị và scale là các đối tượng TOÀN CỤC cố định MỘT LẦN ở cấp tuple, không bao giờ canonicalize lại theo prime hay theo denominator. D26 phải chứng minh tuple có-nhãn canonical, ghim ngưỡng CRT-trực-tiếp chính xác, dựng local oracle giữ-nhãn, dùng master phân-tích prime-power, tích hợp các cut thời-gian-hữu-tỉ, và đo net state complexity chính xác kể cả biến mới; một chiến dịch đầy đủ chỉ chạy nếu cây trạng thái reachable chứng minh vừa cap"
   },
   "route": "/claims/C-D26-LABELED-ROOT",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D26-DIRECT-CRT",
+  "kind": "claim",
+  "label": {
+   "en": "D26 direct-CRT theorems PROVED and double-verified: a unique canonical labeled tuple exists (sort ascending breaking S_13 once, positive representative, primitive, duplicates kept) with sign, permutation and scale fixed ONCE globally; and each labeled coordinate V_i below B13 is pinned by direct CRT once the modulus product exceeds 2*B13 = 969 bits, versus the squared-coefficient threshold 2H = 1946 bits. The direct threshold is provably about half, cutting the certified prime product from about 205 to about 109 primes. Back-conversion re-symmetrizes to the same e_j(V^2) object the coefficient route uses",
+   "vi": "Định lý CRT-trực-tiếp D26 CHỨNG MINH và kiểm kép: một tuple có-nhãn canonical duy nhất tồn tại (sắp tăng phá S_13 một lần, đại diện dương, nguyên thủy, giữ lặp) với dấu, hoán vị và scale cố định MỘT LẦN toàn cục; và mỗi tọa độ có-nhãn V_i dưới B13 được ghim bằng CRT trực tiếp khi tích modulus vượt 2*B13 = 969 bit, so với ngưỡng hệ-số-bình-phương 2H = 1946 bit. Ngưỡng trực tiếp chứng minh khoảng một nửa, giảm tích prime chứng nhận từ khoảng 205 xuống khoảng 109 prime. Chuyển ngược tái-đối-xứng về cùng đối tượng e_j(V^2) mà đường hệ-số dùng"
+  },
+  "short_label": {
+   "en": "C-D26-DIRECT-CRT",
+   "vi": "C-D26-DIRECT-CRT"
+  },
+  "status": "proved_internal",
+  "evidence": "I2",
+  "scope": "canonical labeled tuple + direct coordinate CRT threshold",
+  "gate": "gate-d26",
+  "summary": {
+   "en": "D26 proves a real shortcut: tracking which runner is which lets each speed be pinned with about half as many primes. The math checks out.",
+   "vi": "D26 chứng minh một lối tắt thật: theo dõi người chạy nào là người nào cho phép ghim mỗi tốc độ với khoảng một nửa số prime. Toán đúng."
+  },
+  "technical_summary": {
+   "en": "D26 direct-CRT theorems PROVED and double-verified: a unique canonical labeled tuple exists (sort ascending breaking S_13 once, positive representative, primitive, duplicates kept) with sign, permutation and scale fixed ONCE globally; and each labeled coordinate V_i below B13 is pinned by direct CRT once the modulus product exceeds 2*B13 = 969 bits, versus the squared-coefficient threshold 2H = 1946 bits. The direct threshold is provably about half, cutting the certified prime product from about 205 to about 109 primes. Back-conversion re-symmetrizes to the same e_j(V^2) object the coefficient route uses",
+   "vi": "Định lý CRT-trực-tiếp D26 CHỨNG MINH và kiểm kép: một tuple có-nhãn canonical duy nhất tồn tại (sắp tăng phá S_13 một lần, đại diện dương, nguyên thủy, giữ lặp) với dấu, hoán vị và scale cố định MỘT LẦN toàn cục; và mỗi tọa độ có-nhãn V_i dưới B13 được ghim bằng CRT trực tiếp khi tích modulus vượt 2*B13 = 969 bit, so với ngưỡng hệ-số-bình-phương 2H = 1946 bit. Ngưỡng trực tiếp chứng minh khoảng một nửa, giảm tích prime chứng nhận từ khoảng 205 xuống khoảng 109 prime. Chuyển ngược tái-đối-xứng về cùng đối tượng e_j(V^2) mà đường hệ-số dùng"
+  },
+  "route": "/claims/C-D26-DIRECT-CRT",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "claim:C-D26-NET-NEGATIVE",
+  "kind": "claim",
+  "label": {
+   "en": "D26-PARTIAL (measured net-complexity): the exact ledger is decisive and negative. Maintaining one global labeling forces up to 13! (about 6.2 billion) label assignments per accumulation prime, roughly 2^3546 labeling entropy across the about 109-prime accumulation, far above both the 977-bit threshold saving and the 2^42 compute cap. CRT-consistency forces the labeling only after a coordinate pins, which needs the full accumulation. By the gate rule, a denominator that adds more unconstrained state than it removes is not progress, so the labeled campaign does NOT net-fit the caps. 723 of 723 corruption rejected. The reconstruction theorems stand; the campaign-fit closes negative. No BASE-SURVIVOR, no GLOBAL-WITNESS",
+   "vi": "D26-PARTIAL (đo net-complexity): ledger chính xác quyết định và âm. Giữ một nhãn toàn cục buộc tới 13! (khoảng 6.2 tỉ) gán nhãn mỗi prime tích lũy, khoảng 2^3546 entropy nhãn xuyên tích lũy khoảng 109 prime, vượt xa cả tiết kiệm ngưỡng 977 bit lẫn cap compute 2^42. Nhất quán CRT chỉ ép nhãn sau khi một tọa độ ghim, cần toàn bộ tích lũy. Theo quy tắc gate, một denominator thêm nhiều trạng thái tự do hơn nó bỏ không phải tiến bộ, nên chiến dịch có-nhãn KHÔNG net-vừa cap. 723 trên 723 tấn công bị bác. Định lý tái dựng vẫn đứng; campaign-fit đóng âm. Không BASE-SURVIVOR, không GLOBAL-WITNESS"
+  },
+  "short_label": {
+   "en": "C-D26-NET-NEGATIVE",
+   "vi": "C-D26-NET-NEGATIVE"
+  },
+  "status": "supported_internal",
+  "evidence": "I2",
+  "scope": "measured net-complexity ledger, labeled campaign, frozen caps",
+  "gate": "gate-d26",
+  "summary": {
+   "en": "The shortcut has a hidden cost: keeping the runner labels straight explodes the search far more than the prime saving helps, so this route does not fit the limits. LRC(13) stays open.",
+   "vi": "Lối tắt có chi phí ẩn: giữ nhãn người chạy cho đúng làm bùng nổ tìm kiếm hơn nhiều so với lợi ích tiết kiệm prime, nên đường này không vừa giới hạn. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "D26-PARTIAL (measured net-complexity): the exact ledger is decisive and negative. Maintaining one global labeling forces up to 13! (about 6.2 billion) label assignments per accumulation prime, roughly 2^3546 labeling entropy across the about 109-prime accumulation, far above both the 977-bit threshold saving and the 2^42 compute cap. CRT-consistency forces the labeling only after a coordinate pins, which needs the full accumulation. By the gate rule, a denominator that adds more unconstrained state than it removes is not progress, so the labeled campaign does NOT net-fit the caps. 723 of 723 corruption rejected. The reconstruction theorems stand; the campaign-fit closes negative. No BASE-SURVIVOR, no GLOBAL-WITNESS",
+   "vi": "D26-PARTIAL (đo net-complexity): ledger chính xác quyết định và âm. Giữ một nhãn toàn cục buộc tới 13! (khoảng 6.2 tỉ) gán nhãn mỗi prime tích lũy, khoảng 2^3546 entropy nhãn xuyên tích lũy khoảng 109 prime, vượt xa cả tiết kiệm ngưỡng 977 bit lẫn cap compute 2^42. Nhất quán CRT chỉ ép nhãn sau khi một tọa độ ghim, cần toàn bộ tích lũy. Theo quy tắc gate, một denominator thêm nhiều trạng thái tự do hơn nó bỏ không phải tiến bộ, nên chiến dịch có-nhãn KHÔNG net-vừa cap. 723 trên 723 tấn công bị bác. Định lý tái dựng vẫn đứng; campaign-fit đóng âm. Không BASE-SURVIVOR, không GLOBAL-WITNESS"
+  },
+  "route": "/claims/C-D26-NET-NEGATIVE",
   "valid_from_release": null,
   "valid_to_release": null
  },
