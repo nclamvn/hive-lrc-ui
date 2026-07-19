@@ -312,6 +312,18 @@
   "valid_to_release": null
  },
  {
+  "id": "arc:gate-d19->gate-d20",
+  "source": "gate:gate-d19",
+  "target": "gate:gate-d20",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "intro:C0",
   "source": "gate:scan",
   "target": "claim:C0",
@@ -684,6 +696,18 @@
   "valid_to_release": null
  },
  {
+  "id": "intro:C-D20-PRIME-PRODUCT-LIFT",
+  "source": "gate:gate-d20",
+  "target": "claim:C-D20-PRIME-PRODUCT-LIFT",
+  "relation": "supports",
+  "explanation": {
+   "en": "Introduced at gate-d20.",
+   "vi": "Xuất hiện tại gate-d20."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "dep:0:C1->C2",
   "source": "claim:C1",
   "target": "claim:C2",
@@ -1032,15 +1056,27 @@
   "valid_to_release": null
  },
  {
-  "id": "dep:29:C-D19-LIFT->C0",
+  "id": "dep:29:C-D19-LIFT->C-D20-PRIME-PRODUCT-LIFT",
   "source": "claim:C-D19-LIFT",
+  "target": "claim:C-D20-PRIME-PRODUCT-LIFT",
+  "relation": "reduces_to",
+  "explanation": {
+   "en": "The prime-product lift is executed as gate D20, simultaneous compatibility of one global multiset across a prime family.",
+   "vi": "Lift tích-các-prime được thực thi thành gate D20, tương thích đồng thời của một multiset toàn cục qua một họ prime."
+  },
+  "valid_from_release": "REL-D20-001",
+  "valid_to_release": null
+ },
+ {
+  "id": "dep:30:C-D20-PRIME-PRODUCT-LIFT->C0",
+  "source": "claim:C-D20-PRIME-PRODUCT-LIFT",
   "target": "claim:C0",
   "relation": "reduces_to",
   "explanation": {
-   "en": "The prime-product lift is the remaining route toward the open target.",
-   "vi": "Lift tích-các-prime là đường còn lại hướng tới mục tiêu mở."
+   "en": "D20 simultaneous cross-prime compatibility is the remaining route toward the open target.",
+   "vi": "Tương thích liên-prime đồng thời D20 là đường còn lại hướng tới mục tiêu mở."
   },
-  "valid_from_release": "REL-D19-001",
+  "valid_from_release": "REL-D20-001",
   "valid_to_release": null
  }
 ]

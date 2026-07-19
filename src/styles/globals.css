@@ -1519,6 +1519,7 @@ button {
 .timeline-item.is-partial .timeline-node { border-color: var(--hive-black); }
 .timeline-item.is-blocked .timeline-node { border-style: dashed; border-color: var(--hive-text-secondary); }
 .timeline-item.is-current .timeline-node { border-color: var(--hive-black); box-shadow: 0 0 0 4px rgba(16,16,16,0.08); }
+.timeline-item.is-refuted .timeline-node { border-color: var(--hive-text-secondary); background: var(--hive-text-secondary); }
 .timeline-node-dot { width: 10px; height: 10px; color: var(--hive-black); }
 .timeline-line { flex: 1; width: 2px; background: var(--hive-border); margin: 4px 0; }
 .timeline-item:last-child .timeline-line { display: none; }
@@ -1538,6 +1539,7 @@ button {
 .pill-partial { border-color: var(--hive-border-strong); color: var(--hive-text); }
 .pill-blocked { border-style: dashed; color: var(--hive-text-secondary); }
 .pill-current { background: var(--hive-black); border-color: var(--hive-black); color: var(--hive-white); }
+.pill-refuted { border-color: var(--hive-text-secondary); color: var(--hive-text-secondary); text-decoration: line-through; }
 
 .verify-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; letter-spacing: 0.02em; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--hive-border-strong); color: var(--hive-text-secondary); }
 .verify-icon { width: 12px; height: 12px; }

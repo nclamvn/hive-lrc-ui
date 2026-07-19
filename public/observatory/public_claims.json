@@ -403,21 +403,21 @@
  },
  {
   "claim_id": "D-D18H-ADAPTIVE-DEG5",
-  "status": "validated_bounded",
+  "status": "refuted",
   "evidence": "I2",
-  "scope": "~20000 proper non-tight vectors at p=197",
+  "scope": "refuted as per-prime closure by the exact p=197 witness",
   "gate_introduced": "gate-d18",
-  "gate_last_changed": "gate-d18",
+  "gate_last_changed": "gate-d19",
   "depends_on": [
    "C-D18H-FIXED-M5-CLOSURE"
   ],
   "statement": {
-   "en": "The best per-vector adaptive degree-5 dual stays positive on the tested sample, min bound about 0.02",
-   "vi": "Dual bậc-5 thích ứng tốt nhất theo từng vector vẫn dương trên tập kiểm, chặn nhỏ nhất khoảng 0.02"
+   "en": "REFUTED as a per-prime closure: the adaptive degree-5 dual stayed positive on the ~20000-vector sample, but the exact non-tight p=197 witness has adaptive B5 = 0, so it certifies nothing there",
+   "vi": "BỊ BÁC như một closure theo từng prime: dual bậc-5 thích ứng vẫn dương trên mẫu ~20000 vector, nhưng nhân chứng non-tight chính xác tại p=197 có B5 thích ứng = 0, nên không chứng nhận gì tại đó"
   },
   "plain_language": {
-   "en": "Choosing the best fifth-order certificate per vector works on every case tested, the correct object.",
-   "vi": "Chọn chứng chỉ bậc năm tốt nhất cho từng vector hiệu quả trên mọi ca đã kiểm, chính là đối tượng đúng."
+   "en": "The best fifth-order certificate looked to work on every sampled case, but an exact witness drives it to zero, so the per-prime route does not close.",
+   "vi": "Chứng chỉ bậc năm tốt nhất tưởng như hiệu quả trên mọi ca lấy mẫu, nhưng một nhân chứng chính xác đẩy nó về không, nên đường theo từng prime không đóng."
   }
  },
  {
@@ -460,21 +460,22 @@
  },
  {
   "claim_id": "D-D18I-10-VERTEX-COVER",
-  "status": "validated_bounded",
+  "status": "superseded",
   "evidence": "I2",
   "scope": "~20000 non-tight vectors at p=197, sample only",
   "gate_introduced": "gate-d18",
-  "gate_last_changed": "gate-d18",
+  "gate_last_changed": "gate-d19",
   "depends_on": [
    "C-D18I-PRIMAL-DUAL"
   ],
+  "superseded_by": "C-D19-COVER-WITNESS",
   "statement": {
-   "en": "On the tested sample ten of the 46 vertices certify every vector positively, sampled minimum B5 = 3/98, validation only not a theorem",
-   "vi": "Trên tập kiểm mười trong 46 đỉnh chứng nhận mọi vector là dương, min B5 mẫu = 3/98, chỉ là kiểm chứng không phải định lý"
+   "en": "Withdrawn as a global guide: the sampled minimum B5 = 3/98 over ~20000 vectors only reflected that covers are rare, not impossible; the exact p=197 witness reaches B5 = 0",
+   "vi": "Rút lại như một chỉ dẫn toàn cục: min B5 = 3/98 trên mẫu ~20000 vector chỉ phản ánh việc phủ hiếm, không phải bất khả thi; nhân chứng chính xác tại p=197 đạt B5 = 0"
   },
   "plain_language": {
-   "en": "Empirically a handful of certificates already covers every case tested, strong evidence but not yet a proof.",
-   "vi": "Thực nghiệm một nhúm chứng chỉ đã phủ mọi ca đã kiểm, bằng chứng mạnh nhưng chưa phải chứng minh."
+   "en": "A handful of certificates covered every sampled case, but that was a sampling artifact, not a proof, and an exact witness breaks it.",
+   "vi": "Một nhúm chứng chỉ phủ mọi ca lấy mẫu, nhưng đó là hiện tượng lấy mẫu, không phải chứng minh, và một nhân chứng chính xác phá vỡ nó."
   }
  },
  {
@@ -498,40 +499,40 @@
  },
  {
   "claim_id": "D-D18J-HISTOGRAM-ONLY",
-  "status": "supported_internal",
+  "status": "refuted",
   "evidence": "I2",
-  "scope": "outer relaxation at p=197",
+  "scope": "refuted as a universal description at p=197",
   "gate_introduced": "gate-d18",
-  "gate_last_changed": "gate-d18",
+  "gate_last_changed": "gate-d19",
   "depends_on": [
    "C-D18J-UNCOVERED-CONE"
   ],
   "statement": {
-   "en": "Integer p0=0 histograms survive the current outer realizability constraints; no real B5<=0 vector was found in bounded search",
-   "vi": "Histogram nguyên p0=0 vẫn sống sót qua các ràng buộc khả dĩ ngoài hiện tại; không tìm thấy vector thật B5<=0 trong tìm kiếm giới hạn"
+   "en": "REFUTED as a universal description: the p0=0 cone is not histogram-only, an exact real 13-speed vector at p=197 realizes p0=0 with B5=0",
+   "vi": "BỊ BÁC như một mô tả tổng quát: cone p0=0 không chỉ-histogram, một vector 13 tốc độ thật chính xác tại p=197 đạt p0=0 với B5=0"
   },
   "plain_language": {
-   "en": "A valid integer histogram is not the same as a real speed vector; the gap is the open separation.",
-   "vi": "Một histogram nguyên hợp lệ không giống một vector tốc độ thật; khoảng cách đó là phần tách còn mở."
+   "en": "The uncovered cone was thought to hold only abstract histograms, but a real speed vector reaches it, so the separation cannot exist.",
+   "vi": "Cone không phủ tưởng chỉ chứa histogram trừu tượng, nhưng một vector tốc độ thật chạm tới, nên phần tách không thể tồn tại."
   }
  },
  {
   "claim_id": "C-D18J-VECTOR-SEPARATION",
-  "status": "open",
+  "status": "refuted",
   "evidence": "I2",
   "scope": "all realizable vectors, all 109 primes",
   "gate_introduced": "gate-d18",
-  "gate_last_changed": "gate-d18",
+  "gate_last_changed": "gate-d19",
   "depends_on": [
    "D-D18J-HISTOGRAM-ONLY"
   ],
   "statement": {
-   "en": "Separating actual speed-vector moment profiles from the p0=0 cone (exact realizability cut) remains OPEN",
-   "vi": "Tách các profile moment của vector tốc độ thật khỏi cone p0=0 (lát cắt khả dĩ chính xác) vẫn MỞ"
+   "en": "REFUTED: real speed-vector moment profiles do NOT separate from the p0=0 cone, an exact p=197 vector realizes it, so no per-prime realizability cut exists",
+   "vi": "BỊ BÁC: profile moment của vector tốc độ thật KHÔNG tách khỏi cone p0=0, một vector chính xác tại p=197 đạt tới nó, nên không có lát cắt khả dĩ theo từng prime"
   },
   "plain_language": {
-   "en": "The remaining obligation is to prove real vectors never reach the uncovered cone.",
-   "vi": "Nghĩa vụ còn lại là chứng minh vector thật không bao giờ chạm miền không phủ."
+   "en": "The hoped-for separation of real vectors from the uncovered cone is false, real improper vectors exist at single primes.",
+   "vi": "Phần tách mong đợi giữa vector thật và cone không phủ là sai, vector improper thật hiện hữu tại từng prime."
   }
  },
  {
@@ -589,6 +590,25 @@
   "plain_language": {
    "en": "Single-prime covers are killed only by requiring one cover to hold across many primes at once, that lift is the open problem.",
    "vi": "Phủ đơn-prime chỉ bị loại khi buộc một phủ đúng qua nhiều prime cùng lúc, lift đó là bài toán mở."
+  }
+ },
+ {
+  "claim_id": "C-D20-PRIME-PRODUCT-LIFT",
+  "status": "open",
+  "evidence": "I2",
+  "scope": "one global 13-speed multiset, certified prime family beyond B13",
+  "gate_introduced": "gate-d20",
+  "gate_last_changed": "gate-d20",
+  "depends_on": [
+   "C-D19-LIFT"
+  ],
+  "statement": {
+   "en": "Simultaneous prime-product lift OPEN: rule out one common bounded 13-speed multiset inducing compatible local covers across a certified prime family whose product exceeds B13, encoded by monic root polynomials with CRT-compatible symmetric coefficients; the mandated first phase is an independent replay of the D6/D7R reduction",
+   "vi": "Lift tích-các-prime đồng thời MỞ: loại một multiset 13 tốc độ có chặn chung sinh ra phủ cục bộ tương thích qua một họ prime được chứng nhận mà tích vượt B13, mã hóa bằng đa thức nghiệm đơn khởi với hệ số đối xứng tương thích CRT; phase đầu bắt buộc là replay độc lập rút gọn D6/D7R"
+  },
+  "plain_language": {
+   "en": "The open question is whether one single global speed set can pass the cover test at many primes at once, not just one prime.",
+   "vi": "Câu hỏi mở là liệu một bộ tốc độ toàn cục duy nhất có vượt được kiểm phủ tại nhiều prime cùng lúc không, chứ không chỉ một prime."
   }
  }
 ]

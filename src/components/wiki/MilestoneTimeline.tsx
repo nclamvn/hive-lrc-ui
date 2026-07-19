@@ -7,6 +7,7 @@ const STATUS_LABEL: Record<Milestone["status"], { en: string; vi: string }> = {
   partial: { en: "PARTIAL", vi: "MỘT PHẦN" },
   blocked: { en: "BLOCKED", vi: "CHẶN" },
   current: { en: "CURRENT", vi: "HIỆN TẠI" },
+  refuted: { en: "REFUTED", vi: "BÁC BỎ" },
 };
 
 function VerifyBadge({ level, locale }: { level: Milestone["verify"]; locale: Locale }) {

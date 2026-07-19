@@ -4,7 +4,7 @@
  *          "pending" = authored, not yet independently checked.
  * independence: HIVE evidence class I0..I4.
  */
-export type GateStatus = "pass" | "partial" | "blocked" | "current";
+export type GateStatus = "pass" | "partial" | "blocked" | "current" | "refuted";
 export type VerifyLevel = "double" | "single" | "pending";
 export type IndClass = "I0" | "I1" | "I2" | "I3" | "I4";
 export type Bi = { en: string; vi: string };
@@ -418,7 +418,7 @@ export const gates: Milestone[] = [
   {
     id: "gate-d19", phase: "GATE D19",
     title: b("Exact cyclic cover, per-prime separation refuted", "Phủ tuần hoàn chính xác, bác tách theo từng prime"),
-    status: "current", verify: "double", independence: "I2", date: "2026-07-19",
+    status: "refuted", verify: "double", independence: "I2", date: "2026-07-19",
     summary: b(
       "D19 returns from moment space to the exact source object. Fixing a prime and a primitive root, a speed vector becomes a multiplicity vector on the cyclic group of size p minus 1, and an improper vector (no lonely time) exists exactly when thirteen cyclic translates of the bad set cover the whole group. The fractional covering number is exactly the group size over the bad-set size, about 7 at every prime, far below the budget of 13, so the linear relaxation closes nothing. The decisive result is negative and is published in full. Explicit thirteen-translate covers actually exist at 48 of the 109 primes, and an exact non-tight improper vector is exhibited at p=197 with thirteen distinct speeds, zero lonely times, and adaptive bound exactly 0. This corrects the earlier moment work, the adaptive degree-5 dual also fails at a single prime, and the earlier twenty-thousand-vector search that found no counterexample was bounded by sampling, not by a theorem. Both per-prime methods are therefore insufficient. These single-prime covers are exactly what upstream enumeration finds and are not real counterexamples, they are eliminated only by the prime-product lift that requires one configuration to cover across many primes at once. That lift is the only remaining route. LRC(13) remains open and is not disproven.",
       "D19 quay từ không gian moment về đối tượng nguồn chính xác. Cố định một prime và một căn nguyên thủy, một vector tốc độ thành một vector bội trên nhóm cyclic cỡ p trừ 1, và một vector improper (không thời điểm cô đơn) tồn tại đúng khi mười ba phép dịch tuần hoàn của tập bad phủ toàn nhóm. Số phủ phân số đúng bằng cỡ nhóm chia cỡ tập bad, khoảng 7 tại mọi prime, thấp hơn nhiều ngân sách 13, nên nới lỏng tuyến tính không đóng gì. Kết quả quyết định là âm và được công bố đầy đủ. Phủ mười ba phép dịch tường minh thực sự hiện hữu tại 48 trong 109 prime, và một vector improper non-tight chính xác được trưng ra tại p=197 với mười ba tốc độ phân biệt, không thời điểm cô đơn, và chặn thích ứng đúng bằng 0. Điều này sửa lại công trình moment trước đó, dual bậc-5 thích ứng cũng thất bại tại một prime đơn, và tìm kiếm hai mươi nghìn vector trước đó không thấy phản ví dụ là do giới hạn mẫu, không phải định lý. Vậy cả hai phương pháp theo từng prime đều không đủ. Các phủ đơn-prime này chính là thứ liệt kê thượng nguồn tìm ra và không phải phản ví dụ thật, chúng chỉ bị loại bởi lift tích-các-prime buộc một cấu hình phủ qua nhiều prime cùng lúc. Lift đó là đường còn lại duy nhất. LRC(13) vẫn mở và không bị bác bỏ.",
@@ -429,6 +429,21 @@ export const gates: Milestone[] = [
       b("Both per-prime methods refuted, two verifiers ACCEPT, 78 of 78 corruption rejected; the only remaining route is the prime-product lift (OPEN). LRC(13) OPEN, not disproven", "Cả hai phương pháp theo từng prime bị bác, hai verifier CHẤP NHẬN, 78 trên 78 tấn công bị bác; đường còn lại duy nhất là lift tích-các-prime (MỞ). LRC(13) MỞ, không bị bác bỏ"),
     ],
     artifacts: 12,
+  },
+  {
+    id: "gate-d20", phase: "GATE D20",
+    title: b("Simultaneous prime-product lift", "Lift tích các prime đồng thời"),
+    status: "current", verify: "pending", independence: "I2", date: "2026-07-19",
+    summary: b(
+      "D19 proved that a local cover at one prime is not a global counterexample, so D20 attacks the only route left. A genuine LRC(13) counterexample would have to be one single bounded 13-speed multiset that induces a compatible local cover simultaneously across a family of primes whose product crosses the frozen D6 reconstruction threshold. Choosing an unrelated cover independently at each prime is forbidden, the global identity of the one speed tuple must be preserved. To avoid matching permutations across primes, each local residue multiset is encoded by its monic root polynomial F_p(X) = product of (X - r_i) mod p, so a common global tuple must induce compatible symmetric-coefficient residues that reconstruct by CRT. The mandated first phase, now underway, is a full freeze and independent replay of the D6 finite reduction and the D7R alignment, because that is exactly where an earlier predicate mismatch occurred, no inherited cost proxy or search semantics may be reused without replay. A predicate mismatch triggers restart. The target is to certify that no common global multiset survives compatibility beyond the product threshold, or to surface one bounded CRT-compatible global witness. LRC(13) remains open.",
+      "D19 đã chứng minh một phủ cục bộ tại một prime không phải phản ví dụ toàn cục, nên D20 tấn công đường duy nhất còn lại. Một phản ví dụ LRC(13) thật phải là một multiset 13 tốc độ có chặn duy nhất, sinh ra phủ cục bộ tương thích đồng thời qua một họ prime mà tích của chúng vượt ngưỡng tái dựng D6 đã đóng băng. Cấm chọn một phủ không liên quan riêng lẻ tại mỗi prime, phải giữ nguyên danh tính toàn cục của một bộ tốc độ chung. Để tránh ghép hoán vị giữa các prime, mỗi multiset thặng dư cục bộ được mã hóa bằng đa thức nghiệm đơn khởi F_p(X) = tích (X - r_i) mod p, nên một bộ tuple toàn cục chung phải sinh ra thặng dư hệ số đối xứng tương thích, tái dựng được bằng CRT. Phase đầu bắt buộc, đang tiến hành, là đóng băng và replay độc lập toàn bộ rút gọn hữu hạn D6 và căn chỉnh D7R, vì đó chính là nơi từng xảy ra lệch predicate, không được tái dùng cost proxy hay ngữ nghĩa tìm kiếm kế thừa mà không replay. Lệch predicate thì khởi động lại. Mục tiêu là chứng nhận không multiset toàn cục chung nào sống sót tương thích vượt ngưỡng tích, hoặc trưng ra một nhân chứng toàn cục tương thích CRT có chặn. LRC(13) vẫn mở.",
+    ),
+    checks: [
+      b("Global/local equivalence to re-prove and independently verify: a global counterexample implies simultaneous compatible local covers over the selected prime family, reconstructing one CRT-compatible bounded global object", "Tương đương toàn cục/cục bộ cần chứng minh lại và kiểm độc lập: phản ví dụ toàn cục kéo theo phủ cục bộ tương thích đồng thời qua họ prime chọn, tái dựng một đối tượng toàn cục có chặn tương thích CRT"),
+      b("Mandated first phase underway: freeze and independent replay of the D6 reduction and D7R alignment before any search; predicate mismatch triggers D20-RESTART", "Phase đầu bắt buộc đang tiến hành: đóng băng và replay độc lập rút gọn D6 và căn chỉnh D7R trước mọi tìm kiếm; lệch predicate kích hoạt D20-RESTART"),
+      b("Exit states: PASS (certified simultaneous incompatibility beyond the product threshold), PARTIAL, REFUTED (one surviving CRT-compatible global witness), BLOCKED, or RESTART. Per-prime program is closed as insufficient. LRC(13) OPEN", "Trạng thái thoát: PASS (chứng nhận bất tương thích đồng thời vượt ngưỡng tích), PARTIAL, REFUTED (một nhân chứng toàn cục tương thích CRT sống sót), BLOCKED, hoặc RESTART. Chương trình theo từng prime đã đóng vì không đủ. LRC(13) MỞ"),
+    ],
+    artifacts: 7,
   },
 ];
 

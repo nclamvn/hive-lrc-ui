@@ -838,7 +838,7 @@
    "en": "Exact cyclic cover, per-prime separation refuted",
    "vi": "Phủ tuần hoàn chính xác, bác tách theo từng prime"
   },
-  "status": "current",
+  "status": "refuted",
   "verify": "double",
   "independence": "I2",
   "date": "2026-07-19",
@@ -862,5 +862,37 @@
   ],
   "artifacts": 12,
   "route": "/gates/gate-d19"
+ },
+ {
+  "id": "gate-d20",
+  "phase": "GATE D20",
+  "title": {
+   "en": "Simultaneous prime-product lift",
+   "vi": "Lift tích các prime đồng thời"
+  },
+  "status": "current",
+  "verify": "pending",
+  "independence": "I2",
+  "date": "2026-07-19",
+  "summary": {
+   "en": "D19 proved that a local cover at one prime is not a global counterexample, so D20 attacks the only route left. A genuine LRC(13) counterexample would have to be one single bounded 13-speed multiset that induces a compatible local cover simultaneously across a family of primes whose product crosses the frozen D6 reconstruction threshold. Choosing an unrelated cover independently at each prime is forbidden, the global identity of the one speed tuple must be preserved. To avoid matching permutations across primes, each local residue multiset is encoded by its monic root polynomial F_p(X) = product of (X - r_i) mod p, so a common global tuple must induce compatible symmetric-coefficient residues that reconstruct by CRT. The mandated first phase, now underway, is a full freeze and independent replay of the D6 finite reduction and the D7R alignment, because that is exactly where an earlier predicate mismatch occurred, no inherited cost proxy or search semantics may be reused without replay. A predicate mismatch triggers restart. The target is to certify that no common global multiset survives compatibility beyond the product threshold, or to surface one bounded CRT-compatible global witness. LRC(13) remains open.",
+   "vi": "D19 đã chứng minh một phủ cục bộ tại một prime không phải phản ví dụ toàn cục, nên D20 tấn công đường duy nhất còn lại. Một phản ví dụ LRC(13) thật phải là một multiset 13 tốc độ có chặn duy nhất, sinh ra phủ cục bộ tương thích đồng thời qua một họ prime mà tích của chúng vượt ngưỡng tái dựng D6 đã đóng băng. Cấm chọn một phủ không liên quan riêng lẻ tại mỗi prime, phải giữ nguyên danh tính toàn cục của một bộ tốc độ chung. Để tránh ghép hoán vị giữa các prime, mỗi multiset thặng dư cục bộ được mã hóa bằng đa thức nghiệm đơn khởi F_p(X) = tích (X - r_i) mod p, nên một bộ tuple toàn cục chung phải sinh ra thặng dư hệ số đối xứng tương thích, tái dựng được bằng CRT. Phase đầu bắt buộc, đang tiến hành, là đóng băng và replay độc lập toàn bộ rút gọn hữu hạn D6 và căn chỉnh D7R, vì đó chính là nơi từng xảy ra lệch predicate, không được tái dùng cost proxy hay ngữ nghĩa tìm kiếm kế thừa mà không replay. Lệch predicate thì khởi động lại. Mục tiêu là chứng nhận không multiset toàn cục chung nào sống sót tương thích vượt ngưỡng tích, hoặc trưng ra một nhân chứng toàn cục tương thích CRT có chặn. LRC(13) vẫn mở."
+  },
+  "checks": [
+   {
+    "en": "Global/local equivalence to re-prove and independently verify: a global counterexample implies simultaneous compatible local covers over the selected prime family, reconstructing one CRT-compatible bounded global object",
+    "vi": "Tương đương toàn cục/cục bộ cần chứng minh lại và kiểm độc lập: phản ví dụ toàn cục kéo theo phủ cục bộ tương thích đồng thời qua họ prime chọn, tái dựng một đối tượng toàn cục có chặn tương thích CRT"
+   },
+   {
+    "en": "Mandated first phase underway: freeze and independent replay of the D6 reduction and D7R alignment before any search; predicate mismatch triggers D20-RESTART",
+    "vi": "Phase đầu bắt buộc đang tiến hành: đóng băng và replay độc lập rút gọn D6 và căn chỉnh D7R trước mọi tìm kiếm; lệch predicate kích hoạt D20-RESTART"
+   },
+   {
+    "en": "Exit states: PASS (certified simultaneous incompatibility beyond the product threshold), PARTIAL, REFUTED (one surviving CRT-compatible global witness), BLOCKED, or RESTART. Per-prime program is closed as insufficient. LRC(13) OPEN",
+    "vi": "Trạng thái thoát: PASS (chứng nhận bất tương thích đồng thời vượt ngưỡng tích), PARTIAL, REFUTED (một nhân chứng toàn cục tương thích CRT sống sót), BLOCKED, hoặc RESTART. Chương trình theo từng prime đã đóng vì không đủ. LRC(13) MỞ"
+   }
+  ],
+  "artifacts": 7,
+  "route": "/gates/gate-d20"
  }
 ]

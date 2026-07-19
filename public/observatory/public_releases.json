@@ -312,5 +312,28 @@
    "en": "Equivalence: improper <=> 13 cyclic translates of B cover G=Z/(p-1). Fractional cover = (p-1)/|B| ~ 7 (all 109, <<13, closes nothing). Greedy integer cover <=13 at 48/109 primes (verified). Witness p=197: 13 distinct non-tight speeds, 0 lonely times, p0=0, B5=0 -> corrects D18 (adaptive dual also fails per-prime; the 20459-vector no-counterexample search was sampling-bounded). Only route = prime-product lift B13=7^156*13^143. V1/V2 ACCEPT, 78/78 corruption.",
    "vi": "Tương đương: improper <=> 13 phép dịch tuần hoàn của B phủ G=Z/(p-1). Phủ phân số = (p-1)/|B| ~ 7 (toàn 109, <<13, không đóng gì). Phủ nguyên greedy <=13 tại 48/109 prime (đã kiểm). Nhân chứng p=197: 13 tốc độ non-tight phân biệt, 0 thời điểm cô đơn, p0=0, B5=0 -> sửa D18 (dual thích ứng cũng thất bại theo từng prime; tìm kiếm 20459 vector bị giới hạn mẫu). Đường duy nhất = lift tích-các-prime B13=7^156*13^143. V1/V2 CHẤP NHẬN, 78/78 tấn công."
   }
+ },
+ {
+  "id": "REL-D20-001",
+  "sequence": 15,
+  "gate_id": "gate-d20",
+  "change_type": "GATE_OPENED",
+  "evidence": "I2",
+  "scope": "simultaneous prime-product lift",
+  "owner_approved": true,
+  "published_at": "2026-07-19T00:00:00Z",
+  "supersedes_release_id": "REL-D19-001",
+  "title": {
+   "en": "D20 OPEN, simultaneous prime-product lift",
+   "vi": "D20 MỞ, lift tích-các-prime đồng thời"
+  },
+  "summary_public": {
+   "en": "With every per-prime route closed as insufficient, D20 opens on the only remaining question. A real counterexample would have to be one single bounded set of 13 speeds that passes the cover test at many primes simultaneously, enough for their product to exceed the frozen reconstruction threshold. Picking a different cover at each prime is not allowed, it must be one global configuration. The work begins by independently re-checking the upstream reduction that defines this threshold before any search. LRC(13) remains open.",
+   "vi": "Với mọi đường theo từng prime đã đóng vì không đủ, D20 mở trên câu hỏi duy nhất còn lại. Một phản ví dụ thật phải là một bộ 13 tốc độ có chặn duy nhất vượt được kiểm phủ tại nhiều prime cùng lúc, đủ để tích của chúng vượt ngưỡng tái dựng đã đóng băng. Không được chọn một phủ khác nhau tại mỗi prime, phải là một cấu hình toàn cục. Công việc bắt đầu bằng việc kiểm lại độc lập rút gọn thượng nguồn định nghĩa ngưỡng này trước mọi tìm kiếm. LRC(13) vẫn mở."
+  },
+  "summary_technical": {
+   "en": "Target: rule out one bounded global 13-multiset U inducing compatible local covers across a certified prime family P with product > B13 = 7^156*13^143, or surface one CRT-compatible bounded global witness. Representation: monic root polynomial F_p(X)=prod(X-r_i) mod p; a global tuple induces compatible symmetric-coefficient residues via CRT. Mandated phase 1: freeze + independent replay of D6 reduction and D7R alignment (predicate mismatch => D20-RESTART); no inherited cost proxy/DFS semantics reused without replay. Per-prime program closed as insufficient. No properness prefilter; no support-6. LRC(13) OPEN.",
+   "vi": "Mục tiêu: loại một multiset-13 toàn cục có chặn U sinh phủ cục bộ tương thích qua họ prime chứng nhận P với tích > B13 = 7^156*13^143, hoặc trưng ra một nhân chứng toàn cục tương thích CRT có chặn. Biểu diễn: đa thức nghiệm đơn khởi F_p(X)=prod(X-r_i) mod p; một tuple toàn cục sinh thặng dư hệ số đối xứng tương thích qua CRT. Phase 1 bắt buộc: đóng băng + replay độc lập rút gọn D6 và căn chỉnh D7R (lệch predicate => D20-RESTART); không tái dùng cost proxy/ngữ nghĩa DFS kế thừa mà không replay. Chương trình theo từng prime đóng vì không đủ. Không tiền lọc properness; không support-6. LRC(13) MỞ."
+  }
  }
 ]
