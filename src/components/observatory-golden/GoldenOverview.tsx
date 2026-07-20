@@ -31,6 +31,38 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
         <img className="og-vitruvian" src="/vitruvian.png" alt="" aria-hidden width={172} height={170} />
       </section>
 
+      {/* preprint banner — links to the static D20–D34 archival synthesis page.
+          Live-mode only: kept out of golden fixture mode to preserve the pinned pixel test. */}
+      {!golden && (
+      <a
+        className="og-preprint"
+        href="/preprint/"
+        data-region="preprint"
+        style={{
+          display: "flex", alignItems: "center", justifyContent: "space-between", gap: "18px",
+          margin: "0 0 4px", padding: "16px 20px", textDecoration: "none",
+          background: "#fbfaf7", border: "1px solid #e2e0da", borderRadius: "12px", color: "inherit",
+        }}
+      >
+        <span style={{ minWidth: 0 }}>
+          <span style={{ display: "block", fontSize: "11px", letterSpacing: ".08em", textTransform: "uppercase", color: "#8a8578", fontWeight: 600 }}>
+            {t("Preprint · D20–D34 archival synthesis", "Bản thảo · Tổng hợp lưu trữ D20–D34")}
+          </span>
+          <span style={{ display: "block", marginTop: "3px", fontSize: "16px", fontWeight: 640, color: "#1a1a17" }}>
+            {t("Verifiable Human–AI Exploration of the Lonely Runner Conjecture at k = 13",
+               "Khảo sát Human–AI có kiểm chứng cho Lonely Runner Conjecture tại k = 13")}
+          </span>
+          <span style={{ display: "block", marginTop: "3px", fontSize: "13px", color: "#6f6a5e" }}>
+            {t("Read the paper, download the PDF, LaTeX source, and D20–D34 archive. LRC(13) remains OPEN.",
+               "Đọc bài báo, tải PDF, mã nguồn LaTeX và gói lưu trữ D20–D34. LRC(13) vẫn MỞ.")}
+          </span>
+        </span>
+        <span style={{ flex: "none", padding: "9px 16px", border: "1px solid #1f4b6e", borderRadius: "8px", color: "#1f4b6e", fontWeight: 600, fontSize: "14px", whiteSpace: "nowrap" }}>
+          {t("Read paper →", "Đọc bài báo →")}
+        </span>
+      </a>
+      )}
+
       {/* the problem: live explainer + history timeline */}
       <section className="og-problem" data-region="problem">
         <div className="og-prob-body">
