@@ -396,6 +396,78 @@
   "valid_to_release": null
  },
  {
+  "id": "arc:gate-d26->gate-d27",
+  "source": "gate:gate-d26",
+  "target": "gate:gate-d27",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d27->gate-d28",
+  "source": "gate:gate-d27",
+  "target": "gate:gate-d28",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d28->gate-d29",
+  "source": "gate:gate-d28",
+  "target": "gate:gate-d29",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d29->gate-d30",
+  "source": "gate:gate-d29",
+  "target": "gate:gate-d30",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d30->gate-d31",
+  "source": "gate:gate-d30",
+  "target": "gate:gate-d31",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "arc:gate-d31->gate-d32",
+  "source": "gate:gate-d31",
+  "target": "gate:gate-d32",
+  "relation": "depends_on",
+  "explanation": {
+   "en": "Research arc order.",
+   "vi": "Thứ tự tiến trình nghiên cứu."
+  },
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "intro:C0",
   "source": "gate:scan",
   "target": "claim:C0",

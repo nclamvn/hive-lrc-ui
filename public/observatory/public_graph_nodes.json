@@ -918,6 +918,168 @@
   "valid_to_release": null
  },
  {
+  "id": "gate:gate-d27",
+  "kind": "gate",
+  "label": {
+   "en": "Orbit-compressed unlabeled CRT: BLOCKED",
+   "vi": "CRT không-nhãn nén-orbit: BLOCKED"
+  },
+  "short_label": {
+   "en": "GATE D27",
+   "vi": "GATE D27"
+  },
+  "status": "blocked",
+  "evidence": "I2",
+  "scope": "GATE D27",
+  "gate": "gate-d27",
+  "summary": {
+   "en": "D26 proved the direct coordinate CRT threshold but measured the labeling obligation as a net-negative cost. D27 keeps the lower reconstruction threshold while removing the permanent per-prime labels, holding the global state as an unordered multiset of CRT root classes together with its stabilizer. Merging a new prime is done by enumerating matching orbits, that is transport matrices over the compatibility graph, rather than raw permutations. The orbit quotient is proved exact, with no false merge and no false split, and the sign-lift factor of 2^13 per prime is itemized for the first time. The decisive result is a certified obstruction, not a worst-case proxy: a single generic distinct-residue merge already produces 25,505,877,196,800 orbit children, about 2^44.5, which exceeds the frozen 2^42 state ceiling at merge depth one. The gate closes the forward orbit-enumerative unlabeled root-CRT architecture under the frozen caps. It does not rule out bidirectional or hybrid methods, and it does not decide the conjecture. LRC(13) remains open.",
+   "vi": "D26 chứng minh ngưỡng CRT tọa độ trực tiếp nhưng đo nghĩa vụ gán nhãn là chi phí net âm. D27 giữ ngưỡng tái dựng thấp trong khi bỏ nhãn cố định theo prime, giữ trạng thái toàn cục dưới dạng đa-tập không thứ tự các lớp nghiệm CRT cùng stabilizer của nó. Ghép một prime mới thực hiện bằng liệt kê các orbit khớp, tức transport matrix trên đồ thị tương thích, thay vì hoán vị thô. Orbit quotient được chứng minh chính xác, không false merge và không false split, và hệ số sign-lift 2^13 mỗi prime được tách lần đầu. Kết quả quyết định là một obstruction chứng nhận, không phải proxy trường hợp xấu nhất: một merge generic residue-phân-biệt đơn đã sinh 25.505.877.196.800 orbit con, khoảng 2^44.5, vượt trần trạng thái 2^42 tại độ sâu ghép một. Gate đóng kiến trúc CRT-nghiệm không-nhãn liệt-kê-orbit tiến dưới cap đóng băng. Nó không loại phương pháp hai chiều hay hybrid, và không quyết giả thuyết. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "D26 proved the direct coordinate CRT threshold but measured the labeling obligation as a net-negative cost. D27 keeps the lower reconstruction threshold while removing the permanent per-prime labels, holding the global state as an unordered multiset of CRT root classes together with its stabilizer. Merging a new prime is done by enumerating matching orbits, that is transport matrices over the compatibility graph, rather than raw permutations. The orbit quotient is proved exact, with no false merge and no false split, and the sign-lift factor of 2^13 per prime is itemized for the first time. The decisive result is a certified obstruction, not a worst-case proxy: a single generic distinct-residue merge already produces 25,505,877,196,800 orbit children, about 2^44.5, which exceeds the frozen 2^42 state ceiling at merge depth one. The gate closes the forward orbit-enumerative unlabeled root-CRT architecture under the frozen caps. It does not rule out bidirectional or hybrid methods, and it does not decide the conjecture. LRC(13) remains open.",
+   "vi": "D26 chứng minh ngưỡng CRT tọa độ trực tiếp nhưng đo nghĩa vụ gán nhãn là chi phí net âm. D27 giữ ngưỡng tái dựng thấp trong khi bỏ nhãn cố định theo prime, giữ trạng thái toàn cục dưới dạng đa-tập không thứ tự các lớp nghiệm CRT cùng stabilizer của nó. Ghép một prime mới thực hiện bằng liệt kê các orbit khớp, tức transport matrix trên đồ thị tương thích, thay vì hoán vị thô. Orbit quotient được chứng minh chính xác, không false merge và không false split, và hệ số sign-lift 2^13 mỗi prime được tách lần đầu. Kết quả quyết định là một obstruction chứng nhận, không phải proxy trường hợp xấu nhất: một merge generic residue-phân-biệt đơn đã sinh 25.505.877.196.800 orbit con, khoảng 2^44.5, vượt trần trạng thái 2^42 tại độ sâu ghép một. Gate đóng kiến trúc CRT-nghiệm không-nhãn liệt-kê-orbit tiến dưới cap đóng băng. Nó không loại phương pháp hai chiều hay hybrid, và không quyết giả thuyết. LRC(13) vẫn mở."
+  },
+  "route": "/gates/gate-d27",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "gate:gate-d28",
+  "kind": "gate",
+  "label": {
+   "en": "Certified bulge bridge: BLOCKED-BEFORE-BUILD",
+   "vi": "Cầu vượt phình chứng nhận: BLOCKED-BEFORE-BUILD"
+  },
+  "short_label": {
+   "en": "GATE D28",
+   "vi": "GATE D28"
+  },
+  "status": "blocked",
+  "evidence": "I2",
+  "scope": "GATE D28",
+  "gate": "gate-d28",
+  "summary": {
+   "en": "D28 tests whether the state-count region that blocked D27 can be crossed without enumerating its orbit children, examining a bidirectional symbolic meet and a coefficient-to-root switch at the design level before any production code. The bidirectional route is designed with product-form frontiers that defer pairing and sign, and the backward frontier is shown to be generable without knowing the target tuple, which removes a circularity risk. Its meet still leaves the local-cover choice product intact, because no frozen constraint couples cover choices across primes below the reconstruction zone. The switch route is sound only when the coefficient information already pins the root multiset, at which point it reduces to the earlier coefficient architecture and its known seeding cost. A label-free coefficient carrier pinning at 979 bits is recorded as a candidate finding. Both routes therefore have load-bearing obligations that measured upstream walls contradict, so no bridge implementable under the caps arises without a new coupling theorem. LRC(13) remains open.",
+   "vi": "D28 kiểm liệu vùng số-lượng-trạng-thái đã chặn D27 có thể vượt qua mà không liệt kê orbit con hay không, xét một meet biểu tượng hai chiều và một chuyển hệ-số-sang-nghiệm ở mức thiết kế trước khi có code sản xuất. Đường hai chiều thiết kế với frontier dạng-tích hoãn ghép-cặp và dấu, và frontier lùi được chỉ ra sinh được mà không biết tuple đích, loại nguy cơ vòng lặp. Meet của nó vẫn để nguyên tích lựa-chọn-phủ cục bộ, vì không ràng buộc đóng băng nào ghép các lựa chọn phủ xuyên prime dưới vùng tái dựng. Đường switch chỉ sound khi thông tin hệ số đã ghim đa-tập nghiệm, khi đó nó về kiến trúc hệ số trước và chi phí seeding đã biết. Một carrier hệ số không-nhãn ghim ở 979 bit được ghi làm phát hiện ứng viên. Cả hai đường do đó có nghĩa vụ chịu lực mà các bức tường thượng nguồn đo được mâu thuẫn, nên không cầu nào triển khai được dưới cap xuất hiện mà thiếu một định lý ghép mới. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "D28 tests whether the state-count region that blocked D27 can be crossed without enumerating its orbit children, examining a bidirectional symbolic meet and a coefficient-to-root switch at the design level before any production code. The bidirectional route is designed with product-form frontiers that defer pairing and sign, and the backward frontier is shown to be generable without knowing the target tuple, which removes a circularity risk. Its meet still leaves the local-cover choice product intact, because no frozen constraint couples cover choices across primes below the reconstruction zone. The switch route is sound only when the coefficient information already pins the root multiset, at which point it reduces to the earlier coefficient architecture and its known seeding cost. A label-free coefficient carrier pinning at 979 bits is recorded as a candidate finding. Both routes therefore have load-bearing obligations that measured upstream walls contradict, so no bridge implementable under the caps arises without a new coupling theorem. LRC(13) remains open.",
+   "vi": "D28 kiểm liệu vùng số-lượng-trạng-thái đã chặn D27 có thể vượt qua mà không liệt kê orbit con hay không, xét một meet biểu tượng hai chiều và một chuyển hệ-số-sang-nghiệm ở mức thiết kế trước khi có code sản xuất. Đường hai chiều thiết kế với frontier dạng-tích hoãn ghép-cặp và dấu, và frontier lùi được chỉ ra sinh được mà không biết tuple đích, loại nguy cơ vòng lặp. Meet của nó vẫn để nguyên tích lựa-chọn-phủ cục bộ, vì không ràng buộc đóng băng nào ghép các lựa chọn phủ xuyên prime dưới vùng tái dựng. Đường switch chỉ sound khi thông tin hệ số đã ghim đa-tập nghiệm, khi đó nó về kiến trúc hệ số trước và chi phí seeding đã biết. Một carrier hệ số không-nhãn ghim ở 979 bit được ghi làm phát hiện ứng viên. Cả hai đường do đó có nghĩa vụ chịu lực mà các bức tường thượng nguồn đo được mâu thuẫn, nên không cầu nào triển khai được dưới cap xuất hiện mà thiếu một định lý ghép mới. LRC(13) vẫn mở."
+  },
+  "route": "/gates/gate-d28",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "gate:gate-d29",
+  "kind": "gate",
+  "label": {
+   "en": "Pre-reconstruction cross-prime coupling: PARTIAL",
+   "vi": "Ghép xuyên-prime trước-tái-dựng: PARTIAL"
+  },
+  "short_label": {
+   "en": "GATE D29",
+   "vi": "GATE D29"
+  },
+  "status": "partial",
+  "evidence": "I2",
+  "scope": "GATE D29",
+  "gate": "gate-d29",
+  "summary": {
+   "en": "D29 asks whether any label-free, sign-invariant invariant couples local cover choices across primes before full reconstruction. Phase 1 proves a local content reduction: the complete label-free sign-invariant content of a folded local cover is exactly the squared multiset, equivalently the elementary-symmetric coefficient residues, so every candidate local carrier factors through one coefficient object. Phase 2 identifies the first affirmative cross-prime coupling in the program. The top coefficient equals the square of the speed product, hence a bounded perfect square, and requiring its reconstructed residue to admit a bounded square root excludes local coefficient states that independent membership admits, with an exact and replayable certificate, on complete finite domains. Phase 3 locks this predicate as a theorem: soundness, one-global-scale semantics, an exact modular-root structure, and a general non-vacuity counting theorem. The exact evaluator that decides it is blocked-compute in the useful regime under the frozen caps, so the coupling is mathematically established but not yet campaign-usable. LRC(13) remains open.",
+   "vi": "D29 hỏi liệu bất biến không-nhãn, bất-biến-dấu nào ghép các lựa chọn phủ cục bộ xuyên prime trước tái dựng đầy đủ. Pha 1 chứng minh một thu gọn nội dung cục bộ: nội dung không-nhãn bất-biến-dấu đầy đủ của một phủ gấp cục bộ đúng bằng đa-tập bình phương, tương đương các dư hệ số đối xứng sơ cấp, nên mọi carrier cục bộ ứng viên đều qua một đối tượng hệ số. Pha 2 xác định ghép xuyên-prime khẳng định đầu tiên trong chương trình. Hệ số cao nhất bằng bình phương tích tốc độ, do đó một bình phương hoàn hảo bị chặn, và yêu cầu dư tái dựng của nó nhận một căn bậc hai bị chặn loại các trạng thái hệ số cục bộ mà thành viên độc lập nhận, với chứng chỉ chính xác và replay được, trên miền hữu hạn đầy đủ. Pha 3 khóa predicate này thành định lý: soundness, ngữ nghĩa một-scale-toàn-cục, cấu trúc modular-root chính xác, và một định lý đếm non-vacuity tổng quát. Bộ đánh giá chính xác quyết định nó là blocked-compute trong miền hữu ích dưới cap đóng băng, nên ghép được thiết lập toán học nhưng chưa dùng-được cho chiến dịch. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "D29 asks whether any label-free, sign-invariant invariant couples local cover choices across primes before full reconstruction. Phase 1 proves a local content reduction: the complete label-free sign-invariant content of a folded local cover is exactly the squared multiset, equivalently the elementary-symmetric coefficient residues, so every candidate local carrier factors through one coefficient object. Phase 2 identifies the first affirmative cross-prime coupling in the program. The top coefficient equals the square of the speed product, hence a bounded perfect square, and requiring its reconstructed residue to admit a bounded square root excludes local coefficient states that independent membership admits, with an exact and replayable certificate, on complete finite domains. Phase 3 locks this predicate as a theorem: soundness, one-global-scale semantics, an exact modular-root structure, and a general non-vacuity counting theorem. The exact evaluator that decides it is blocked-compute in the useful regime under the frozen caps, so the coupling is mathematically established but not yet campaign-usable. LRC(13) remains open.",
+   "vi": "D29 hỏi liệu bất biến không-nhãn, bất-biến-dấu nào ghép các lựa chọn phủ cục bộ xuyên prime trước tái dựng đầy đủ. Pha 1 chứng minh một thu gọn nội dung cục bộ: nội dung không-nhãn bất-biến-dấu đầy đủ của một phủ gấp cục bộ đúng bằng đa-tập bình phương, tương đương các dư hệ số đối xứng sơ cấp, nên mọi carrier cục bộ ứng viên đều qua một đối tượng hệ số. Pha 2 xác định ghép xuyên-prime khẳng định đầu tiên trong chương trình. Hệ số cao nhất bằng bình phương tích tốc độ, do đó một bình phương hoàn hảo bị chặn, và yêu cầu dư tái dựng của nó nhận một căn bậc hai bị chặn loại các trạng thái hệ số cục bộ mà thành viên độc lập nhận, với chứng chỉ chính xác và replay được, trên miền hữu hạn đầy đủ. Pha 3 khóa predicate này thành định lý: soundness, ngữ nghĩa một-scale-toàn-cục, cấu trúc modular-root chính xác, và một định lý đếm non-vacuity tổng quát. Bộ đánh giá chính xác quyết định nó là blocked-compute trong miền hữu ích dưới cap đóng băng, nên ghép được thiết lập toán học nhưng chưa dùng-được cho chiến dịch. LRC(13) vẫn mở."
+  },
+  "route": "/gates/gate-d29",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "gate:gate-d30",
+  "kind": "gate",
+  "label": {
+   "en": "Certified bounded modular square root: PARTIAL",
+   "vi": "Căn bậc hai modular bị chặn chứng nhận: PARTIAL"
+  },
+  "short_label": {
+   "en": "GATE D30",
+   "vi": "GATE D30"
+  },
+  "status": "partial",
+  "evidence": "I2",
+  "scope": "GATE D30",
+  "gate": "gate-d30",
+  "summary": {
+   "en": "The Phase 3 coupling reduces its useful computation to one exact problem: given an odd squarefree modulus with known factorization, a residue that is a square modulo every selected prime, and a bound, decide whether a bounded value squares to that residue. D30 studies exact algorithms and replayable certificates for that bounded modular square-root problem and delivers a certified hybrid evaluator. The evaluator returns exactly one of witness, empty-certified, open-incomplete, or invalid-input, with three exact paths, tiny root enumeration, meet-in-the-middle, and a q-scan, selected by a deterministic preflight dispatcher that picks the cheapest path whose certified count fits the caps and otherwise returns open at preflight without materializing state. Empty certificates carry a full structural completeness record, not a hash alone, and an independent backend replays them. On the complete finite domains all paths and the dispatcher agree with brute force. The approximately 109-prime useful instance returns open-incomplete at preflight, because the exact paths exceed the caps there. LRC(13) remains open.",
+   "vi": "Ghép Pha 3 rút gọn phần tính toán hữu ích của nó về một bài toán chính xác: cho một modulus lẻ squarefree với phân tích đã biết, một dư là bình phương modulo mọi prime đã chọn, và một chặn, quyết định liệu một giá trị bị chặn bình phương thành dư đó. D30 nghiên cứu thuật toán chính xác và chứng chỉ replay được cho bài toán căn bậc hai modular bị chặn đó và giao một bộ đánh giá hybrid chứng nhận. Bộ đánh giá trả đúng một trong witness, empty-certified, open-incomplete, hoặc invalid-input, với ba đường chính xác, liệt kê nghiệm nhỏ, meet-in-the-middle, và q-scan, chọn bởi một dispatcher preflight xác định lấy đường rẻ nhất mà đếm chứng nhận vừa cap và ngược lại trả open tại preflight mà không materialize trạng thái. Chứng chỉ empty mang bản ghi hoàn chỉnh cấu trúc đầy đủ, không phải chỉ một hash, và một backend độc lập replay chúng. Trên miền hữu hạn đầy đủ mọi đường và dispatcher khớp brute force. Thể hiện hữu ích khoảng 109 prime trả open-incomplete tại preflight, vì các đường chính xác vượt cap ở đó. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "The Phase 3 coupling reduces its useful computation to one exact problem: given an odd squarefree modulus with known factorization, a residue that is a square modulo every selected prime, and a bound, decide whether a bounded value squares to that residue. D30 studies exact algorithms and replayable certificates for that bounded modular square-root problem and delivers a certified hybrid evaluator. The evaluator returns exactly one of witness, empty-certified, open-incomplete, or invalid-input, with three exact paths, tiny root enumeration, meet-in-the-middle, and a q-scan, selected by a deterministic preflight dispatcher that picks the cheapest path whose certified count fits the caps and otherwise returns open at preflight without materializing state. Empty certificates carry a full structural completeness record, not a hash alone, and an independent backend replays them. On the complete finite domains all paths and the dispatcher agree with brute force. The approximately 109-prime useful instance returns open-incomplete at preflight, because the exact paths exceed the caps there. LRC(13) remains open.",
+   "vi": "Ghép Pha 3 rút gọn phần tính toán hữu ích của nó về một bài toán chính xác: cho một modulus lẻ squarefree với phân tích đã biết, một dư là bình phương modulo mọi prime đã chọn, và một chặn, quyết định liệu một giá trị bị chặn bình phương thành dư đó. D30 nghiên cứu thuật toán chính xác và chứng chỉ replay được cho bài toán căn bậc hai modular bị chặn đó và giao một bộ đánh giá hybrid chứng nhận. Bộ đánh giá trả đúng một trong witness, empty-certified, open-incomplete, hoặc invalid-input, với ba đường chính xác, liệt kê nghiệm nhỏ, meet-in-the-middle, và q-scan, chọn bởi một dispatcher preflight xác định lấy đường rẻ nhất mà đếm chứng nhận vừa cap và ngược lại trả open tại preflight mà không materialize trạng thái. Chứng chỉ empty mang bản ghi hoàn chỉnh cấu trúc đầy đủ, không phải chỉ một hash, và một backend độc lập replay chúng. Trên miền hữu hạn đầy đủ mọi đường và dispatcher khớp brute force. Thể hiện hữu ích khoảng 109 prime trả open-incomplete tại preflight, vì các đường chính xác vượt cap ở đó. LRC(13) vẫn mở."
+  },
+  "route": "/gates/gate-d30",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "gate:gate-d31",
+  "kind": "gate",
+  "label": {
+   "en": "Prime economy and the residue coset theorem: PARTIAL",
+   "vi": "Kinh tế prime và định lý coset dư: PARTIAL"
+  },
+  "short_label": {
+   "en": "GATE D31",
+   "vi": "GATE D31"
+  },
+  "status": "partial",
+  "evidence": "I2",
+  "scope": "GATE D31",
+  "gate": "gate-d31",
+  "summary": {
+   "en": "D31 asks whether a prime portfolio can accumulate enough modulus bits for the coupling to become non-vacuous while the count of nonzero-residue primes, the local-cover complexity, and the exact evaluator cost all stay within the caps. The measured obstruction is a seeding count, the product over primes of the number of distinct admissible top-coefficient residues, which for the dense case stays far above the state ceiling for every portfolio that reaches the coupling onset, and using fewer larger primes raises it rather than lowering it. Phase 1 explains this with a proved structural theorem. Because the local admissible cover family is closed under multiplication of all coordinates by any unit and the top coefficient scales by the twenty-sixth power, the nonzero admissible residue set is a union of cosets of that power subgroup, hence the full quadratic-residue subgroup away from the exceptional residue class and a union of at most thirteen cosets on it. The nonzero residue set is therefore of linear size in the prime, so no structured family reaches a constant-size set at scale. LRC(13) remains open.",
+   "vi": "D31 hỏi liệu một danh mục prime có thể tích lũy đủ bit modulus để ghép thành non-vacuous trong khi số prime dư-khác-không, độ phức tạp phủ cục bộ, và chi phí bộ đánh giá chính xác đều nằm trong cap. Trở ngại đo được là một đếm seeding, tích trên các prime của số dư hệ số cao nhất admissible phân biệt, mà với trường hợp dày ở xa trên trần trạng thái cho mọi danh mục đạt khởi phát ghép, và dùng ít prime lớn hơn làm nó tăng thay vì giảm. Pha 1 giải thích điều này bằng một định lý cấu trúc được chứng minh. Vì họ phủ admissible cục bộ đóng dưới nhân mọi tọa độ bởi bất kỳ đơn vị và hệ số cao nhất scale theo lũy thừa hai mươi sáu, tập dư admissible khác không là hợp các coset của nhóm con lũy thừa đó, do đó toàn bộ nhóm con dư bậc hai ngoài lớp dư ngoại lệ và hợp tối đa mười ba coset trên nó. Tập dư khác không do đó có kích thước tuyến tính theo prime, nên không họ cấu trúc nào đạt tập kích-thước-hằng ở quy mô. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "D31 asks whether a prime portfolio can accumulate enough modulus bits for the coupling to become non-vacuous while the count of nonzero-residue primes, the local-cover complexity, and the exact evaluator cost all stay within the caps. The measured obstruction is a seeding count, the product over primes of the number of distinct admissible top-coefficient residues, which for the dense case stays far above the state ceiling for every portfolio that reaches the coupling onset, and using fewer larger primes raises it rather than lowering it. Phase 1 explains this with a proved structural theorem. Because the local admissible cover family is closed under multiplication of all coordinates by any unit and the top coefficient scales by the twenty-sixth power, the nonzero admissible residue set is a union of cosets of that power subgroup, hence the full quadratic-residue subgroup away from the exceptional residue class and a union of at most thirteen cosets on it. The nonzero residue set is therefore of linear size in the prime, so no structured family reaches a constant-size set at scale. LRC(13) remains open.",
+   "vi": "D31 hỏi liệu một danh mục prime có thể tích lũy đủ bit modulus để ghép thành non-vacuous trong khi số prime dư-khác-không, độ phức tạp phủ cục bộ, và chi phí bộ đánh giá chính xác đều nằm trong cap. Trở ngại đo được là một đếm seeding, tích trên các prime của số dư hệ số cao nhất admissible phân biệt, mà với trường hợp dày ở xa trên trần trạng thái cho mọi danh mục đạt khởi phát ghép, và dùng ít prime lớn hơn làm nó tăng thay vì giảm. Pha 1 giải thích điều này bằng một định lý cấu trúc được chứng minh. Vì họ phủ admissible cục bộ đóng dưới nhân mọi tọa độ bởi bất kỳ đơn vị và hệ số cao nhất scale theo lũy thừa hai mươi sáu, tập dư admissible khác không là hợp các coset của nhóm con lũy thừa đó, do đó toàn bộ nhóm con dư bậc hai ngoài lớp dư ngoại lệ và hợp tối đa mười ba coset trên nó. Tập dư khác không do đó có kích thước tuyến tính theo prime, nên không họ cấu trúc nào đạt tập kích-thước-hằng ở quy mô. LRC(13) vẫn mở."
+  },
+  "route": "/gates/gate-d31",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
+  "id": "gate:gate-d32",
+  "kind": "gate",
+  "label": {
+   "en": "Implicit realizability and the symbolic CEGAR kernel: PARTIAL",
+   "vi": "Khả-thực-hiện ngầm và nhân CEGAR biểu tượng: PARTIAL"
+  },
+  "short_label": {
+   "en": "GATE D32",
+   "vi": "GATE D32"
+  },
+  "status": "partial",
+  "evidence": "I2",
+  "scope": "GATE D32",
+  "gate": "gate-d32",
+  "summary": {
+   "en": "D32 tests the remaining unrefuted route, representing the global realizability problem implicitly and refining it with exact predicates rather than enumerating any product of local states. The scan defines an abstraction-refinement loop whose predicates, local admissibility, the top-coefficient square lift, positivity and Newton inequalities, and square splitting, are each proved to preserve every governed tuple, and on complete finite domains the loop agrees with brute-force enumeration, including a case where square splitting is the load-bearing refinement. Phase 1 implements a genuinely symbolic kernel with two independent exact backends, a canonical reduced decision diagram and an independent finite-domain engine. The local admissibility layer compresses genuinely: the diagram uses a number of nodes linear in the prime count while representing the full product, with zero Cartesian materialization. The coupling constraint does not compress in the implemented backends, because its construction materializes a bounded-square or product enumeration, so the cost moves to preprocessing. The local-separability result is a proved theorem; the coupled layer is a representation-specific obstruction, not a universal one. LRC(13) remains open.",
+   "vi": "D32 kiểm đường chưa-bị-bác còn lại, biểu diễn bài toán khả-thực-hiện toàn cục ngầm và tinh chỉnh bằng predicate chính xác thay vì liệt kê bất kỳ tích trạng thái cục bộ nào. Khảo sát định nghĩa một vòng trừu-tượng-tinh-chỉnh mà các predicate của nó, admissibility cục bộ, square lift hệ số cao nhất, bất đẳng thức dương và Newton, và square splitting, mỗi cái được chứng minh giữ mọi tuple governed, và trên miền hữu hạn đầy đủ vòng khớp liệt kê brute-force, gồm một trường hợp mà square splitting là tinh chỉnh chịu lực. Pha 1 triển khai một nhân biểu tượng thật với hai backend chính xác độc lập, một decision diagram thu gọn canonical và một engine miền-hữu-hạn độc lập. Lớp admissibility cục bộ nén thật: diagram dùng số node tuyến tính theo số prime trong khi biểu diễn tích đầy đủ, với materialization Cartesian bằng không. Ràng buộc ghép không nén trong các backend đã triển khai, vì cấu trúc của nó materialize một liệt kê bình-phương-bị-chặn hoặc tích, nên chi phí chuyển sang tiền xử lý. Kết quả tách-cục-bộ là một định lý được chứng minh; lớp ghép là obstruction đặc-thù-biểu-diễn, không phải phổ quát. LRC(13) vẫn mở."
+  },
+  "technical_summary": {
+   "en": "D32 tests the remaining unrefuted route, representing the global realizability problem implicitly and refining it with exact predicates rather than enumerating any product of local states. The scan defines an abstraction-refinement loop whose predicates, local admissibility, the top-coefficient square lift, positivity and Newton inequalities, and square splitting, are each proved to preserve every governed tuple, and on complete finite domains the loop agrees with brute-force enumeration, including a case where square splitting is the load-bearing refinement. Phase 1 implements a genuinely symbolic kernel with two independent exact backends, a canonical reduced decision diagram and an independent finite-domain engine. The local admissibility layer compresses genuinely: the diagram uses a number of nodes linear in the prime count while representing the full product, with zero Cartesian materialization. The coupling constraint does not compress in the implemented backends, because its construction materializes a bounded-square or product enumeration, so the cost moves to preprocessing. The local-separability result is a proved theorem; the coupled layer is a representation-specific obstruction, not a universal one. LRC(13) remains open.",
+   "vi": "D32 kiểm đường chưa-bị-bác còn lại, biểu diễn bài toán khả-thực-hiện toàn cục ngầm và tinh chỉnh bằng predicate chính xác thay vì liệt kê bất kỳ tích trạng thái cục bộ nào. Khảo sát định nghĩa một vòng trừu-tượng-tinh-chỉnh mà các predicate của nó, admissibility cục bộ, square lift hệ số cao nhất, bất đẳng thức dương và Newton, và square splitting, mỗi cái được chứng minh giữ mọi tuple governed, và trên miền hữu hạn đầy đủ vòng khớp liệt kê brute-force, gồm một trường hợp mà square splitting là tinh chỉnh chịu lực. Pha 1 triển khai một nhân biểu tượng thật với hai backend chính xác độc lập, một decision diagram thu gọn canonical và một engine miền-hữu-hạn độc lập. Lớp admissibility cục bộ nén thật: diagram dùng số node tuyến tính theo số prime trong khi biểu diễn tích đầy đủ, với materialization Cartesian bằng không. Ràng buộc ghép không nén trong các backend đã triển khai, vì cấu trúc của nó materialize một liệt kê bình-phương-bị-chặn hoặc tích, nên chi phí chuyển sang tiền xử lý. Kết quả tách-cục-bộ là một định lý được chứng minh; lớp ghép là obstruction đặc-thù-biểu-diễn, không phải phổ quát. LRC(13) vẫn mở."
+  },
+  "route": "/gates/gate-d32",
+  "valid_from_release": null,
+  "valid_to_release": null
+ },
+ {
   "id": "claim:C0",
   "kind": "claim",
   "label": {
