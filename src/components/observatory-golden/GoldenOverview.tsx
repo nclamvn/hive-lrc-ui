@@ -34,13 +34,14 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
       {/* preprint banner — links to the static D20–D34 archival synthesis page.
           Live-mode only: kept out of golden fixture mode to preserve the pinned pixel test. */}
       {!golden && (
+      <div style={{ maxWidth: "var(--obs-max-content)", margin: "0 auto", padding: "18px var(--obs-page-inset) 0", width: "100%" }}>
       <a
         className="og-preprint"
         href="/preprint/"
         data-region="preprint"
         style={{
           display: "flex", alignItems: "center", justifyContent: "space-between", gap: "18px",
-          margin: "0 0 4px", padding: "16px 20px", textDecoration: "none",
+          margin: 0, padding: "16px 20px", textDecoration: "none",
           background: "#fbfaf7", border: "1px solid #e2e0da", borderRadius: "12px", color: "inherit",
         }}
       >
@@ -61,6 +62,7 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
           {t("Read paper →", "Đọc bài báo →")}
         </span>
       </a>
+      </div>
       )}
 
       {/* the problem: live explainer + history timeline */}
