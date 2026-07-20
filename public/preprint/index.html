@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HIVE-LRC D20–D34 · Verifiable Human–AI Exploration of the Lonely Runner Conjecture at k=13</title>
+<meta name="description" content="HIVE-LRC archival synthesis and preprint (gates D20–D34). LRC(13) OPEN. Program archived without a terminal theorem. Four scoped theorems, an exact Q13 evaluator, and a scoped negative-capability result." />
+<meta property="og:title" content="HIVE-LRC: An Auditable Stopping Point after D20–D34" />
+<meta property="og:description" content="Verifier-linked human–AI exploration of LRC(13). LRC(13) remains OPEN; the program is archived without a terminal theorem." />
+<meta property="og:type" content="article" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous" />
+<style>
+  :root{
+    --ink:#111417; --ink-2:#3b424a; --ink-3:#6b7480; --line:#e3e6ea; --line-2:#eef0f3;
+    --surface:#ffffff; --surface-2:#f7f8fa; --accent:#1f4b6e; --mono:#2a2f36;
+    --ok:#1f6b3a; --ok-bg:#e8f2ec; --warn:#7a5a15; --warn-bg:#f4efe1; --stop:#7a2233; --stop-bg:#f4e7ea;
+    --open:#2f3a55; --open-bg:#eaeef6;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--surface-2); color:var(--ink);
+    font:16px/1.62 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    letter-spacing:.1px;
+  }
+  .wrap{max-width:820px; margin:0 auto; padding:0 20px}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  code,.mono{font-family:"SF Mono",ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace; font-size:.86em}
+  h1,h2,h3{line-height:1.25; letter-spacing:-.2px}
+  h1{font-size:26px; margin:.2em 0 .3em; font-weight:650}
+  h2{font-size:20px; margin:2.2em 0 .5em; font-weight:640; padding-top:.4em; border-top:1px solid var(--line)}
+  h3{font-size:16px; margin:1.4em 0 .3em; font-weight:640; color:var(--ink-2)}
+  p{margin:.7em 0}
+  .sub{color:var(--ink-3); font-size:14px}
+  header.top{background:var(--surface); border-bottom:1px solid var(--line)}
+  /* status bar */
+  .statusbar{display:flex; flex-wrap:wrap; gap:8px; padding:14px 0}
+  .badge{display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:999px;
+    font-size:12.5px; font-weight:600; border:1px solid transparent; white-space:nowrap}
+  .badge .k{font-weight:500; color:var(--ink-3)}
+  .b-open{background:var(--open-bg); color:var(--open); border-color:#d5ddec}
+  .b-archived{background:var(--warn-bg); color:var(--warn); border-color:#e6dcc2}
+  .b-none{background:var(--surface-2); color:var(--ink-2); border-color:var(--line)}
+  main{padding:8px 0 64px}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:20px 22px; margin:18px 0}
+  .authors{margin:.4em 0 0}
+  .authors .name{font-weight:640; font-size:17px}
+  .collab{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px 20px; margin:16px 0}
+  .collab .role{font-weight:640}
+  blockquote{margin:1.1em 0; padding:12px 18px; background:var(--surface); border-left:3px solid var(--accent);
+    border-radius:0 8px 8px 0; color:var(--ink-2)}
+  .lead{font-size:17px; color:var(--ink-2)}
+  ol.results{list-style:none; counter-reset:r; padding:0; margin:1em 0}
+  ol.results>li{counter-increment:r; position:relative; padding:14px 16px 14px 52px; margin:10px 0;
+    background:var(--surface); border:1px solid var(--line); border-radius:10px}
+  ol.results>li::before{content:counter(r); position:absolute; left:14px; top:14px; width:26px; height:26px;
+    border-radius:7px; background:var(--surface-2); border:1px solid var(--line); color:var(--ink-2);
+    display:flex; align-items:center; justify-content:center; font-weight:650; font-size:14px}
+  ol.results>li b{font-weight:640}
+  .tablewrap{overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--line);
+    border-radius:10px; margin:1em 0; background:var(--surface)}
+  table{border-collapse:collapse; width:100%; font-size:14px; min-width:520px}
+  th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line-2); vertical-align:top}
+  th{background:var(--surface-2); font-weight:640; color:var(--ink-2); font-size:12.5px; letter-spacing:.3px; text-transform:uppercase}
+  tr:last-child td{border-bottom:none}
+  .st{font-weight:640; font-size:12px; padding:2px 8px; border-radius:6px; white-space:nowrap; display:inline-block}
+  .st.p{background:var(--warn-bg); color:var(--warn)}
+  .st.b{background:var(--stop-bg); color:var(--stop)}
+  .st.k{background:var(--ok-bg); color:var(--ok)}
+  .st.a{background:var(--open-bg); color:var(--open)}
+  pre.status{background:#0f1216; color:#e7edf3; border-radius:10px; padding:14px 16px; overflow-x:auto;
+    font-family:"SF Mono",ui-monospace,monospace; font-size:13px; line-height:1.6; margin:1em 0}
+  pre.status .lbl{color:#8fa3b8}
+  ul.triggers{margin:.6em 0; padding-left:20px}
+  ul.triggers li{margin:.35em 0}
+  .downloads{display:grid; gap:10px; margin:1em 0}
+  .dl{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 16px;
+    background:var(--surface); border:1px solid var(--line); border-radius:10px}
+  .dl .meta{min-width:0}
+  .dl .t{font-weight:640}
+  .dl .h{font-size:11.5px; color:var(--ink-3); word-break:break-all; margin-top:2px}
+  .dl .btn{flex:none; padding:8px 14px; border:1px solid var(--accent); border-radius:8px; color:var(--accent);
+    font-weight:600; font-size:14px}
+  .dl .btn:hover{background:var(--accent); color:#fff; text-decoration:none}
+  .hashgrid{font-size:12.5px}
+  .hashgrid .row{padding:8px 0; border-bottom:1px solid var(--line-2)}
+  .hashgrid .row:last-child{border-bottom:none}
+  .hashgrid .f{font-weight:600; color:var(--ink-2)}
+  .hashgrid .v{color:var(--mono); word-break:break-all; font-family:"SF Mono",ui-monospace,monospace}
+  footer{border-top:1px solid var(--line); color:var(--ink-3); font-size:13px; padding:24px 0 48px}
+  .langtoggle{display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; margin:10px 0 0}
+  .langtoggle button{border:0; background:var(--surface); color:var(--ink-2); font:inherit; font-size:13px;
+    font-weight:600; padding:6px 14px; cursor:pointer}
+  .langtoggle button[aria-pressed="true"]{background:var(--ink); color:#fff}
+  [data-lang]{display:none}
+  body[data-show="en"] [data-lang="en"]{display:block}
+  body[data-show="vi"] [data-lang="vi"]{display:block}
+  .katex{font-size:1.02em}
+  @media (max-width:560px){ h1{font-size:22px} .dl{flex-direction:column; align-items:flex-start} }
+</style>
+</head>
+<body data-show="en">
+<header class="top">
+  <div class="wrap">
+    <div class="statusbar" aria-label="Project status">
+      <span class="badge b-open"><span class="k">LRC(13)</span> OPEN</span>
+      <span class="badge b-archived"><span class="k">Program</span> ARCHIVED</span>
+      <span class="badge b-archived"><span class="k">Disposition</span> ARCHIVE-WITHOUT-TERMINAL-THEOREM</span>
+      <span class="badge b-none"><span class="k">Evidence</span> I2</span>
+      <span class="badge b-none"><span class="k">BASE-SURVIVOR</span> NONE</span>
+      <span class="badge b-none"><span class="k">GLOBAL-WITNESS</span> NONE</span>
+    </div>
+  </div>
+</header>
+
+<main><div class="wrap">
+
+  <!-- Title + authors -->
+  <h1>Verifiable Human–AI Exploration of the Lonely Runner Conjecture at <span class="mono">k=13</span></h1>
+  <p class="sub">Cross-Prime Coupling, Exact Evaluation, and Scoped Computational Obstructions · HIVE-LRC gates D20–D34</p>
+  <div class="card">
+    <div class="authors">
+      <div class="name">Lâm Nguyễn</div>
+      <div class="sub">AI Officer, Real-time Robotics · primary accountable author</div>
+    </div>
+    <div class="sub" style="margin-top:10px"><strong>AI research collaborators</strong> (disclosed contributors, not byline authors):</div>
+    <div class="collab" style="margin-bottom:0">
+      <div><span class="role">Sol</span> — ChatGPT 5.6 Thinking. Research architecture, theorem formalization, adversarial review, and claim-scope control.</div>
+      <div style="margin-top:8px"><span class="role">Fable</span> — Claude Code. Authorized implementation, testing, independent verifiers, corruption suites, and artifact production.</div>
+    </div>
+    <div class="langtoggle" role="group" aria-label="Language">
+      <button type="button" data-set="en" aria-pressed="true">English</button>
+      <button type="button" data-set="vi" aria-pressed="false">Tiếng Việt</button>
+    </div>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div data-lang="en">
+    <blockquote>HIVE-LRC did not solve LRC(13), did not find a counterexample, and did not prove that no future method can work. The program was archived because no remaining route had both direct campaign leverage and a sharp, inexpensive, falsifiable first gate.</blockquote>
+
+    <h2>Plain-language summary</h2>
+    <p class="lead">The Lonely Runner Conjecture asks whether, for every set of distinct positive integer speeds \(V_1,\dots,V_k\), there is a time \(t\) at which every runner is far from the origin:</p>
+    <p style="text-align:center">\[ \lVert tV_i\rVert \ge \frac{1}{k+1}\quad\text{for all }i. \]</p>
+    <p>Recent computer-assisted work establishes the conjecture through \(k=12\). HIVE-LRC targeted \(k=13\), the fourteen-runner case, which remains the first unresolved case. HIVE stands for <strong>Human Intelligence and Verifiable Exploration</strong>: the Owner sets the mission and accepts accountability, a Contractor designs gates and formalizes and reviews claims, and a Builder implements only authorized work with tests and certificates. No single agent proposes, implements, verifies, and approves the same claim.</p>
+
+    <h2>Five retained results</h2>
+    <ol class="results">
+      <li><b>C0 — local-content reduction.</b> At each odd prime the sign- and permutation-invariant local content is carried equivalently by the folded cover, the squared multiset, the split polynomial, and the full coefficient vector \((e_1,\dots,e_{13})\). It removes unnecessary labels and signs but does not by itself guarantee a bounded global integer lift.</li>
+      <li><b>Q13 — cross-prime coupling.</b> The top coefficient satisfies \(e_{13}(V^2)=\left(\prod_i V_i\right)^2\), a bounded perfect square. Requiring its reconstructed residue to admit a bounded square root excludes local states before full reconstruction. On three complete finite domains it excluded 56/90, 178/240, and 335/432 states — figures specific to those domains, not universal rates.</li>
+      <li><b>Certified Q13 evaluator.</b> An exact evaluator with three paths (enumeration, meet-in-the-middle, q-scan) under a deterministic preflight dispatcher. It returns only <code>WITNESS</code>, <code>EMPTY-CERTIFIED</code>, <code>OPEN-INCOMPLETE</code>, or <code>INVALID-INPUT</code>; a timeout, memory cap, or heuristic miss is never converted to an emptiness claim.</li>
+      <li><b>Top-residue coset theorem.</b> Unit scaling gives \(e_{13}(cV)=c^{26}e_{13}(V)\), so the nonzero top residues form a union of \(26\)th-power cosets; away from the exceptional class a nonempty set is already the full quadratic-residue subgroup. This is why using fewer, larger primes does not shrink the problem.</li>
+      <li><b>Local symbolic separability.</b> Independent prime-local relations admit a decision diagram whose size is additive in the number of blocks (one pilot: semantic states grew 15 → 71,280 while the diagram grew only 4 → 8 nodes, with zero Cartesian materialization). Adding Q13 breaks separability: the final diagram can stay small, but its construction must process a large coupled object — the wall moves from storage to preprocessing.</li>
+    </ol>
+
+    <h2>D20–D34 route timeline</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Gate</th><th>Route</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>D20</td><td>Simultaneous prime-product lift</td><td><span class="st b">BLOCKED</span></td></tr>
+        <tr><td>D21</td><td>Signature-narrowed seed generation</td><td><span class="st b">BLOCKED</span></td></tr>
+        <tr><td>D22</td><td>Implicit global-signature elimination</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D23</td><td>Early global realizability cuts</td><td><span class="st k">PASS (mechanism)</span></td></tr>
+        <tr><td>D24</td><td>Residue-stratified early cuts</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D25</td><td>Adaptive rational-time separation</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D26</td><td>Labeled-root direct CRT</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D27</td><td>Orbit-compressed unlabeled CRT</td><td><span class="st b">BLOCKED</span></td></tr>
+        <tr><td>D28</td><td>Certified bulge bridge</td><td><span class="st b">BLOCKED-BEFORE-BUILD</span></td></tr>
+        <tr><td>D29</td><td>Pre-reconstruction cross-prime coupling (Q13)</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D30</td><td>Certified bounded modular square root</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D31</td><td>Prime economy · residue coset theorem</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D32</td><td>Implicit realizability · symbolic CEGAR</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D33</td><td>Terminal architecture audit</td><td><span class="st a">PARTIAL-CLOSURE</span></td></tr>
+        <tr><td>D34</td><td>Open route triage · disposition</td><td><span class="st a">ARCHIVE</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Scoped negative-capability statement</h2>
+    <p>Within the subset of the D20–D34 architecture family that was actually implemented, under the frozen resource caps (30 minutes per exact query, 18 hours per pilot, 6 GiB RAM per process, 48 GiB disk, at most \(2^{42}\) explicit states), no route produced a complete, cap-fitting \(k=13\) campaign. Every obstruction remains specific to a representation, encoding, variable order, cut language, proof format, or implementation. <strong>This is a scoped result, not a universal lower bound, and not a proof of impossibility.</strong></p>
+
+    <h2>Open routes and reopen triggers</h2>
+    <p>Two routes were never implemented and remain open, not refuted: <strong>algebraic / resultant elimination</strong> (a compact emptiness certificate is not indicated but the degree, coefficient-height, and proof-size explosion is plausible-not-certified), and <strong>exact lattice / CVP</strong> (standard univariate Coppersmith is subsumed by q-scan in the no-wrap regime, but multi-dimensional exact CVP, bounded-distance decoding, and proof-producing enumeration remain open). The program reopens only when a proposal supplies at least one of:</p>
+    <ul class="triggers">
+      <li>a stronger cross-prime predicate that prunes before the Q13 onset;</li>
+      <li>an exact, EMPTY-certifying evaluator in \(B_{13} &lt; M &lt; B_{13}^2\);</li>
+      <li>a certified non-Cartesian symbolic-compiler construction bound;</li>
+      <li>a bounded algebraic elimination formulation with degree, height, and proof-size bounds;</li>
+      <li>an exact lattice / CVP method for roots larger than \(M^{1/2}\);</li>
+      <li>a decisive resolution of one D33 closing theorem.</li>
+    </ul>
+
+    <h2>Final status</h2>
+    <pre class="status"><span class="lbl">LRC(13):</span>          OPEN
+<span class="lbl">Active campaign:</span>  ARCHIVED
+<span class="lbl">Archive class:</span>    ARCHIVE-WITHOUT-TERMINAL-THEOREM
+<span class="lbl">Evidence ceiling:</span> I2
+<span class="lbl">BASE-SURVIVOR:</span>    NONE
+<span class="lbl">GLOBAL-WITNESS:</span>   NONE</pre>
+    <p>The largest value of the program is not a victory claim but a verifiable record that distinguishes what was proved, what holds only on finite domains, what was measured, what is blocked in one implementation, and what remains open — a clean map for the next attempt.</p>
+  </div>
+
+  <!-- ===================== TIẾNG VIỆT ===================== -->
+  <div data-lang="vi">
+    <blockquote>HIVE-LRC không giải được LRC(13), không tìm thấy phản ví dụ và không chứng minh rằng không còn phương pháp nào có thể thành công. Chương trình được lưu trữ vì không còn một bước thử tiếp theo vừa đủ sắc, vừa đủ rẻ và có khả năng bác bỏ rõ ràng để biện minh cho việc tiếp tục.</blockquote>
+
+    <h2>Tóm tắt</h2>
+    <p class="lead">Lonely Runner Conjecture hỏi rằng với mọi bộ \(k\) vận tốc nguyên dương khác nhau \(V_1,\dots,V_k\), có tồn tại thời điểm \(t\) sao cho mọi người chạy đều ở xa gốc:</p>
+    <p style="text-align:center">\[ \lVert tV_i\rVert \ge \frac{1}{k+1}\quad\text{với mọi }i. \]</p>
+    <p>Các công trình computer-assisted mới nhất đã đưa kết quả đến \(k\le 12\). HIVE-LRC nhắm vào \(k=13\) (14 người chạy), hiện vẫn là trường hợp mở đầu tiên. HIVE là <strong>Human Intelligence and Verifiable Exploration</strong>: Owner đặt câu hỏi và chịu trách nhiệm, Contractor thiết kế gate và formalize/phản biện claim, Builder chỉ triển khai nhiệm vụ đã cấp phép cùng test và certificate. Không agent nào được tự đề xuất, tự code, tự kiểm và tự tuyên bố cùng một claim.</p>
+
+    <h2>Năm kết quả được giữ lại</h2>
+    <ol class="results">
+      <li><b>C0 — thu gọn nội dung địa phương.</b> Ở mỗi prime lẻ, thông tin bất biến dưới đổi dấu và hoán vị được biểu diễn tương đương bằng folded cover, squared multiset, split polynomial và vector hệ số đầy đủ \((e_1,\dots,e_{13})\). Nó bỏ nhãn và dấu không cần thiết nhưng không tự bảo đảm có nghiệm nguyên toàn cục bị chặn.</li>
+      <li><b>Q13 — coupling xuyên prime.</b> Hệ số cao nhất thỏa \(e_{13}(V^2)=\left(\prod_i V_i\right)^2\), một bình phương bị chặn. Yêu cầu residue tái dựng của nó nhận một căn bậc hai bị chặn giúp loại trạng thái trước khi tái dựng đầy đủ. Trên ba miền đầy đủ, Q13 loại 56/90, 178/240, 335/432 trạng thái — chỉ đúng trong các miền đã khai, không phải tỷ lệ phổ quát.</li>
+      <li><b>Bộ đánh giá exact cho Q13.</b> Ba đường exact (liệt kê, meet-in-the-middle, q-scan) dưới một dispatcher preflight xác định. Chỉ trả <code>WITNESS</code>, <code>EMPTY-CERTIFIED</code>, <code>OPEN-INCOMPLETE</code>, <code>INVALID-INPUT</code>; timeout, hết RAM hay heuristic miss không bao giờ bị đổi thành kết luận “không có nghiệm”.</li>
+      <li><b>Định lý coset residue.</b> Vì \(e_{13}(cV)=c^{26}e_{13}(V)\), các residue khác zero là hợp của các coset lũy thừa bậc 26; ngoài lớp ngoại lệ, chỉ cần tập khác rỗng là đã dày bằng toàn bộ nhóm quadratic residues. Đây là lý do “dùng ít prime lớn hơn” không tự làm bài toán nhỏ đi.</li>
+      <li><b>Nén symbolic phần địa phương.</b> Quan hệ độc lập theo prime có decision diagram kích thước cộng theo số block (một pilot: trạng thái ngữ nghĩa tăng 15 → 71.280 trong khi diagram chỉ 4 → 8 node, không materialize Cartesian). Thêm Q13 làm mất tính tách; diagram cuối có thể nhỏ nhưng quá trình xây phải xử lý một đối tượng coupling lớn — bức tường chuyển từ lưu trữ sang preprocessing.</li>
+    </ol>
+
+    <h2>Dòng thời gian D20–D34</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Gate</th><th>Hướng</th><th>Trạng thái</th></tr></thead>
+      <tbody>
+        <tr><td>D20</td><td>Simultaneous prime-product lift</td><td><span class="st b">BLOCKED</span></td></tr>
+        <tr><td>D21</td><td>Seed generation thu hẹp theo signature</td><td><span class="st b">BLOCKED</span></td></tr>
+        <tr><td>D22</td><td>Implicit global-signature elimination</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D23</td><td>Early global realizability cuts</td><td><span class="st k">PASS (cơ chế)</span></td></tr>
+        <tr><td>D24</td><td>Residue-stratified early cuts</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D25</td><td>Adaptive rational-time separation</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D26</td><td>Labeled-root direct CRT</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D27</td><td>Orbit-compressed unlabeled CRT</td><td><span class="st b">BLOCKED</span></td></tr>
+        <tr><td>D28</td><td>Certified bulge bridge</td><td><span class="st b">BLOCKED-BEFORE-BUILD</span></td></tr>
+        <tr><td>D29</td><td>Coupling xuyên prime trước tái dựng (Q13)</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D30</td><td>Căn bậc hai modular bị chặn chứng nhận</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D31</td><td>Kinh tế prime · định lý coset</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D32</td><td>Khả-thực-hiện ngầm · symbolic CEGAR</td><td><span class="st p">PARTIAL</span></td></tr>
+        <tr><td>D33</td><td>Kiểm toán kiến trúc terminal</td><td><span class="st a">PARTIAL-CLOSURE</span></td></tr>
+        <tr><td>D34</td><td>Triage route mở · quyết định</td><td><span class="st a">ARCHIVE</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Phát biểu negative-capability có phạm vi</h2>
+    <p>Trong phần kiến trúc D20–D34 thực sự đã triển khai, dưới các cap tài nguyên đóng băng (30 phút mỗi truy vấn exact, 18 giờ mỗi pilot, 6 GiB RAM mỗi tiến trình, 48 GiB disk, tối đa \(2^{42}\) trạng thái explicit), không hướng nào tạo được campaign \(k=13\) hoàn chỉnh nằm trong giới hạn. Mỗi obstruction chỉ đúng trong một representation, encoding, variable order, cut language, proof format hoặc implementation. <strong>Đây là kết quả có phạm vi, không phải lower bound phổ quát và không phải chứng minh bất khả thi.</strong></p>
+
+    <h2>Những hướng vẫn mở và điều kiện tái khởi động</h2>
+    <p>Hai hướng chưa từng được triển khai và vẫn mở, chưa bị bác bỏ: <strong>đại số / resultant</strong> (chưa thấy chứng chỉ EMPTY gọn, nhưng bùng nổ degree/height/proof-size mới ở mức plausible-chưa-certified) và <strong>lattice / exact CVP</strong> (Coppersmith một biến bị q-scan bao phủ trong vùng no-wrap, nhưng CVP nhiều chiều, bounded-distance decoding và proof-producing enumeration vẫn mở). Dự án chỉ mở lại khi xuất hiện một trong:</p>
+    <ul class="triggers">
+      <li>predicate xuyên prime mới cắt được trước Q13 onset;</li>
+      <li>evaluator exact có EMPTY certificate trong \(B_{13} &lt; M &lt; B_{13}^2\);</li>
+      <li>symbolic compiler có construction bound không Cartesian;</li>
+      <li>elimination formulation có degree, height, proof-size bound cụ thể;</li>
+      <li>lattice / CVP exact xử lý được nghiệm lớn hơn \(M^{1/2}\);</li>
+      <li>một định lý mở của D33 được giải quyết dứt khoát.</li>
+    </ul>
+
+    <h2>Trạng thái cuối</h2>
+    <pre class="status"><span class="lbl">LRC(13):</span>          OPEN
+<span class="lbl">Active campaign:</span>  ARCHIVED
+<span class="lbl">Archive class:</span>    ARCHIVE-WITHOUT-TERMINAL-THEOREM
+<span class="lbl">Evidence ceiling:</span> I2
+<span class="lbl">BASE-SURVIVOR:</span>    NONE
+<span class="lbl">GLOBAL-WITNESS:</span>   NONE</pre>
+    <p>Giá trị lớn nhất của chương trình không phải một tuyên bố chiến thắng mà là khả năng dừng đúng lúc, không nâng mức claim, và để lại một bản đồ đủ sạch cho lần nghiên cứu tiếp theo.</p>
+  </div>
+
+  <!-- ===================== DOWNLOADS (shared) ===================== -->
+  <h2>Downloads</h2>
+  <div class="downloads">
+    <div class="dl">
+      <div class="meta">
+        <div class="t">Preprint (PDF, 13 pages)</div>
+        <div class="h">SHA-256 8cc623781b5c5d862f33c7ac52c26a7ae25f78280a32f50f78a7be29c4dbd6ff</div>
+      </div>
+      <a class="btn" href="/preprint/hive_lrc_d20_d34_preprint.pdf">Download</a>
+    </div>
+    <div class="dl">
+      <div class="meta">
+        <div class="t">LaTeX source (main.tex, references.bib, build)</div>
+        <div class="h">SHA-256 ad882fa745a0684df77ec1ba14cdd9bc233b82b3dfb6ba10b25d6e64716f935f</div>
+      </div>
+      <a class="btn" href="/preprint/hive_lrc_arxiv_source.zip">Download</a>
+    </div>
+    <div class="dl">
+      <div class="meta">
+        <div class="t">D20–D34 final archive package</div>
+        <div class="h">SHA-256 6fcb575435f44298705cac156bc8d212334715324fd3208c348c8d0e466a5ec4</div>
+      </div>
+      <a class="btn" href="/preprint/HIVE_LRC_D34_FINAL_ARCHIVE_PACKAGE.zip">Download</a>
+    </div>
+  </div>
+  <p class="sub">Observatory: <a href="https://lamnguyen.work">lamnguyen.work</a> · Suggested arXiv category <code>math.CO</code> (cross-list <code>math.NT</code>, <code>cs.DM</code>); MSC 11K60, 11A07, 68V15.</p>
+
+  <!-- ===================== AI DISCLOSURE (shared) ===================== -->
+  <h2>AI collaboration disclosure</h2>
+  <div class="card" style="margin-top:8px">
+    <p><strong>Accountable human author.</strong> Lâm Nguyễn (AI Officer, Real-time Robotics) selected the research question, approved every gate, accepted or rejected each claim, chose the final scope, and accepts responsibility for the paper and its submission.</p>
+    <p><strong>Sol — ChatGPT 5.6 Thinking:</strong> research architecture, theorem formalization, adversarial review, claim-scope correction, gate design, and archival synthesis / manuscript drafting.</p>
+    <p><strong>Fable — Claude Code agent:</strong> authorized implementation, experiments and benchmarks, independent code paths, corruption testing, artifact generation, and completion reports.</p>
+    <p class="sub">The AI systems are not accountable persons and cannot approve the submission, respond to allegations, or accept responsibility for errors; they are disclosed as research collaborators rather than listed as human authors. Full statement: <a href="/preprint/AI_COLLABORATION_DISCLOSURE.md">AI_COLLABORATION_DISCLOSURE.md</a>.</p>
+  </div>
+
+  <!-- ===================== ARTIFACT HASHES (shared) ===================== -->
+  <h2>Artifact SHA-256</h2>
+  <div class="card hashgrid" style="margin-top:8px">
+    <div class="row"><div class="f">hive_lrc_d20_d34_preprint.pdf</div><div class="v">8cc623781b5c5d862f33c7ac52c26a7ae25f78280a32f50f78a7be29c4dbd6ff</div></div>
+    <div class="row"><div class="f">hive_lrc_arxiv_source.zip</div><div class="v">ad882fa745a0684df77ec1ba14cdd9bc233b82b3dfb6ba10b25d6e64716f935f</div></div>
+    <div class="row"><div class="f">HIVE_LRC_D34_FINAL_ARCHIVE_PACKAGE.zip</div><div class="v">6fcb575435f44298705cac156bc8d212334715324fd3208c348c8d0e466a5ec4</div></div>
+  </div>
+
+</div></main>
+
+<footer><div class="wrap">
+  HIVE-LRC · Human Intelligence and Verifiable Exploration. LRC(13) remains OPEN. This page reports an archived research program; it makes no claim that LRC(13) is solved, refuted, or impossible.
+</div></footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>
+  document.querySelectorAll('.langtoggle button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var lang=b.getAttribute('data-set');
+      document.body.setAttribute('data-show', lang);
+      document.querySelectorAll('.langtoggle button').forEach(function(x){
+        x.setAttribute('aria-pressed', x===b ? 'true':'false');
+      });
+    });
+  });
+  window.addEventListener('DOMContentLoaded', function(){
+    if(window.renderMathInElement){
+      renderMathInElement(document.body, {
+        delimiters:[
+          {left:'\\[',right:'\\]',display:true},
+          {left:'\\(',right:'\\)',display:false}
+        ],
+        throwOnError:false
+      });
+    }
+  });
+</script>
+</body>
+</html>
