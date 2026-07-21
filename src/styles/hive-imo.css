@@ -79,6 +79,17 @@
 
 /* ---------------- hero ---------------- */
 .hi-hero { padding: 84px 0 0; }
+/* two columns on wide screens so the hero doesn't pile up on the left */
+.hi-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 360px); gap: 64px; align-items: start; }
+.hi-hero-side { position: sticky; top: 88px; }
+.hi-hero-side .hi-statusblock { margin-top: 6px; }
+.hi-hero-side .hi-statusblock dl { grid-template-columns: 1fr; }
+.hi-hero-side .hi-statusblock div { border-left: none; }
+@media (max-width: 980px) {
+  .hi-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hi-hero-side { position: static; max-width: 520px; }
+  .hi-hero-side .hi-statusblock dl { grid-template-columns: 1fr 1fr; }
+}
 .hi-eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--hi-accent); font-weight: 600; }
 .hi-hero-title { font-family: var(--hi-serif); font-weight: 500; font-size: 52px; line-height: 1.08; letter-spacing: -.02em;
   margin: 22px 0 0; max-width: 15ch; color: var(--hi-ink); }

@@ -43,7 +43,8 @@ export default async function HiveImoOverview({ params }: { params: Promise<{ lo
     <main>
       {/* hero */}
       <section className="hi-hero">
-        <div className="hi-wrap">
+        <div className="hi-wrap hi-hero-grid">
+          <div className="hi-hero-main">
           <div className="hi-eyebrow">HIVE RESEARCH · IMO 2026 · HUMAN × AI</div>
           <h1 className="hi-hero-title">
             {t(L, "Six problems. One verifiable Human–AI journey.",
@@ -73,8 +74,10 @@ export default async function HiveImoOverview({ params }: { params: Promise<{ lo
               {t(L, "Download proof dossier", "Tải proof dossier")}
             </span>
           </div>
+          </div>{/* /hi-hero-main */}
 
-          {/* mandatory status block (brief §2) */}
+          {/* mandatory status block (brief §2) — hero right-hand fact sheet */}
+          <aside className="hi-hero-side">
           <div className="hi-statusblock">
             <dl>
               <div><dt>PROJECT</dt><dd>HIVE-IMO X</dd></div>
@@ -85,6 +88,7 @@ export default async function HiveImoOverview({ params }: { params: Promise<{ lo
               <div><dt>OFFICIAL-SOLUTION DEPENDENCE</dt><dd>{t(L, "shown per problem", "hiển thị theo từng bài")}</dd></div>
             </dl>
           </div>
+          </aside>
         </div>
       </section>
 
