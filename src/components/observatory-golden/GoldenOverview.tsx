@@ -34,7 +34,7 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
       {/* preprint banner — links to the static D20–D34 archival synthesis page.
           Live-mode only: kept out of golden fixture mode to preserve the pinned pixel test. */}
       {!golden && (
-      <div style={{ maxWidth: "var(--obs-max-content)", margin: "0 auto", padding: "18px var(--obs-page-inset) 0", width: "100%" }}>
+      <div style={{ maxWidth: "var(--obs-max-content)", margin: "0 auto", padding: "44px var(--obs-page-inset) 0", width: "100%" }}>
       <a
         className="og-preprint"
         href="/preprint/"
