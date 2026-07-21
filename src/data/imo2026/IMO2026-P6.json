@@ -28,7 +28,7 @@
         {
           "name": "problem_vi.reviewed.md",
           "href": "/imo2026/p6/official/problem_vi.reviewed.md",
-          "sha256": "5d299a8d5a4e2d40b2fe4a927cda2f2deffa99be00385f772ef640909242321d"
+          "sha256": "06096ebcb2cdfe23d6fbf07935f4eb0f1ca32f9acf69903027498deb4ae89683"
         },
         {
           "name": "source_record.json",
@@ -145,7 +145,7 @@
   "proofs_rejected": 0,
   "counterexamples_found": 0,
   "last_updated": "2026-07-21T10:30:00+07:00",
-  "artifact_manifest_sha256": "0dc4d16537e42d45a4187ffb4c6fa74befeb6f545ad11f0893e5694e95ad7831",
+  "artifact_manifest_sha256": "ce54e4063c4c4a837fc8c7defc6b3ad65850b6c0a5795dfc84d51ff95dffd063",
   "official_solution_viewed": false,
   "statement_en": "Let $a_1,a_2,a_3,\\ldots$ be an infinite sequence of positive integers greater than $1$. Suppose that for all positive integers $n$, the number $a_{n+1}$ is the smallest positive integer greater than $a_n$ such that $\\gcd(a_{n+1},a_i)>1$ for every $i=1,2,\\ldots,n$. Prove that there exist positive integers $T$ and $L$ such that\n$$a_{n+T}=a_n+L$$\nfor every positive integer $n$.\n\n(Note that $\\gcd(x,y)$ denotes the greatest common divisor of positive integers $x$ and $y$.)",
   "statement_vi": "Cho $a_1,a_2,a_3,\\ldots$ là một dãy vô hạn các số nguyên dương lớn hơn $1$. Giả sử rằng với mọi số nguyên dương $n$, số $a_{n+1}$ là số nguyên dương nhỏ nhất lớn hơn $a_n$ sao cho $\\gcd(a_{n+1},a_i)>1$ với mọi $i=1,2,\\ldots,n$. Chứng minh rằng tồn tại các số nguyên dương $T$ và $L$ sao cho\n$$a_{n+T}=a_n+L$$\nvới mọi số nguyên dương $n$.\n\n(Ở đây $\\gcd(x,y)$ ký hiệu ước chung lớn nhất của các số nguyên dương $x$ và $y$.)",

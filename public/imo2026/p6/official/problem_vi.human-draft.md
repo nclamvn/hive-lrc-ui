@@ -1,4 +1,4 @@
-# IMO 2026 · Bài 6 (bản dịch nháp — Fable, chờ Human duyệt)
+# IMO 2026 · Bài 6 (bản dịch nháp - Fable, chờ Human duyệt)
 
 Cho $a_1,a_2,a_3,\ldots$ là một dãy vô hạn các số nguyên dương lớn hơn $1$. Giả sử rằng với mọi số nguyên dương $n$, số $a_{n+1}$ là số nguyên dương nhỏ nhất lớn hơn $a_n$ sao cho $\gcd(a_{n+1},a_i)>1$ với mọi $i=1,2,\ldots,n$. Chứng minh rằng tồn tại các số nguyên dương $T$ và $L$ sao cho
 $$a_{n+T}=a_n+L$$

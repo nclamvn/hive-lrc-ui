@@ -28,7 +28,7 @@
         {
           "name": "problem_vi.reviewed.md",
           "href": "/imo2026/p1/official/problem_vi.reviewed.md",
-          "sha256": "c46c5d5698289ec6a474abb6ddf40a87f65b2ebb6d648defef765470c5c6f76c"
+          "sha256": "dedcfb4c38361af86e197ca866861bd405a16c6daae8836a1a808722506a9a78"
         },
         {
           "name": "source_record.json",
@@ -145,7 +145,7 @@
   "proofs_rejected": 0,
   "counterexamples_found": 0,
   "last_updated": "2026-07-21T10:30:00+07:00",
-  "artifact_manifest_sha256": "9bc9a17ecd8240137e1bdbd013dda62d068319993682947656b41331dc51f195",
+  "artifact_manifest_sha256": "34b34081d3218512555cdb9dfd33dc2c68f67cc829e076ab9a3e0277133ecadb",
   "official_solution_viewed": false,
   "statement_en": "There are $2026$ integers greater than $1$ written on a blackboard, not necessarily different. In a move, Confucius chooses two integers $m>1$ and $n>1$ from different places on the blackboard and replaces these two integers with\n$$\\gcd(m,n) \\qquad \\text{and} \\qquad \\frac{\\operatorname{lcm}(m,n)}{\\gcd(m,n)}.$$\nHe continues to make moves while it is possible to do so.\n\n(a) Prove that, regardless of the choices of Confucius, after finitely many moves, exactly one integer $M$ on the blackboard is greater than $1$.\n\n(b) Prove that the value of $M$ does not depend on the choices of Confucius.\n\n(Note that $\\gcd(x,y)$ denotes the greatest common divisor of positive integers $x$ and $y$, and $\\operatorname{lcm}(x,y)$ denotes the least common multiple of $x$ and $y$.)",
   "statement_vi": "Có $2026$ số nguyên lớn hơn $1$ được viết trên một tấm bảng, không nhất thiết khác nhau. Trong một nước đi, Confucius chọn hai số nguyên $m>1$ và $n>1$ ở hai vị trí khác nhau trên bảng và thay hai số này bằng\n$$\\gcd(m,n) \\qquad \\text{và} \\qquad \\frac{\\operatorname{lcm}(m,n)}{\\gcd(m,n)}.$$\nÔng ấy tiếp tục thực hiện các nước đi khi còn có thể.\n\n(a) Chứng minh rằng, bất kể Confucius chọn thế nào, sau hữu hạn nước đi, có đúng một số nguyên $M$ trên bảng lớn hơn $1$.\n\n(b) Chứng minh rằng giá trị của $M$ không phụ thuộc vào cách chọn của Confucius.\n\n(Ở đây $\\gcd(x,y)$ ký hiệu ước chung lớn nhất của các số nguyên dương $x$ và $y$, và $\\operatorname{lcm}(x,y)$ ký hiệu bội chung nhỏ nhất của $x$ và $y$.)",

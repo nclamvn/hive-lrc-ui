@@ -1,4 +1,4 @@
-# IMO 2026 · Bài 4 (bản dịch nháp — Fable, chờ Human duyệt)
+# IMO 2026 · Bài 4 (bản dịch nháp - Fable, chờ Human duyệt)
 
 Shan-Yu và Mulan chơi một trò chơi. Cho $\theta$ là một góc với $0^\circ<\theta<180^\circ$ mà cả hai người chơi đều biết. Ban đầu, Shan-Yu làm một tam giác bằng giấy $\mathcal{T}$ với các số đo tùy ý theo lựa chọn của mình. Sau đó, họ lặp lại các bước sau:
 

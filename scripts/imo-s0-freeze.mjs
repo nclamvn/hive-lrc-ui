@@ -1,4 +1,4 @@
-// TIP-HIMO-S0-000 — reproducible freeze generator.
+// TIP-HIMO-S0-000 - reproducible freeze generator.
 // Reads the stored raw official source, writes a per-problem dossier under
 // public/imo2026/p{n}/official/ with SHA-256 manifests, and patches the six
 // ledger records to OFFICIAL-FROZEN. Re-running reproduces identical bytes
@@ -187,9 +187,9 @@ for (let n = 1; n <= 6; n++) {
 
   const frag = rawFragment(String(n));
   const enMd = `# IMO 2026 · Problem ${n}\n\n${p.en}\n`;
-  const viDraft = `# IMO 2026 · Bài ${n} (bản dịch nháp — Fable, chờ Human duyệt)\n\n${p.vi}\n`;
+  const viDraft = `# IMO 2026 · Bài ${n} (bản dịch nháp - Fable, chờ Human duyệt)\n\n${p.vi}\n`;
   // Per Contractor review: this file must NOT present as "reviewed" until Human V3.
-  const viReviewed = `# IMO 2026 · Bài ${n} — bản dịch (V3 CHƯA HOÀN TẤT)\n\nSTATUS: PENDING-HUMAN-V3 — chưa được Human kiểm dòng-đối-dòng. Không dùng làm bản dịch chính thức cho tới khi Human xác nhận.\n\nBản nháp hiện tại (do Fable soạn, để tham chiếu khi Human rà soát):\n\n${p.vi}\n`;
+  const viReviewed = `# IMO 2026 · Bài ${n} - bản dịch (V3 CHƯA HOÀN TẤT)\n\nSTATUS: PENDING-HUMAN-V3 - chưa được Human kiểm dòng-đối-dòng. Không dùng làm bản dịch chính thức cho tới khi Human xác nhận.\n\nBản nháp hiện tại (do Fable soạn, để tham chiếu khi Human rà soát):\n\n${p.vi}\n`;
   const normalized = JSON.stringify({
     problem_id: pid, day: n <= 3 ? 1 : 2, number: n, language: "en",
     statement_markdown: p.en,

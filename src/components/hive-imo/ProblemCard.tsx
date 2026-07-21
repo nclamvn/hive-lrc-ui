@@ -4,7 +4,7 @@ import { slugFor, STAGE_IDS } from "@/lib/imo/ledger";
 import { EVIDENCE_LABELS, STAGE_NAMES, t, type Locale } from "@/lib/imo/copy";
 import { StatusBadge } from "@/components/hive-imo/StatusBadge";
 
-// Most-advanced stage that has left NOT-STARTED — the "latest gate" line.
+// Most-advanced stage that has left NOT-STARTED - the "latest gate" line.
 function latestStage(p: ProblemRecord): string {
   const active = [...p.stages].reverse().find((s) => s.status !== "NOT-STARTED");
   if (!active) return "S0";
@@ -12,9 +12,9 @@ function latestStage(p: ProblemRecord): string {
 }
 
 function fmtDate(iso: string, locale: Locale): string {
-  if (!iso) return "—";
+  if (!iso) return "-";
   const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return "—";
+  if (Number.isNaN(d.getTime())) return "-";
   return d.toLocaleDateString(locale === "vi" ? "vi-VN" : "en-GB", {
     day: "2-digit", month: "short", year: "numeric",
   });

@@ -1,6 +1,6 @@
-# IMO 2026 · Bài 6 — bản dịch (V3 CHƯA HOÀN TẤT)
+# IMO 2026 · Bài 6 - bản dịch (V3 CHƯA HOÀN TẤT)
 
-STATUS: PENDING-HUMAN-V3 — chưa được Human kiểm dòng-đối-dòng. Không dùng làm bản dịch chính thức cho tới khi Human xác nhận.
+STATUS: PENDING-HUMAN-V3 - chưa được Human kiểm dòng-đối-dòng. Không dùng làm bản dịch chính thức cho tới khi Human xác nhận.
 
 Bản nháp hiện tại (do Fable soạn, để tham chiếu khi Human rà soát):
 

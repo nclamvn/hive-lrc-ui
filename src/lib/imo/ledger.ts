@@ -1,10 +1,10 @@
-// HIVE-IMO X — machine-readable ledger loader.
+// HIVE-IMO X - machine-readable ledger loader.
 //
 // Fable (Builder) contract: this module READS state from the approved JSON
 // ledger. It never fabricates mathematical progress. Every problem is
 // initialized from src/data/imo2026/IMO2026-P{n}.json and rendered verbatim.
 // A problem is only counted toward "x/6 complete" once its status reaches an
-// independently-verified tier — see COMPLETE_STATUSES below.
+// independently-verified tier - see COMPLETE_STATUSES below.
 
 import P1 from "@/data/imo2026/IMO2026-P1.json";
 import P2 from "@/data/imo2026/IMO2026-P2.json";

@@ -28,7 +28,7 @@
         {
           "name": "problem_vi.reviewed.md",
           "href": "/imo2026/p3/official/problem_vi.reviewed.md",
-          "sha256": "3445c80f8547aa19066192eaba0e0f2934c16e0451ec58069e73d50531d48789"
+          "sha256": "a3088291bdcec66344718b8347954141a774d9a0fe4d16c086f57f05014e33f1"
         },
         {
           "name": "source_record.json",
@@ -145,7 +145,7 @@
   "proofs_rejected": 0,
   "counterexamples_found": 0,
   "last_updated": "2026-07-21T10:30:00+07:00",
-  "artifact_manifest_sha256": "571b848703675cd66e6fbcb3bf3595308d6fbb1d4c89b6d23ac3ec1c314d3933",
+  "artifact_manifest_sha256": "3a2d1b5820695723524934ec064311d5598bd3de183e8c108216a6ea4993461b",
   "official_solution_viewed": false,
   "statement_en": "Let $n$ be a positive integer. Liu Bang and Xiang Yu have a stick of length $1$ and want to divide it between themselves. Liu marks at most $n$ points on the stick, and then Xiang marks at most $n$ points on the stick. The marked points are distinct. Then, the stick is cut at all marked points, creating a number of pieces. Afterwards, they take turns claiming any unclaimed piece of the stick, with Liu going first. Each player's goal is to maximise the total length of their own pieces.\n\nFor each $n$, determine the largest value $c$ such that Liu may guarantee a total length of at least $c$, regardless of Xiang's play.",
   "statement_vi": "Cho $n$ là một số nguyên dương. Liu Bang và Xiang Yu có một chiếc gậy dài $1$ và muốn chia nó cho nhau. Liu đánh dấu nhiều nhất $n$ điểm trên gậy, sau đó Xiang đánh dấu nhiều nhất $n$ điểm trên gậy. Các điểm được đánh dấu là phân biệt. Sau đó, chiếc gậy được cắt tại tất cả các điểm đã đánh dấu, tạo thành một số mảnh. Tiếp theo, họ lần lượt nhận bất kỳ mảnh nào chưa được nhận, Liu đi trước. Mục tiêu của mỗi người chơi là tối đa hóa tổng độ dài các mảnh của mình.\n\nVới mỗi $n$, hãy xác định giá trị lớn nhất $c$ sao cho Liu có thể bảo đảm tổng độ dài ít nhất bằng $c$, bất kể Xiang chơi thế nào.",

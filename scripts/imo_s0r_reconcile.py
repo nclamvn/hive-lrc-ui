@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""TIP-HIMO-S0R-000 — reconcile six legacy manuscripts into verifier-ready dossiers.
+"""TIP-HIMO-S0R-000 - reconcile six legacy manuscripts into verifier-ready dossiers.
 
 Builder scope ONLY: hash, extract, map sections, build proof-obligation skeletons
 (nodes CLAIMED / UNPARSED only), record provenance + exposure, emit clean verifier
@@ -27,7 +27,7 @@ STMT_TOKENS = {
     4: ["180", "\\theta"], 5: ["f(f(y))", "\\mathbb{R}_{>0}"], 6: ["a_{n+T}", "gcd"],
 }
 # Proof-obligation skeletons from the gate's load-bearing targets + manuscript structure.
-# status is ALWAYS "CLAIMED" (the manuscript claims it; not verified) — Builder may not
+# status is ALWAYS "CLAIMED" (the manuscript claims it; not verified) - Builder may not
 # use any post-CLAIMED state. load_bearing marks the gate's flagged steps.
 OBLIG = {
  1: [("O1","Each move yields positive integers; moves are well-defined",[],False),

@@ -28,7 +28,7 @@
         {
           "name": "problem_vi.reviewed.md",
           "href": "/imo2026/p5/official/problem_vi.reviewed.md",
-          "sha256": "f1e2e17c40ee8e8ba7cc4d6bda5a2ed5ee86a566feb2483c76de3e1ce85a4bfa"
+          "sha256": "1911f674c7f28900c505a58eed487bdac213e17c7fd5012eae26480005479322"
         },
         {
           "name": "source_record.json",
@@ -145,7 +145,7 @@
   "proofs_rejected": 0,
   "counterexamples_found": 0,
   "last_updated": "2026-07-21T10:30:00+07:00",
-  "artifact_manifest_sha256": "a4d9bd45579da4754fba4c413f3b893d7554dbdc2545e75f1b06a86591aa5791",
+  "artifact_manifest_sha256": "c5a4202bea31ee5806fea821f3f83fb3b78f0c3804df92486825f9f6ec587ed5",
   "official_solution_viewed": false,
   "statement_en": "Let $\\mathbb{R}_{>0}$ be the set of positive real numbers. Determine all functions $f\\colon \\mathbb{R}_{>0}\\to\\mathbb{R}_{>0}$ such that\n$$\\sqrt{\\frac{x^2+f(y)^2}{2}} \\;\\ge\\; \\frac{f(x)+y}{2} \\;\\ge\\; \\sqrt{x\\,f(y)}$$\nfor every $x,y\\in\\mathbb{R}_{>0}$.",
   "statement_vi": "Cho $\\mathbb{R}_{>0}$ là tập các số thực dương. Hãy xác định tất cả các hàm số $f\\colon \\mathbb{R}_{>0}\\to\\mathbb{R}_{>0}$ sao cho\n$$\\sqrt{\\frac{x^2+f(y)^2}{2}} \\;\\ge\\; \\frac{f(x)+y}{2} \\;\\ge\\; \\sqrt{x\\,f(y)}$$\nvới mọi $x,y\\in\\mathbb{R}_{>0}$.",

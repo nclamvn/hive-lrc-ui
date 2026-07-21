@@ -12,7 +12,7 @@ import {
 import { ProblemCard } from "@/components/hive-imo/ProblemCard";
 
 export const metadata: Metadata = {
-  title: "HIVE-IMO X — Six Problems, One Verifiable Human–AI Journey",
+  title: "HIVE-IMO X - Six Problems, One Verifiable Human–AI Journey",
   description: "A public record of a Human × AI attempt at all six IMO 2026 problems, with independent verification gates.",
 };
 
@@ -57,8 +57,8 @@ export default async function HiveImoOverview({ params }: { params: Promise<{ lo
           </p>
           <p className="hi-hero-body">
             {t(L,
-              "The IMO does not only test finding an answer. It tests seeing structure, choosing the right lemma, and writing a proof with no hidden steps. HIVE-IMO X records the whole process — blind reading, wrong routes, counterexamples and proof candidates — through to independent verification.",
-              "IMO không chỉ kiểm tra việc tìm ra đáp án. Nó kiểm tra khả năng nhìn thấy cấu trúc, chọn đúng bổ đề và viết một chứng minh không có chỗ ẩn. HIVE-IMO X ghi lại toàn bộ quá trình — đọc mù, những hướng sai, phản ví dụ và proof candidate — cho đến kiểm chứng độc lập.")}
+              "The IMO does not only test finding an answer. It tests seeing structure, choosing the right lemma, and writing a proof with no hidden steps. HIVE-IMO X records the whole process - blind reading, wrong routes, counterexamples and proof candidates - through to independent verification.",
+              "IMO không chỉ kiểm tra việc tìm ra đáp án. Nó kiểm tra khả năng nhìn thấy cấu trúc, chọn đúng bổ đề và viết một chứng minh không có chỗ ẩn. HIVE-IMO X ghi lại toàn bộ quá trình - đọc mù, những hướng sai, phản ví dụ và proof candidate - cho đến kiểm chứng độc lập.")}
           </p>
           <p className="hi-hero-note">
             {t(L,
@@ -76,15 +76,15 @@ export default async function HiveImoOverview({ params }: { params: Promise<{ lo
           </div>
           </div>{/* /hi-hero-main */}
 
-          {/* mandatory status block (brief §2) — hero right-hand fact sheet */}
+          {/* mandatory status block (brief §2) - hero right-hand fact sheet */}
           <aside className="hi-hero-side">
           <div className="hi-statusblock">
             <dl>
               <div><dt>PROJECT</dt><dd>HIVE-IMO X</dd></div>
               <div><dt>TARGET</dt><dd>{legacyManuscriptCount()}/6 manuscripts · {independentlyAuditedCount()}/6 audited</dd></div>
               <div><dt>{t(L, "HUMAN OWNER", "HUMAN OWNER")}</dt><dd>Lâm Nguyễn</dd></div>
-              <div><dt>AI CONTRACTOR</dt><dd>Sol — ChatGPT 5.6 Thinking</dd></div>
-              <div><dt>AI BUILDER</dt><dd>Fable — Claude Code</dd></div>
+              <div><dt>AI CONTRACTOR</dt><dd>Sol - ChatGPT 5.6 Thinking</dd></div>
+              <div><dt>AI BUILDER</dt><dd>Fable - Claude Code</dd></div>
               <div><dt>OFFICIAL-SOLUTION DEPENDENCE</dt><dd>{t(L, "shown per problem", "hiển thị theo từng bài")}</dd></div>
             </dl>
           </div>

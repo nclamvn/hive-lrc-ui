@@ -28,7 +28,7 @@
         {
           "name": "problem_vi.reviewed.md",
           "href": "/imo2026/p4/official/problem_vi.reviewed.md",
-          "sha256": "d1e4ba3629870deffce10011f0fbd19069ccdedf17201ea69f4a860d941fe025"
+          "sha256": "ae1719845fb0113aaa9b46302196e5f19bc4bfe49957239369e46b9d014299c5"
         },
         {
           "name": "source_record.json",
@@ -145,7 +145,7 @@
   "proofs_rejected": 0,
   "counterexamples_found": 0,
   "last_updated": "2026-07-21T10:30:00+07:00",
-  "artifact_manifest_sha256": "cb495c1b21f53455233fee62658188e4ca3df18248c50ffa518accb7406c8dd0",
+  "artifact_manifest_sha256": "12e60de0a27214abe20e88ca3944771ab9617b992f490901e73fbb838dae9c2d",
   "official_solution_viewed": false,
   "statement_en": "Shan-Yu and Mulan are playing a game. Let $\\theta$ be an angle with $0^\\circ<\\theta<180^\\circ$ known to both players. Initially, Shan-Yu makes a paper triangle $\\mathcal{T}$ with measurements of his choice. Then, they repeatedly perform the following steps:\n\n- If $\\mathcal{T}$ has at least one angle measuring exactly $\\theta$, then the game stops and Mulan wins.\n- Otherwise, Mulan chooses a point $P$ on the perimeter of $\\mathcal{T}$, different from its three vertices. She then makes a straight cut from $P$ to the opposite vertex of $\\mathcal{T}$, splitting it into two triangles.\n- Shan-Yu discards one of the two triangles. The remaining triangle becomes the new $\\mathcal{T}$.\n\nFor which real values of $\\theta$ can Mulan guarantee her victory in finitely many steps, no matter how Shan-Yu plays?",
   "statement_vi": "Shan-Yu và Mulan chơi một trò chơi. Cho $\\theta$ là một góc với $0^\\circ<\\theta<180^\\circ$ mà cả hai người chơi đều biết. Ban đầu, Shan-Yu làm một tam giác bằng giấy $\\mathcal{T}$ với các số đo tùy ý theo lựa chọn của mình. Sau đó, họ lặp lại các bước sau:\n\n- Nếu $\\mathcal{T}$ có ít nhất một góc bằng đúng $\\theta$, thì trò chơi dừng lại và Mulan thắng.\n- Ngược lại, Mulan chọn một điểm $P$ trên chu vi của $\\mathcal{T}$, khác ba đỉnh của nó. Sau đó cô cắt thẳng từ $P$ đến đỉnh đối diện của $\\mathcal{T}$, chia nó thành hai tam giác.\n- Shan-Yu bỏ đi một trong hai tam giác. Tam giác còn lại trở thành $\\mathcal{T}$ mới.\n\nVới những giá trị thực nào của $\\theta$ thì Mulan có thể bảo đảm chiến thắng của mình sau hữu hạn bước, bất kể Shan-Yu chơi thế nào?",

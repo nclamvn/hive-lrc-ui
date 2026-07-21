@@ -127,9 +127,9 @@ for (let n = 1; n <= 6; n++) {
 if (auditedCount !== 0) fail("AUDIT-COUNT", `audit dashboard must remain 0/6 during reconciliation, found ${auditedCount}`);
 
 if (errors.length) {
-  console.error(`\n✗ imo:validate — ${errors.length} problem(s):`);
+  console.error(`\n✗ imo:validate - ${errors.length} problem(s):`);
   for (const e of errors) console.error(`  • ${e}`);
   process.exit(1);
 }
 
-console.log(`✓ imo:validate — 6/6 ledger records valid (schema + structural rules).`);
+console.log(`✓ imo:validate - 6/6 ledger records valid (schema + structural rules).`);

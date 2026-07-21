@@ -1,4 +1,4 @@
-// HIVE-IMO X — bilingual copy + label registries.
+// HIVE-IMO X - bilingual copy + label registries.
 // All display strings live here so en/vi stay parallel and the components
 // stay presentational. Wording is taken verbatim from the approved brief.
 
@@ -51,7 +51,7 @@ export const STATUS_LABELS: Record<Status, { en: string; vi: string }> = {
   "PUBLISHED": { en: "Published", vi: "Đã công bố" },
 };
 
-// Confidence vocabulary — brief §2 bans fake percentages; use these words only.
+// Confidence vocabulary - brief §2 bans fake percentages; use these words only.
 export const EVIDENCE_LABELS: Record<EvidenceClass, { en: string; vi: string }> = {
   I0: { en: "Unscoped", vi: "Chưa định phạm vi" },
   I1: { en: "Exploratory", vi: "Thăm dò" },
@@ -72,7 +72,7 @@ export const CONTRIBUTION_LABELS: Record<ContributionLevel, { en: string; vi: st
   "CO-LEAD": { en: "Co-lead", vi: "Đồng chủ trì" },
   SUPPORT: { en: "Support", vi: "Hỗ trợ" },
   VERIFY: { en: "Verify", vi: "Kiểm chứng" },
-  NONE: { en: "—", vi: "—" },
+  NONE: { en: "-", vi: "-" },
 };
 
 // Rows of the contribution matrix (brief §6).

@@ -28,7 +28,7 @@
         {
           "name": "problem_vi.reviewed.md",
           "href": "/imo2026/p2/official/problem_vi.reviewed.md",
-          "sha256": "5e511d05daee0a40bd8448c918bef073a7a5f9eb2e8c7df5d5fd728a3f1f550c"
+          "sha256": "4b31e929889cb6a0e03475c7528b6532028e834722b30e98731171521da94f33"
         },
         {
           "name": "source_record.json",
@@ -145,7 +145,7 @@
   "proofs_rejected": 0,
   "counterexamples_found": 0,
   "last_updated": "2026-07-21T10:30:00+07:00",
-  "artifact_manifest_sha256": "e1f3c6cd5e3ce357a403f72ea4e8a874148f5beeda68cbe75997192cdf5779ec",
+  "artifact_manifest_sha256": "7085d75573b712a993e87dac25f635b60fb730dc99072b0ec9f82ee3666ec745",
   "official_solution_viewed": false,
   "statement_en": "Let $ABC$ be a triangle and let points $M$ and $N$ be the midpoints of sides $AB$ and $AC$, respectively. Let points $K$ and $L$ be chosen strictly inside triangles $BMC$ and $BNC$, respectively, such that $K$ lies strictly inside triangle $ABL$ and $L$ lies strictly inside triangle $AKC$. Suppose that\n$$\\angle KBA=\\angle ACL,\\qquad \\angle LBK=\\angle LNC,\\qquad \\text{and}\\qquad \\angle LCK=\\angle BMK.$$\nLet $O$ be the circumcentre of triangle $AKL$. Prove that $OM=ON$.",
   "statement_vi": "Cho tam giác $ABC$ và gọi $M$, $N$ lần lượt là trung điểm của các cạnh $AB$ và $AC$. Chọn các điểm $K$ và $L$ nằm hoàn toàn bên trong các tam giác $BMC$ và $BNC$ tương ứng, sao cho $K$ nằm hoàn toàn bên trong tam giác $ABL$ và $L$ nằm hoàn toàn bên trong tam giác $AKC$. Giả sử rằng\n$$\\angle KBA=\\angle ACL,\\qquad \\angle LBK=\\angle LNC,\\qquad \\text{và}\\qquad \\angle LCK=\\angle BMK.$$\nGọi $O$ là tâm đường tròn ngoại tiếp tam giác $AKL$. Chứng minh rằng $OM=ON$.",

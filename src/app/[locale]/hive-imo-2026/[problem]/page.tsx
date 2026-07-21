@@ -21,7 +21,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; problem: string }> }): Promise<Metadata> {
   const { problem } = await params;
   const p = problemBySlug(problem);
-  return { title: p ? `HIVE-IMO X — Problem ${p.number}` : "HIVE-IMO X" };
+  return { title: p ? `HIVE-IMO X - Problem ${p.number}` : "HIVE-IMO X" };
 }
 
 function Block({ id, heading, lede, children }: { id?: string; heading: string; lede?: string; children: React.ReactNode }) {
@@ -64,7 +64,7 @@ export default async function ProblemDetail({ params }: { params: Promise<{ loca
             <span className="dot">·</span>
             <span>{domain}</span>
             <span className="dot">·</span>
-            <span>{t(L, "Evidence", "Bằng chứng")} {p.evidence_class} — {locale === "vi" ? ev.vi : ev.en}</span>
+            <span>{t(L, "Evidence", "Bằng chứng")} {p.evidence_class} - {locale === "vi" ? ev.vi : ev.en}</span>
           </div>
           <div className="hi-detail-meta">
             <span>{t(L, "Official-solution dependence:", "Phụ thuộc lời giải chính thức:")} <b>{locale === "vi" ? dep.vi : dep.en}</b></span>
@@ -148,7 +148,7 @@ export default async function ProblemDetail({ params }: { params: Promise<{ loca
 
         {/* 4. what it asks */}
         <Block heading={t(L, "What the problem asks", "Bài toán hỏi gì")}>
-          {empty("A short plain-language explanation is written during S1–S3, after independent human and AI reads. S0 freezes the statement only — no interpretation yet.",
+          {empty("A short plain-language explanation is written during S1–S3, after independent human and AI reads. S0 freezes the statement only - no interpretation yet.",
                  "Phần giải thích ngắn gọn được viết trong S1–S3, sau khi Human và AI đọc độc lập. S0 chỉ khóa đề, chưa diễn giải.")}
         </Block>
 
@@ -209,11 +209,11 @@ export default async function ProblemDetail({ params }: { params: Promise<{ loca
         </Block>
 
         {/* 10 & 11. proofs */}
-        <Block heading={t(L, "Proof — compact", "Chứng minh — bản gọn")}>
+        <Block heading={t(L, "Proof - compact", "Chứng minh - bản gọn")}>
           {empty("Written at S11 in natural olympiad style, scorable 0–7 per step. Not yet available.",
                  "Được viết ở S11 theo văn phong olympiad tự nhiên, chấm được 0–7 mỗi bước. Chưa có.")}
         </Block>
-        <Block heading={t(L, "Proof — annotated", "Chứng minh — bản chú giải")}>
+        <Block heading={t(L, "Proof - annotated", "Chứng minh - bản chú giải")}>
           {empty("The annotated proof with justifications and dependencies is not yet available.",
                  "Bản chú giải với lý do và phụ thuộc chưa có.")}
         </Block>
