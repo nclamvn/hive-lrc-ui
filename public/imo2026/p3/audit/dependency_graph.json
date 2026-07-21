@@ -1,0 +1,38 @@
+{
+  "problem_id": "IMO2026-P3",
+  "nodes": [
+    "O1",
+    "O2",
+    "O3",
+    "O4",
+    "O5",
+    "O6"
+  ],
+  "edges": [
+    {
+      "from": "O1",
+      "to": "O2"
+    },
+    {
+      "from": "O1",
+      "to": "O3"
+    },
+    {
+      "from": "O1",
+      "to": "O4"
+    },
+    {
+      "from": "O4",
+      "to": "O5"
+    },
+    {
+      "from": "O3",
+      "to": "O6"
+    },
+    {
+      "from": "O5",
+      "to": "O6"
+    }
+  ],
+  "acyclic": true
+}

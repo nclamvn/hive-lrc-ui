@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HIVE-IMO X Problem Record",
+  "type": "object",
+  "required": [
+    "problem_id",
+    "year",
+    "day",
+    "number",
+    "status",
+    "official_source",
+    "official_solution_dependence",
+    "evidence_class",
+    "stages",
+    "contributions"
+  ],
+  "properties": {
+    "problem_id": {
+      "type": "string",
+      "pattern": "^IMO2026-P[1-6]$"
+    },
+    "year": {
+      "const": 2026
+    },
+    "day": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2
+    },
+    "number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
+    "domain": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "enum": [
+        "NOT-STARTED",
+        "FROZEN-PENDING-REVIEW",
+        "OFFICIAL-FROZEN",
+        "HUMAN-READ",
+        "AI-READ",
+        "DECOMPOSED",
+        "CANDIDATE-LEMMA",
+        "CANDIDATE-PROOF",
+        "COUNTEREXAMPLE-FOUND",
+        "REPAIR-IN-PROGRESS",
+        "VERIFIED-INTERNAL",
+        "VERIFIED-INDEPENDENT",
+        "FORMALIZED",
+        "PUBLISHED"
+      ]
+    },
+    "official_source": {
+      "type": "string",
+      "format": "uri"
+    },
+    "official_solution_dependence": {
+      "enum": [
+        "NONE",
+        "POST-HOC-COMPARISON",
+        "PARTIAL",
+        "YES"
+      ]
+    },
+    "evidence_class": {
+      "enum": [
+        "I0",
+        "I1",
+        "I2",
+        "I3",
+        "I4"
+      ]
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 15
+    },
+    "contributions": {
+      "type": "object"
+    },
+    "proofs_rejected": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "counterexamples_found": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "artifact_manifest_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

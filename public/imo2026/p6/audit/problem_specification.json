@@ -1,0 +1,17 @@
+{
+  "problem_id": "IMO2026-P6",
+  "day": 2,
+  "number": 6,
+  "official_statement_source": "https://www.imo-official.org/problems/?language=en",
+  "official_raw_page_sha256": "cbe3015874c360049cd405840bbb4bb1b80e951e51028ec732b21d67f46a1095",
+  "manuscript_sha256": "06b2172ce6366f814daea5fb1a46824239f94d5cf3ddabf6d075dc6ca1002681",
+  "statement_match": "MATCH",
+  "statement_match_method": "Builder read the manuscript's restated problem and confirmed the same official problem (entities, quantities, question). Statement-level only; line-by-line semantic match deferred to the independent verifier. Not a proof-correctness claim.",
+  "statement_tokens_expected": [
+    "a_{n+T}",
+    "gcd"
+  ],
+  "statement_tokens_found": [
+    "gcd"
+  ]
+}

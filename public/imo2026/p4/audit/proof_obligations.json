@@ -1,0 +1,54 @@
+{
+  "problem_id": "IMO2026-P4",
+  "obligations": [
+    {
+      "id": "O1",
+      "claim": "Normalized cut-state formulas (b,x,q-b-x) and (c,a-x,b+x)",
+      "status": "CLAIMED",
+      "dependencies": [],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O2",
+      "claim": "Integer k in (b,a+b) forces an integer-multiple angle in both branches",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O3",
+      "claim": "Monovariant m -> m-1 forces m=1 when q integer (Mulan wins)",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O2"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    },
+    {
+      "id": "O4",
+      "claim": "Noninteger invariant preserved by >=1 branch when q not integer",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O5",
+      "claim": "Classification theta = 180/n, n>=2",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O3",
+        "O4"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    }
+  ]
+}

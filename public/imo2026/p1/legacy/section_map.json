@@ -1,0 +1,40 @@
+{
+  "problem_id": "IMO2026-P1",
+  "sections": [
+    {
+      "n": 1,
+      "title": "Đềbài",
+      "char_offset": 464
+    },
+    {
+      "n": 2,
+      "title": "Bản đồchiến lược",
+      "char_offset": 806
+    },
+    {
+      "n": 3,
+      "title": "Phép biến đổi theo sốmũ nguyên tố",
+      "char_offset": 1186
+    },
+    {
+      "n": 4,
+      "title": "Phần (a): quá trình kết thúc",
+      "char_offset": 1499
+    },
+    {
+      "n": 5,
+      "title": "Phần (b): invariant xác định sốcuối",
+      "char_offset": 2781
+    },
+    {
+      "n": 6,
+      "title": "Kiểm toán các bẫy thường gặp",
+      "char_offset": 3713
+    },
+    {
+      "n": 7,
+      "title": "Góc nhìn cấu trúc",
+      "char_offset": 4134
+    }
+  ]
+}

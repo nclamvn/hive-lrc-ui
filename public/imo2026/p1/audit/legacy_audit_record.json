@@ -1,0 +1,93 @@
+{
+  "problem_id": "IMO2026-P1",
+  "manuscript": {
+    "filename": "IMO2026_Day1_Problem1.pdf",
+    "sha256": "3fa9e154caa6afbe0156176c3c9129d9320dd72947ab0959d895e92afbe34dcf",
+    "created_at": "2026-07-16",
+    "original_path": "/Users/os/Downloads/IMO2026/IMO2026_Day1_Problem1.pdf",
+    "provenance_status": "PARTIAL",
+    "claimed_authors": []
+  },
+  "official_binding": {
+    "source_sha256": "cbe3015874c360049cd405840bbb4bb1b80e951e51028ec732b21d67f46a1095",
+    "statement_match": "MATCH"
+  },
+  "exposure": {
+    "human": {
+      "official_solution_exposure": "UNKNOWN",
+      "unofficial_external_solution_exposure": "UNKNOWN",
+      "internal_project_solution_exposure": "UNKNOWN",
+      "search_history_exposure": "UNKNOWN",
+      "blind_reconstruction_eligible": "UNKNOWN",
+      "notes": "Owner attestation pending. Legacy manuscripts exist, so eligibility not established. Unknown is not false."
+    },
+    "sol": {
+      "official_solution_exposure": false,
+      "unofficial_external_solution_exposure": false,
+      "internal_project_solution_exposure": true,
+      "search_history_exposure": "UNKNOWN",
+      "blind_reconstruction_eligible": false,
+      "notes": "Sol read all six manuscripts during the deep dive; internal-project exposure TRUE; not eligible as blind reconstruction actor."
+    },
+    "fable": {
+      "official_solution_exposure": false,
+      "unofficial_external_solution_exposure": false,
+      "internal_project_solution_exposure": true,
+      "search_history_exposure": false,
+      "blind_reconstruction_eligible": false,
+      "notes": "Fable extracted full text of all six manuscripts during S0-R; internal-project exposure TRUE. Only official statements were fetched from the organiser. Not eligible as blind reconstruction actor."
+    }
+  },
+  "proof_obligations": [
+    {
+      "id": "O1",
+      "claim": "Each move yields positive integers; moves are well-defined",
+      "status": "CLAIMED",
+      "dependencies": [],
+      "load_bearing": false,
+      "notes": ""
+    },
+    {
+      "id": "O2",
+      "claim": "Process terminates via lexicographic descent of (S,k)",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O3",
+      "claim": "Terminal state has exactly one integer M>1",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O2"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    },
+    {
+      "id": "O4",
+      "claim": "Per-prime valuation-column gcd g_p is invariant",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O5",
+      "claim": "Final-state uniqueness: M = prod p^{gcd(v_p(x_i))}",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O3",
+        "O4"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    }
+  ],
+  "audit_status": "RECONCILED"
+}

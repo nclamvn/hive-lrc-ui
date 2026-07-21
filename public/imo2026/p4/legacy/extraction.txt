@@ -1,0 +1,201 @@
+HIVE–IMO X
+HUMAN–AI OLYMPIAD SYSTEM
+IMO 2026 - Bài 4
+Trò chơi cắt tam giác, chuẩn hóa góc và thếbao vây hai nhánh
+THÔNG TIN TÀI LIỆU
+Kết quảcuối:
+θ = 180◦
+n
+(n = 2, 3, 4, . . .).
+Kiến trúc chứng minh: đặt q = 180◦/θ. Nếu q nguyên, Mộc Lan tạo một nhát cắt
+sao cho cảhai tam giác con đều có một góc là bội nguyên của θ, rồi giảm bội ấy
+từng đơn vị. Nếu q không nguyên, Thiên Vũ duy trì bất biến: cảba góc, khi chia
+cho θ, đều không nguyên.
+Bản biên soạn độc lập theo quy trình Human–AI Olympiad Attack. Không phải lời giải chính thức của Ban tổchức
+IMO.
+
+IMO 2026 - LỜI GIẢI BÀI 4
+HIVE–IMO X
+1
+Đềbài
+Thiên Vũ và Mộc Lan chơi một trò chơi. Cho một góc θ với
+0◦< θ < 180◦,
+mà cảhai người chơi đều biết. Đầu tiên, Thiên Vũ làm một tam giác T bằng giấy với kích
+thước tùy ý. Sau đó, họliên tục thực hiện các bước sau:
+• Nếu T có ít nhất một góc có sốđo bằng đúng θ, trò chơi kết thúc và Mộc Lan thắng.
+• Nếu không, Mộc Lan chọn một điểm P trên biên của T, không trùng với một đỉnh. Cô
+cắt T theo đoạn thẳng nối P với đỉnh đối diện, chia T thành hai tam giác.
+• Thiên Vũ bỏmột trong hai tam giác. Tam giác còn lại trởthành tam giác T mới.
+Xác định tất cảcác giá trịthực của θ mà Mộc Lan có thểbảo đảm thắng sau hữu hạn bước,
+bất kểThiên Vũ chơi thếnào.
+2
+Bản đồchiến lược
+Trực giác minimax: khóa cảhai đường thoát
+Mộc Lan không được quyền chọn tam giác còn lại. Vì vậy một nhát cắt hữu ích phải
+tạo ra hai nhánh đều có lợi: dù Thiên Vũ bỏbên nào, trạng thái mới vẫn nằm trong
+vùng Mộc Lan kiểm soát.
+Chuẩn hóa mọi góc bằng đơn vịθ và đặt
+q = 180◦
+θ
+.
+Mộc Lan thắng khi một góc chuẩn hóa bằng đúng 1.
+Bài toán tách thành hai phía:
+1. nếu q ∈Z, dựng một thếbao vây hai nhánh và giảm một góc nguyên về1;
+2. nếu q /∈Z, Thiên Vũ chọn tam giác đều và giữbất biến “không có góc chuẩn hóa nào
+là sốnguyên”.
+3
+Mô hình chính xác của một nhát cắt
+Giảsửtam giác hiện tại có các góc
+aθ,
+bθ,
+cθ,
+với
+a, b, c > 0,
+a + b + c = q.
+(1)
+Mộc Lan cắt từđỉnh có góc aθ đến cạnh đối diện, chia góc đó thành
+xθ
+và
+(a −x)θ,
+0 < x < a.
+Hai tam giác con có các bộgóc chuẩn hóa
+(b, x, q −b −x)
+(2)
+Human–AI Olympiad Attack
+1
+
+IMO 2026 - LỜI GIẢI BÀI 4
+HIVE–IMO X
+và
+(c, a −x, b + x) .
+(3)
+Công thức (2), (3) là toàn bộcơ chếcủa trò chơi. Mọi chiến lược sau đây chỉlà cách chọn
+x đểcảhai bộđều mang một dấu hiệu kiểm soát được.
+4
+Khi q = n là sốnguyên: Mộc Lan thắng
+Vì 0◦< θ < 180◦, ta có n ≥2.
+4.1 Bước một: tạo một góc nguyên ởcảhai nhánh
+Bổđề4.1. Giảsửa, b, c trong (1) đều không nguyên và a + b + c = n ∈Z. Mộc Lan có thể
+chọn một nhát cắt sao cho mỗi tam giác con đều có ít nhất một góc chuẩn hóa là sốnguyên.
+Chứng minh. Ta sẽgán lại tên các góc nếu cần đểtìm một sốnguyên k thỏa
+b < k < a + b.
+(4)
+Nếu có một góc lớn hơn 1, gọi góc đó là a. Khoảng (b, a + b) có độdài a > 1, nên chứa một
+sốnguyên k.
+Nếu không có góc nào lớn hơn 1, do cảba góc đều không nguyên nên
+0 < a, b, c < 1.
+Từa + b + c = n và n ≥2 nguyên, suy ra n = 2. Khi đó có một cặp góc có tổng lớn hơn 1;
+gọi chúng là a, b. Vì b < 1 < a + b, ta lấy k = 1.
+Trong cảhai trường hợp, chọn
+x = k −b.
+Điều kiện (4) cho 0 < x < a, nên đây là một nhát cắt hợp lệ. Trong tam giác (3), ta có
+b + x = k ∈Z,
+còn trong tam giác (2),
+q −b −x = n −k ∈Z.
+Vì thế, dù Thiên Vũ giữtam giác nào, tam giác mới cũng có một góc là bội nguyên của
+θ.
+Đây chính là thế“bỏbên nào cũng mắc bẫy”: Mộc Lan không đoán lựa chọn của đối thủ
+mà khóa đồng thời cảhai lựa chọn.
+4.2 Bước hai: giảm bội nguyên về1
+Giảsửtam giác hiện tại có một góc bằng
+mθ,
+m ∈Z>0.
+Nếu m = 1, Mộc Lan đã thắng.
+Nếu m ≥2, cô cắt từđỉnh đó và chia góc thành
+θ + (m −1)θ.
+Human–AI Olympiad Attack
+2
+
+IMO 2026 - LỜI GIẢI BÀI 4
+HIVE–IMO X
+Một tam giác con có góc θ. Nếu Thiên Vũ giữnó, Mộc Lan thắng ởlần kiểm tra kếtiếp. Để
+tránh thua ngay, Thiên Vũ buộc phải giữtam giác con có góc (m −1)θ. Do đó bội nguyên
+giảm theo
+m 7−→m −1.
+Lặp lại, ta được
+m →m −1 →· · · →2 →1.
+Khi m = 2, nhát cắt 2θ = θ + θ tạo góc θ trong cảhai tam giác con, nên Thiên Vũ không
+còn đường thoát.
+Kết luận phía thuận
+Nếu
+180◦
+θ
+= n ∈Z,
+thì Mộc Lan bảo đảm thắng sau hữu hạn bước.
+5
+Khi q không nguyên: Thiên Vũ tránh thua mãi mãi
+Giảsử
+q = 180◦
+θ
+/∈Z.
+Thiên Vũ chọn tam giác đều. Ba góc chuẩn hóa ban đầu đều bằng
+q
+3,
+và q/3 không nguyên.
+Thiên Vũ sẽduy trì bất biến:
+Cảba góc chuẩn hóa của tam giác được giữlại đều không nguyên.
+(5)
+Bổđề5.1. Giảsửa, b, c đều không nguyên và a + b + c = q /∈Z. Sau mọi nhát cắt, ít nhất
+một trong hai tam giác con vẫn có cảba góc chuẩn hóa không nguyên.
+Chứng minh. Hai tam giác con là (2), (3). Vì b, c không nguyên, tam giác (2) chỉcó thểchứa
+một góc nguyên nếu
+x ∈Z
+hoặc
+q −b −x ∈Z.
+Tương tự, tam giác (3) chỉcó thểchứa một góc nguyên nếu
+a −x ∈Z
+hoặc
+b + x ∈Z.
+Giảsửcảhai tam giác con đều có một góc nguyên. Có bốn cách ghép hai điều kiện trên:
+1. x và a −x nguyên, suy ra a nguyên;
+2. x và b + x nguyên, suy ra b nguyên;
+3. q −b −x và a −x nguyên, lấy hiệu suy ra
+(q −b −x) −(a −x) = c
+nguyên;
+4. q −b −x và b + x nguyên, lấy tổng suy ra q nguyên.
+Human–AI Olympiad Attack
+3
+
+IMO 2026 - LỜI GIẢI BÀI 4
+HIVE–IMO X
+Mỗi trường hợp đều mâu thuẫn với giảthiết. Vậy ít nhất một tam giác con không có góc
+chuẩn hóa nguyên nào. Thiên Vũ giữtam giác đó.
+Bất biến (5) được duy trì vô hạn. Vì 1 là sốnguyên, tam giác được giữlại không bao giờ
+có góc chuẩn hóa bằng 1, tức không bao giờcó góc bằng đúng θ.
+Kết luận phía nghịch
+Nếu
+180◦
+θ
+/∈Z,
+Thiên Vũ có một chiến lược tránh thua mãi mãi.
+6
+Đáp án hoàn chỉnh
+Kết hợp hai phía, Mộc Lan có thểbảo đảm thắng sau hữu hạn bước khi và chỉkhi
+180◦
+θ
+∈Z.
+Do 0◦< θ < 180◦, tất cảcác giá trịcần tìm là
+θ = 180◦
+n ,
+n = 2, 3, 4, . . .
+7
+Kiểm toán các điểm dễbỏsót
+Bẫy 1: 0◦không phải một đáp án
+Đềbài quy định rõ 0◦< θ < 180◦. Cụm “sau hữu hạn bước” nói vềsốlượt chơi,
+không mởrộng miền giá trịcủa θ. Mọi tam giác trong trò chơi đều không suy biến,
+nên mọi góc đều dương.
+Bẫy 2: phải khóa cảhai nhánh
+Một nhát cắt chỉtạo góc θ ởmột tam giác con là chưa đủ, vì Thiên Vũ có thểbỏtam
+giác đó. Bổđềởphía thuận tạo một góc nguyên trong cảhai nhánh; bước giảm
+m 7→m −1 sau đó buộc đối thủđi theo một chuỗi hữu hạn.
+Bẫy 3: bất biến không nguyên
+Trong phía nghịch, các góc chuẩn hóa có thểlà sốhữu tỉkhông nguyên. Điều cần
+thiết và đủđểtránh góc θ là không cho bất kỳgóc chuẩn hóa nào bằng sốnguyên
+1; bất biến mạnh hơn được chọn là không có sốnguyên nào.
+8
+Góc nhìn cấu trúc
+Khi q nguyên, Mộc Lan tạo ởhai nhánh hai bội nguyên bù nhau k và n −k, rồi dùng
+monovariant m giảm về1. Khi q không nguyên, Thiên Vũ giữbất biến rằng không góc
+chuẩn hóa nào là sốnguyên. Hai cơ chếkhóa chính xác tại điều kiện 180◦/θ ∈Z.
+Human–AI Olympiad Attack
+4

@@ -1,0 +1,50 @@
+{
+  "problem_id": "IMO2026-P6",
+  "sections": [
+    {
+      "n": 1,
+      "title": "Đềbài",
+      "char_offset": 595
+    },
+    {
+      "n": 2,
+      "title": "Bản đồchiến lược",
+      "char_offset": 893
+    },
+    {
+      "n": 3,
+      "title": "Tập admissible và các tính chất cơ bản",
+      "char_offset": 1465
+    },
+    {
+      "n": 4,
+      "title": "Kernel tối tiểu",
+      "char_offset": 2333
+    },
+    {
+      "n": 5,
+      "title": "Bổđềnhân chứng và rào chắn lũy thừa",
+      "char_offset": 2762
+    },
+    {
+      "n": 6,
+      "title": "Mọi nguyên tốtrong kernel đều nhỏhơn a2",
+      "char_offset": 3588
+    },
+    {
+      "n": 7,
+      "title": "Từhữu hạn kernel đến tuần hoàn tịnh tiến",
+      "char_offset": 4777
+    },
+    {
+      "n": 8,
+      "title": "Kiểm toán các điểm dễbỏsót",
+      "char_offset": 5497
+    },
+    {
+      "n": 9,
+      "title": "Góc nhìn cấu trúc",
+      "char_offset": 6117
+    }
+  ]
+}

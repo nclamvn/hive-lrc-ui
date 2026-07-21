@@ -1,0 +1,28 @@
+{
+  "problem_id": "IMO2026-P2",
+  "human": {
+    "official_solution_exposure": "UNKNOWN",
+    "unofficial_external_solution_exposure": "UNKNOWN",
+    "internal_project_solution_exposure": "UNKNOWN",
+    "search_history_exposure": "UNKNOWN",
+    "blind_reconstruction_eligible": "UNKNOWN",
+    "notes": "Owner attestation pending. Legacy manuscripts exist, so eligibility not established. Unknown is not false."
+  },
+  "sol": {
+    "official_solution_exposure": false,
+    "unofficial_external_solution_exposure": false,
+    "internal_project_solution_exposure": true,
+    "search_history_exposure": "UNKNOWN",
+    "blind_reconstruction_eligible": false,
+    "notes": "Sol read all six manuscripts during the deep dive; internal-project exposure TRUE; not eligible as blind reconstruction actor."
+  },
+  "fable": {
+    "official_solution_exposure": false,
+    "unofficial_external_solution_exposure": false,
+    "internal_project_solution_exposure": true,
+    "search_history_exposure": false,
+    "blind_reconstruction_eligible": false,
+    "notes": "Fable extracted full text of all six manuscripts during S0-R; internal-project exposure TRUE. Only official statements were fetched from the organiser. Not eligible as blind reconstruction actor."
+  },
+  "updated_at": "2026-07-21T12:00:00+07:00"
+}

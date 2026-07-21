@@ -1,0 +1,265 @@
+HIVE–IMO X
+HUMAN–AI OLYMPIAD SYSTEM
+IMO 2026 - Bài 5
+RMS–AM–GM, quỹđạo của hàm và độlệch hằng
+THÔNG TIN TÀI LIỆU
+Kết quảcuối:
+f(x) = x + c
+(c ≥0).
+Kiến trúc chứng minh: ép hai đầu của chuỗi bất đẳng thức bằng nhau bằng phép
+thếx = f(y); đặt g(x) = f(x) −x; dùng quỹđạo của f và một bộkẹp định lượng để
+chứng minh g là hằng.
+Bản biên soạn độc lập theo quy trình Human–AI Olympiad Attack. Không phải lời giải chính thức của Ban tổchức
+IMO.
+
+IMO 2026 - LỜI GIẢI BÀI 5
+HIVE–IMO X
+1
+Đềbài
+Ký hiệu R>0 là tập các sốthực dương. Xác định tất cảcác hàm
+f : R>0 −→R>0
+thỏa mãn
+√
+x2 + f(y)2
+2
+≥f(x) + y
+2
+≥
+√
+xf(y)
+(1)
+với mọi x, y ∈R>0.
+2
+Bản đồchiến lược
+Trực giác cấu trúc
+Hai đầu của (1) là hai vếtrong chuỗi quen thuộc
+RMS(x, f(y)) ≥AM(x, f(y)) ≥GM(x, f(y)).
+Nếu biểu thức giữa đúng bằng x+f(y)
+2
+, thì ta phải có
+f(x) + y = x + f(y),
+tức f(x) −x là hằng. Vì vậy đặt
+g(x) = f(x) −x
+và tìm cách chứng minh g không phụthuộc vào x.
+Các nghĩa vụchứng minh là:
+1. tạo một quan hệlặp đủmạnh cho f;
+2. chứng minh g(x) ≥0;
+3. chứng minh mọi giá trịdương của g bằng nhau;
+4. loại trừkhảnăng g đồng thời nhận 0 và một hằng sốdương;
+5. kiểm tra trực tiếp họnghiệm thu được.
+3
+Nhát đánh cân bằng: chọn x = f(y)
+Trong (1), thay x = f(y). Khi đó hai đầu đều bằng f(y):
+√
+f(y)2 + f(y)2
+2
+= f(y)
+và
+√
+f(y)f(y) = f(y).
+Vì biểu thức giữa bịkẹp giữa hai sốbằng nhau,
+f(f(y)) + y
+2
+= f(y),
+hay
+f(f(y)) = 2f(y) −y.
+(2)
+Human–AI Olympiad Attack
+1
+
+IMO 2026 - LỜI GIẢI BÀI 5
+HIVE–IMO X
+Với g(x) = f(x) −x, ta có
+f(f(y)) = f(y) + g(f(y)).
+So sánh với (2) và dùng f(y) = y + g(y), suy ra
+g(f(y)) = g(y).
+(3)
+Độlệch g được bảo toàn dọc theo quỹđạo của f.
+4
+Quỹđạo của f và dấu của g
+Từf(y) = y + g(y) và (3), bằng quy nạp ta thu được
+fn(y) = y + ng(y)
+(4)
+với mọi sốnguyên n ≥0.
+Thật vậy, nếu fn(y) = y + ng(y) thì
+fn+1(y) = fn(y) + g(fn(y)) = y + ng(y) + g(y),
+vì (3) cho g(fn(y)) = g(y).
+Do fn(y) > 0 với mọi n, không thểcó g(y) < 0: nếu vậy, y + ng(y) sẽâm khi n đủlớn. Vì
+thế
+g(y) ≥0
+với mọi y > 0.
+(5)
+5
+Bộkẹp định lượng cho độlệch
+Đặt
+Z = f(y) > 0.
+Vì y = Z −g(y) và f(x) = x + g(x),
+f(x) + y = x + Z + g(x) −g(y).
+Từnửa phải của (1),
+x + Z + g(x) −g(y) ≥2
+√
+xZ,
+suy ra
+g(x) −g(y) ≥−
+(√x −
+√
+Z
+)2.
+(6)
+Từnửa trái của (1),
+x + Z + g(x) −g(y) ≤
+√
+2(x2 + Z2),
+nên
+g(x) −g(y) ≤
+√
+2(x2 + Z2) −(x + Z).
+Rational hóa vếphải:
+√
+2(x2 + Z2) −(x + Z) =
+(x −Z)2
+√
+2(x2 + Z2) + x + Z
+.
+Do đó
+g(x) −g(y) ≤
+(x −Z)2
+√
+2(x2 + Z2) + x + Z
+.
+(7)
+Hai cận (6), (7) cho thấy: nếu x và f(y) có khoảng cách bịchặn trong khi cảhai tiến ra vô
+hạn, thì g(x) −g(y) →0.
+Human–AI Olympiad Attack
+2
+
+IMO 2026 - LỜI GIẢI BÀI 5
+HIVE–IMO X
+6
+Mọi giá trịdương của g đều bằng nhau
+Giảsử
+g(u) = a > 0,
+g(v) = b > 0.
+Theo (4),
+un = fn(u) = u + na,
+vm = fm(v) = v + mb.
+Đồng thời
+g(un) = a,
+g(vm) = b,
+f(vm) = v + (m + 1)b.
+Với mỗi m đủlớn, chọn sốnguyên n = n(m) ≥0 gần nhất với
+v + (m + 1)b −u
+a
+.
+Khi đó
+|un −f(vm)| ≤a
+2,
+(8)
+trong khi un, f(vm) →∞.
+Áp dụng (6) và (7) với x = un, y = vm, Z = f(vm), ta được
+−
+(√un −
+√
+f(vm)
+)2 ≤a −b ≤
+(un −f(vm))2
+√
+2(u2n + f(vm)2) + un + f(vm)
+.
+(9)
+Nhờ(8), tửsốởcận phải bịchặn, còn mẫu tiến ra vô hạn. Cận phải tiến về0. Cận trái
+cũng tiến về0 vì
+(√un −
+√
+f(vm)
+)2 =
+(un −f(vm))2
+(√un +
+√
+f(vm)
+)2 .
+Cho m →∞trong (9), suy ra
+a −b = 0.
+Bổđề6.1. Mọi giá trịdương của g đều bằng cùng một hằng sốc > 0.
+Vì g ≥0, hoặc g ≡0, hoặc g chỉnhận các giá trị0 và một hằng sốc > 0.
+7
+Không thểđồng thời có g = 0 và g = c > 0
+Giảsửtồn tại u, v > 0 sao cho
+g(u) = 0,
+g(v) = c > 0.
+Xét đoạn đóng nối u và v. Hai tập
+A = {x : g(x) = 0},
+B = {x : g(x) = c}
+phân hoạch đoạn đó và đều không rỗng. Vì một đoạn là liên thông, khoảng cách giữa A
+và B trên đoạn phải bằng 0. Do đó tồn tại các dãy
+xn ∈B,
+yn ∈A
+cùng hội tụđến một điểm t > 0.
+Human–AI Olympiad Attack
+3
+
+IMO 2026 - LỜI GIẢI BÀI 5
+HIVE–IMO X
+Với y = yn, ta có f(yn) = yn. Áp dụng cận trên (7) với x = xn,
+c = g(xn) −g(yn) ≤
+(xn −yn)2
+√
+2(x2n + y2n) + xn + yn
+.
+Vếphải tiến về0 khi n →∞, mâu thuẫn với c > 0.
+Vậy g không thểnhận đồng thời 0 và một giá trịdương. Kết hợp với các phần trên,
+g(x) = c
+với mọi x > 0
+cho một hằng sốc ≥0. Do đó
+f(x) = x + c
+(c ≥0).
+(10)
+8
+Kiểm tra họnghiệm
+Cho
+f(x) = x + c,
+c ≥0.
+Khi đó f nhận giá trịdương trên R>0 và
+f(x) + y = x + c + y = x + f(y).
+Bất đẳng thức cần kiểm tra trởthành
+√
+x2 + f(y)2
+2
+≥x + f(y)
+2
+≥
+√
+xf(y),
+đúng theo chuỗi RMS–AM–GM cho hai sốdương x và f(y).
+Đáp án hoàn chỉnh
+Tất cảcác hàm thỏa mãn đềbài là
+f(x) = x + c
+(c ≥0).
+9
+Kiểm toán các điểm dễbỏsót
+Bẫy 1: dấu bằng RMS–AM–GM không tựđộng áp dụng
+Biểu thức giữa ban đầu là f(x)+y
+2
+, không phải x+f(y)
+2
+. Cần chứng minh độlệch f(t)−t
+là hằng trước khi nhận diện đầy đủchuỗi RMS–AM–GM.
+Bẫy 2: quỹđạo không cần tiến sát nhau tuyệt đối
+Trong bước so sánh hai giá trịdương a, b, chỉcần |un −f(vm)| bịchặn trong khi các
+điểm tiến ra vô hạn. Hai cận (6), (7) khi đó vẫn co về0.
+Human–AI Olympiad Attack
+4
+
+IMO 2026 - LỜI GIẢI BÀI 5
+HIVE–IMO X
+Bẫy 3: phải loại trừhỗn hợp 0 và c
+Việc chứng minh mọi giá trịdương của g bằng nhau chưa đủ. Cần dùng tính liên
+thông của R>0 cùng bộkẹp địa phương đểloại khảnăng g nhận cả0 và c > 0.
+10 Góc nhìn cấu trúc
+Phép thếx = f(y) tạo một điểm cân bằng tuyệt đối: hai đầu của chuỗi kẹp trùng nhau.
+Quan hệthu được làm mỗi quỹđạo của f trởthành một cấp sốcộng với bước g(y). Bộ
+kẹp (6), (7) đóng vai trò một verifier định lượng, buộc các bước quỹđạo khác nhau phải
+bằng nhau. Cuối cùng, tính liên thông loại bỏsựphân mảnh giữa bước 0 và bước dương.
+Vì thếtoàn bộhọnghiệm chỉcòn các phép tịnh tiến có hệsốgóc 1.
+Human–AI Olympiad Attack
+5

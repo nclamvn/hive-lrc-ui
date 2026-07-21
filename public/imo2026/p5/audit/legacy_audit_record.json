@@ -1,0 +1,103 @@
+{
+  "problem_id": "IMO2026-P5",
+  "manuscript": {
+    "filename": "IMO2026_Day2_Problem5.pdf",
+    "sha256": "2fe7f2ecc97358771f2b30f6a8c17fdd2bdfc9b2b0c8be2c4ff4a090a2ad1e48",
+    "created_at": "2026-07-16",
+    "original_path": "/Users/os/Downloads/IMO2026/IMO2026_Day2_Problem5.pdf",
+    "provenance_status": "PARTIAL",
+    "claimed_authors": []
+  },
+  "official_binding": {
+    "source_sha256": "cbe3015874c360049cd405840bbb4bb1b80e951e51028ec732b21d67f46a1095",
+    "statement_match": "MATCH"
+  },
+  "exposure": {
+    "human": {
+      "official_solution_exposure": "UNKNOWN",
+      "unofficial_external_solution_exposure": "UNKNOWN",
+      "internal_project_solution_exposure": "UNKNOWN",
+      "search_history_exposure": "UNKNOWN",
+      "blind_reconstruction_eligible": "UNKNOWN",
+      "notes": "Owner attestation pending. Legacy manuscripts exist, so eligibility not established. Unknown is not false."
+    },
+    "sol": {
+      "official_solution_exposure": false,
+      "unofficial_external_solution_exposure": false,
+      "internal_project_solution_exposure": true,
+      "search_history_exposure": "UNKNOWN",
+      "blind_reconstruction_eligible": false,
+      "notes": "Sol read all six manuscripts during the deep dive; internal-project exposure TRUE; not eligible as blind reconstruction actor."
+    },
+    "fable": {
+      "official_solution_exposure": false,
+      "unofficial_external_solution_exposure": false,
+      "internal_project_solution_exposure": true,
+      "search_history_exposure": false,
+      "blind_reconstruction_eligible": false,
+      "notes": "Fable extracted full text of all six manuscripts during S0-R; internal-project exposure TRUE. Only official statements were fetched from the organiser. Not eligible as blind reconstruction actor."
+    }
+  },
+  "proof_obligations": [
+    {
+      "id": "O1",
+      "claim": "Substitution x=f(y) gives f(f(y)) = 2 f(y) - y",
+      "status": "CLAIMED",
+      "dependencies": [],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O2",
+      "claim": "g=f-x: g(f(y))=g(y); orbit f^n(y)=y+n g(y); hence g>=0",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O3",
+      "claim": "Quantitative squeeze bounding g(x)-g(y)",
+      "status": "CLAIMED",
+      "dependencies": [],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O4",
+      "claim": "Positive values of g equal a single constant c (positive-step equality)",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O2",
+        "O3"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O5",
+      "claim": "Exclusion of mixed values {0,c}",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O3",
+        "O4"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O6",
+      "claim": "f(x)=x+c, c>=0",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O4",
+        "O5"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    }
+  ],
+  "audit_status": "RECONCILED"
+}

@@ -1,0 +1,55 @@
+{
+  "problem_id": "IMO2026-P5",
+  "sections": [
+    {
+      "n": 1,
+      "title": "Đềbài",
+      "char_offset": 476
+    },
+    {
+      "n": 2,
+      "title": "≥f(x) + y",
+      "char_offset": 580
+    },
+    {
+      "n": 3,
+      "title": "Nhát đánh cân bằng: chọn x = f(y)",
+      "char_offset": 1157
+    },
+    {
+      "n": 4,
+      "title": "Quỹđạo của f và dấu của g",
+      "char_offset": 1623
+    },
+    {
+      "n": 5,
+      "title": "Bộkẹp định lượng cho độlệch",
+      "char_offset": 1975
+    },
+    {
+      "n": 6,
+      "title": "Mọi giá trịdương của g đều bằng nhau",
+      "char_offset": 2580
+    },
+    {
+      "n": 7,
+      "title": "Không thểđồng thời có g = 0 và g = c > 0",
+      "char_offset": 3345
+    },
+    {
+      "n": 8,
+      "title": "Kiểm tra họnghiệm",
+      "char_offset": 4080
+    },
+    {
+      "n": 9,
+      "title": "Kiểm toán các điểm dễbỏsót",
+      "char_offset": 4394
+    },
+    {
+      "n": 10,
+      "title": "Góc nhìn cấu trúc",
+      "char_offset": 5045
+    }
+  ]
+}

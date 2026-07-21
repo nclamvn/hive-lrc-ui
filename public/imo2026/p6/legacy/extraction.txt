@@ -1,0 +1,206 @@
+HIVE–IMO X
+HUMAN–AI OLYMPIAD SYSTEM
+IMO 2026 - Bài 6
+Dãy tham lam, kernel tối tiểu và rào chắn lũy thừa
+THÔNG TIN TÀI LIỆU
+Kết quảcuối: tồn tại các sốnguyên dương T, L sao cho
+an+T = an + L
+với mọi n ≥1.
+Kiến trúc chứng minh: nén dãy thành một tập cốđịnh A; xét các phần tửtối
+tiểu theo chia hết; dùng một “rào chắn lũy thừa” đểchứng minh mọi nguyên tố
+trong kernel đều nhỏhơn a2
+1; từđó A là hợp hữu hạn các tập bội và tuần hoàn
+theo modulo.
+Bản biên soạn độc lập theo quy trình Human–AI Olympiad Attack. Không phải lời giải chính thức của Ban tổchức
+IMO.
+
+IMO 2026 - LỜI GIẢI BÀI 6
+HIVE–IMO X
+1
+Đềbài
+Cho một dãy vô hạn a1, a2, a3, . . . gồm các sốnguyên lớn hơn 1. Giảsửvới mọi sốnguyên
+dương n, sốhạng an+1 là sốnguyên dương nhỏnhất lớn hơn an sao cho
+gcd(an+1, ai) > 1
+(i = 1, 2, . . . , n).
+Chứng minh rằng tồn tại các sốnguyên dương T, L sao cho
+an+T = an + L
+với mọi sốnguyên dương n.
+2
+Bản đồchiến lược
+Nén bài toán động thành một tập cốđịnh
+Đặt
+A = {m > 1 : gcd(m, ai) > 1 với mọi i ≥1}.
+Dãy (an) chính là phép liệt kê tăng dần các phần tửcủa A không nhỏhơn a1. Vì vậy
+chỉcần chứng minh A tuần hoàn theo một modulo L.
+Lộtrình chứng minh:
+1. chứng minh A đóng lên theo chia hết và đôi một không nguyên tốcùng nhau;
+2. xét các phần tửtối tiểu của A theo quan hệchia hết, gọi là các kernel;
+3. chứng minh chỉcó hữu hạn kernel bằng cách chặn mọi nguyên tốtrong kernel bởi
+a2
+1;
+4. lấy L là bội chung nhỏnhất của các kernel và đếm sốlớp dư hợp lệđểthu được T.
+3
+Tập admissible và các tính chất cơ bản
+Bổđề3.1. Dãy (an) liệt kê tăng dần đúng các phần tửcủa A nằm trong [a1, ∞).
+Chứng minh. Mỗi an có ước chung lớn hơn 1 với mọi sốhạng trước nó do cách chọn, và
+với mọi sốhạng sau nó do điều kiện áp dụng ởcác bước sau. Vì thếan ∈A.
+Nếu m ∈A và m > an, thì m là một ứng viên hợp lệởbước chọn an+1. Do tính nhỏnhất,
+an+1 ≤m.
+Vì vậy dãy không thểbỏqua một phần tửnào của A lớn hơn a1.
+Bổđề3.2. Tập A có hai tính chất:
+1. nếu m ∈A và m | M, thì M ∈A;
+2. nếu x, y ∈A, thì gcd(x, y) > 1.
+Chứng minh. Mệnh đềđầu hiển nhiên vì mọi ước chung của m với ai cũng chia M.
+Giảsửx, y ∈A nhưng gcd(x, y) = 1. Chọn k đủlớn sao cho kx > a1 và gcd(k, y) = 1, chẳng
+hạn chọn k ≡1 (mod y) đủlớn. Từtính đóng lên, kx ∈A, nên kx xuất hiện trong dãy.
+Nhưng
+gcd(kx, y) = 1,
+Human–AI Olympiad Attack
+1
+
+IMO 2026 - LỜI GIẢI BÀI 6
+HIVE–IMO X
+trái với y ∈A.
+4
+Kernel tối tiểu
+Với m > 1, ký hiệu
+rad(m) =
+∏
+p|m
+p.
+Nếu m ∈A thì rad(m) ∈A, vì hai sốcó cùng tập ước nguyên tố. Trong các ước của rad(m)
+thuộc A, chọn một ước tối tiểu theo chia hết. Ta gọi nó là một kernel.
+Mỗi kernel là sốvuông tựdo. Hơn nữa, mọi m ∈A chia hết cho ít nhất một kernel. Do
+tính đóng lên,
+A =
+∪
+b∈K
+bN,
+(1)
+trong đó K là họtất cảcác kernel.
+Vì vậy nút thắt duy nhất còn lại là:
+Bổđềkhóa
+Họkernel K là hữu hạn.
+5
+Bổđềnhân chứng và rào chắn lũy thừa
+Bổđề5.1 (Nhân chứng xuất hiện trước một lũy thừa). Cho d > 1 và d /∈A. Gọi j là chỉsố
+nhỏnhất sao cho
+gcd(d, aj) = 1.
+Nếu s là sốnguyên dương nhỏnhất thỏa ds > a1, thì
+aj < ds.
+(2)
+Chứng minh. Giảsửaj ≥ds. Gọi t là chỉsốđầu tiên sao cho at ≥ds. Khi đó t ≤j và, với
+mọi i < t, ta có gcd(d, ai) > 1. Do đó ds có ước chung lớn hơn 1 với mọi ai trước bước t và
+là một ứng viên hợp lệ.
+Bởi tính tham lam, at ≤ds. Kết hợp với định nghĩa của t, suy ra at = ds.
+Nếu t = j thì gcd(aj, d) > 1, mâu thuẫn. Nếu t < j thì at và aj là hai sốhạng của dãy nên
+có ước chung lớn hơn 1. Nhưng mọi ước nguyên tốcủa at = ds đều chia d, lại mâu thuẫn
+với gcd(aj, d) = 1.
+Ý nghĩa của bổđềlà: một sốkhông thuộc A phải bịmột sốhạng của dãy “phát hiện” trước
+khi dãy vượt qua lũy thừa đầu tiên của nó nằm trên a1.
+6
+Mọi nguyên tốtrong kernel đều nhỏhơn a2
+1
+Cốđịnh một nguyên tốp xuất hiện trong ít nhất một kernel. Trong tất cảcác kernel chứa
+p, chọn
+b = pd
+sao cho cofactor d = b/p nhỏnhất.
+Human–AI Olympiad Attack
+2
+
+IMO 2026 - LỜI GIẢI BÀI 6
+HIVE–IMO X
+Nếu d = 1, thì p = b ∈A. Vì p phải có ước chung với a1, suy ra p | a1, nên p ≤a1.
+Xét d > 1. Do b là kernel, ước thực sựd không thuộc A. Chọn j nhỏnhất sao cho
+gcd(d, aj) = 1.
+(3)
+Vì aj, b ∈A, hai sốnày không nguyên tốcùng nhau. Từb = pd và (3), ước chung duy nhất
+có thểđến từp, nên
+p | aj.
+(4)
+Chọn một kernel c chia rad(aj). Vì c, b ∈A, ta có gcd(c, b) > 1. Mặt khác c | aj và gcd(aj, d) =
+1, nên c không chứa nguyên tốnào của d. Do đó p | c; viết
+c = pe.
+(5)
+Nếu d > a1, trong Bổđề5.1 ta có s = 1, nên aj < d. Từ(5),
+e = c
+p ≤aj
+p < d,
+trái với cách chọn d nhỏnhất trong các kernel chứa p. Vì thế
+d ≤a1.
+(6)
+Bây giờlấy s nhỏnhất sao cho ds > a1. Khi đó
+ds−1 ≤a1
+=⇒
+ds ≤a1d ≤a2
+1.
+TừBổđề5.1 và (4),
+p ≤aj < ds ≤a2
+1.
+Do đó:
+Định lý 6.1. Mọi nguyên tốxuất hiện trong một kernel đều thỏa
+p < a2
+1.
+(7)
+Chỉcó hữu hạn sốnguyên tốnhỏhơn a2
+1, và mỗi kernel là tích của một tập con các nguyên
+tốđó. Vì vậy họK hữu hạn. Bổđềkhóa đã được chứng minh.
+7
+Từhữu hạn kernel đến tuần hoàn tịnh tiến
+Liệt kê các kernel là
+K = {b1, b2, . . . , br}.
+Theo (1),
+A = b1N ∪b2N ∪· · · ∪brN.
+Đặt
+L = lcm(b1, b2, . . . , br).
+(8)
+Vì bi | L với mọi i,
+bi | m
+⇐⇒
+bi | m + L.
+Suy ra
+m ∈A
+⇐⇒
+m + L ∈A.
+(9)
+Human–AI Olympiad Attack
+3
+
+IMO 2026 - LỜI GIẢI BÀI 6
+HIVE–IMO X
+Gọi T là sốlớp dư modulo L thuộc A:
+T = #{1 ≤r ≤L : bi | r với ít nhất một i}.
+(10)
+Mỗi đoạn gồm L sốnguyên liên tiếp chứa đúng T phần tửcủa A. Đặc biệt, khoảng
+(an, an + L]
+chứa đúng T phần tửcủa A, phần tửcuối là an + L. Vì (an) liệt kê A theo thứtựtăng dần,
+an+T = an + L
+với mọi n ≥1.
+Kết luận
+Tồn tại các sốnguyên dương T, L thỏa
+an+T = an + L
+với mọi n ≥1.
+Chuỗi sai phân an+1 −an vì thếlà tuần hoàn với chu kỳT.
+8
+Kiểm toán các điểm dễbỏsót
+Bẫy 1: khoảng cách bịchặn chưa đủ
+Từviệc mọi bội của a1 thuộc A có thểsuy ra an+1 −an ≤a1, nhưng một dãy có bước
+nhảy trong một tập hữu hạn chưa chắc tuần hoàn. Cần hữu hạn hóa các kernel.
+Bẫy 2: phải dùng lũy thừa ds
+Một bội tùy ý của d có thểchứa nguyên tốmới, nên một sốhạng nguyên tốcùng
+nhau với d vẫn có thểgiao với bội đó qua nguyên tốmới. Lũy thừa ds có đúng cùng
+tập ước nguyên tốvới d, vì thếtạo ra rào chắn tuyệt đối.
+Bẫy 3: cặp chu kỳkhông duy nhất
+Nếu một cặp (T, L) thỏa mãn thì mọi cặp (kT, kL) cũng thỏa mãn. Đềbài chỉyêu
+cầu tồn tại, không yêu cầu xác định cặp nguyên thủy.
+9
+Góc nhìn cấu trúc
+Quy tắc tham lam ban đầu dường như phụthuộc vào toàn bộlịch sử. Tuy nhiên, tập A
+biến lịch sửấy thành một đối tượng tĩnh. Kernel mô tảnhững “giấy thông hành nguyên
+tố” tối thiểu đểmột sốthuộc A. Bổđềlũy thừa cho thấy một nguyên tốmới không thể
+trốn quá lâu: nếu cofactor còn lớn, ta tạo được một kernel nhỏhơn; nếu cofactor đã nhỏ,
+lũy thừa đầu tiên của nó nằm dưới a2
+1. Vì thếchỉhữu hạn nguyên tốvà hữu hạn kernel
+có thểxuất hiện. Phần còn lại là sốhọc modulo.
+Human–AI Olympiad Attack
+4

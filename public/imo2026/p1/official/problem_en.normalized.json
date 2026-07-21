@@ -1,0 +1,12 @@
+{
+  "problem_id": "IMO2026-P1",
+  "day": 1,
+  "number": 1,
+  "language": "en",
+  "statement_markdown": "There are $2026$ integers greater than $1$ written on a blackboard, not necessarily different. In a move, Confucius chooses two integers $m>1$ and $n>1$ from different places on the blackboard and replaces these two integers with\n$$\\gcd(m,n) \\qquad \\text{and} \\qquad \\frac{\\operatorname{lcm}(m,n)}{\\gcd(m,n)}.$$\nHe continues to make moves while it is possible to do so.\n\n(a) Prove that, regardless of the choices of Confucius, after finitely many moves, exactly one integer $M$ on the blackboard is greater than $1$.\n\n(b) Prove that the value of $M$ does not depend on the choices of Confucius.\n\n(Note that $\\gcd(x,y)$ denotes the greatest common divisor of positive integers $x$ and $y$, and $\\operatorname{lcm}(x,y)$ denotes the least common multiple of $x$ and $y$.)",
+  "normalization_changes": [
+    "Rendering-only: MathJax SVG glyphs transcribed to LaTeX ($...$ / $$...$$). No semantic change.",
+    "Whitespace collapsed; problem parts kept as in source (e.g. (a)/(b), bulleted steps)."
+  ],
+  "semantic_content_unchanged": true
+}

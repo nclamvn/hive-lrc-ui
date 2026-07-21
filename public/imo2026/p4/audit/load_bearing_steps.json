@@ -1,0 +1,17 @@
+{
+  "problem_id": "IMO2026-P4",
+  "steps": [
+    {
+      "id": "O1",
+      "claim": "Normalized cut-state formulas (b,x,q-b-x) and (c,a-x,b+x)"
+    },
+    {
+      "id": "O2",
+      "claim": "Integer k in (b,a+b) forces an integer-multiple angle in both branches"
+    },
+    {
+      "id": "O4",
+      "claim": "Noninteger invariant preserved by >=1 branch when q not integer"
+    }
+  ]
+}

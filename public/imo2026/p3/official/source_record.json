@@ -1,0 +1,13 @@
+{
+  "problem_id": "IMO2026-P3",
+  "official_source_url": "https://www.imo-official.org/problems/?language=en",
+  "edition_url": "https://www.imo-official.org/editions/2026/",
+  "fetched_at": "2026-07-21T09:00:00+07:00",
+  "http_status": 200,
+  "fetch_method": "curl GET (raw HTML) + glyph decode + browser visual confirmation",
+  "fetched_by": "Fable (Claude Code, Builder)",
+  "raw_page_file": "/imo2026/official_source/problems_2026.raw.html",
+  "raw_page_sha256": "cbe3015874c360049cd405840bbb4bb1b80e951e51028ec732b21d67f46a1095",
+  "statement_fragment_sha256": "20cc320004344359d7d2242fcf95cfc0d341d6246ce2b047de1e51fd9a15dd91",
+  "normalized_sha256": "0b08ff64ebbd48977ebf54c19ce300e76be0fe26c612f8e3e9543289e460ae30"
+}

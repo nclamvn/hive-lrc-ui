@@ -1,0 +1,65 @@
+{
+  "problem_id": "IMO2026-P2",
+  "obligations": [
+    {
+      "id": "O1",
+      "claim": "Reflection K',L' give cyclic quads (A,C,K,K') and (A,B,L,L')",
+      "status": "CLAIMED",
+      "dependencies": [],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O2",
+      "claim": "Antipode reduction: OM=ON iff DB=DC",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    },
+    {
+      "id": "O3",
+      "claim": "Coordinate parameterization of the configuration",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    },
+    {
+      "id": "O4",
+      "claim": "Non-degeneracy Delta != 0",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O3"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O5",
+      "claim": "Load-bearing identity Delta*G = Q_K*E_K + Q_L*E_L",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O3"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O6",
+      "claim": "Conclude DB=DC hence OM=ON",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O2",
+        "O4",
+        "O5"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": "IMO2026-P6",
+  "lemmas": [
+    {
+      "id": "O1",
+      "claim": "Greedy sequence = increasing enumeration of admissible set A",
+      "status": "CLAIMED",
+      "load_bearing": true
+    },
+    {
+      "id": "O2",
+      "claim": "A is upward-closed under divisibility and pairwise non-coprime",
+      "status": "CLAIMED",
+      "load_bearing": true
+    },
+    {
+      "id": "O4",
+      "claim": "Witness-before-power lemma: a_j < d^s",
+      "status": "CLAIMED",
+      "load_bearing": true
+    },
+    {
+      "id": "O5",
+      "claim": "Prime bound p < a_1^2 -> finitely many kernels",
+      "status": "CLAIMED",
+      "load_bearing": true
+    }
+  ]
+}

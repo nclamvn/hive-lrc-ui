@@ -1,0 +1,186 @@
+{
+  "problem_id": "IMO2026-P3",
+  "year": 2026,
+  "day": 1,
+  "number": 3,
+  "domain": [],
+  "status": "FROZEN-PENDING-REVIEW",
+  "official_source": "https://www.imo-official.org/problems/?language=en",
+  "official_solution_dependence": "NONE",
+  "evidence_class": "I0",
+  "stages": [
+    {
+      "id": "S0",
+      "status": "FROZEN-PENDING-REVIEW",
+      "human": "Pending: Human V3 translation review + contamination attestation.",
+      "ai": "Fable froze the official statement, produced normalized EN + VI draft, source record, contamination ledger and SHA-256 manifest. Sol V2 semantic review pending. No solving.",
+      "artifacts": [
+        {
+          "name": "problem_en.md",
+          "href": "/imo2026/p3/official/problem_en.md",
+          "sha256": "a0cd720e8c9e0a197f0acd96f8e049c63783370127b2fab422598dac0803e3d7"
+        },
+        {
+          "name": "problem_en.normalized.json",
+          "href": "/imo2026/p3/official/problem_en.normalized.json",
+          "sha256": "0b08ff64ebbd48977ebf54c19ce300e76be0fe26c612f8e3e9543289e460ae30"
+        },
+        {
+          "name": "problem_vi.reviewed.md",
+          "href": "/imo2026/p3/official/problem_vi.reviewed.md",
+          "sha256": "3445c80f8547aa19066192eaba0e0f2934c16e0451ec58069e73d50531d48789"
+        },
+        {
+          "name": "source_record.json",
+          "href": "/imo2026/p3/official/source_record.json",
+          "sha256": "dac43bcb6e393a4bd9afc4755e79309e825de65c9181482658edf967873dcc8c"
+        },
+        {
+          "name": "contamination_ledger.json",
+          "href": "/imo2026/p3/official/contamination_ledger.json",
+          "sha256": "8b176ec5e5fb74cf21ddd715dbf4deff8f395e60d5685fcdbb71dffeb44c102b"
+        }
+      ]
+    },
+    {
+      "id": "S1",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S2",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S3",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S4",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S5",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S6",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S7",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S8",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S9",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S10",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S11",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S12",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S13",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S14",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    }
+  ],
+  "contributions": {},
+  "proofs_rejected": 0,
+  "counterexamples_found": 0,
+  "last_updated": "2026-07-21T10:30:00+07:00",
+  "artifact_manifest_sha256": "571b848703675cd66e6fbcb3bf3595308d6fbb1d4c89b6d23ac3ec1c314d3933",
+  "official_solution_viewed": false,
+  "statement_en": "Let $n$ be a positive integer. Liu Bang and Xiang Yu have a stick of length $1$ and want to divide it between themselves. Liu marks at most $n$ points on the stick, and then Xiang marks at most $n$ points on the stick. The marked points are distinct. Then, the stick is cut at all marked points, creating a number of pieces. Afterwards, they take turns claiming any unclaimed piece of the stick, with Liu going first. Each player's goal is to maximise the total length of their own pieces.\n\nFor each $n$, determine the largest value $c$ such that Liu may guarantee a total length of at least $c$, regardless of Xiang's play.",
+  "statement_vi": "Cho $n$ là một số nguyên dương. Liu Bang và Xiang Yu có một chiếc gậy dài $1$ và muốn chia nó cho nhau. Liu đánh dấu nhiều nhất $n$ điểm trên gậy, sau đó Xiang đánh dấu nhiều nhất $n$ điểm trên gậy. Các điểm được đánh dấu là phân biệt. Sau đó, chiếc gậy được cắt tại tất cả các điểm đã đánh dấu, tạo thành một số mảnh. Tiếp theo, họ lần lượt nhận bất kỳ mảnh nào chưa được nhận, Liu đi trước. Mục tiêu của mỗi người chơi là tối đa hóa tổng độ dài các mảnh của mình.\n\nVới mỗi $n$, hãy xác định giá trị lớn nhất $c$ sao cho Liu có thể bảo đảm tổng độ dài ít nhất bằng $c$, bất kể Xiang chơi thế nào.",
+  "source": {
+    "url": "https://www.imo-official.org/problems/?language=en",
+    "edition_url": "https://www.imo-official.org/editions/2026/",
+    "fetched_at": "2026-07-21T09:00:00+07:00",
+    "raw_page_sha256": "cbe3015874c360049cd405840bbb4bb1b80e951e51028ec732b21d67f46a1095",
+    "dossier_dir": "/imo2026/p3/official/"
+  },
+  "s0_review": {
+    "state": "FROZEN-PENDING-REVIEW",
+    "v2_english_semantic": "PENDING (Sol)",
+    "v3_vietnamese": "PENDING (Human)",
+    "human_contamination_attestation": "PENDING",
+    "passes_official_freeze": false
+  },
+  "legacy_manuscript": {
+    "available": true,
+    "file": "/imo2026/p3/legacy/IMO2026_Day1_Problem3.pdf",
+    "sha256": "74bfa6311fcab1897a977f3969de2a886ad5e9e901ef343f1b530275b67c9206",
+    "created": "2026-07-16",
+    "level": "L4-candidate (human-checkable write-up)",
+    "audit_state": "AUDIT-PENDING",
+    "label": "Independent HIVE-IMO X manuscript. Not an official IMO solution, and not independently verified under the new pipeline."
+  },
+  "proof_audit": "NOT-STARTED",
+  "internal_prior_solution_exposure": true,
+  "reconciliation": {
+    "state": "RECONCILED",
+    "obligations": 6,
+    "load_bearing": 4,
+    "statement_match": "MATCH",
+    "audit_dir": "/imo2026/p3/audit/",
+    "record_sha256": "ca114fdb676928331157b1d8ac27dc0bd5a5699aaeb269179f81f7be719716bd",
+    "reconciled_at": "2026-07-21T12:00:00+07:00"
+  }
+}

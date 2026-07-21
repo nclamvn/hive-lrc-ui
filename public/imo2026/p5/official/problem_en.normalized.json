@@ -1,0 +1,12 @@
+{
+  "problem_id": "IMO2026-P5",
+  "day": 2,
+  "number": 5,
+  "language": "en",
+  "statement_markdown": "Let $\\mathbb{R}_{>0}$ be the set of positive real numbers. Determine all functions $f\\colon \\mathbb{R}_{>0}\\to\\mathbb{R}_{>0}$ such that\n$$\\sqrt{\\frac{x^2+f(y)^2}{2}} \\;\\ge\\; \\frac{f(x)+y}{2} \\;\\ge\\; \\sqrt{x\\,f(y)}$$\nfor every $x,y\\in\\mathbb{R}_{>0}$.",
+  "normalization_changes": [
+    "Rendering-only: MathJax SVG glyphs transcribed to LaTeX ($...$ / $$...$$). No semantic change.",
+    "Whitespace collapsed; problem parts kept as in source (e.g. (a)/(b), bulleted steps)."
+  ],
+  "semantic_content_unchanged": true
+}

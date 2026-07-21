@@ -1,0 +1,64 @@
+{
+  "problem_id": "IMO2026-P5",
+  "obligations": [
+    {
+      "id": "O1",
+      "claim": "Substitution x=f(y) gives f(f(y)) = 2 f(y) - y",
+      "status": "CLAIMED",
+      "dependencies": [],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O2",
+      "claim": "g=f-x: g(f(y))=g(y); orbit f^n(y)=y+n g(y); hence g>=0",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O3",
+      "claim": "Quantitative squeeze bounding g(x)-g(y)",
+      "status": "CLAIMED",
+      "dependencies": [],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O4",
+      "claim": "Positive values of g equal a single constant c (positive-step equality)",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O2",
+        "O3"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O5",
+      "claim": "Exclusion of mixed values {0,c}",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O3",
+        "O4"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O6",
+      "claim": "f(x)=x+c, c>=0",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O4",
+        "O5"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    }
+  ]
+}

@@ -9,6 +9,7 @@ type Locale = "en" | "vi";
 
 const NAV: { key: string; en: string; vi: string; href: (l: string) => string; match: (seg: string, path: string, l: string) => boolean }[] = [
   { key: "overview", en: "Overview", vi: "Tổng quan", href: (l) => `/${l}/overview`, match: (_s, p, l) => p === `/${l}/overview` },
+  { key: "imo", en: "IMO 2026", vi: "IMO 2026", href: (l) => `/${l}/hive-imo-2026`, match: (_s, p, l) => p.startsWith(`/${l}/hive-imo-2026`) },
   { key: "map", en: "Research Map", vi: "Bản đồ", href: (l) => `/${l}/observatory/map`, match: (s) => s === "map" },
   { key: "gates", en: "Gates", vi: "Gate", href: (l) => `/${l}/observatory/gates`, match: (s) => s === "gates" },
   { key: "claims", en: "Claims", vi: "Claim", href: (l) => `/${l}/observatory/claims`, match: (s) => s === "claims" },

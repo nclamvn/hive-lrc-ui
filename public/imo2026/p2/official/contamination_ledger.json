@@ -1,0 +1,36 @@
+{
+  "problem_id": "IMO2026-P2",
+  "actors": {
+    "human": {
+      "official_solution_viewed": "UNKNOWN",
+      "unofficial_solution_viewed": "UNKNOWN",
+      "discussion_or_hint_viewed": "UNKNOWN",
+      "social_media_solution_viewed": "UNKNOWN",
+      "prior_memory_claimed": "UNKNOWN",
+      "internal_project_solution_exposure": "UNKNOWN",
+      "blind_read_eligibility": "NOT-ESTABLISHED",
+      "notes": "Fable cannot attest to the Human's official-source exposure (unknown ≠ false). Legacy solution manuscripts exist in the project, so Human blind-read eligibility is NOT-ESTABLISHED until the Owner attests. Independence from the IMO official solution is a separate matter and remains NONE."
+    },
+    "sol": {
+      "official_solution_viewed": false,
+      "unofficial_solution_viewed": false,
+      "discussion_or_hint_viewed": false,
+      "social_media_solution_viewed": false,
+      "prior_memory_claimed": false,
+      "internal_project_solution_exposure": true,
+      "blind_read_eligibility": "NO",
+      "notes": "Sol (Contractor) attestation: viewed only the official IMO 2026 problem page for source review; no IMO official/unofficial solution accessed. However, the HIVE-IMO X project already contains legacy solution manuscripts for P1–P6, so Sol's internal-project solution exposure is TRUE and Sol is not eligible for a genuine AI blind read of these problems."
+    },
+    "fable": {
+      "official_solution_viewed": false,
+      "unofficial_solution_viewed": false,
+      "discussion_or_hint_viewed": false,
+      "social_media_solution_viewed": false,
+      "prior_memory_claimed": false,
+      "internal_project_solution_exposure": true,
+      "blind_read_eligibility": "NO",
+      "notes": "Fable attests no recalled IMO 2026 solution/hint was in its active context before S0, and it accessed only the official statements from the organiser. But Fable has now read the legacy project manuscripts during reconciliation, so internal-project solution exposure is TRUE and Fable is not eligible for a genuine blind read. official_solution_viewed refers to IMO organiser material only."
+    }
+  },
+  "updated_at": "2026-07-21T10:30:00+07:00"
+}

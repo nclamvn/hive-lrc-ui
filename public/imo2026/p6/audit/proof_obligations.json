@@ -1,0 +1,64 @@
+{
+  "problem_id": "IMO2026-P6",
+  "obligations": [
+    {
+      "id": "O1",
+      "claim": "Greedy sequence = increasing enumeration of admissible set A",
+      "status": "CLAIMED",
+      "dependencies": [],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O2",
+      "claim": "A is upward-closed under divisibility and pairwise non-coprime",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O3",
+      "claim": "Minimal kernels; A = union of b*N over kernels",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O2"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    },
+    {
+      "id": "O4",
+      "claim": "Witness-before-power lemma: a_j < d^s",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O5",
+      "claim": "Prime bound p < a_1^2 -> finitely many kernels",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O3",
+        "O4"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O6",
+      "claim": "Translation periodicity a_{n+T} = a_n + L",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O5"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    }
+  ]
+}

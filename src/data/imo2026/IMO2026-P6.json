@@ -1,0 +1,186 @@
+{
+  "problem_id": "IMO2026-P6",
+  "year": 2026,
+  "day": 2,
+  "number": 6,
+  "domain": [],
+  "status": "FROZEN-PENDING-REVIEW",
+  "official_source": "https://www.imo-official.org/problems/?language=en",
+  "official_solution_dependence": "NONE",
+  "evidence_class": "I0",
+  "stages": [
+    {
+      "id": "S0",
+      "status": "FROZEN-PENDING-REVIEW",
+      "human": "Pending: Human V3 translation review + contamination attestation.",
+      "ai": "Fable froze the official statement, produced normalized EN + VI draft, source record, contamination ledger and SHA-256 manifest. Sol V2 semantic review pending. No solving.",
+      "artifacts": [
+        {
+          "name": "problem_en.md",
+          "href": "/imo2026/p6/official/problem_en.md",
+          "sha256": "c551d0c72d1c4e287953043e9cf272e99f9b05d842a4d0e3fcfba296f916f29b"
+        },
+        {
+          "name": "problem_en.normalized.json",
+          "href": "/imo2026/p6/official/problem_en.normalized.json",
+          "sha256": "a685f23f76059d296e745d3a1f3292614c33a8eb72ce620c96ec5fc0bbfa45c7"
+        },
+        {
+          "name": "problem_vi.reviewed.md",
+          "href": "/imo2026/p6/official/problem_vi.reviewed.md",
+          "sha256": "5d299a8d5a4e2d40b2fe4a927cda2f2deffa99be00385f772ef640909242321d"
+        },
+        {
+          "name": "source_record.json",
+          "href": "/imo2026/p6/official/source_record.json",
+          "sha256": "2a31ac7916be10118db2965fc9aa3f07a595116e7f3f5c5f3229533af6dc7846"
+        },
+        {
+          "name": "contamination_ledger.json",
+          "href": "/imo2026/p6/official/contamination_ledger.json",
+          "sha256": "c64b88c7629508f70231b78878d1141bcc6fd9d4521e6b5c104747c4ae7d3199"
+        }
+      ]
+    },
+    {
+      "id": "S1",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S2",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S3",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S4",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S5",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S6",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S7",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S8",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S9",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S10",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S11",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S12",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S13",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    },
+    {
+      "id": "S14",
+      "status": "NOT-STARTED",
+      "human": "",
+      "ai": "",
+      "artifacts": []
+    }
+  ],
+  "contributions": {},
+  "proofs_rejected": 0,
+  "counterexamples_found": 0,
+  "last_updated": "2026-07-21T10:30:00+07:00",
+  "artifact_manifest_sha256": "0dc4d16537e42d45a4187ffb4c6fa74befeb6f545ad11f0893e5694e95ad7831",
+  "official_solution_viewed": false,
+  "statement_en": "Let $a_1,a_2,a_3,\\ldots$ be an infinite sequence of positive integers greater than $1$. Suppose that for all positive integers $n$, the number $a_{n+1}$ is the smallest positive integer greater than $a_n$ such that $\\gcd(a_{n+1},a_i)>1$ for every $i=1,2,\\ldots,n$. Prove that there exist positive integers $T$ and $L$ such that\n$$a_{n+T}=a_n+L$$\nfor every positive integer $n$.\n\n(Note that $\\gcd(x,y)$ denotes the greatest common divisor of positive integers $x$ and $y$.)",
+  "statement_vi": "Cho $a_1,a_2,a_3,\\ldots$ là một dãy vô hạn các số nguyên dương lớn hơn $1$. Giả sử rằng với mọi số nguyên dương $n$, số $a_{n+1}$ là số nguyên dương nhỏ nhất lớn hơn $a_n$ sao cho $\\gcd(a_{n+1},a_i)>1$ với mọi $i=1,2,\\ldots,n$. Chứng minh rằng tồn tại các số nguyên dương $T$ và $L$ sao cho\n$$a_{n+T}=a_n+L$$\nvới mọi số nguyên dương $n$.\n\n(Ở đây $\\gcd(x,y)$ ký hiệu ước chung lớn nhất của các số nguyên dương $x$ và $y$.)",
+  "source": {
+    "url": "https://www.imo-official.org/problems/?language=en",
+    "edition_url": "https://www.imo-official.org/editions/2026/",
+    "fetched_at": "2026-07-21T09:00:00+07:00",
+    "raw_page_sha256": "cbe3015874c360049cd405840bbb4bb1b80e951e51028ec732b21d67f46a1095",
+    "dossier_dir": "/imo2026/p6/official/"
+  },
+  "s0_review": {
+    "state": "FROZEN-PENDING-REVIEW",
+    "v2_english_semantic": "PENDING (Sol)",
+    "v3_vietnamese": "PENDING (Human)",
+    "human_contamination_attestation": "PENDING",
+    "passes_official_freeze": false
+  },
+  "legacy_manuscript": {
+    "available": true,
+    "file": "/imo2026/p6/legacy/IMO2026_Day2_Problem6.pdf",
+    "sha256": "06b2172ce6366f814daea5fb1a46824239f94d5cf3ddabf6d075dc6ca1002681",
+    "created": "2026-07-16",
+    "level": "L4-candidate (human-checkable write-up)",
+    "audit_state": "AUDIT-PENDING",
+    "label": "Independent HIVE-IMO X manuscript. Not an official IMO solution, and not independently verified under the new pipeline."
+  },
+  "proof_audit": "NOT-STARTED",
+  "internal_prior_solution_exposure": true,
+  "reconciliation": {
+    "state": "RECONCILED",
+    "obligations": 6,
+    "load_bearing": 4,
+    "statement_match": "MATCH",
+    "audit_dir": "/imo2026/p6/audit/",
+    "record_sha256": "79b35f7a49bbb057f3b232b0cf249567a6cbe70cfc8666837c864c959ead4327",
+    "reconciled_at": "2026-07-21T12:00:00+07:00"
+  }
+}

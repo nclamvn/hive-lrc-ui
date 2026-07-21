@@ -1,0 +1,23 @@
+{
+  "problem_id": "IMO2026-P1",
+  "lemmas": [
+    {
+      "id": "O2",
+      "claim": "Process terminates via lexicographic descent of (S,k)",
+      "status": "CLAIMED",
+      "load_bearing": true
+    },
+    {
+      "id": "O4",
+      "claim": "Per-prime valuation-column gcd g_p is invariant",
+      "status": "CLAIMED",
+      "load_bearing": true
+    },
+    {
+      "id": "O5",
+      "claim": "Final-state uniqueness: M = prod p^{gcd(v_p(x_i))}",
+      "status": "CLAIMED",
+      "load_bearing": true
+    }
+  ]
+}

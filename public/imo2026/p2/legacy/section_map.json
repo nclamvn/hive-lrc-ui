@@ -1,0 +1,40 @@
+{
+  "problem_id": "IMO2026-P2",
+  "sections": [
+    {
+      "n": 1,
+      "title": "Đềbài",
+      "char_offset": 498
+    },
+    {
+      "n": 2,
+      "title": "Bước dựng làm lộkiến trúc",
+      "char_offset": 825
+    },
+    {
+      "n": 3,
+      "title": "Đổi mục tiêu bằng antipode",
+      "char_offset": 1673
+    },
+    {
+      "n": 4,
+      "title": "Tọa độhóa cấu trúc đã nén",
+      "char_offset": 2015
+    },
+    {
+      "n": 5,
+      "title": "Tọa độcủa antipode",
+      "char_offset": 3330
+    },
+    {
+      "n": 6,
+      "title": "Đồng nhất thức khóa",
+      "char_offset": 3788
+    },
+    {
+      "n": 7,
+      "title": "Ý nghĩa chiến lược của lời giải",
+      "char_offset": 4421
+    }
+  ]
+}

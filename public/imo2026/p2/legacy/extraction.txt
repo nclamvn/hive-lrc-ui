@@ -1,0 +1,227 @@
+HIVE–IMO X
+HUMAN–AI OLYMPIAD SYSTEM
+IMO 2026 - Bài 2
+Trung điểm, hai tứgiác nội tiếp và phép giảm vềantipode
+THÔNG TIN TÀI LIỆU
+Kiến trúc: phản xạK, L qua các trung điểm đểtạo hai hình bình hành; ba điều
+kiện góc trởthành hai cyclicity và một cặp tia đẳng giác. Dựng antipode D của A
+trên (AKL), biến OM = ON thành DB = DC, rồi khóa bằng tọa độ.
+Bản biên soạn độc lập theo quy trình Human–AI Olympiad Attack. Không phải lời giải chính thức của Ban tổchức
+IMO.
+
+IMO 2026 - LỜI GIẢI BÀI 2
+HIVE–IMO X
+1
+Đềbài
+Cho tam giác ABC. Gọi M, N lần lượt là trung điểm của AB, AC. Chọn K, L lần lượt nằm
+hẳn bên trong các tam giác BMC, BNC, sao cho K nằm hẳn bên trong tam giác ABL và
+L nằm hẳn bên trong tam giác AKC. Giảsử
+∠KBA = ∠ACL,
+∠LBK = ∠LNC,
+∠LCK = ∠BMK.
+Gọi O là tâm đường tròn ngoại tiếp tam giác AKL. Chứng minh rằng
+OM = ON.
+2
+Bước dựng làm lộkiến trúc
+Đặt
+α = ∠KBA = ∠ACL,
+β = ∠LBK = ∠LNC,
+γ = ∠LCK = ∠BMK.
+Lấy K′ đối xứng với K qua M, và L′ đối xứng với L qua N.
+Vì M là trung điểm của cảAB và KK′, tứgiác AK′BK là hình bình hành. Do đó
+AK′ ∥BK,
+BK′ ∥AK.
+Tương tự, AL′CL là hình bình hành và
+AL′ ∥CL,
+CL′ ∥AL.
+2.1 Hai tứgiác nội tiếp
+Ta có
+∠ACK = ∠ACL + ∠LCK = α + γ.
+Mặt khác, nhờcác quan hệsong song và M, K, K′ thẳng hàng,
+∠AK′K = 180◦−α −γ.
+Do đó
+∠ACK + ∠AK′K = 180◦,
+suy ra
+A, C, K, K′ đồng viên.
+Tương tự,
+∠ABL = ∠ABK + ∠KBL = α + β.
+Trong tam giác CNL,
+∠CLN = 180◦−α −β.
+Vì L′A ∥LC và L′L cùng phương với LN,
+∠AL′L = 180◦−α −β.
+Do đó
+∠ABL + ∠AL′L = 180◦,
+suy ra
+A, B, L, L′ đồng viên.
+Điều kiện góc thứnhất đồng thời cho
+∠K′AB = ∠CAL′ = α,
+tức AK′ và AL′ là hai tia đẳng giác ngoài đối với góc BAC.
+Human–AI Olympiad Attack
+1
+
+IMO 2026 - LỜI GIẢI BÀI 2
+HIVE–IMO X
+3
+Đổi mục tiêu bằng antipode
+Gọi D là điểm đối diện A qua đường kính của đường tròn (AKL). Khi đó O là trung điểm
+của AD.
+Trong tam giác ADB, O là trung điểm của AD và M là trung điểm của AB, nên
+OM = DB
+2 .
+Tương tự, trong tam giác ADC,
+ON = DC
+2 .
+Vì thế
+OM = ON ⇐⇒DB = DC.
+Ta chỉcòn chứng minh antipode D nằm trên đường trung trực của BC.
+4
+Tọa độhóa cấu trúc đã nén
+Chuẩn hóa
+A = (0, 0),
+B = (1, 0),
+C = ρ(cos θ, sin θ),
+trong đó
+ρ = AC > 0,
+θ = ∠BAC.
+Đặt
+x = BK > 0,
+ρy = CL > 0.
+Từđịnh nghĩa của α và vịtrí các điểm,
+K = (1 −x cos α, x sin α),
+K′ = (x cos α, −x sin α),
+L = ρ(cos θ, sin θ) −ρy
+(
+cos(θ + α), sin(θ + α)
+)
+,
+L′ = ρy
+(
+cos(θ + α), sin(θ + α)
+)
+.
+Ký hiệu tích có hướng của hai vector U, V bởi
+[U, V ] = U1V2 −U2V1.
+Bốn điểm 0, U, V, W đồng viên khi và chỉkhi
+|U|2[V, W] + |V |2[W, U] + |W|2[U, V ] = 0.
+(1)
+Điều này thu được bằng cách khửhai hệsốtuyến tính trong phương trình tổng quát của
+một đường tròn đi qua gốc tọa độ.
+Đặt
+S = sin(θ + α),
+T = sin θ + 2 cos α sin(θ + α).
+Vì 0 < α < ∠ACB, ta có 0 < θ + α < π, nên S > 0.
+Human–AI Olympiad Attack
+2
+
+IMO 2026 - LỜI GIẢI BÀI 2
+HIVE–IMO X
+4.1 Phương trình từđường tròn (A, C, K, K′)
+Áp dụng (1) cho U = C, V = K, W = K′. Ta có
+|C|2 = ρ2,
+|K|2 = 1 −2x cos α + x2,
+|K′|2 = x2,
+[K, K′] = −x sin α,
+[K′, C] = ρxS,
+[C, K] = ρ(xS −sin θ).
+Thay vào (1), chia cho ρx > 0 và rút gọn, ta nhận được
+EK := 2Sx2 −Tx + S −ρ sin α = 0.
+(2)
+4.2 Phương trình từđường tròn (A, B, L, L′)
+Áp dụng (1) cho U = B, V = L, W = L′ và rút gọn tương tự, ta được
+EL := 2Sy2 −Ty + S −sin α
+ρ
+= 0.
+(3)
+Hai phương trình (2), (3) chứa toàn bộnội dung của hai cyclicity sau khi đã khai thác
+trung điểm và góc đẳng giác.
+5
+Tọa độcủa antipode
+Ký hiệu phép quay 90◦ngược chiều kim đồng hồbởi
+J(u1, u2) = (−u2, u1).
+Đặt
+∆= [K, L].
+Vì A, K, L không thẳng hàng, ∆̸= 0.
+Đường tròn có đường kính AD có phương trình vector
+X · D = |X|2.
+Do K, L nằm trên đường tròn này,
+K · D = |K|2,
+L · D = |L|2.
+Giải hệtuyến tính cho D cho ta
+D = |L|2JK −|K|2JL
+∆
+.
+(4)
+Đặt
+G = |D −B|2 −|D −C|2.
+Mục tiêu DB = DC tương đương với G = 0.
+Human–AI Olympiad Attack
+3
+
+IMO 2026 - LỜI GIẢI BÀI 2
+HIVE–IMO X
+6
+Đồng nhất thức khóa
+Thay tọa độcủa B, C, K, L và biểu thức (4) vào G, rồi nhóm theo hai phương trình cyclic
+(2), (3), ta thu được đồng nhất thức
+∆G = QKEK + QLEL,
+(5)
+trong đó
+QK = −ρ sin θ
+S
++
+(
+ρ −ρ2 sin α
+S
+)
+y,
+QL = ρ
+[ρ2 sin θ
+S
++
+(
+−ρ2 + ρ sin α
+S
+)
+x
+]
+.
+Đồng nhất thức (5) là phép khai triển đại sốtrực tiếp. Không có giảthiết hình học mới
+nào được dùng ởbước này; nó chỉnói rằng hiệu hai bình phương khoảng cách thuộc tổ
+hợp tuyến tính của hai điều kiện đồng viên.
+Từ(2) và (3),
+EK = EL = 0.
+Bởi vậy (5) cho
+∆G = 0.
+Do ∆̸= 0,
+G = 0.
+Suy ra
+|D −B| = |D −C|,
+hay
+DB = DC.
+Cuối cùng,
+OM = DB
+2
+= DC
+2
+= ON.
+Kết luận
+OM = ON.
+7
+Ý nghĩa chiến lược của lời giải
+Ba điều kiện góc ban đầu không trực tiếp tạo ra các đường tròn dễthấy. Phản xạqua hai
+trung điểm dịch các tia vềđúng vịtrí, tạo hai hình bình hành và hai tứgiác nội tiếp. Sau
+đó antipode loại tâm đường tròn khỏi bài toán:
+OM = ON ⇐⇒DB = DC.
+Phần tọa độchỉđược dùng sau khi cấu trúc đã được nén xuống hai phương trình cyclic
+và một đẳng thức khoảng cách.
+Human–AI Olympiad Attack
+4
+
+IMO 2026 - LỜI GIẢI BÀI 2
+HIVE–IMO X
+Ghi chú vềmức kiểm chứng
+Lời giải là một chứng minh tọa độhoàn chỉnh. Đồng nhất thức (5) có thểkiểm
+tra bằng khai triển tay hoặc bằng đại sốmáy tính; việc dùng máy tính đểkiểm tra
+không phải là giảthiết của chứng minh.
+Human–AI Olympiad Attack
+5

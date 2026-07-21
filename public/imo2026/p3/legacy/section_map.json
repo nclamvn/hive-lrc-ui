@@ -1,0 +1,45 @@
+{
+  "problem_id": "IMO2026-P3",
+  "sections": [
+    {
+      "n": 1,
+      "title": "Đềbài",
+      "char_offset": 491
+    },
+    {
+      "n": 2,
+      "title": "Giá trịcủa một phân hoạch cốđịnh",
+      "char_offset": 900
+    },
+    {
+      "n": 3,
+      "title": "Trực giác ghép cặp",
+      "char_offset": 1748
+    },
+    {
+      "n": 4,
+      "title": "Ứng viên và chiến lược của Lưu Bang",
+      "char_offset": 2298
+    },
+    {
+      "n": 5,
+      "title": "Cận trên: đối chiến lược của Hạng Vũ",
+      "char_offset": 2535
+    },
+    {
+      "n": 6,
+      "title": "Cận dưới: cấu trúc nhịphân của Lưu Bang",
+      "char_offset": 4348
+    },
+    {
+      "n": 7,
+      "title": "Kết luận",
+      "char_offset": 6383
+    },
+    {
+      "n": 8,
+      "title": "Diễn giải trực giác",
+      "char_offset": 6572
+    }
+  ]
+}

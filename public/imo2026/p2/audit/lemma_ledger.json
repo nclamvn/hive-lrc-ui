@@ -1,0 +1,23 @@
+{
+  "problem_id": "IMO2026-P2",
+  "lemmas": [
+    {
+      "id": "O1",
+      "claim": "Reflection K',L' give cyclic quads (A,C,K,K') and (A,B,L,L')",
+      "status": "CLAIMED",
+      "load_bearing": true
+    },
+    {
+      "id": "O4",
+      "claim": "Non-degeneracy Delta != 0",
+      "status": "CLAIMED",
+      "load_bearing": true
+    },
+    {
+      "id": "O5",
+      "claim": "Load-bearing identity Delta*G = Q_K*E_K + Q_L*E_L",
+      "status": "CLAIMED",
+      "load_bearing": true
+    }
+  ]
+}

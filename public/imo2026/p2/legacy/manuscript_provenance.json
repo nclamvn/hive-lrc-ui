@@ -1,0 +1,14 @@
+{
+  "problem_id": "IMO2026-P2",
+  "filename": "IMO2026_Day1_Problem2.pdf",
+  "sha256": "c10b9120459dd1c06b06e316c76d91d2ff9031f8385cbaa4c6085722b20f4855",
+  "original_path": "/Users/os/Downloads/IMO2026/IMO2026_Day1_Problem2.pdf",
+  "created_at": "2026-07-16",
+  "size_bytes": 80831,
+  "provenance_status": "PARTIAL",
+  "artifact_custody_provenance": "DOCUMENTED",
+  "authorship_provenance": "UNKNOWN",
+  "claimed_authors": [],
+  "authorship_note": "Artifact history and custody are documented (path, date, size, SHA-256, file predates this session, and this Builder session did not create it). Original authorship is NOT established.",
+  "self_label": "Independent HIVE-IMO X manuscript; explicitly not an official IMO solution."
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": "IMO2026-P5",
+  "steps": [
+    {
+      "id": "O1",
+      "claim": "Substitution x=f(y) gives f(f(y)) = 2 f(y) - y"
+    },
+    {
+      "id": "O2",
+      "claim": "g=f-x: g(f(y))=g(y); orbit f^n(y)=y+n g(y); hence g>=0"
+    },
+    {
+      "id": "O3",
+      "claim": "Quantitative squeeze bounding g(x)-g(y)"
+    },
+    {
+      "id": "O4",
+      "claim": "Positive values of g equal a single constant c (positive-step equality)"
+    },
+    {
+      "id": "O5",
+      "claim": "Exclusion of mixed values {0,c}"
+    }
+  ]
+}

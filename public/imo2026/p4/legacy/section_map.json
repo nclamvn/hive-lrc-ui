@@ -1,0 +1,50 @@
+{
+  "problem_id": "IMO2026-P4",
+  "sections": [
+    {
+      "n": 1,
+      "title": "Đềbài",
+      "char_offset": 591
+    },
+    {
+      "n": 2,
+      "title": "Bản đồchiến lược",
+      "char_offset": 1247
+    },
+    {
+      "n": 3,
+      "title": "Mô hình chính xác của một nhát cắt",
+      "char_offset": 1793
+    },
+    {
+      "n": 0,
+      "title": "< x < a.",
+      "char_offset": 1993
+    },
+    {
+      "n": 4,
+      "title": "Khi q = n là sốnguyên: Mộc Lan thắng",
+      "char_offset": 2293
+    },
+    {
+      "n": 5,
+      "title": "Khi q không nguyên: Thiên Vũ tránh thua mãi mãi",
+      "char_offset": 4033
+    },
+    {
+      "n": 6,
+      "title": "Đáp án hoàn chỉnh",
+      "char_offset": 5371
+    },
+    {
+      "n": 7,
+      "title": "Kiểm toán các điểm dễbỏsót",
+      "char_offset": 5556
+    },
+    {
+      "n": 8,
+      "title": "Góc nhìn cấu trúc",
+      "char_offset": 6269
+    }
+  ]
+}

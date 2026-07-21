@@ -13,7 +13,8 @@
     "observatory:build": "node scripts/build-observatory.mts",
     "observatory:check": "node scripts/observatory-governance.mjs",
     "observatory": "node scripts/build-observatory.mts && node scripts/observatory-governance.mjs",
-    "prebuild": "node scripts/build-observatory.mts && node scripts/observatory-governance.mjs"
+    "imo:validate": "node scripts/imo-validate.mjs",
+    "prebuild": "node scripts/build-observatory.mts && node scripts/observatory-governance.mjs && node scripts/imo-validate.mjs"
   },
   "dependencies": {
     "@observablehq/plot": "^0.6.17",

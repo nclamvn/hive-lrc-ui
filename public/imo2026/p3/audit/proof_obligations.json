@@ -1,0 +1,64 @@
+{
+  "problem_id": "IMO2026-P3",
+  "obligations": [
+    {
+      "id": "O1",
+      "claim": "Fixed-partition game value V=(1+Delta)/2 with pairing strategy",
+      "status": "CLAIMED",
+      "dependencies": [],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O2",
+      "claim": "Candidate optimum c_n = 2^n/(2^{n+1}-1)",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    },
+    {
+      "id": "O3",
+      "claim": "Upper bound: subset-sum proximity + pairing cut budget <= n",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O4",
+      "claim": "Lower bound: powers of two + tree two-colouring, |R|>=1",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O1"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O5",
+      "claim": "Pairing bound |R| <= Delta'",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O4"
+      ],
+      "load_bearing": true,
+      "notes": ""
+    },
+    {
+      "id": "O6",
+      "claim": "Bounds meet at c_n",
+      "status": "CLAIMED",
+      "dependencies": [
+        "O3",
+        "O5"
+      ],
+      "load_bearing": false,
+      "notes": ""
+    }
+  ]
+}

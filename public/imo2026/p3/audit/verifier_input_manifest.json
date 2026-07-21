@@ -1,0 +1,22 @@
+{
+  "problem_id": "IMO2026-P3",
+  "purpose": "Clean input for a FRESH independent verifier (no prior exposure).",
+  "provides": [
+    "official frozen problem statement (EN)",
+    "legacy manuscript PDF (IMO2026_Day1_Problem3.pdf)",
+    "proof-obligation skeleton WITHOUT verdicts",
+    "audit rubric (to be supplied by Contractor)"
+  ],
+  "excludes": [
+    "search history / discussion",
+    "prior self-assessments ('coherent' etc.)",
+    "Sol's conclusions",
+    "any suspected-error list",
+    "any repair suggestions"
+  ],
+  "files": {
+    "official_statement": "/imo2026/p3/official/problem_en.md",
+    "manuscript": "/imo2026/p3/legacy/IMO2026_Day1_Problem3.pdf",
+    "proof_obligations": "/imo2026/p3/audit/proof_obligations.json"
+  }
+}

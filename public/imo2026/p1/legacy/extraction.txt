@@ -1,0 +1,174 @@
+HIVE–IMO X
+HUMAN–AI OLYMPIAD SYSTEM
+IMO 2026 - Bài 1
+Quá trình gcd/lcm, thuật toán Euclid trên sốmũ và dạng chuẩn
+duy nhất
+THÔNG TIN TÀI LIỆU
+Kết quảcuối:
+M =
+∏
+p
+pgcd
+(
+vp(x1),...,vp(x2026)
+)
+.
+Kiến trúc chứng minh: monovariant từđiển cho tính dừng, sau đó invariant
+theo từng sốnguyên tốđểxác định dạng chuẩn.
+Bản biên soạn độc lập theo quy trình Human–AI Olympiad Attack. Không phải lời giải chính thức của Ban tổchức
+IMO.
+
+IMO 2026 - LỜI GIẢI BÀI 1
+HIVE–IMO X
+1
+Đềbài
+Trên bảng có 2026 sốnguyên lớn hơn 1, không nhất thiết khác nhau. Trong một bước,
+Khổng Tửchọn hai sốm, n > 1 ởhai vịtrí khác nhau và thay chúng bằng
+gcd(m, n)
+và
+lcm(m, n)
+gcd(m, n) .
+Ông tiếp tục chừng nào còn có thể.
+(a) Chứng minh rằng sau hữu hạn bước còn đúng một sốM > 1.
+(b) Chứng minh rằng M không phụthuộc vào các lựa chọn.
+2
+Bản đồchiến lược
+Phân rã nghĩa vụ
+1. Chứng minh mỗi bước luôn tạo ra sốnguyên dương.
+2. Tìm một đại lượng sắp tốt buộc quá trình kết thúc.
+3. Mô tảtrạng thái cuối.
+4. Tìm invariant đủmạnh đểxác định duy nhất sốcuối.
+Điểm then chốt là không dùng một đại lượng cho cảhai nhiệm vụ. Tính dừng được xửlý
+bằng một monovariant; tính độc lập đường đi được xửlý bằng một invariant khác.
+3
+Phép biến đổi theo sốmũ nguyên tố
+Cốđịnh một sốnguyên tốp. Đặt
+a = vp(m),
+b = vp(n).
+Khi đó
+vp(gcd(m, n)) = min(a, b)
+và
+vp
+(lcm(m, n)
+gcd(m, n)
+)
+= max(a, b) −min(a, b) = |a −b|.
+Vì thế, ởcột sốmũ của p, một bước có dạng
+(a, b) 7−→
+(
+min(a, b), |a −b|
+)
+.
+Đây chính là một bước của thuật toán Euclid dạng trừ.
+4
+Phần (a): quá trình kết thúc
+Với sốnguyên dương x, ký hiệu
+Ω(x) =
+∑
+p
+vp(x),
+tức tổng các sốmũ trong phân tích nguyên tốcủa x.
+Human–AI Olympiad Attack
+1
+
+IMO 2026 - LỜI GIẢI BÀI 1
+HIVE–IMO X
+Tại một trạng thái của bảng, đặt
+S =
+2026
+∑
+i=1
+Ω(xi),
+k = #{i : xi > 1}.
+Xét cặp (S, k) theo thứtựtừđiển.
+Giảsửmột bước chọn m, n và đặt d = gcd(m, n). Với từng sốnguyên tốp, tổng hai sốmũ
+thay đổi từ
+a + b
+thành
+min(a, b) + |a −b| = max(a, b).
+Mức giảm là min(a, b). Cộng trên mọi p,
+Smới = Scũ −Ω(d).
+• Nếu d > 1, thì Ω(d) > 0, nên S giảm nghiêm ngặt.
+• Nếu d = 1, hai sốmới là 1 và mn. Khi đó S không đổi nhưng k giảm đúng 1.
+Do đó sau mỗi bước,
+(S, k)mới <lex (S, k)cũ.
+Không tồn tại dãy giảm vô hạn trong N2 với thứtựtừđiển. Vậy quá trình phải kết thúc
+sau hữu hạn bước.
+Bổđề4.1. Trong mọi bước, hai sốmới không thểđồng thời bằng 1.
+Chứng minh. Nếu gcd(m, n) > 1, sốthứnhất đã lớn hơn 1. Nếu gcd(m, n) = 1, sốthứhai
+bằng mn > 1.
+Vì ban đầu có các sốlớn hơn 1, trong suốt quá trình luôn còn ít nhất một sốlớn hơn 1.
+Khi quá trình dừng, không thểcòn hai sốlớn hơn 1, vì khi đó vẫn có thểchọn chúng để
+thực hiện một bước. Vậy trạng thái cuối có đúng một sốM > 1 và tất cảcác sốcòn lại
+bằng 1.
+Kết luận phần (a)
+Bất kểcách chọn các cặp, sau hữu hạn bước trên bảng còn đúng một sốM > 1.
+5
+Phần (b): invariant xác định sốcuối
+Cốđịnh sốnguyên tốp. Tại một trạng thái, đặt
+gp = gcd
+(
+vp(x1), vp(x2), . . . , vp(x2026)
+)
+.
+Nếu một bước thay hai sốmũ a, b bằng min(a, b), |a −b|, thì
+gcd
+(
+min(a, b), |a −b|
+)
+= gcd(a, b).
+Thật vậy, giảsửa ≥b, khi đó
+gcd
+(
+min(a, b), |a −b|
+)
+= gcd(b, a −b) = gcd(a, b).
+Human–AI Olympiad Attack
+2
+
+IMO 2026 - LỜI GIẢI BÀI 1
+HIVE–IMO X
+Các sốmũ khác không đổi, nên gp là invariant của toàn bộquá trình.
+Ởtrạng thái cuối, chỉcòn sốM > 1. Dãy sốmũ của p có dạng
+0, 0, . . . , 0, vp(M), 0, . . . , 0.
+Do đó gcd của dãy này bằng vp(M). Vì gp không đổi,
+vp(M) = gcd
+(
+vp(x1), . . . , vp(x2026)
+)
+.
+Suy ra
+M =
+∏
+p
+pgcd(vp(x1),...,vp(x2026)).
+Tích chỉchạy trên hữu hạn sốnguyên tốxuất hiện trong các sốban đầu.
+Công thức trên chỉphụthuộc trạng thái ban đầu, nên M không phụthuộc vào thứtựlựa
+chọn.
+Đáp án hoàn chỉnh
+M =
+∏
+p
+pgcdi vp(xi)
+và quá trình luôn kết thúc ởtrạng thái gồm M cùng 2025 số1.
+6
+Kiểm toán các bẫy thường gặp
+Bẫy 1: gcd của các sốtrên bảng không bất biến
+Ví dụ
+(8, 4) →(4, 2) →(2, 2) →(2, 1).
+Sốcuối là 2, trong khi gcd(8, 4) = 4.
+Bẫy 2: không phải mỗi bước đều làm một sốmũ bằng 0
+Ví dụ
+(5, 3) →(3, 2).
+Phép biến đổi là Euclid dạng trừ, có thểcần nhiều bước.
+Bẫy 3: tổng sốmũ không luôn giảm
+Nếu gcd(m, n) = 1, ví dụ(2, 3) →(1, 6), tổng sốmũ giữnguyên. Vì vậy cần cặp từ
+điển (S, k) chứkhông chỉS.
+7
+Góc nhìn cấu trúc
+Bài toán là một hệviết lại có nhiều đường đi. Phần (a) là bài toán termination. Phần (b)
+là bài toán unique normal form. Valuation vp tách một phép toán sốhọc phức tạp thành
+các bước Euclid độc lập trên từng cột, còn invariant gcd của cột ghép các kết quảtrởlại
+thành một sốduy nhất.
+Human–AI Olympiad Attack
+3

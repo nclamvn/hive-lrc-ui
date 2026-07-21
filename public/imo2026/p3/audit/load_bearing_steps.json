@@ -1,0 +1,21 @@
+{
+  "problem_id": "IMO2026-P3",
+  "steps": [
+    {
+      "id": "O1",
+      "claim": "Fixed-partition game value V=(1+Delta)/2 with pairing strategy"
+    },
+    {
+      "id": "O3",
+      "claim": "Upper bound: subset-sum proximity + pairing cut budget <= n"
+    },
+    {
+      "id": "O4",
+      "claim": "Lower bound: powers of two + tree two-colouring, |R|>=1"
+    },
+    {
+      "id": "O5",
+      "claim": "Pairing bound |R| <= Delta'"
+    }
+  ]
+}
