@@ -48,7 +48,7 @@ export default async function HiveImoOverview({ params }: { params: Promise<{ lo
           <div className="hi-eyebrow">HIVE RESEARCH · IMO 2026 · HUMAN × AI</div>
           <h1 className="hi-hero-title">
             {t(L, "Six problems. One verifiable Human–AI journey.",
-                  "Sáu bài toán. Một hành trình Human × AI có thể kiểm chứng.")}
+                  "Sáu bài toán. Một hành trình Human × AI có thể kiểm chứng.")}
           </h1>
           <p className="hi-hero-sub">
             {t(L,
