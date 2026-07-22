@@ -177,7 +177,7 @@ export default async function HiveImoOverview({ params }: { params: Promise<{ lo
                 "Quy trình tách rõ đọc, thử, kiểm và so sánh để không agent nào tự đề xuất rồi tự chấp nhận câu trả lời của mình.")}
             </p>
           </div>
-          <div className="hi-grid" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
+          <div className="hi-stage-grid">
             {STAGE_IDS.map((id) => {
               const n = STAGE_NAMES[id];
               return (

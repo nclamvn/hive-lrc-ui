@@ -155,6 +155,9 @@
 .hi-day-label .date { font-family: var(--hi-mono); letter-spacing: 0; text-transform: none; color: var(--hi-faint); font-weight: 400; }
 .hi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--hi-card-gap); }
 
+/* compact stage grid (short labels) - reflows down to 2 columns on phones */
+.hi-stage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--hi-card-gap); }
+
 .hi-card { display: flex; flex-direction: column; text-decoration: none; color: inherit;
   background: var(--hi-surface); border: 1px solid var(--hi-border); border-radius: var(--hi-radius);
   box-shadow: var(--hi-shadow); padding: 24px 24px 20px; transition: border-color .14s, transform .14s, box-shadow .14s; }
@@ -320,12 +323,26 @@ a.hi-card:hover { border-color: var(--hi-border); transform: translateY(-2px);
 @media (max-width: 900px) {
   .hi { --hi-section: 80px; --hi-section-tight: 60px; --hi-inset: 22px; }
   .hi-grid, .hi-roles { grid-template-columns: 1fr; }
+  .hi-stage-grid { grid-template-columns: repeat(2, 1fr); }
   .hi-metrics { grid-template-columns: repeat(2, 1fr); }
   .hi-hero-title { font-size: clamp(34px, 9vw, 52px); }
   .hi-header-nav { display: none; }
   .hi-statusblock dl { grid-template-columns: 1fr; }
 }
+@media (max-width: 600px) {
+  /* three-up comparison cards get too narrow on phones - stack them and lay
+     each out horizontally: big count on the left, label + note on the right */
+  .hi-tiers { grid-template-columns: 1fr; gap: 12px; }
+  .hi-tier { display: grid; grid-template-columns: auto 1fr; column-gap: 18px;
+    align-items: baseline; padding: 18px 20px; }
+  .hi-tier .tv { grid-row: 1 / span 2; font-size: 30px; }
+  .hi-tier .tl { grid-column: 2; margin-top: 0; }
+  .hi-tier .tn { grid-column: 2; margin-top: 3px; }
+}
 @media (max-width: 560px) {
   .hi-metrics { grid-template-columns: 1fr; }
   .hi-detail-title { font-size: 30px; }
+}
+@media (max-width: 380px) {
+  .hi-stage-grid { grid-template-columns: 1fr; }
 }
