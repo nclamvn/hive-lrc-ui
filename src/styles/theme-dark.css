@@ -9,8 +9,37 @@
  * tokens.css regardless of CSS import order.
  * ------------------------------------------------------------------ */
 
+/* Curated research-map (inline SVG) palette. Defined as CSS variables so the
+   map colors resolve from data-theme in the browser (SSR-safe, no JS). Light
+   defaults live here; the dark values are set in the html[data-theme="dark"]
+   block below. */
+:root {
+  --cm-ink: #111111;
+  --cm-dim: #66645f;
+  --cm-line: #cbc8c0;
+  --cm-soft: #e9e7e1;
+  --cm-paper: #fffefc;
+  --cm-accent: #2f9b50;
+  --cm-rust: #a08f7a;
+  --cm-on-ink: #ffffff;
+  --cm-on-node: #1a1a1a;
+  --cm-outline: #66645f;
+}
+
 html[data-theme="dark"] {
   color-scheme: dark;
+
+  /* research-map SVG palette (dark) */
+  --cm-ink: #ece9e1;
+  --cm-dim: #8a877e;
+  --cm-line: #5a564d;
+  --cm-soft: #3a3833;
+  --cm-paper: #211f1a;
+  --cm-accent: #4fb96e;
+  --cm-rust: #b89a86;
+  --cm-on-ink: #100f0d;
+  --cm-on-node: #ece9e1;
+  --cm-outline: #d7d3c9;
 
   /* ---- Observatory "golden" theme tokens ---- */
   --obs-bg: #100f0d;

@@ -8,22 +8,23 @@ import { pick } from "@/lib/observatory";
 type Props = { nodes: GraphNode[]; edges: GraphEdge[]; locale: Locale };
 const t = (l: Locale, en: string, vi: string) => (l === "vi" ? vi : en);
 
-// SVG map palette. Picked once from the active theme (this is an inline SVG,
-// so values must be concrete). In dark, "proved" (INK) becomes a light-filled
-// emphasis node with dark text, while default/supported/superseded nodes stay
-// dark and receive a light NODE_OUTLINE so every shape reads on the near-black
-// canvas.
-const DARK = typeof document !== "undefined" && document.documentElement.getAttribute("data-theme") === "dark";
-const INK = DARK ? "#ece9e1" : "#111111",
-  DIM = DARK ? "#8a877e" : "#66645f",
-  LINE = DARK ? "#5a564d" : "#cbc8c0",
-  SOFT = DARK ? "#3a3833" : "#e9e7e1",
-  PAPER = DARK ? "#211f1a" : "#fffefc",
-  ACCENT = DARK ? "#4fb96e" : "#2f9b50",
-  RUST = DARK ? "#b89a86" : "#a08f7a",
-  ON_INK = DARK ? "#100f0d" : "#fff",        // label on an INK-filled (emphasis) node
-  ON_NODE = DARK ? "#ece9e1" : "#1a1a1a",    // label on SOFT / PAPER nodes
-  NODE_OUTLINE = DARK ? "#d7d3c9" : "";      // light outline for dark-filled nodes
+// SVG map palette as CSS custom properties (defined per data-theme in
+// theme-dark.css) and applied through the `style` prop so the browser resolves
+// them at paint time. This is SSR-safe: no document access at module load, so
+// the server and client render identical markup and the theme is applied by
+// CSS from <html data-theme>. In dark, "proved" (INK) is a light emphasis fill
+// with dark text, while default/supported/superseded nodes stay dark and take
+// a light NODE_OUTLINE so every shape reads against the near-black canvas.
+const INK = "var(--cm-ink)",
+  DIM = "var(--cm-dim)",
+  LINE = "var(--cm-line)",
+  SOFT = "var(--cm-soft)",
+  PAPER = "var(--cm-paper)",
+  ACCENT = "var(--cm-accent)",
+  RUST = "var(--cm-rust)",
+  ON_INK = "var(--cm-on-ink)",        // label on an INK-filled (emphasis) node
+  ON_NODE = "var(--cm-on-node)",      // label on SOFT / PAPER nodes
+  NODE_OUTLINE = "var(--cm-outline)"; // outline for dark-filled nodes
 
 // hand-tuned claim layout: [column, lane]  (lane 0=upper, 1=mid, 2=lower)
 const CLAIM_POS: Record<string, [number, number]> = {
@@ -133,17 +134,17 @@ export function CuratedMap({ nodes, edges, locale }: Props) {
              style={{ cursor: drag.current ? "grabbing" : "grab" }}>
           <svg viewBox={`0 0 ${VW} ${VH}`} preserveAspectRatio="xMidYMid meet" style={{ width: "100%", height: "100%" }}>
             <defs>
-              <marker id="cm-a" markerWidth="7" markerHeight="7" refX="6" refY="3.2" orient="auto"><path d="M0 0L7 3.2L0 6.4z" fill={LINE} /></marker>
-              <marker id="cm-ag" markerWidth="7" markerHeight="7" refX="6" refY="3.2" orient="auto"><path d="M0 0L7 3.2L0 6.4z" fill={ACCENT} /></marker>
-              <marker id="cm-ar" markerWidth="7" markerHeight="7" refX="6" refY="3.2" orient="auto"><path d="M0 0L7 3.2L0 6.4z" fill={RUST} /></marker>
+              <marker id="cm-a" markerWidth="7" markerHeight="7" refX="6" refY="3.2" orient="auto"><path d="M0 0L7 3.2L0 6.4z" style={{ fill: LINE }} /></marker>
+              <marker id="cm-ag" markerWidth="7" markerHeight="7" refX="6" refY="3.2" orient="auto"><path d="M0 0L7 3.2L0 6.4z" style={{ fill: ACCENT }} /></marker>
+              <marker id="cm-ar" markerWidth="7" markerHeight="7" refX="6" refY="3.2" orient="auto"><path d="M0 0L7 3.2L0 6.4z" style={{ fill: RUST }} /></marker>
             </defs>
             <g transform={T}>
               {/* gate timeline rail */}
-              <polyline points={gateSeq.map((n) => `${pos[n.id].x},${pos[n.id].y}`).join(" ")} fill="none" stroke={LINE} strokeWidth="1" opacity="0.7" />
+              <polyline points={gateSeq.map((n) => `${pos[n.id].x},${pos[n.id].y}`).join(" ")} fill="none" strokeWidth="1" opacity="0.7" style={{ stroke: LINE }} />
               {/* claim -> introducing gate faint connectors */}
               {showClaims && claimList.map((n) => {
                 const p = pos[n.id]; const g = pos[`gate:${n.gate}`]; if (!p || !g) return null;
-                return <path key={`c-${n.id}`} d={`M${p.x} ${p.y - 15} C ${p.x} ${(p.y + g.y) / 2}, ${g.x} ${(p.y + g.y) / 2}, ${g.x} ${g.y + 15}`} fill="none" stroke={LINE} strokeWidth="0.8" strokeDasharray="2 3" opacity={dimmed(n.id) ? 0.06 : 0.3} />;
+                return <path key={`c-${n.id}`} d={`M${p.x} ${p.y - 15} C ${p.x} ${(p.y + g.y) / 2}, ${g.x} ${(p.y + g.y) / 2}, ${g.x} ${g.y + 15}`} fill="none" strokeWidth="0.8" strokeDasharray="2 3" opacity={dimmed(n.id) ? 0.06 : 0.3} style={{ stroke: LINE }} />;
               })}
               {/* claim dependency edges */}
               {showClaims && edges.map((e) => {
@@ -153,24 +154,24 @@ export function CuratedMap({ nodes, edges, locale }: Props) {
                 const mk = e.relation === "verifies" ? "url(#cm-ag)" : e.relation === "supersedes" ? "url(#cm-ar)" : "url(#cm-a)";
                 const mx = (s.x + d.x) / 2, my = (s.y + d.y) / 2 - (Math.abs(s.y - d.y) < 8 ? 16 : 0);
                 const op = dimmed(e.source) || dimmed(e.target) ? 0.08 : 0.9;
-                return <path key={e.id} d={`M${s.x + 58} ${s.y} Q ${mx} ${my} ${d.x - 58} ${d.y}`} fill="none" stroke={st.c} strokeWidth={st.w} strokeDasharray={st.dash} markerEnd={mk} opacity={op} />;
+                return <path key={e.id} d={`M${s.x + 58} ${s.y} Q ${mx} ${my} ${d.x - 58} ${d.y}`} fill="none" strokeWidth={st.w} strokeDasharray={st.dash} markerEnd={mk} opacity={op} style={{ stroke: st.c }} />;
               })}
               {/* gate nodes (circle for short codes, pill for long codes like C.004 so text never overflows) */}
               {gateSeq.map((n) => {
                 const p = pos[n.id]; const cur = n.status === "current"; const blk = gateFill(n.status) === INK;
-                const label = gateLabel(n); const stroke = cur ? ACCENT : n.status === "pass" ? INK : (DARK ? NODE_OUTLINE : DIM);
+                const label = gateLabel(n); const stroke = cur ? ACCENT : n.status === "pass" ? INK : NODE_OUTLINE;
                 const pill = label.length >= 4;
                 const pw = Math.max(29, label.length * 6 + 14);
                 return (
                   <g key={n.id} style={{ cursor: "pointer" }} opacity={dimmed(n.id) ? 0.18 : 1}
                      onClick={(ev) => { ev.stopPropagation(); setSel(n); }}>
                     {cur && (pill
-                      ? <rect x={p.x - pw / 2 - 4.5} y={p.y - 18.5} width={pw + 9} height={37} rx={18.5} fill="none" stroke={ACCENT} strokeOpacity="0.3" strokeWidth="1.6" />
-                      : <circle cx={p.x} cy={p.y} r="19" fill="none" stroke={ACCENT} strokeOpacity="0.3" strokeWidth="1.6" />)}
+                      ? <rect x={p.x - pw / 2 - 4.5} y={p.y - 18.5} width={pw + 9} height={37} rx={18.5} fill="none" strokeOpacity="0.3" strokeWidth="1.6" style={{ stroke: ACCENT }} />
+                      : <circle cx={p.x} cy={p.y} r="19" fill="none" strokeOpacity="0.3" strokeWidth="1.6" style={{ stroke: ACCENT }} />)}
                     {pill
-                      ? <rect x={p.x - pw / 2} y={p.y - 14.5} width={pw} height={29} rx={14.5} fill={gateFill(n.status)} stroke={stroke} strokeWidth={cur ? 2 : 1.4} />
-                      : <circle cx={p.x} cy={p.y} r="14.5" fill={gateFill(n.status)} stroke={stroke} strokeWidth={cur ? 2 : 1.4} />}
-                    <text x={p.x} y={p.y + 3.4} textAnchor="middle" fontSize="9.5" fontFamily="ui-monospace, Menlo, monospace" fontWeight="600" fill={blk ? ON_INK : ON_NODE}>{label}</text>
+                      ? <rect x={p.x - pw / 2} y={p.y - 14.5} width={pw} height={29} rx={14.5} strokeWidth={cur ? 2 : 1.4} style={{ fill: gateFill(n.status), stroke }} />
+                      : <circle cx={p.x} cy={p.y} r="14.5" strokeWidth={cur ? 2 : 1.4} style={{ fill: gateFill(n.status), stroke }} />}
+                    <text x={p.x} y={p.y + 3.4} textAnchor="middle" fontSize="9.5" fontFamily="ui-monospace, Menlo, monospace" fontWeight="600" style={{ fill: blk ? ON_INK : ON_NODE }}>{label}</text>
                   </g>
                 );
               })}
@@ -181,14 +182,14 @@ export function CuratedMap({ nodes, edges, locale }: Props) {
                 const proved = ["proved_internal", "validated_exact"].includes(n.status);
                 const superseded = n.status === "superseded"; const target = cid === "C0";
                 const fill = target ? PAPER : proved ? INK : superseded ? PAPER : SOFT;
-                const stroke = DARK ? (proved ? INK : NODE_OUTLINE) : (target ? INK : proved ? INK : superseded ? LINE : DIM);
+                const stroke = proved ? INK : NODE_OUTLINE;
                 return (
                   <g key={n.id} style={{ cursor: "pointer" }} opacity={dimmed(n.id) ? 0.16 : 1}
                      onClick={(ev) => { ev.stopPropagation(); setSel(n); }}>
                     <rect x={p.x - 56} y={p.y - 14} width="112" height="28" rx={target ? 14 : 7}
-                          fill={fill} stroke={stroke} strokeWidth={target ? 1.6 : 1.3} strokeDasharray={superseded ? "4 3" : undefined} />
+                          strokeWidth={target ? 1.6 : 1.3} strokeDasharray={superseded ? "4 3" : undefined} style={{ fill, stroke }} />
                     <text x={p.x} y={p.y + 3.2} textAnchor="middle" fontSize="9" fontWeight="600"
-                          fill={proved ? ON_INK : ON_NODE} opacity={superseded ? 0.7 : 1}>{pick({ en: tag[0], vi: tag[1] }, locale)}</text>
+                          opacity={superseded ? 0.7 : 1} style={{ fill: proved ? ON_INK : ON_NODE }}>{pick({ en: tag[0], vi: tag[1] }, locale)}</text>
                   </g>
                 );
               })}
