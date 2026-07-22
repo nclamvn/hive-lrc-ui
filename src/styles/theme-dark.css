@@ -131,6 +131,14 @@ html[data-theme="dark"] .rm-canvas {
   background-image: radial-gradient(circle, rgba(241, 239, 232, 0.045) 0.7px, transparent 0.8px);
 }
 
+/* About-page Vitruvian line-art: multiply blend disappears on a dark ground, so
+   invert the dark strokes to light and keep it a faint background flourish */
+html[data-theme="dark"] .og-about-art img {
+  mix-blend-mode: normal;
+  filter: invert(0.92) hue-rotate(180deg);
+  opacity: 0.5;
+}
+
 /* "compression lens" magnitude bars (Methods page) — keep bars light and
    readable on the dark card without the pure-white glare of the light theme */
 html[data-theme="dark"] .eff-page {
