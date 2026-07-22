@@ -1,9 +1,9 @@
 /**
- * HIVE-LRC Observatory — authored public ontology (the reviewed source of the public read model).
+ * HIVE-LRC Observatory – authored public ontology (the reviewed source of the public read model).
  * This is the ONLY place public claims / edges / releases / artifacts are authored. The projector
  * (scripts/build-observatory.mts) combines this with gates.ts to emit immutable JSON snapshots under
  * public/observatory/. Nothing here may reference a filesystem path, a private-file hash, or assert an
- * evidence level above I2 — the governance scanner (scripts/observatory-governance.mjs) enforces this.
+ * evidence level above I2 – the governance scanner (scripts/observatory-governance.mjs) enforces this.
  *
  * Standing invariant: LRC(13) is OPEN. Evidence ceiling I2.
  */

@@ -77,7 +77,7 @@ export function buildGoldenVM(locale: Locale, golden: boolean): GoldenVM {
         "D26 chứng minh rằng một bộ $13$ vận tốc dương, nguyên thủy và được sắp thứ tự toàn cục có thể được tái dựng trực tiếp theo từng tọa độ bằng CRT. Ngưỡng tái dựng giảm từ khoảng $1946$ bits của phương pháp hệ số đối xứng xuống khoảng $969$ bits, tương ứng giảm số prime cần tích lũy từ khoảng $205$ xuống $109$ (hệ số khoảng $2.008$). Tuy nhiên, local cover tại mỗi prime là một multiset không thứ tự. Việc bung toàn bộ phép ghép vào $13$ nhãn toàn cục tạo worst-case branching proxy gần $(13!)^{109}$, làm mất lợi ích của ngưỡng thấp hơn dưới giới hạn tài nguyên hiện tại. Hai định lý tái dựng vẫn được giữ nguyên; full labeled campaign chưa đóng. LRC(13) vẫn đang mở."),
       stats: [
         { value: current.independence, label: t("evidence", "bằng chứng") },
-        { value: current.verify === "double" ? "2×" : current.verify === "single" ? "1×" : "—", label: t("verifiers", "verifier") },
+        { value: current.verify === "double" ? "2×" : current.verify === "single" ? "1×" : "–", label: t("verifiers", "verifier") },
         { value: String(current.artifacts), label: t("artifacts", "artifact") },
       ],
       href: `/${locale}/observatory/gates`,

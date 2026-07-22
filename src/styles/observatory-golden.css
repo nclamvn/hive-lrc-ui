@@ -1,4 +1,4 @@
-/* HIVE-LRC Observatory — golden overview layout (matches HIVE_OBSERVATORY_GOLDEN_MASTER_1586x992.png).
+/* HIVE-LRC Observatory – golden overview layout (matches HIVE_OBSERVATORY_GOLDEN_MASTER_1586x992.png).
    Tokens in observatory-golden-tokens.css. Reference viewport 1586x992, content inset 46px. */
 
 .og {
@@ -205,7 +205,7 @@
 /* golden mode: kill motion/caret already handled by tokens [data-golden] */
 
 /* ============================================================================
-   GOLDEN CONTENT KIT — flow-layout classes for the shell + all sub-pages.
+   GOLDEN CONTENT KIT – flow-layout classes for the shell + all sub-pages.
    (The overview above uses fixed geometry for the pixel golden; these are for
    the live home body reuse + every /observatory/* page.)
    ============================================================================ */
@@ -402,7 +402,7 @@ a.og-dep:hover { border-color: var(--obs-line-strong); }
 .og-chip.tok-validated::before { background: var(--obs-ink); box-shadow: 0 0 0 1.5px var(--obs-surface), 0 0 0 3px var(--obs-ink); width: 4px; height: 4px; }
 
 /* ============================================================================
-   RESEARCH MAP (/observatory/map) — dagre DAG in a golden panel
+   RESEARCH MAP (/observatory/map) – dagre DAG in a golden panel
    ============================================================================ */
 .rm-wrap { border: 1px solid var(--obs-line); border-radius: var(--obs-radius-card); background: var(--obs-surface);
   box-shadow: var(--obs-shadow-card); overflow: hidden; }
@@ -450,7 +450,7 @@ a.og-dep:hover { border-color: var(--obs-line-strong); }
 .rm-lg { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--obs-ink-3); }
 .rm-lg i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
 
-/* About page — prose left, Vitruvian illustration right (transparent PNG, blends into bg) */
+/* About page – prose left, Vitruvian illustration right (transparent PNG, blends into bg) */
 .og-about { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 56px; align-items: start; }
 .og-about-art { position: sticky; top: 104px; margin-top: 72px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .og-about-art img { width: 100%; max-width: 400px; height: auto; opacity: 0.9; mix-blend-mode: multiply; }

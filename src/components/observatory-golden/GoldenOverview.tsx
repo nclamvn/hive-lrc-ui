@@ -31,7 +31,7 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
         <img className="og-vitruvian" src="/vitruvian.png" alt="" aria-hidden width={172} height={170} />
       </section>
 
-      {/* preprint banner — links to the static D20–D34 archival synthesis page.
+      {/* preprint banner – links to the static D20–D34 archival synthesis page.
           Live-mode only: kept out of golden fixture mode to preserve the pinned pixel test. */}
       {!golden && (
       <div style={{ maxWidth: "var(--obs-max-content)", margin: "0 auto", padding: "44px var(--obs-page-inset) 0", width: "100%" }}>
@@ -105,7 +105,7 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
         })}
       </section>
 
-      {/* latest result — featured */}
+      {/* latest result – featured */}
       <section className="og-featured" data-region="latest-result">
         <div className="og-feat-main">
           <div className="og-feat-head">

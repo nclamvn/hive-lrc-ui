@@ -1,5 +1,5 @@
 /**
- * Observatory data loader — reads ONLY the generated public snapshot (public/observatory/*.json).
+ * Observatory data loader – reads ONLY the generated public snapshot (public/observatory/*.json).
  * The public site never imports the private research store; types come from the ontology module
  * (erased at runtime), data comes from the reviewed, governance-scanned JSON.
  */

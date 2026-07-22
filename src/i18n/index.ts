@@ -24,7 +24,7 @@ export function flattenKeys(obj: unknown, prefix = ""): string[] {
   );
 }
 
-/** Throws when en/vi key sets diverge — used by unit tests and dev assert. */
+/** Throws when en/vi key sets diverge – used by unit tests and dev assert. */
 export function assertKeyParity(): void {
   const enKeys = new Set(flattenKeys(en));
   const viKeys = new Set(flattenKeys(vi));
