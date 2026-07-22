@@ -65,6 +65,14 @@ html[data-theme="dark"] .hi {
 html[data-theme="dark"] .hi-btn.primary { color: #100f0d; }
 html[data-theme="dark"] .hi-btn.primary:hover { background: #c46f6f; color: #100f0d; }
 html[data-theme="dark"] .hi-dl:hover { background: #241d1b; }
+/* maroon-text-on-cream callouts: the text was a hardcoded dark maroon (#5f2323)
+   that vanished on the dark maroon-soft ground — lift it to the light accent */
+html[data-theme="dark"] .hi-principle,
+html[data-theme="dark"] .hi-review-banner { color: var(--hi-accent); }
+html[data-theme="dark"] .hi-badge.warn { border-color: var(--hi-accent); }
+/* status badges had hardcoded cream/mint backgrounds — give them dark grounds */
+html[data-theme="dark"] .hi-badge.active { background: #2a2216; border-color: #4a3a22; }
+html[data-theme="dark"] .hi-badge.done { background: #17251b; border-color: #2c4433; }
 
 /* ---- Observatory: fix hardcoded light backgrounds ---- */
 /* frosted-glass floating controls / drawers over the graph surfaces */

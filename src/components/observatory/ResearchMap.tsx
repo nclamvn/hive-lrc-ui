@@ -9,8 +9,18 @@ import { pick } from "@/lib/observatory";
 type Props = { nodes: GraphNode[]; edges: GraphEdge[]; locale: Locale };
 const t = (l: Locale, en: string, vi: string) => (l === "vi" ? vi : en);
 
-// warm monochrome palette + single green accent (matches the golden design)
-const INK = "#111111", DIM = "#66645f", LINE = "#cbc8c0", SOFT = "#e9e7e1", PAPER = "#fffefc", ACCENT = "#2f9b50";
+// warm monochrome palette + single green accent (matches the golden design).
+// Cytoscape cannot read CSS custom properties, so the palette is picked once
+// from the active theme. INK is the emphasis fill; text on it is ON_INK.
+const DARK = typeof document !== "undefined" && document.documentElement.getAttribute("data-theme") === "dark";
+const INK = DARK ? "#ece9e1" : "#111111",
+  DIM = DARK ? "#8a877e" : "#66645f",
+  LINE = DARK ? "#4f4c44" : "#cbc8c0",
+  SOFT = DARK ? "#3a3833" : "#e9e7e1",
+  PAPER = DARK ? "#211f1a" : "#fffefc",
+  ACCENT = DARK ? "#4fb96e" : "#2f9b50",
+  ON_INK = DARK ? "#100f0d" : "#fff",       // label sitting on an INK-filled node
+  ON_NODE = DARK ? "#ece9e1" : "#1a1a1a";   // label on SOFT / PAPER nodes
 let dagreRegistered = false;
 
 function fill(status: string): string {
@@ -75,7 +85,7 @@ export function ResearchMap({ nodes, edges, locale }: Props) {
             "font-size": (n: any) => (n.data("kind") === "gate" ? 11 : 9),
             "font-family": "ui-monospace, SFMono-Regular, Menlo, monospace",
             "font-weight": 600,
-            "color": (n: any) => (fill(n.data("status")) === INK ? "#fff" : "#1a1a1a"),
+            "color": (n: any) => (fill(n.data("status")) === INK ? ON_INK : ON_NODE),
             "text-valign": "center", "text-halign": "center",
             "text-max-width": (n: any) => (n.data("kind") === "gate" ? "48px" : "104px"),
             "text-wrap": "wrap",
