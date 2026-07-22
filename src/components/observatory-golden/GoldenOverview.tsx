@@ -27,8 +27,6 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
           <h1 className="og-hero-title">{vm.hero.title}</h1>
           <p className="og-hero-sub">{vm.hero.subtitle}</p>
         </div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="og-vitruvian" src="/vitruvian.png" alt="" aria-hidden width={172} height={170} />
       </section>
 
       {/* preprint banner – links to the static D20–D34 archival synthesis page.
