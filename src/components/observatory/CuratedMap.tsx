@@ -8,7 +8,22 @@ import { pick } from "@/lib/observatory";
 type Props = { nodes: GraphNode[]; edges: GraphEdge[]; locale: Locale };
 const t = (l: Locale, en: string, vi: string) => (l === "vi" ? vi : en);
 
-const INK = "#111111", DIM = "#66645f", LINE = "#cbc8c0", SOFT = "#e9e7e1", PAPER = "#fffefc", ACCENT = "#2f9b50", RUST = "#a08f7a";
+// SVG map palette. Picked once from the active theme (this is an inline SVG,
+// so values must be concrete). In dark, "proved" (INK) becomes a light-filled
+// emphasis node with dark text, while default/supported/superseded nodes stay
+// dark and receive a light NODE_OUTLINE so every shape reads on the near-black
+// canvas.
+const DARK = typeof document !== "undefined" && document.documentElement.getAttribute("data-theme") === "dark";
+const INK = DARK ? "#ece9e1" : "#111111",
+  DIM = DARK ? "#8a877e" : "#66645f",
+  LINE = DARK ? "#5a564d" : "#cbc8c0",
+  SOFT = DARK ? "#3a3833" : "#e9e7e1",
+  PAPER = DARK ? "#211f1a" : "#fffefc",
+  ACCENT = DARK ? "#4fb96e" : "#2f9b50",
+  RUST = DARK ? "#b89a86" : "#a08f7a",
+  ON_INK = DARK ? "#100f0d" : "#fff",        // label on an INK-filled (emphasis) node
+  ON_NODE = DARK ? "#ece9e1" : "#1a1a1a",    // label on SOFT / PAPER nodes
+  NODE_OUTLINE = DARK ? "#d7d3c9" : "";      // light outline for dark-filled nodes
 
 // hand-tuned claim layout: [column, lane]  (lane 0=upper, 1=mid, 2=lower)
 const CLAIM_POS: Record<string, [number, number]> = {
@@ -143,7 +158,7 @@ export function CuratedMap({ nodes, edges, locale }: Props) {
               {/* gate nodes (circle for short codes, pill for long codes like C.004 so text never overflows) */}
               {gateSeq.map((n) => {
                 const p = pos[n.id]; const cur = n.status === "current"; const blk = gateFill(n.status) === INK;
-                const label = gateLabel(n); const stroke = cur ? ACCENT : n.status === "pass" ? INK : DIM;
+                const label = gateLabel(n); const stroke = cur ? ACCENT : n.status === "pass" ? INK : (DARK ? NODE_OUTLINE : DIM);
                 const pill = label.length >= 4;
                 const pw = Math.max(29, label.length * 6 + 14);
                 return (
@@ -155,7 +170,7 @@ export function CuratedMap({ nodes, edges, locale }: Props) {
                     {pill
                       ? <rect x={p.x - pw / 2} y={p.y - 14.5} width={pw} height={29} rx={14.5} fill={gateFill(n.status)} stroke={stroke} strokeWidth={cur ? 2 : 1.4} />
                       : <circle cx={p.x} cy={p.y} r="14.5" fill={gateFill(n.status)} stroke={stroke} strokeWidth={cur ? 2 : 1.4} />}
-                    <text x={p.x} y={p.y + 3.4} textAnchor="middle" fontSize="9.5" fontFamily="ui-monospace, Menlo, monospace" fontWeight="600" fill={blk ? "#fff" : "#1a1a1a"}>{label}</text>
+                    <text x={p.x} y={p.y + 3.4} textAnchor="middle" fontSize="9.5" fontFamily="ui-monospace, Menlo, monospace" fontWeight="600" fill={blk ? ON_INK : ON_NODE}>{label}</text>
                   </g>
                 );
               })}
@@ -166,14 +181,14 @@ export function CuratedMap({ nodes, edges, locale }: Props) {
                 const proved = ["proved_internal", "validated_exact"].includes(n.status);
                 const superseded = n.status === "superseded"; const target = cid === "C0";
                 const fill = target ? PAPER : proved ? INK : superseded ? PAPER : SOFT;
-                const stroke = target ? INK : proved ? INK : superseded ? LINE : DIM;
+                const stroke = DARK ? (proved ? INK : NODE_OUTLINE) : (target ? INK : proved ? INK : superseded ? LINE : DIM);
                 return (
                   <g key={n.id} style={{ cursor: "pointer" }} opacity={dimmed(n.id) ? 0.16 : 1}
                      onClick={(ev) => { ev.stopPropagation(); setSel(n); }}>
                     <rect x={p.x - 56} y={p.y - 14} width="112" height="28" rx={target ? 14 : 7}
                           fill={fill} stroke={stroke} strokeWidth={target ? 1.6 : 1.3} strokeDasharray={superseded ? "4 3" : undefined} />
                     <text x={p.x} y={p.y + 3.2} textAnchor="middle" fontSize="9" fontWeight="600"
-                          fill={proved ? "#fff" : "#1a1a1a"} opacity={superseded ? 0.7 : 1}>{pick({ en: tag[0], vi: tag[1] }, locale)}</text>
+                          fill={proved ? ON_INK : ON_NODE} opacity={superseded ? 0.7 : 1}>{pick({ en: tag[0], vi: tag[1] }, locale)}</text>
                   </g>
                 );
               })}
