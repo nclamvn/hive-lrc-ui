@@ -21,9 +21,9 @@ const INK = DARK ? "#ece9e1" : "#111111",
   ACCENT = DARK ? "#4fb96e" : "#2f9b50",
   ON_INK = DARK ? "#100f0d" : "#fff",       // label sitting on an INK-filled node
   ON_NODE = DARK ? "#ece9e1" : "#1a1a1a",   // label on SOFT / PAPER nodes
-  // in dark, dark-filled nodes need a light outline so they read against the
-  // near-black canvas; only used to lift the muted DIM/LINE borders.
-  NODE_OUTLINE = DARK ? "#8f8b80" : "";
+  // in dark, dark-filled nodes need a clearly light (near-white) outline so
+  // they read against the near-black canvas; lifts the muted DIM/LINE borders.
+  NODE_OUTLINE = DARK ? "#d7d3c9" : "";
 let dagreRegistered = false;
 
 function fill(status: string): string {
@@ -88,7 +88,13 @@ export function ResearchMap({ nodes, edges, locale }: Props) {
               if (DARK && fill(st) !== INK && (b.color === DIM || b.color === LINE)) return NODE_OUTLINE;
               return b.color;
             },
-            "border-width": (n: any) => Math.max(border(n.data("status")).width, DARK ? 1.2 : 1),
+            "border-width": (n: any) => {
+              const st = n.data("status");
+              const b = border(st);
+              // dark-filled nodes lifted to the light outline get a clearer, thicker edge
+              if (DARK && fill(st) !== INK && (b.color === DIM || b.color === LINE)) return Math.max(b.width, 1.6);
+              return Math.max(b.width, DARK ? 1.2 : 1);
+            },
             "border-style": (n: any) => border(n.data("status")).style,
             "shape": (n: any) => shape(n.data("kind")),
             "label": "data(label)",
