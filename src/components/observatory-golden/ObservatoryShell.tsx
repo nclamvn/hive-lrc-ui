@@ -22,8 +22,8 @@ const NAV: { key: string; en: string; vi: string; href: (l: string) => string; m
 export function Hexmark({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 30 30" fill="none" aria-hidden>
-      <path d="M15 2.5 26 9v12L15 27.5 4 21V9L15 2.5Z" stroke="#111" strokeWidth="1.5" strokeLinejoin="round" />
-      <path d="M15 9.2 20.5 12.4v6.4L15 22 9.5 18.8v-6.4L15 9.2Z" stroke="#111" strokeWidth="1" strokeLinejoin="round" opacity=".5" />
+      <path d="M15 2.5 26 9v12L15 27.5 4 21V9L15 2.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M15 9.2 20.5 12.4v6.4L15 22 9.5 18.8v-6.4L15 9.2Z" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" opacity=".5" />
     </svg>
   );
 }

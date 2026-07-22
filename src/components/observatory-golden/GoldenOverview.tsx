@@ -42,23 +42,23 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
         style={{
           display: "flex", alignItems: "center", justifyContent: "space-between", gap: "18px",
           margin: 0, padding: "16px 20px", textDecoration: "none",
-          background: "#fbfaf7", border: "1px solid #e2e0da", borderRadius: "12px", color: "inherit",
+          background: "var(--obs-surface-soft)", border: "1px solid var(--obs-line)", borderRadius: "12px", color: "inherit",
         }}
       >
         <span style={{ minWidth: 0 }}>
-          <span style={{ display: "block", fontSize: "11px", letterSpacing: ".08em", textTransform: "uppercase", color: "#8a8578", fontWeight: 600 }}>
+          <span style={{ display: "block", fontSize: "11px", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--obs-ink-3)", fontWeight: 600 }}>
             {t("Preprint · D20–D34 archival synthesis", "Bản thảo · Tổng hợp lưu trữ D20–D34")}
           </span>
-          <span style={{ display: "block", marginTop: "3px", fontSize: "16px", fontWeight: 640, color: "#1a1a17" }}>
+          <span style={{ display: "block", marginTop: "3px", fontSize: "16px", fontWeight: 640, color: "var(--obs-ink)" }}>
             {t("Verifiable Human–AI Exploration of the Lonely Runner Conjecture at k = 13",
                "Khảo sát Human–AI có kiểm chứng cho Lonely Runner Conjecture tại k = 13")}
           </span>
-          <span style={{ display: "block", marginTop: "3px", fontSize: "13px", color: "#6f6a5e" }}>
+          <span style={{ display: "block", marginTop: "3px", fontSize: "13px", color: "var(--obs-ink-2)" }}>
             {t("Read the paper, download the PDF, LaTeX source, and D20–D34 archive. LRC(13) remains OPEN.",
                "Đọc bài báo, tải PDF, mã nguồn LaTeX và gói lưu trữ D20–D34. LRC(13) vẫn MỞ.")}
           </span>
         </span>
-        <span style={{ flex: "none", padding: "9px 16px", border: "1px solid #1f4b6e", borderRadius: "8px", color: "#1f4b6e", fontWeight: 600, fontSize: "14px", whiteSpace: "nowrap" }}>
+        <span style={{ flex: "none", padding: "9px 16px", border: "1px solid var(--obs-line-strong)", borderRadius: "8px", color: "var(--obs-ink)", fontWeight: 600, fontSize: "14px", whiteSpace: "nowrap" }}>
           {t("Read paper →", "Đọc bài báo →")}
         </span>
       </a>
@@ -164,10 +164,10 @@ export function GoldenOverview({ locale, vm, golden = false }: { locale: Locale;
         <div className="og-lp">
           <div className="og-lp-t">{t("Progress Overview", "Tổng quan tiến độ")}</div>
           <svg className="og-chart" viewBox="0 0 300 150" preserveAspectRatio="none">
-            <line x1="0" y1="130" x2="300" y2="130" stroke="#e2e0da" /><line x1="0" y1="90" x2="300" y2="90" stroke="#f0efe9" /><line x1="0" y1="50" x2="300" y2="50" stroke="#f0efe9" />
-            <polyline points="0,120 50,110 100,95 150,80 200,60 250,42 300,30" fill="none" stroke="#111" strokeWidth="1.5" />
-            <polyline points="0,128 50,122 100,112 150,104 200,88 250,74 300,58" fill="none" stroke="#2f9b50" strokeWidth="1.5" />
-            <polyline points="0,132 50,128 100,126 150,120 200,116 250,110 300,104" fill="none" stroke="#cbc8c0" strokeWidth="1.5" />
+            <line x1="0" y1="130" x2="300" y2="130" style={{ stroke: "var(--obs-line)" }} /><line x1="0" y1="90" x2="300" y2="90" style={{ stroke: "var(--obs-line)" }} /><line x1="0" y1="50" x2="300" y2="50" style={{ stroke: "var(--obs-line)" }} />
+            <polyline points="0,120 50,110 100,95 150,80 200,60 250,42 300,30" fill="none" strokeWidth="1.5" style={{ stroke: "var(--obs-ink)" }} />
+            <polyline points="0,128 50,122 100,112 150,104 200,88 250,74 300,58" fill="none" strokeWidth="1.5" style={{ stroke: "var(--obs-accent)" }} />
+            <polyline points="0,132 50,128 100,126 150,120 200,116 250,110 300,104" fill="none" strokeWidth="1.5" style={{ stroke: "var(--obs-line-strong)" }} />
           </svg>
         </div>
         <div className="og-lp">

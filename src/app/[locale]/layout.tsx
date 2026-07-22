@@ -5,6 +5,7 @@ import { LOCALES, isLocale } from "@/i18n";
 import "katex/dist/katex.min.css";
 import "@/styles/tokens.css";
 import "@/styles/globals.css";
+import "@/styles/theme-dark.css";
 
 const inter = Inter({
   subsets: ["latin", "vietnamese"],
@@ -46,7 +47,7 @@ export default async function LocaleLayout({
   if (!isLocale(locale)) notFound();
 
   return (
-    <html lang={locale} className={`${inter.variable} ${newsreader.variable}`}>
+    <html lang={locale} data-theme="dark" className={`${inter.variable} ${newsreader.variable}`}>
       <body>{children}</body>
     </html>
   );

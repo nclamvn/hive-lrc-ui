@@ -1,0 +1,112 @@
+/* ------------------------------------------------------------------ *
+ * Dark theme — the site default. Applied via <html data-theme="dark">.
+ *
+ * A warm near-black palette that preserves the editorial feel of the
+ * light "golden" Observatory theme rather than a generic gray dark mode.
+ *
+ * Selectors use html[data-theme="dark"] (specificity 0,1,1) so the token
+ * overrides win over the :root defaults in tokens.css / observatory-golden-
+ * tokens.css regardless of CSS import order.
+ * ------------------------------------------------------------------ */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* ---- Observatory "golden" theme tokens ---- */
+  --obs-bg: #100f0d;
+  --obs-surface: #191713;
+  --obs-surface-soft: #14120f;
+  --obs-ink: #f1efe8;
+  --obs-ink-2: #b0ada4;
+  --obs-ink-3: #86837b;
+  --obs-line: #2c2a25;
+  --obs-line-strong: #3d3a34;
+  --obs-accent: #4fb96e;
+  --obs-accent-soft: rgba(79, 185, 110, 0.15);
+  --obs-danger: #cf8a63;
+  --obs-shadow-card:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.55);
+
+  /* ---- base dashboard tokens (globals.css) ---- */
+  --hive-bg: #100f0d;
+  --hive-surface: #191713;
+  --hive-text: #f1efe8;
+  --hive-text-secondary: #b0ada4;
+  --hive-text-muted: #86837b;
+  --hive-border: #2c2a25;
+  --hive-border-strong: #3d3a34;
+  --hive-fill-soft: #14120f;
+  --hive-black: #f1efe8;
+  --hive-white: #100f0d;
+  --hive-shadow-card:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+/* ---- IMO 2026 academic theme (.hi) tokens ---- */
+html[data-theme="dark"] .hi {
+  --hi-bg: #100f0d;
+  --hi-surface: #191713;
+  --hi-surface-soft: #14120f;
+  --hi-ink: #f1efe8;
+  --hi-muted: #a8a59c;
+  --hi-faint: #7d7a72;
+  --hi-border: #2c2a25;
+  --hi-border-soft: #242220;
+  --hi-accent: #d67f7f;      /* lightened academic maroon for dark bg */
+  --hi-accent-2: #d0a066;    /* lightened ochre */
+  --hi-accent-soft: #2a1d1b;
+  --hi-ok: #6fae82;
+  --hi-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+}
+html[data-theme="dark"] .hi-btn.primary { color: #100f0d; }
+html[data-theme="dark"] .hi-btn.primary:hover { background: #c46f6f; color: #100f0d; }
+html[data-theme="dark"] .hi-dl:hover { background: #241d1b; }
+
+/* ---- Observatory: fix hardcoded light backgrounds ---- */
+/* frosted-glass floating controls / drawers over the graph surfaces */
+html[data-theme="dark"] .og-map-ctrl,
+html[data-theme="dark"] .og-map-view,
+html[data-theme="dark"] .rm-ctrl {
+  background: rgba(25, 23, 19, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+html[data-theme="dark"] .rm-drawer {
+  background: rgba(25, 23, 19, 0.96);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+/* featured-result panel on the overview */
+html[data-theme="dark"] .og-featured {
+  background: var(--obs-surface-soft);
+}
+/* hover shadows on tiles */
+html[data-theme="dark"] a.og-tile:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 14px 30px rgba(0, 0, 0, 0.5);
+}
+/* dot-grid backgrounds: light dots on dark instead of dark-on-light */
+html[data-theme="dark"] .og-map {
+  background-image: radial-gradient(circle, rgba(241, 239, 232, 0.05) 0.7px, transparent 0.8px);
+}
+html[data-theme="dark"] .rm-canvas {
+  background-image: radial-gradient(circle, rgba(241, 239, 232, 0.045) 0.7px, transparent 0.8px);
+}
+
+/* decorative Vitruvian line-art (dark strokes on transparent) — invert so it
+   reads on a dark ground, kept faint as a background flourish */
+html[data-theme="dark"] .og-vitruvian {
+  filter: invert(0.92) hue-rotate(180deg);
+  opacity: 0.42;
+}
+
+/* "compression lens" magnitude bars (Methods page) — keep bars light and
+   readable on the dark card without the pure-white glare of the light theme */
+html[data-theme="dark"] .eff-page {
+  --eff-black: #f1efe8;
+  --eff-mid: #a8a59c;
+  --eff-line: #3d3a34;
+  --eff-soft: #26241f;
+  --eff-white: #d8d5cc;
+}
